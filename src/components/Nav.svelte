@@ -2,12 +2,27 @@
 	import { onMount } from 'svelte';
 	import smoothscroll from 'smoothscroll-polyfill';
 
+	const id = 'work';
+	const yOffset = -70;
+	let element;
+	let yOffSet;
+
 	onMount(() => {
 		smoothscroll.polyfill();
+		element = document.getElementById(id);
+		yOffSet = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
 	});
 
 	const handleClick = () => {
-		document.getElementById('work').scrollIntoView({ behavior: 'smooth' });
+		// document.getElementById('work').scrollIntoView({ behavior: 'smooth', block: 'start' });
+		// document.getElementById('work').scrollTop -= 100;
+
+		// const id = 'work';
+		// const yOffset = -70;
+		// const element = document.getElementById(id);
+		// const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+		window.scrollTo({ top: yOffSet, behavior: 'smooth' });
 	};
 
 	let boxShadow = 'none';
