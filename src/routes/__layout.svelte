@@ -4,7 +4,9 @@
 </script>
 
 <Nav />
-<slot />
+<section class="content">
+	<slot />
+</section>
 <Footer />
 
 <style lang="css" global>
@@ -20,5 +22,9 @@
 		--expand-label: 0.5rem;
 		--accent-color: #d3a615;
 		--background-color: rgb(235, 235, 235);
+	}
+
+	.content {
+		margin-top: 4rem;
 	}
 </style>

@@ -37,7 +37,7 @@
 		transition-property: all;
 		transition-duration: 250ms;
 		background-color: var(--accent-color);
-		z-index: 10;
+		z-index: 1;
 	}
 
 	.project-image {

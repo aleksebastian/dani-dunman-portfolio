@@ -9,9 +9,19 @@
 	const handleClick = () => {
 		document.getElementById('work').scrollIntoView({ behavior: 'smooth' });
 	};
+
+	let backgroundColor = 'white';
+	let y;
+	$: if (y > 1) {
+		backgroundColor = '--background-color';
+	} else {
+		backgroundColor = 'white';
+	}
 </script>
 
-<nav class="nav">
+<svelte:window bind:scrollY={y} />
+
+<nav class="nav" style={`background-color: ${backgroundColor}`}>
 	<a href="/">Daniela Dunman</a>
 	<div class="nav-links">
 		<a href="/" on:click={handleClick}>Work</a>
@@ -27,6 +37,14 @@
 		height: 4rem;
 		padding: 0 3rem;
 		font-size: 1.2rem;
+		overflow: hidden;
+		background-color: var(--background-color);
+		position: fixed; /* Set the navbar to fixed position */
+		top: 0; /* Position the navbar at the top of the page */
+		width: 100%; /* Full width */
+		z-index: 10;
+		transition-property: all;
+		transition-duration: 250ms;
 	}
 
 	.nav-links {
