@@ -34,30 +34,26 @@
 		width: 100%;
 		color: white;
 		cursor: pointer;
-		transition-property: all;
-		transition-duration: 250ms;
-		background-color: var(--accent-color);
 		z-index: 1;
 	}
 
-	.project-image {
-		transition-property: all;
-		transition-duration: 250ms;
-	}
-
-	.project:after {
-		content: '';
+	.project::after {
 		position: absolute;
+		opacity: 0;
+		content: '';
 		top: 0;
 		left: 0;
-		width: 50%;
+		width: 100%;
 		height: 100%;
-		background: var(--accent-color);
+		background-color: rgb(211, 166, 21);
+		-webkit-transition: all 150ms;
+		transition: all 150ms;
 	}
 
-	.project-image:hover {
-		-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-		filter: grayscale(100%);
+	.project:hover::after {
+		opacity: 0.3;
+		-webkit-transition: all 150ms;
+		transition: all 150ms;
 	}
 
 	.project-name {
@@ -66,6 +62,7 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
+		z-index: 2;
 	}
 
 	/* .placeholder {
