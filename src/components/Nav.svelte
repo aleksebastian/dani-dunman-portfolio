@@ -41,7 +41,7 @@
 		padding: 0 3rem;
 		font-size: 1.2rem;
 		overflow: hidden;
-		background-color: rgba(255, 255, 255, 0.95);
+		background-color: rgba(255, 255, 255, 0.97);
 		position: fixed; /* Set the navbar to fixed position */
 		top: 0; /* Position the navbar at the top of the page */
 		width: 100%; /* Full width */
