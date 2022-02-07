@@ -10,18 +10,21 @@
 		document.getElementById('work').scrollIntoView({ behavior: 'smooth' });
 	};
 
+	let boxShadow = 'none';
 	let backgroundColor = 'white';
 	let y;
 	$: if (y > 1) {
-		backgroundColor = '--background-color';
+		// backgroundColor = '--background-color';
+		boxShadow = 'rgba(0, 0, 0, 0.08) 0px 1px 12px';
 	} else {
-		backgroundColor = 'white';
+		// backgroundColor = 'white';
+		boxShadow = 'none';
 	}
 </script>
 
 <svelte:window bind:scrollY={y} />
 
-<nav class="nav" style={`background-color: ${backgroundColor}`}>
+<nav class="nav" style={`box-shadow: ${boxShadow}`}>
 	<a href="/">Daniela Dunman</a>
 	<div class="nav-links">
 		<a href="/" on:click={handleClick}>Work</a>
@@ -38,13 +41,15 @@
 		padding: 0 3rem;
 		font-size: 1.2rem;
 		overflow: hidden;
-		background-color: var(--background-color);
+		background-color: rgba(255, 255, 255, 0.95);
 		position: fixed; /* Set the navbar to fixed position */
 		top: 0; /* Position the navbar at the top of the page */
 		width: 100%; /* Full width */
 		z-index: 10;
 		transition-property: all;
 		transition-duration: 250ms;
+		backdrop-filter: blur(6px);
+		-webkit-backdrop-filter: blur(6px);
 	}
 
 	.nav-links {
