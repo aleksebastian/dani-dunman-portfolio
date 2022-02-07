@@ -1,7 +1,7 @@
 <script>
 	export let project;
 
-	import IntersectionObserver from '../intersectionObserver.svelte';
+	import IntersectionObserver from './IntersectionObserver.svelte';
 </script>
 
 <!-- 'sm': '640px',

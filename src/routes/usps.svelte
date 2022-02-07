@@ -5,7 +5,7 @@
 	import Gallery from '../components/Gallery.svelte';
 	import MdArrowDownward from 'svelte-icons/md/MdArrowDownward.svelte';
 
-	import IntersectionObserver from '../IntersectionObserver.svelte';
+	import IntersectionObserver from './IntersectionObserver.svelte';
 
 	let percentage = 0;
 	let showMoreStatistics = false;
