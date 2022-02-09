@@ -2,15 +2,17 @@
 	import { slide } from 'svelte/transition';
 	import MdArrowDownward from 'svelte-icons/md/MdArrowDownward.svelte';
 
-	import IntersectionObserver from '../components/IntersectionObserver.svelte';
+	import ImageLoader from '../components/image/ImageLoader.svelte';
+
+	import Expandable from '../components/Expandable.svelte';
 
 	let percentage = 0;
-	let showMoreStatistics = false;
-	let showResearch = false;
+	$: showStatistics = false;
+	$: showResearch = false;
 
 	const handleClick = (section) => {
 		if (section === 'statistics') {
-			showMoreStatistics = !showMoreStatistics;
+			showStatistics = !showStatistics;
 			return;
 		}
 		if (section === 'research') {
@@ -22,13 +24,13 @@
 
 <div class="grid">
 	<!-- HERO -->
-	<div class="hero full section">
+	<div class="hero full py-md">
 		<p class="header">USPS SmartBanking</p>
 		<p class="subheader">UX/Research</p>
 	</div>
 
 	<!-- PROJECT INFO -->
-	<div class="projectInfo section">
+	<div class="projectInfo py-md">
 		<div>
 			<p class="name">Goal</p>
 			<p class="body-text">
@@ -52,46 +54,34 @@
 	<div id="work" class="gallery full">
 		<div class="photos">
 			<div>
-				<IntersectionObserver once={true} let:intersecting>
-					{#if intersecting}
-						<img class="project-image" src="https://picsum.photos/800/550" alt="dani" />
-					{/if}
-				</IntersectionObserver>
+				<div class="project-image">
+					<ImageLoader src="https://picsum.photos/800/550" alt="dani" />
+				</div>
 			</div>
 			<div>
-				<IntersectionObserver once={true} let:intersecting>
-					{#if intersecting}
-						<img class="project-image" src="https://picsum.photos/800/550" alt="dani" />
-					{/if}
-				</IntersectionObserver>
+				<div class="project-image">
+					<ImageLoader src="https://picsum.photos/800/550" alt="dani" />
+				</div>
 			</div>
 			<div>
-				<IntersectionObserver once={true} let:intersecting>
-					{#if intersecting}
-						<img class="project-image" src="https://picsum.photos/800/550" alt="dani" />
-					{/if}
-				</IntersectionObserver>
+				<div class="project-image">
+					<ImageLoader src="https://picsum.photos/800/550" alt="dani" />
+				</div>
 			</div>
 			<div>
-				<IntersectionObserver once={true} let:intersecting>
-					{#if intersecting}
-						<img class="project-image" src="https://picsum.photos/800/550" alt="dani" />
-					{/if}
-				</IntersectionObserver>
+				<div class="project-image">
+					<ImageLoader src="https://picsum.photos/800/550" alt="dani" />
+				</div>
 			</div>
 			<div>
-				<IntersectionObserver once={true} let:intersecting>
-					{#if intersecting}
-						<img class="project-image" src="https://picsum.photos/800/550" alt="dani" />
-					{/if}
-				</IntersectionObserver>
+				<div class="project-image">
+					<ImageLoader src="https://picsum.photos/800/550" alt="dani" />
+				</div>
 			</div>
 			<div>
-				<IntersectionObserver once={true} let:intersecting>
-					{#if intersecting}
-						<img class="project-image" src="https://picsum.photos/800/550" alt="dani" />
-					{/if}
-				</IntersectionObserver>
+				<div class="project-image">
+					<ImageLoader src="https://picsum.photos/800/550" alt="dani" />
+				</div>
 			</div>
 		</div>
 	</div>
@@ -111,17 +101,20 @@
 			<p>Unbanked: A person who does not use banks or banking institutions in any way or form.</p>
 		</div>
 		<div class="researchRight">
-			<IntersectionObserver once={true} let:intersecting>
-				{#if intersecting}
-					<p class="hugeNumber">~32%</p>
-				{/if}
-			</IntersectionObserver>
+			<p class="hugeNumber">~32%</p>
+
 			<p>of the US population is considered under/un banked</p>
 		</div>
 	</div>
 
 	<!-- EXPANDABLE SECTION -->
-	<div class="expandable">
+	<Expandable
+		{handleClick}
+		state={showStatistics}
+		section={'statistics'}
+		text={'More statistics'}
+	/>
+	<!-- <div class="expandable">
 		<div class="expandableLeft">
 			<p>More statistics</p>
 			<div class="line" />
@@ -129,19 +122,23 @@
 		</div>
 		<div class="expandableRight">
 			<div class="line" />
-			<div class="icon" on:click={() => handleClick('statistics')}>
+			<div
+				class="icon"
+				style="transform: {showMoreStatistics ? 'rotateZ(0)' : 'rotateZ(180deg)'}"
+				on:click={() => handleClick('statistics')}
+			>
 				<MdArrowDownward />
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<!-- MORE STATISTICS -->
-	{#if showMoreStatistics}
+	{#if showStatistics}
 		<div transition:slide|local class="moreStatistics" />
 	{/if}
 
 	<!-- PAIN POINTS -->
-	<p class="label main section">Pain Points</p>
+	<p class="label main py-md">Pain Points</p>
 	<div class="pain-top main">
 		<div class="painPoint">
 			<div class="point" />
@@ -176,9 +173,9 @@
 	</div>
 
 	<!-- HOW IS USPS QUALIFIED TO SERVE -->
-	<div class="main section">
+	<div class="main py-md">
 		<p class="label main">How is USPS qualified to serve the un/under banked</p>
-		<div class="flex-row main space-between section">
+		<div class="flex-row main space-between py-md">
 			<div class="flex-col">
 				<p>serves</p>
 				<p class="header">161.4 MM</p>
@@ -198,46 +195,180 @@
 	</div>
 
 	<!-- EXPANDABLE SECTION -->
-	<div class="expandable">
-		<div class="expandableLeft">
-			<p>More research and exploration</p>
+	<Expandable
+		{handleClick}
+		state={showResearch}
+		section={'research'}
+		text={'More research and exploration'}
+	/>
+	<!-- <div class="expandable main py-md">
+		<p>More research and exploration</p>
+		<div class="second flex-row">
 			<div class="line" />
-			<p>&nbsp;</p>
-		</div>
-		<div class="expandableRight">
-			<div class="line" />
-			<div class="icon" on:click={() => handleClick('research')}>
+			<div
+				class="icon"
+				style="transform: {showResearch ? 'rotateZ(0)' : 'rotateZ(180deg)'}"
+				on:click={() => handleClick('research')}
+			>
 				<MdArrowDownward />
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<!-- MORE RESEARCH -->
-	{#if !showResearch}
-		<div transition:slide|local class="moreResearch">
-			<p class="researchText label">Competitive Audit</p>
-			<p class="researchText">There have been proposals to solve this issue.</p>
-			<div class="flex-row proposals">
+	{#if showResearch}
+		<div transition:slide|local class="moreResearch py-md">
+			<p class="researchText label py-sm">Competitive Audit</p>
+			<p class="researchText py-sm">There have been proposals to solve this issue.</p>
+			<div class="flex-row proposals py-sm">
 				<div class="proposal">
-					<p>Label</p>
-					<p>Text Text Text Text Text Text Text Text Text Text Text</p>
+					<p>{'Cryptocurrencies'.toUpperCase()}</p>
+					<p>are fully digital and easy to access, and location and income are not a barrier.</p>
 				</div>
 				<div class="proposal">
-					<p>Label</p>
-					<p>Text Text Text Text Text Text Text Text Text Text Text</p>
+					<p>{'“Outlet” bank branch offices'.toUpperCase()}</p>
+					<p>
+						are branches of participating banks that are conveniently located for lower-income
+						households.
+					</p>
 				</div>
 				<div class="proposal">
-					<p>Label</p>
-					<p>Text Text Text Text Text Text Text Text Text Text Text</p>
+					<p>{'Neobanks'.toUpperCase()}</p>
+					<p>
+						a type of direct bank that functions fully online, such as Chime, Current, and
+						Aspiration.
+					</p>
 				</div>
 			</div>
 			<p class="researchText">However,</p>
 			<p class="researchText">there are no active soluctions.</p>
 		</div>
+
+		<!-- UX RESEARCH METHODS -->
+		<div class="flex-row main ux-methods py-md flex-wrap">
+			<div class="image">
+				<ImageLoader alt="rectangle" src="https://picsum.photos/750/500" />
+			</div>
+			<div class="text">
+				<p class="label py-sm">UX RESEARCH METHOD 01: How Might We (HMW’s)</p>
+				<p>
+					My team and I created a Miro board where we could share our research findings and organize
+					them in such a way that we could easily compare and contrast between different questions
+					and problem spaces. We looked over our HMWs and reorganized our sticky notes into the
+					categories of information distribution, resources/education, security, utility services,
+					and tasks. From there, we sorted through them once again and created another table with
+					the most relevant and helpful questions. In this table, we listed possible answers to the
+					HMWs.
+				</p>
+			</div>
+		</div>
+		<div class="flex-row main ux-methods py-md flex-wrap">
+			<div class="text">
+				<p class="label py-sm">UX RESEARCH METHOD 02: Survey</p>
+				<p>
+					I created a quick survey that I shared on my Instagram for people to answer questions
+					about their experience with banking, their frustrations, and what they would be willing to
+					do to open a bank account if they found themselves on the bank's deny-list.
+				</p>
+				<p class="py-md">
+					Those who are denied standard bank accounts due to a rocky banking history were identified
+					as part of the unbanked community, and are the target audience.
+				</p>
+			</div>
+
+			<div class="complex">
+				<div class="imgs flex-row">
+					<div class="sq-img">
+						<ImageLoader alt="square" src="https://picsum.photos/600" />
+					</div>
+					<div class="sq-img">
+						<ImageLoader alt="square" src="https://picsum.photos/600" />
+					</div>
+				</div>
+				<div class="img">
+					<ImageLoader alt="square" src="https://picsum.photos/800/300" />
+				</div>
+			</div>
+		</div>
+
+		<div class="flex-row main ux-methods last flex-wrap">
+			<img alt="rectangle" src="https://picsum.photos/750/450" class="image" />
+			<div class="text">
+				<p class="label py-sm">UX RESEARCH METHOD 03/04: User Persona and Journey Map</p>
+				<p>
+					My target audience is deny-listed, bank users. People who have been kicked out of the
+					banking system are unable to open an account independent of where they go because their
+					history follows them. Not being able to bank pushes them further into “unbankedness” for
+					longer and makes it harder for them to get out.
+				</p>
+			</div>
+			<div class="main placeholder">
+				<ImageLoader alt="placeholder" src="https://picsum.photos/1950/350" />
+			</div>
+		</div>
 	{/if}
 </div>
 
 <style>
+	* {
+		font-size: var(--body-size);
+	}
+
+	.ux-methods {
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+	}
+
+	.complex {
+		flex-basis: calc(50% - 0.5rem);
+		max-width: calc(50% - 0.5rem);
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.image {
+		/* max-width: 600px; */
+		flex-basis: calc(50% - 0.5rem);
+		max-width: calc(50% - 0.5rem);
+		height: auto;
+	}
+
+	.text {
+		flex-basis: calc(50% - 0.5rem);
+		max-width: calc(50% - 0.5rem);
+	}
+
+	.flex-wrap {
+		flex-wrap: wrap;
+	}
+
+	.imgs {
+		gap: 1rem;
+	}
+
+	.sq-img {
+		/* flex-basis: 20%; */
+		/* flex-basis: calc(50% - 0.5rem);
+		min-width: calc(50% - 0.5rem) !important;
+		height: auto; */
+	}
+
+	.img {
+		background-color: blue;
+		max-height: 300px;
+	}
+
+	.placeholder {
+		/* height: 300px; */
+		background-color: grey;
+	}
+
+	.last {
+		padding: 3rem 0 3rem 0;
+	}
+
 	.researchText {
 		grid-column: 1 / 11;
 	}
@@ -251,10 +382,14 @@
 		flex-basis: 25%;
 	}
 
+	.proposal p {
+		padding: 0.5rem 0;
+	}
+
 	.moreResearch {
 		display: grid;
 		grid-template-columns: repeat(10, minmax(0, 1fr));
-		height: 16rem;
+		/* height: 16rem; */
 		grid-column: 2 / 12;
 	}
 
@@ -296,7 +431,11 @@
 		grid-column: 2 / 12;
 	}
 
-	.section {
+	.py-sm {
+		padding: 1rem 0;
+	}
+
+	.py-md {
 		padding: 3rem 0;
 	}
 
@@ -330,26 +469,33 @@
 	}
 
 	.icon {
-		width: 32px;
+		margin-bottom: 0.1rem;
+		width: 40px;
 		height: 32px;
-		transition: all 0.25s ease-in-out;
+		transition: all 0.4s ease;
+		cursor: pointer;
+		/* transform: rotateZ(180deg); */
 	}
 
 	.expandable {
-		grid-column: 1 / -1;
+		/* grid-column: 1 / -1; */
 		display: grid;
-		grid-template-columns: repeat(12, minmax(0, 1fr));
+		grid-template-columns: subgrid;
 	}
 
 	.expandableLeft {
-		grid-column: 2 / 11;
+		/* grid-column: 1 / 2; */
+	}
+
+	.second {
+		align-items: center;
 	}
 
 	.expandableRight {
 		display: flex;
 		align-items: center;
 		align-self: center;
-		grid-column: 11 / 12;
+		grid-column: 1 / 2;
 	}
 
 	.line {
@@ -408,10 +554,11 @@
 	}
 
 	.photos {
-		grid-column: 2 / 12;
+		grid-column: 3 / 11;
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 		gap: 3rem;
+		justify-items: center;
 	}
 
 	.research {

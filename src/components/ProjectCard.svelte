@@ -1,16 +1,14 @@
 <script>
 	export let project;
 
-	import IntersectionObserver from './IntersectionObserver.svelte';
+	import ImageLoader from './image/ImageLoader.svelte';
 </script>
 
 <a href={`/${project.toLowerCase()}`} class="project">
-	<IntersectionObserver once={true} let:intersecting>
-		{#if intersecting}
-			<img class="project-image" src="https://picsum.photos/800/550" alt="dani" />
-			<p class="project-name">{project}</p>
-		{/if}
-	</IntersectionObserver>
+	<div class="project-image">
+		<ImageLoader class="project-image" src="https://picsum.photos/800/550" alt="dani" />
+	</div>
+	<p class="project-name">{project}</p>
 </a>
 
 <style>
