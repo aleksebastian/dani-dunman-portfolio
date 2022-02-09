@@ -1,5 +1,5 @@
 <script>
-	import { slide } from 'svelte/transition';
+	import { slide, fade } from 'svelte/transition';
 	import MdArrowDownward from 'svelte-icons/md/MdArrowDownward.svelte';
 
 	import ImageLoader from '../components/image/ImageLoader.svelte';
@@ -20,101 +20,116 @@
 			return;
 		}
 	};
+
+	import { onMount } from 'svelte';
+	const heroSrc = 'https://picsum.photos/1950/450';
+	let heroLoaded = false;
+	onMount(() => {
+		const heroImg = new Image();
+		heroImg.src = heroSrc;
+		heroImg.onload = () => {
+			heroLoaded = true;
+		};
+	});
 </script>
 
 <div class="grid">
 	<!-- HERO -->
-	<div class="hero full py-md">
-		<p class="header">USPS SmartBanking</p>
-		<p class="subheader">UX/Research</p>
-	</div>
-
-	<!-- PROJECT INFO -->
-	<div class="projectInfo py-md">
-		<div>
-			<p class="name">Goal</p>
-			<p class="body-text">
-				To provide the underbanked and unbanked community a service for reentering the banking
-				system through USPS. The service should be a stepping stone back into traditional banking,
-				not a replacement for it.
-			</p>
+	{#if heroLoaded}
+		<div in:fade class="hero full py-md">
+			<p class="header">USPS SmartBanking</p>
+			<p class="subheader">UX/Research</p>
 		</div>
-		<div>
-			<p class="name">What I Did</p>
-			<p class="body-text">
-				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-				been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-				galley of type and scrambled it to make a type specimen book.
-			</p>
-		</div>
-	</div>
 
-	<!-- GALLERY -->
-	<!-- <div class="galleryBackground"> -->
-	<div id="work" class="gallery full">
-		<div class="photos">
+		<!-- <div class="hero full py-md" /> -->
+
+		<!-- PROJECT INFO -->
+		<div class="projectInfo py-md">
 			<div>
-				<div class="project-image">
-					<ImageLoader src="https://picsum.photos/800/550" alt="dani" />
-				</div>
+				<p class="name">Goal</p>
+				<p class="body-text">
+					To provide the underbanked and unbanked community a service for reentering the banking
+					system through USPS. The service should be a stepping stone back into traditional banking,
+					not a replacement for it.
+				</p>
 			</div>
 			<div>
-				<div class="project-image">
-					<ImageLoader src="https://picsum.photos/800/550" alt="dani" />
-				</div>
-			</div>
-			<div>
-				<div class="project-image">
-					<ImageLoader src="https://picsum.photos/800/550" alt="dani" />
-				</div>
-			</div>
-			<div>
-				<div class="project-image">
-					<ImageLoader src="https://picsum.photos/800/550" alt="dani" />
-				</div>
-			</div>
-			<div>
-				<div class="project-image">
-					<ImageLoader src="https://picsum.photos/800/550" alt="dani" />
-				</div>
-			</div>
-			<div>
-				<div class="project-image">
-					<ImageLoader src="https://picsum.photos/800/550" alt="dani" />
-				</div>
+				<p class="name">What I Did</p>
+				<p class="body-text">
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+					been the industry's standard dummy text ever since the 1500s, when an unknown printer took
+					a galley of type and scrambled it to make a type specimen book.
+				</p>
 			</div>
 		</div>
-	</div>
-	<!-- </div> -->
 
-	<!-- RESEARCH -->
-	<div class="research full">
-		<div class="researchLeft">
-			<p class="name">Research</p>
-			<p class="label">Initial Research</p>
-			<p>
-				Underbanked: Someone who does not receive all the services available from a bank, be it from
-				location to hours, they are not receiving full benefits. They are people with bank accounts
-				that continue to use non-bank financial services such as moeny orders and bill payments.
-			</p>
-			<p>&nbsp;</p>
-			<p>Unbanked: A person who does not use banks or banking institutions in any way or form.</p>
+		<!-- GALLERY -->
+		<!-- <div class="galleryBackground"> -->
+		<div id="work" class="gallery full">
+			<div class="photos">
+				<div>
+					<div class="project-image">
+						<ImageLoader src="https://picsum.photos/800/550" alt="dani" />
+					</div>
+				</div>
+				<div>
+					<div class="project-image">
+						<ImageLoader src="https://picsum.photos/800/550" alt="dani" />
+					</div>
+				</div>
+				<div>
+					<div class="project-image">
+						<ImageLoader src="https://picsum.photos/800/550" alt="dani" />
+					</div>
+				</div>
+				<div>
+					<div class="project-image">
+						<ImageLoader src="https://picsum.photos/800/550" alt="dani" />
+					</div>
+				</div>
+				<div>
+					<div class="project-image">
+						<ImageLoader src="https://picsum.photos/800/550" alt="dani" />
+					</div>
+				</div>
+				<div>
+					<div class="project-image">
+						<ImageLoader src="https://picsum.photos/800/550" alt="dani" />
+					</div>
+				</div>
+			</div>
 		</div>
-		<div class="researchRight">
-			<p class="hugeNumber">~32%</p>
+		<!-- </div> -->
 
-			<p>of the US population is considered under/un banked</p>
+		<!-- RESEARCH -->
+		<div class="research full">
+			<div class="researchLeft">
+				<p class="name">Research</p>
+				<p class="label">Initial Research</p>
+				<p>
+					Underbanked: Someone who does not receive all the services available from a bank, be it
+					from location to hours, they are not receiving full benefits. They are people with bank
+					accounts that continue to use non-bank financial services such as moeny orders and bill
+					payments.
+				</p>
+				<p>&nbsp;</p>
+				<p>Unbanked: A person who does not use banks or banking institutions in any way or form.</p>
+			</div>
+			<div class="researchRight">
+				<p class="hugeNumber">~32%</p>
+
+				<p>of the US population is considered under/un banked</p>
+			</div>
 		</div>
-	</div>
 
-	<!-- EXPANDABLE SECTION -->
-	<Expandable
-		{handleClick}
-		state={showStatistics}
-		section={'statistics'}
-		text={'More statistics'}
-	/>
-	<!-- <div class="expandable">
+		<!-- EXPANDABLE SECTION -->
+		<Expandable
+			{handleClick}
+			state={showStatistics}
+			section={'statistics'}
+			text={'More statistics'}
+		/>
+		<!-- <div class="expandable">
 		<div class="expandableLeft">
 			<p>More statistics</p>
 			<div class="line" />
@@ -132,76 +147,76 @@
 		</div>
 	</div> -->
 
-	<!-- MORE STATISTICS -->
-	{#if showStatistics}
-		<div transition:slide|local class="moreStatistics" />
-	{/if}
+		<!-- MORE STATISTICS -->
+		{#if showStatistics}
+			<div transition:slide|local class="moreStatistics" />
+		{/if}
 
-	<!-- PAIN POINTS -->
-	<p class="label main py-md">Pain Points</p>
-	<div class="pain-top main">
-		<div class="painPoint">
-			<div class="point" />
-			<p>Label</p>
-		</div>
-		<div class="painPoint">
-			<div class="point" />
-			<p>Label</p>
-		</div>
-		<div class="painPoint">
-			<div class="point" />
-			<p>Label</p>
-		</div>
-		<div class="painPoint">
-			<div class="point" />
-			<p>Label</p>
-		</div>
-	</div>
-	<div class="pain-bottom">
-		<div class="painPoint">
-			<div class="point" />
-			<p>Label</p>
-		</div>
-		<div class="painPoint">
-			<div class="point" />
-			<p>Label</p>
-		</div>
-		<div class="painPoint">
-			<div class="point" />
-			<p>Label</p>
-		</div>
-	</div>
-
-	<!-- HOW IS USPS QUALIFIED TO SERVE -->
-	<div class="main py-md">
-		<p class="label main">How is USPS qualified to serve the un/under banked</p>
-		<div class="flex-row main space-between py-md">
-			<div class="flex-col">
-				<p>serves</p>
-				<p class="header">161.4 MM</p>
-				<p>addresses in the country</p>
+		<!-- PAIN POINTS -->
+		<p class="label main py-md">Pain Points</p>
+		<div class="pain-top main">
+			<div class="painPoint">
+				<div class="point" />
+				<p>Label</p>
 			</div>
-			<div class="flex-col">
-				<p>serves</p>
-				<p class="header">161.4 MM</p>
-				<p>addresses in the country</p>
+			<div class="painPoint">
+				<div class="point" />
+				<p>Label</p>
 			</div>
-			<div class="flex-col">
-				<p>serves</p>
-				<p class="header">161.4 MM</p>
-				<p>addresses in the country</p>
+			<div class="painPoint">
+				<div class="point" />
+				<p>Label</p>
+			</div>
+			<div class="painPoint">
+				<div class="point" />
+				<p>Label</p>
 			</div>
 		</div>
-	</div>
+		<div class="pain-bottom">
+			<div class="painPoint">
+				<div class="point" />
+				<p>Label</p>
+			</div>
+			<div class="painPoint">
+				<div class="point" />
+				<p>Label</p>
+			</div>
+			<div class="painPoint">
+				<div class="point" />
+				<p>Label</p>
+			</div>
+		</div>
 
-	<!-- EXPANDABLE SECTION -->
-	<Expandable
-		{handleClick}
-		state={showResearch}
-		section={'research'}
-		text={'More research and exploration'}
-	/>
-	<!-- <div class="expandable main py-md">
+		<!-- HOW IS USPS QUALIFIED TO SERVE -->
+		<div class="main py-md">
+			<p class="label main">How is USPS qualified to serve the un/under banked</p>
+			<div class="flex-row main space-between py-md">
+				<div class="flex-col">
+					<p>serves</p>
+					<p class="header">161.4 MM</p>
+					<p>addresses in the country</p>
+				</div>
+				<div class="flex-col">
+					<p>serves</p>
+					<p class="header">161.4 MM</p>
+					<p>addresses in the country</p>
+				</div>
+				<div class="flex-col">
+					<p>serves</p>
+					<p class="header">161.4 MM</p>
+					<p>addresses in the country</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- EXPANDABLE SECTION -->
+		<Expandable
+			{handleClick}
+			state={showResearch}
+			section={'research'}
+			text={'More research and exploration'}
+		/>
+		<!-- <div class="expandable main py-md">
 		<p>More research and exploration</p>
 		<div class="second flex-row">
 			<div class="line" />
@@ -215,97 +230,100 @@
 		</div>
 	</div> -->
 
-	<!-- MORE RESEARCH -->
-	{#if showResearch}
-		<div transition:slide|local class="moreResearch py-md">
-			<p class="researchText label py-sm">Competitive Audit</p>
-			<p class="researchText py-sm">There have been proposals to solve this issue.</p>
-			<div class="flex-row proposals py-sm">
-				<div class="proposal">
-					<p>{'Cryptocurrencies'.toUpperCase()}</p>
-					<p>are fully digital and easy to access, and location and income are not a barrier.</p>
-				</div>
-				<div class="proposal">
-					<p>{'“Outlet” bank branch offices'.toUpperCase()}</p>
-					<p>
-						are branches of participating banks that are conveniently located for lower-income
-						households.
-					</p>
-				</div>
-				<div class="proposal">
-					<p>{'Neobanks'.toUpperCase()}</p>
-					<p>
-						a type of direct bank that functions fully online, such as Chime, Current, and
-						Aspiration.
-					</p>
-				</div>
-			</div>
-			<p class="researchText">However,</p>
-			<p class="researchText">there are no active soluctions.</p>
-		</div>
-
-		<!-- UX RESEARCH METHODS -->
-		<div class="flex-row main ux-methods py-md flex-wrap">
-			<div class="image">
-				<ImageLoader alt="rectangle" src="https://picsum.photos/750/500" />
-			</div>
-			<div class="text">
-				<p class="label py-sm">UX RESEARCH METHOD 01: How Might We (HMW’s)</p>
-				<p>
-					My team and I created a Miro board where we could share our research findings and organize
-					them in such a way that we could easily compare and contrast between different questions
-					and problem spaces. We looked over our HMWs and reorganized our sticky notes into the
-					categories of information distribution, resources/education, security, utility services,
-					and tasks. From there, we sorted through them once again and created another table with
-					the most relevant and helpful questions. In this table, we listed possible answers to the
-					HMWs.
-				</p>
-			</div>
-		</div>
-		<div class="flex-row main ux-methods py-md flex-wrap">
-			<div class="text">
-				<p class="label py-sm">UX RESEARCH METHOD 02: Survey</p>
-				<p>
-					I created a quick survey that I shared on my Instagram for people to answer questions
-					about their experience with banking, their frustrations, and what they would be willing to
-					do to open a bank account if they found themselves on the bank's deny-list.
-				</p>
-				<p class="py-md">
-					Those who are denied standard bank accounts due to a rocky banking history were identified
-					as part of the unbanked community, and are the target audience.
-				</p>
-			</div>
-
-			<div class="complex">
-				<div class="imgs flex-row">
-					<div class="sq-img">
-						<ImageLoader alt="square" src="https://picsum.photos/600" />
+		<!-- MORE RESEARCH -->
+		{#if showResearch}
+			<div transition:slide|local class="moreResearch py-md">
+				<p class="researchText label py-sm">Competitive Audit</p>
+				<p class="researchText py-sm">There have been proposals to solve this issue.</p>
+				<div class="flex-row proposals py-sm">
+					<div class="proposal">
+						<p>{'Cryptocurrencies'.toUpperCase()}</p>
+						<p>are fully digital and easy to access, and location and income are not a barrier.</p>
 					</div>
-					<div class="sq-img">
-						<ImageLoader alt="square" src="https://picsum.photos/600" />
+					<div class="proposal">
+						<p>{'“Outlet” bank branch offices'.toUpperCase()}</p>
+						<p>
+							are branches of participating banks that are conveniently located for lower-income
+							households.
+						</p>
+					</div>
+					<div class="proposal">
+						<p>{'Neobanks'.toUpperCase()}</p>
+						<p>
+							a type of direct bank that functions fully online, such as Chime, Current, and
+							Aspiration.
+						</p>
 					</div>
 				</div>
-				<div class="img">
-					<ImageLoader alt="square" src="https://picsum.photos/800/300" />
+				<p class="researchText">However,</p>
+				<p class="researchText">there are no active soluctions.</p>
+			</div>
+
+			<!-- UX RESEARCH METHODS -->
+			<div class="flex-row main ux-methods py-md flex-wrap">
+				<div class="image">
+					<ImageLoader alt="rectangle" src="https://picsum.photos/750/500" />
+				</div>
+				<div class="text">
+					<p class="label py-sm">UX RESEARCH METHOD 01: How Might We (HMW’s)</p>
+					<p>
+						My team and I created a Miro board where we could share our research findings and
+						organize them in such a way that we could easily compare and contrast between different
+						questions and problem spaces. We looked over our HMWs and reorganized our sticky notes
+						into the categories of information distribution, resources/education, security, utility
+						services, and tasks. From there, we sorted through them once again and created another
+						table with the most relevant and helpful questions. In this table, we listed possible
+						answers to the HMWs.
+					</p>
 				</div>
 			</div>
-		</div>
+			<div class="flex-row main ux-methods py-md flex-wrap">
+				<div class="text">
+					<p class="label py-sm">UX RESEARCH METHOD 02: Survey</p>
+					<p>
+						I created a quick survey that I shared on my Instagram for people to answer questions
+						about their experience with banking, their frustrations, and what they would be willing
+						to do to open a bank account if they found themselves on the bank's deny-list.
+					</p>
+					<p class="py-md">
+						Those who are denied standard bank accounts due to a rocky banking history were
+						identified as part of the unbanked community, and are the target audience.
+					</p>
+				</div>
 
-		<div class="flex-row main ux-methods last flex-wrap">
-			<img alt="rectangle" src="https://picsum.photos/750/450" class="image" />
-			<div class="text">
-				<p class="label py-sm">UX RESEARCH METHOD 03/04: User Persona and Journey Map</p>
-				<p>
-					My target audience is deny-listed, bank users. People who have been kicked out of the
-					banking system are unable to open an account independent of where they go because their
-					history follows them. Not being able to bank pushes them further into “unbankedness” for
-					longer and makes it harder for them to get out.
-				</p>
+				<div class="complex">
+					<div class="imgs flex-row">
+						<div class="sq-img">
+							<ImageLoader alt="square" src="https://picsum.photos/600" />
+						</div>
+						<div class="sq-img">
+							<ImageLoader alt="square" src="https://picsum.photos/600" />
+						</div>
+					</div>
+					<div class="img">
+						<ImageLoader alt="square" src="https://picsum.photos/800/300" />
+					</div>
+				</div>
 			</div>
-			<div class="main placeholder">
-				<ImageLoader alt="placeholder" src="https://picsum.photos/1950/350" />
+
+			<div class="flex-row main ux-methods last flex-wrap">
+				<img alt="rectangle" src="https://picsum.photos/750/450" class="image" />
+				<div class="text">
+					<p class="label py-sm">UX RESEARCH METHOD 03/04: User Persona and Journey Map</p>
+					<p>
+						My target audience is deny-listed, bank users. People who have been kicked out of the
+						banking system are unable to open an account independent of where they go because their
+						history follows them. Not being able to bank pushes them further into “unbankedness” for
+						longer and makes it harder for them to get out.
+					</p>
+				</div>
+				<div class="main placeholder">
+					<ImageLoader alt="placeholder" src="https://picsum.photos/1950/350" />
+				</div>
 			</div>
-		</div>
+		{/if}
+	{:else}
+		<div style="min-height: 100vh" />
 	{/if}
 </div>
 
@@ -516,7 +534,8 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		background-color: gray;
+		/* background-color: gray; */
+		background-image: url('https://picsum.photos/1950/450');
 	}
 
 	.header {
