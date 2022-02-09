@@ -1,12 +1,21 @@
 <script>
 	export let project;
 
+	function rand(min, max) {
+		let randomNum = Math.random() * (max - min) + min;
+		return Math.round(randomNum);
+	}
+
 	import ImageLoader from './image/ImageLoader.svelte';
 </script>
 
 <a href={`/${project.toLowerCase()}`} class="project">
 	<div class="project-image">
-		<ImageLoader class="project-image" src="https://picsum.photos/800/550" alt="dani" />
+		<ImageLoader
+			class="project-image"
+			src={`https://picsum.photos/seed/${rand(0, 200)}/700/450`}
+			alt="dani"
+		/>
 	</div>
 	<p class="project-name">{project}</p>
 </a>
@@ -48,8 +57,4 @@
 		transform: translate(-50%, -50%);
 		z-index: 2;
 	}
-
-	/* .placeholder {
-		min-height: 100vh;
-	} */
 </style>

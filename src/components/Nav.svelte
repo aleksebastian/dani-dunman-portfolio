@@ -1,38 +1,31 @@
 <script>
 	import { onMount } from 'svelte';
 	import smoothscroll from 'smoothscroll-polyfill';
+	import { yOffSet } from '../store';
 
 	const id = 'work';
 	const yOffset = -70;
 	let element;
-	let yOffSet;
 
 	onMount(() => {
 		smoothscroll.polyfill();
 		element = document.getElementById(id);
-		yOffSet = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+		if (element) {
+			yOffSet.set(element.getBoundingClientRect().top + window.pageYOffset + yOffset);
+		}
 	});
 
 	const handleClick = () => {
-		// document.getElementById('work').scrollIntoView({ behavior: 'smooth', block: 'start' });
-		// document.getElementById('work').scrollTop -= 100;
-
-		// const id = 'work';
-		// const yOffset = -70;
-		// const element = document.getElementById(id);
-		// const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-		window.scrollTo({ top: yOffSet, behavior: 'smooth' });
+		setTimeout(() => {
+			window.scrollTo({ top: $yOffSet, behavior: 'smooth' });
+		}, 100);
 	};
 
 	let boxShadow = 'none';
-	let backgroundColor = 'white';
 	let y;
 	$: if (y > 1) {
-		// backgroundColor = '--background-color';
 		boxShadow = 'rgba(0, 0, 0, 0.08) 0px 1px 12px';
 	} else {
-		// backgroundColor = 'white';
 		boxShadow = 'none';
 	}
 </script>

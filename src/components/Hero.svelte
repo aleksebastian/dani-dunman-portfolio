@@ -7,7 +7,6 @@
 
 <style>
 	/* MOBILE PORTRAIT */
-
 	.header {
 		font-size: 1.8rem;
 		line-height: 1.3;
@@ -19,7 +18,6 @@
 	}
 
 	/* MOBILE LANDSCAPE */
-
 	@media (min-width: 640px) {
 		.hero {
 			margin-top: -1rem;

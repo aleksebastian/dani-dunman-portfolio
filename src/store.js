@@ -1,3 +1,4 @@
 import { writable } from 'svelte/store';
 
-export const galleryMounted = writable(false);
+export const currentPage = writable('');
+export const yOffSet = writable(0);

@@ -55,6 +55,5 @@
 		height: 32px;
 		transition: all 0.4s ease;
 		cursor: pointer;
-		/* transform: rotateZ(180deg); */
 	}
 </style>

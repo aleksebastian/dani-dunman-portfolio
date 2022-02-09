@@ -1,9 +1,9 @@
 <script>
 	import { slide, fade } from 'svelte/transition';
 	import MdArrowDownward from 'svelte-icons/md/MdArrowDownward.svelte';
+	import { currentPage } from '../store';
 
 	import ImageLoader from '../components/image/ImageLoader.svelte';
-
 	import Expandable from '../components/Expandable.svelte';
 
 	let percentage = 0;
@@ -25,12 +25,18 @@
 	const heroSrc = 'https://picsum.photos/1950/450';
 	let heroLoaded = false;
 	onMount(() => {
+		currentPage.set('usps');
 		const heroImg = new Image();
 		heroImg.src = heroSrc;
 		heroImg.onload = () => {
 			heroLoaded = true;
 		};
 	});
+
+	function rand(min, max) {
+		let randomNum = Math.random() * (max - min) + min;
+		return Math.round(randomNum);
+	}
 </script>
 
 <div class="grid">
@@ -69,32 +75,32 @@
 			<div class="photos">
 				<div>
 					<div class="project-image">
-						<ImageLoader src="https://picsum.photos/800/550" alt="dani" />
+						<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/800/550`} alt="dani" />
 					</div>
 				</div>
 				<div>
 					<div class="project-image">
-						<ImageLoader src="https://picsum.photos/800/550" alt="dani" />
+						<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/800/550`} alt="dani" />
 					</div>
 				</div>
 				<div>
 					<div class="project-image">
-						<ImageLoader src="https://picsum.photos/800/550" alt="dani" />
+						<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/800/550`} alt="dani" />
 					</div>
 				</div>
 				<div>
 					<div class="project-image">
-						<ImageLoader src="https://picsum.photos/800/550" alt="dani" />
+						<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/800/550`} alt="dani" />
 					</div>
 				</div>
 				<div>
 					<div class="project-image">
-						<ImageLoader src="https://picsum.photos/800/550" alt="dani" />
+						<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/800/550`} alt="dani" />
 					</div>
 				</div>
 				<div>
 					<div class="project-image">
-						<ImageLoader src="https://picsum.photos/800/550" alt="dani" />
+						<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/800/550`} alt="dani" />
 					</div>
 				</div>
 			</div>
@@ -129,23 +135,6 @@
 			section={'statistics'}
 			text={'More statistics'}
 		/>
-		<!-- <div class="expandable">
-		<div class="expandableLeft">
-			<p>More statistics</p>
-			<div class="line" />
-			<p>&nbsp;</p>
-		</div>
-		<div class="expandableRight">
-			<div class="line" />
-			<div
-				class="icon"
-				style="transform: {showMoreStatistics ? 'rotateZ(0)' : 'rotateZ(180deg)'}"
-				on:click={() => handleClick('statistics')}
-			>
-				<MdArrowDownward />
-			</div>
-		</div>
-	</div> -->
 
 		<!-- MORE STATISTICS -->
 		{#if showStatistics}
@@ -216,19 +205,6 @@
 			section={'research'}
 			text={'More research and exploration'}
 		/>
-		<!-- <div class="expandable main py-md">
-		<p>More research and exploration</p>
-		<div class="second flex-row">
-			<div class="line" />
-			<div
-				class="icon"
-				style="transform: {showResearch ? 'rotateZ(0)' : 'rotateZ(180deg)'}"
-				on:click={() => handleClick('research')}
-			>
-				<MdArrowDownward />
-			</div>
-		</div>
-	</div> -->
 
 		<!-- MORE RESEARCH -->
 		{#if showResearch}
@@ -262,7 +238,7 @@
 			<!-- UX RESEARCH METHODS -->
 			<div class="flex-row main ux-methods py-md flex-wrap">
 				<div class="image">
-					<ImageLoader alt="rectangle" src="https://picsum.photos/750/500" />
+					<ImageLoader alt="rectangle" src={'https://picsum.photos/750/500'} />
 				</div>
 				<div class="text">
 					<p class="label py-sm">UX RESEARCH METHOD 01: How Might We (HMW’s)</p>
@@ -294,10 +270,10 @@
 				<div class="complex">
 					<div class="imgs flex-row">
 						<div class="sq-img">
-							<ImageLoader alt="square" src="https://picsum.photos/600" />
+							<ImageLoader alt="square" src={`https://picsum.photos/600`} />
 						</div>
 						<div class="sq-img">
-							<ImageLoader alt="square" src="https://picsum.photos/600" />
+							<ImageLoader alt="square" src={`https://picsum.photos/600`} />
 						</div>
 					</div>
 					<div class="img">

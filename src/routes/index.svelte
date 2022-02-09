@@ -3,6 +3,11 @@
 	import Hero from '../components/Hero.svelte';
 	import Gallery from '../components/Gallery.svelte';
 	import Footer from '../components/Footer.svelte';
+
+	import { onMount } from 'svelte';
+	import { currentPage } from '../store';
+
+	onMount(() => currentPage.set('index'));
 </script>
 
 <section class="content">
