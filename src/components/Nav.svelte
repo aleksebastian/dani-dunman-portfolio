@@ -36,7 +36,7 @@
 	<a href="/">Daniela Dunman</a>
 	<div class="nav-links">
 		<a href="/" on:click={handleClick}>Work</a>
-		<a href="/">About</a>
+		<a href="/about">About</a>
 	</div>
 </nav>
 
@@ -49,15 +49,15 @@
 		padding: 0 3rem;
 		font-size: 1.2rem;
 		overflow: hidden;
-		background-color: rgba(255, 255, 255, 0.97);
-		position: fixed; /* Set the navbar to fixed position */
-		top: 0; /* Position the navbar at the top of the page */
-		width: 100%; /* Full width */
+		background-color: rgba(255, 255, 255, 0.95);
+		position: fixed;
+		top: 0;
+		width: 100%;
 		z-index: 10;
 		transition-property: all;
 		transition-duration: 250ms;
-		backdrop-filter: blur(6px);
-		-webkit-backdrop-filter: blur(6px);
+		backdrop-filter: blur(8px);
+		-webkit-backdrop-filter: blur(8px);
 	}
 
 	.nav-links {

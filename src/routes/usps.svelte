@@ -1,6 +1,5 @@
 <script>
 	import { slide, fade } from 'svelte/transition';
-	import MdArrowDownward from 'svelte-icons/md/MdArrowDownward.svelte';
 	import { currentPage } from '../store';
 
 	import ImageLoader from '../components/image/ImageLoader.svelte';
@@ -9,6 +8,7 @@
 	let percentage = 0;
 	$: showStatistics = false;
 	$: showResearch = false;
+	$: showAbout = false;
 
 	const handleClick = (section) => {
 		if (section === 'statistics') {
@@ -18,6 +18,9 @@
 		if (section === 'research') {
 			showResearch = !showResearch;
 			return;
+		}
+		if (section === 'about') {
+			showAbout = !showAbout;
 		}
 	};
 
@@ -301,11 +304,119 @@
 	{:else}
 		<div style="min-height: 100vh" />
 	{/if}
+
+	<!-- SUMMARY OF RESEARCH -->
+	<div class="main py-md">
+		<!-- <div class="this flex-row"> -->
+		<div class="py-md">
+			<p class="label">Summary of Research</p>
+			<p>
+				There are plenty of apps/services that help people try to budget, but there aren’t any
+				educational services that help people understand the why and the how of banking.︎
+			</p>
+		</div>
+		<div class="py-md">
+			<p class="label">Hypothesis</p>
+			<p>
+				If I make an application that will educate people on personal finances, they will be less
+				likely to fall back into being un/underbanked.
+			</p>
+		</div>
+		<div class="py-md">
+			<p class="label">Conclusion/Opportunity Statement</p>
+			<p>
+				We will provide convenient banking services for the people who are deny-listed from the
+				banking system so they can easily establish financial security through the USPS Banking
+				services by building trust and knowledge about personal finances.
+			</p>
+		</div>
+		<!-- </div> -->
+	</div>
+
+	<!-- SOLUTION -->
+	<div class="full grid bg-grey">
+		<div class="main">
+			<p class="label bold py-sm">Solution</p>
+			<p class="py-sm">USPS Second Chance Account</p>
+			<p class="py-sm">
+				The SmartBanking Account (USPS Second Chance Account) will give the client a second chance
+				at banking, along with knowledge about finances that will help speed up their financial
+				literacy and put them back on their feet faster and more effectively.
+			</p>
+			<p class="py-sm">
+				A second chance bank account gives customers with troubled records a fresh opportunity to
+				demonstrate they can bank responsibly. If your banking history is less than perfect, past
+				overdraft fees and other negative information could hinder your ability to get a traditional
+				checking account. A second chance checking account can give you access to payment tools like
+				checks and debit cards. And it can help you build a better banking history.
+			</p>
+		</div>
+	</div>
+
+	<Expandable {handleClick} state={showAbout} section={'about'} text={'More About SmartBanking'} />
+	{#if showAbout}
+		<div transition:slide|local class="main py-md">
+			<p class="py-sm">The Who:</p>
+			<p>
+				Those who are denied standard bank accounts due to a rocky (poor) banking history. (Bank
+				history reports track how you have handled savings and checking accounts in the past. These
+				show if you have overdrawn accounts, fees that you did not pay, or have been suspected of
+				fraud.)
+			</p>
+			<p class="py-sm">The problem we are solving:</p>
+			<p>
+				People who are on the ChexSystems cant open bank accounts except for second chance accounts.
+				These can be found in various places, but they only provide a second opportunity to either
+				fail again or try to grow a little bit. There are no
+			</p>
+		</div>
+	{/if}
+
+	<p class="main label">Final Deliverable</p>
+	<div class="main flex-row py-md">
+		<div class="del">I am Deliverable</div>
+		<div class="del">
+			<p class="label">Suggested Walk-through</p>
+			<ul>
+				<li>Go to the Sign-In page</li>
+				<li>Type in your user and password, and sign in</li>
+				<li>Toggle between your in progress and saved courses</li>
+				<li>Toggle between your achived and current goals</li>
+				<li>Toggle between your inprogress and achived challenges</li>
+				<li>Pick up where you left off on your most recent course</li>
+				<li>Check what part of the lesson you are currently on</li>
+				<li>Go back to the Dashboard</li>
+			</ul>
+		</div>
+	</div>
 </div>
 
 <style>
 	* {
 		font-size: var(--body-size);
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		padding: 0.9rem 0;
+	}
+
+	.del {
+		flex-basis: calc(50% - 0.5rem);
+		max-width: calc(50% - 0.5rem);
+	}
+
+	.bold {
+		font-weight: 500;
+	}
+
+	.bg-grey {
+		background-color: var(--background-color);
 	}
 
 	.ux-methods {

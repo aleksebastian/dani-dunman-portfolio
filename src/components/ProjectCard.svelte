@@ -11,19 +11,34 @@
 
 <a href={`/${project.toLowerCase()}`} class="project">
 	<div class="project-image">
-		<ImageLoader
-			class="project-image"
-			src={`https://picsum.photos/seed/${rand(0, 200)}/700/450`}
-			alt="dani"
-		/>
+		<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/700/450`} alt="dani" />
 	</div>
 	<p class="project-name">{project}</p>
 </a>
 
 <style>
+	/* screens: {
+			MOBILE LANDSCAPE
+      'sm': '640px',
+      // => @media (min-width: 640px) { ... }
+			TABLET PORTRAIT
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+			TABLET LANDSCAPE
+      'lg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+			MACBOOK
+      'xl': '1280px',
+      // => @media (min-width: 1280px) { ... }
+			MONITOR
+      '2xl': '1536px',
+      // => @media (min-width: 1536px) { ... }
+    } */
+
 	.project {
 		position: relative;
 		width: 100%;
+		height: auto;
 		color: white;
 		cursor: pointer;
 		z-index: 1;
@@ -50,11 +65,22 @@
 	}
 
 	.project-name {
-		font-size: var(--callout-size);
+		font-size: var(--label-size);
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		z-index: 2;
+	}
+
+	@media (min-width: 768px) {
+		.project-name {
+			font-size: var(--callout-size);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 2;
+		}
 	}
 </style>
