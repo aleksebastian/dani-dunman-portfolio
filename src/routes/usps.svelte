@@ -212,7 +212,7 @@
 		/>
 
 		<!-- MORE RESEARCH -->
-		{#if !showResearch}
+		{#if showResearch}
 			<div transition:slide|local class="moreResearch py-md">
 				<p class="researchText label pb-sm">Competitive Audit</p>
 				<p class="researchText py-sm">There have been proposals to solve this issue.</p>
