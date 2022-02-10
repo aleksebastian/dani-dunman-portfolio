@@ -46,7 +46,7 @@
 	<!-- HERO -->
 	{#if heroLoaded}
 		<div in:fade class="hero full py-md">
-			<p class="header">USPS SmartBanking</p>
+			<p class="project-name">USPS SmartBanking</p>
 			<p class="subheader">UX/Research</p>
 		</div>
 
@@ -55,7 +55,7 @@
 		<!-- PROJECT INFO -->
 		<div class="projectInfo py-md">
 			<div>
-				<p class="name">Goal</p>
+				<p class="label bold">Goal</p>
 				<p class="body-text">
 					To provide the underbanked and unbanked community a service for reentering the banking
 					system through USPS. The service should be a stepping stone back into traditional banking,
@@ -63,7 +63,7 @@
 				</p>
 			</div>
 			<div>
-				<p class="name">What I Did</p>
+				<p class="label bold">What I Did</p>
 				<p class="body-text">
 					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
 					been the industry's standard dummy text ever since the 1500s, when an unknown printer took
@@ -113,7 +113,7 @@
 		<!-- RESEARCH -->
 		<div class="research full">
 			<div class="researchLeft">
-				<p class="name">Research</p>
+				<p class="label bold">Research</p>
 				<p class="label">Initial Research</p>
 				<p>
 					Underbanked: Someone who does not receive all the services available from a bank, be it
@@ -125,7 +125,7 @@
 				<p>Unbanked: A person who does not use banks or banking institutions in any way or form.</p>
 			</div>
 			<div class="researchRight">
-				<p class="hugeNumber">~32%</p>
+				<p class="callout-lg">~32%</p>
 
 				<p>of the US population is considered under/un banked</p>
 			</div>
@@ -145,55 +145,57 @@
 		{/if}
 
 		<!-- PAIN POINTS -->
-		<p class="label main py-md">Pain Points</p>
-		<div class="pain-top main">
-			<div class="painPoint">
-				<div class="point" />
-				<p>Label</p>
+		<div class="main grid py-md">
+			<p class="label full">Pain Points</p>
+			<div class="pain-top main">
+				<div class="painPoint">
+					<div class="point" />
+					<p>Label</p>
+				</div>
+				<div class="painPoint">
+					<div class="point" />
+					<p>Label</p>
+				</div>
+				<div class="painPoint">
+					<div class="point" />
+					<p>Label</p>
+				</div>
+				<div class="painPoint">
+					<div class="point" />
+					<p>Label</p>
+				</div>
 			</div>
-			<div class="painPoint">
-				<div class="point" />
-				<p>Label</p>
-			</div>
-			<div class="painPoint">
-				<div class="point" />
-				<p>Label</p>
-			</div>
-			<div class="painPoint">
-				<div class="point" />
-				<p>Label</p>
-			</div>
-		</div>
-		<div class="pain-bottom">
-			<div class="painPoint">
-				<div class="point" />
-				<p>Label</p>
-			</div>
-			<div class="painPoint">
-				<div class="point" />
-				<p>Label</p>
-			</div>
-			<div class="painPoint">
-				<div class="point" />
-				<p>Label</p>
+			<div class="pain-bottom">
+				<div class="painPoint">
+					<div class="point" />
+					<p>Label</p>
+				</div>
+				<div class="painPoint">
+					<div class="point" />
+					<p>Label</p>
+				</div>
+				<div class="painPoint">
+					<div class="point" />
+					<p>Label</p>
+				</div>
 			</div>
 		</div>
 
 		<!-- HOW IS USPS QUALIFIED TO SERVE -->
 		<div class="main py-md">
 			<p class="label main">How is USPS qualified to serve the un/under banked</p>
-			<div class="flex-row main space-between py-md">
-				<div class="flex-col">
+			<div class="flex-row main space-between">
+				<div class="flex-col pt-sm">
 					<p>serves</p>
 					<p class="header">161.4 MM</p>
 					<p>addresses in the country</p>
 				</div>
-				<div class="flex-col">
+				<div class="flex-col  pt-sm">
 					<p>serves</p>
 					<p class="header">161.4 MM</p>
 					<p>addresses in the country</p>
 				</div>
-				<div class="flex-col">
+				<div class="flex-col  pt-sm">
 					<p>serves</p>
 					<p class="header">161.4 MM</p>
 					<p>addresses in the country</p>
@@ -210,9 +212,9 @@
 		/>
 
 		<!-- MORE RESEARCH -->
-		{#if showResearch}
+		{#if !showResearch}
 			<div transition:slide|local class="moreResearch py-md">
-				<p class="researchText label py-sm">Competitive Audit</p>
+				<p class="researchText label pb-sm">Competitive Audit</p>
 				<p class="researchText py-sm">There have been proposals to solve this issue.</p>
 				<div class="flex-row proposals py-sm">
 					<div class="proposal">
@@ -241,7 +243,7 @@
 			<!-- UX RESEARCH METHODS -->
 			<div class="flex-row main ux-methods py-md flex-wrap">
 				<div class="image">
-					<ImageLoader alt="rectangle" src={'https://picsum.photos/750/500'} />
+					<ImageLoader alt="rectangle" src={'https://picsum.photos/800/500'} />
 				</div>
 				<div class="text">
 					<p class="label py-sm">UX RESEARCH METHOD 01: How Might We (HMW’s)</p>
@@ -301,99 +303,124 @@
 				</div>
 			</div>
 		{/if}
+
+		<!-- SUMMARY OF RESEARCH -->
+		<div class="main py-md">
+			<!-- <div class="this flex-row"> -->
+			<div class="pb-sm">
+				<p class="label">Summary of Research</p>
+				<p>
+					There are plenty of apps/services that help people try to budget, but there aren’t any
+					educational services that help people understand the why and the how of banking.︎
+				</p>
+			</div>
+			<div class="py-sm">
+				<p class="label">Hypothesis</p>
+				<p>
+					If I make an application that will educate people on personal finances, they will be less
+					likely to fall back into being un/underbanked.
+				</p>
+			</div>
+			<div class="py-sm">
+				<p class="label">Conclusion/Opportunity Statement</p>
+				<p>
+					We will provide convenient banking services for the people who are deny-listed from the
+					banking system so they can easily establish financial security through the USPS Banking
+					services by building trust and knowledge about personal finances.
+				</p>
+			</div>
+			<!-- </div> -->
+		</div>
+
+		<!-- SOLUTION -->
+		<div class="full grid bg-grey">
+			<div class="main">
+				<p class="label bold py-sm">Solution</p>
+				<p class="py-sm">USPS Second Chance Account</p>
+				<p class="py-sm">
+					The SmartBanking Account (USPS Second Chance Account) will give the client a second chance
+					at banking, along with knowledge about finances that will help speed up their financial
+					literacy and put them back on their feet faster and more effectively.
+				</p>
+				<p class="py-sm">
+					A second chance bank account gives customers with troubled records a fresh opportunity to
+					demonstrate they can bank responsibly. If your banking history is less than perfect, past
+					overdraft fees and other negative information could hinder your ability to get a
+					traditional checking account. A second chance checking account can give you access to
+					payment tools like checks and debit cards. And it can help you build a better banking
+					history.
+				</p>
+			</div>
+			<Expandable
+				{handleClick}
+				state={showAbout}
+				section={'about'}
+				text={'More About SmartBanking'}
+			/>
+			{#if showAbout}
+				<div transition:slide|local class="main py-md">
+					<p class="py-sm">The Who:</p>
+					<p>
+						Those who are denied standard bank accounts due to a rocky (poor) banking history. (Bank
+						history reports track how you have handled savings and checking accounts in the past.
+						These show if you have overdrawn accounts, fees that you did not pay, or have been
+						suspected of fraud.)
+					</p>
+					<p class="py-sm">The problem we are solving:</p>
+					<p>
+						People who are on the ChexSystems cant open bank accounts except for second chance
+						accounts. These can be found in various places, but they only provide a second
+						opportunity to either fail again or try to grow a little bit. There are no
+					</p>
+				</div>
+			{/if}
+		</div>
+
+		<p class="main label">Final Deliverable</p>
+		<div class="main flex-row py-md">
+			<div class="del">I am Deliverable</div>
+			<div class="del">
+				<p class="label">Suggested Walk-through</p>
+				<ul>
+					<li>Go to the Sign-In page</li>
+					<li>Type in your user and password, and sign in</li>
+					<li>Toggle between your in progress and saved courses</li>
+					<li>Toggle between your achived and current goals</li>
+					<li>Toggle between your inprogress and achived challenges</li>
+					<li>Pick up where you left off on your most recent course</li>
+					<li>Check what part of the lesson you are currently on</li>
+					<li>Go back to the Dashboard</li>
+				</ul>
+			</div>
+		</div>
 	{:else}
 		<div style="min-height: 100vh" />
 	{/if}
-
-	<!-- SUMMARY OF RESEARCH -->
-	<div class="main py-md">
-		<!-- <div class="this flex-row"> -->
-		<div class="py-md">
-			<p class="label">Summary of Research</p>
-			<p>
-				There are plenty of apps/services that help people try to budget, but there aren’t any
-				educational services that help people understand the why and the how of banking.︎
-			</p>
-		</div>
-		<div class="py-md">
-			<p class="label">Hypothesis</p>
-			<p>
-				If I make an application that will educate people on personal finances, they will be less
-				likely to fall back into being un/underbanked.
-			</p>
-		</div>
-		<div class="py-md">
-			<p class="label">Conclusion/Opportunity Statement</p>
-			<p>
-				We will provide convenient banking services for the people who are deny-listed from the
-				banking system so they can easily establish financial security through the USPS Banking
-				services by building trust and knowledge about personal finances.
-			</p>
-		</div>
-		<!-- </div> -->
-	</div>
-
-	<!-- SOLUTION -->
-	<div class="full grid bg-grey">
-		<div class="main">
-			<p class="label bold py-sm">Solution</p>
-			<p class="py-sm">USPS Second Chance Account</p>
-			<p class="py-sm">
-				The SmartBanking Account (USPS Second Chance Account) will give the client a second chance
-				at banking, along with knowledge about finances that will help speed up their financial
-				literacy and put them back on their feet faster and more effectively.
-			</p>
-			<p class="py-sm">
-				A second chance bank account gives customers with troubled records a fresh opportunity to
-				demonstrate they can bank responsibly. If your banking history is less than perfect, past
-				overdraft fees and other negative information could hinder your ability to get a traditional
-				checking account. A second chance checking account can give you access to payment tools like
-				checks and debit cards. And it can help you build a better banking history.
-			</p>
-		</div>
-	</div>
-
-	<Expandable {handleClick} state={showAbout} section={'about'} text={'More About SmartBanking'} />
-	{#if showAbout}
-		<div transition:slide|local class="main py-md">
-			<p class="py-sm">The Who:</p>
-			<p>
-				Those who are denied standard bank accounts due to a rocky (poor) banking history. (Bank
-				history reports track how you have handled savings and checking accounts in the past. These
-				show if you have overdrawn accounts, fees that you did not pay, or have been suspected of
-				fraud.)
-			</p>
-			<p class="py-sm">The problem we are solving:</p>
-			<p>
-				People who are on the ChexSystems cant open bank accounts except for second chance accounts.
-				These can be found in various places, but they only provide a second opportunity to either
-				fail again or try to grow a little bit. There are no
-			</p>
-		</div>
-	{/if}
-
-	<p class="main label">Final Deliverable</p>
-	<div class="main flex-row py-md">
-		<div class="del">I am Deliverable</div>
-		<div class="del">
-			<p class="label">Suggested Walk-through</p>
-			<ul>
-				<li>Go to the Sign-In page</li>
-				<li>Type in your user and password, and sign in</li>
-				<li>Toggle between your in progress and saved courses</li>
-				<li>Toggle between your achived and current goals</li>
-				<li>Toggle between your inprogress and achived challenges</li>
-				<li>Pick up where you left off on your most recent course</li>
-				<li>Check what part of the lesson you are currently on</li>
-				<li>Go back to the Dashboard</li>
-			</ul>
-		</div>
-	</div>
 </div>
 
 <style>
 	* {
 		font-size: var(--body-size);
+	}
+
+	.pt-sm {
+		padding-top: 1rem;
+	}
+
+	.pt-md {
+		padding-top: 2rem;
+	}
+
+	.pb-sm {
+		padding-bottom: 1rem;
+	}
+
+	.callout {
+		font-size: var(--callout-size);
+	}
+
+	.callout-lg {
+		font-size: var(--callout-size-lg);
 	}
 
 	ul {
@@ -451,13 +478,6 @@
 
 	.imgs {
 		gap: 1rem;
-	}
-
-	.sq-img {
-		/* flex-basis: 20%; */
-		/* flex-basis: calc(50% - 0.5rem);
-		min-width: calc(50% - 0.5rem) !important;
-		height: auto; */
 	}
 
 	.img {
@@ -573,42 +593,6 @@
 		background-color: grey;
 	}
 
-	.icon {
-		margin-bottom: 0.1rem;
-		width: 40px;
-		height: 32px;
-		transition: all 0.4s ease;
-		cursor: pointer;
-		/* transform: rotateZ(180deg); */
-	}
-
-	.expandable {
-		/* grid-column: 1 / -1; */
-		display: grid;
-		grid-template-columns: subgrid;
-	}
-
-	.expandableLeft {
-		/* grid-column: 1 / 2; */
-	}
-
-	.second {
-		align-items: center;
-	}
-
-	.expandableRight {
-		display: flex;
-		align-items: center;
-		align-self: center;
-		grid-column: 1 / 2;
-	}
-
-	.line {
-		width: 100%;
-		border-bottom: 1px solid black;
-		text-align: center;
-	}
-
 	.grid {
 		display: grid;
 		grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -621,11 +605,10 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		/* background-color: gray; */
 		background-image: url('https://picsum.photos/1950/450');
 	}
 
-	.header {
+	.project-name {
 		font-size: var(--header-size);
 		font-weight: 500;
 	}
@@ -685,5 +668,11 @@
 
 	.researchRight p {
 		text-align: center;
+	}
+
+	@media (min-width: 1536px) {
+		.text {
+			grid-column: 1 / -1;
+		}
 	}
 </style>

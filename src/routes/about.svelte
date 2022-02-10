@@ -49,10 +49,6 @@
 </div>
 
 <style>
-	* {
-		/* font-size: var(--body-size); */
-	}
-
 	.email {
 		color: black;
 	}

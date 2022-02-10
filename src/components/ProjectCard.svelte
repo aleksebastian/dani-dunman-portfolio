@@ -42,6 +42,8 @@
 		color: white;
 		cursor: pointer;
 		z-index: 1;
+		display: flex;
+		justify-content: center;
 	}
 
 	.project::after {
@@ -76,11 +78,15 @@
 	@media (min-width: 768px) {
 		.project-name {
 			font-size: var(--callout-size);
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			z-index: 2;
+		}
+		.project {
+			max-width: 100%;
+		}
+	}
+
+	@media (min-width: 1536px) {
+		.project {
+			max-width: 80%;
 		}
 	}
 </style>

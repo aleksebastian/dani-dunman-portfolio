@@ -22,6 +22,9 @@
 </div>
 
 <style>
+	p {
+		font-size: var(--expand-label);
+	}
 	.expandable {
 		display: grid;
 		grid-template-columns: subgrid;
@@ -46,7 +49,7 @@
 	}
 
 	.py-md {
-		padding: 3rem 0;
+		padding: 0;
 	}
 
 	.icon {

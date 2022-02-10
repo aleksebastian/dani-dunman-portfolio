@@ -14,7 +14,8 @@
 	.gallery {
 		display: grid;
 		grid-gap: 3rem;
-		grid-template-columns: repeat(1, minmax(0, 1fr));
+		/* grid-template-columns: repeat(1, minmax(0, 1fr)); */
+		place-items: center;
 		padding: 3rem 0;
 		min-height: 100vh;
 	}
