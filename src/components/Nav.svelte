@@ -115,18 +115,15 @@
 		align-items: center;
 		width: 100vw;
 		height: 100vh;
-		margin: 0 0 0 -83vw;
+		margin: 1rem 0 0 -83vw;
 		padding: 50px;
 		padding-top: 125px;
-		/* background: white; */
 		list-style-type: none;
 		-webkit-font-smoothing: antialiased;
 		transform-origin: 0% 0%;
 		transform: translate(100%, 0);
 		transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 		background-color: rgba(255, 255, 255, 0.9);
-		/* backdrop-filter: blur(8px);
-		-webkit-backdrop-filter: blur(8px); */
 	}
 
 	#menu li {
@@ -199,8 +196,8 @@
 		display: block;
 		position: relative;
 		z-index: 1;
-		width: 33px;
-		height: 4px;
+		width: 32px;
+		height: 3px;
 		margin-bottom: 5px;
 		background: #d3a615;
 		border-radius: 1px;
@@ -223,7 +220,7 @@
 
 	.ham input:checked ~ span {
 		opacity: 1;
-		transform: rotate(45deg) translate(-2px, -1px);
+		transform: rotate(45deg) translate(-2px, 0px);
 		background: #d3a615;
 	}
 
@@ -233,7 +230,7 @@
 	}
 
 	.ham input:checked ~ span:nth-last-child(2) {
-		transform: rotate(-45deg) translate(0, -1px);
+		transform: rotate(-45deg) translate(-2px, 0px);
 	}
 
 	a {
