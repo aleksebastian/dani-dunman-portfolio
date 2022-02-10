@@ -1,13 +1,14 @@
 <script>
 	import { onMount } from 'svelte';
 	import smoothscroll from 'smoothscroll-polyfill';
-	import { yOffSet } from '../store';
+	import { yOffSet, isMobileNavOpen } from '../store';
 
 	import FaEnvelopeSquare from 'svelte-icons/fa/FaEnvelopeSquare.svelte';
 
 	const id = 'work';
 	const yOffset = -70;
 	let element;
+	let win;
 
 	onMount(() => {
 		smoothscroll.polyfill();
@@ -15,6 +16,8 @@
 		if (element) {
 			yOffSet.set(element.getBoundingClientRect().top + window.pageYOffset + yOffset);
 		}
+		win = document.body;
+		console.log(win);
 	});
 
 	const handleClick = () => {
@@ -31,7 +34,19 @@
 		boxShadow = 'none';
 	}
 
-	$: isMobileNavOpen = true;
+	$: isMobileNavOpenLocal = false;
+	$: isMobileNavOpenLocal, toggleMobileNav();
+
+	const toggleMobileNav = () => {
+		isMobileNavOpen.set(isMobileNavOpenLocal);
+		if (win) {
+			if (!isMobileNavOpenLocal) {
+				win.style.overflow = null;
+			} else {
+				win.style.overflow = 'hidden';
+			}
+		}
+	};
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -40,11 +55,11 @@
 	<a href="/">Daniela Dunman</a>
 	<!-- MOBILE NAV -->
 	<div class="ham">
-		<input type="checkbox" bind:checked={isMobileNavOpen} />
+		<input type="checkbox" bind:checked={isMobileNavOpenLocal} />
 		<span />
 		<span />
 		<span />
-		<ul id="menu" style="transform: {!isMobileNavOpen ? 'translate(100%, 0)' : 'none'}">
+		<ul id="menu" style="transform: {!isMobileNavOpenLocal ? 'translate(100%, 0)' : 'none'}">
 			<li>
 				<a href="/">Projects</a>
 			</li>
@@ -103,13 +118,15 @@
 		margin: 0 0 0 -83vw;
 		padding: 50px;
 		padding-top: 125px;
-		background: white;
+		/* background: white; */
 		list-style-type: none;
 		-webkit-font-smoothing: antialiased;
 		transform-origin: 0% 0%;
-		/* transform: translate(100%, 0); */
+		transform: translate(100%, 0);
 		transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-		background-color: rgba(255, 255, 255, 0.95);
+		background-color: rgba(255, 255, 255, 0.9);
+		/* backdrop-filter: blur(8px);
+		-webkit-backdrop-filter: blur(8px); */
 	}
 
 	#menu li {
@@ -160,7 +177,7 @@
 	.ham {
 		display: block;
 		position: relative;
-		z-index: 1;
+		z-index: 1000;
 		-webkit-user-select: none;
 		user-select: none;
 	}
