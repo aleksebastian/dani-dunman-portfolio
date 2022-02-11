@@ -1,9 +1,14 @@
 <script>
 	import Nav from '../components/Nav.svelte';
 	import Footer from '../components/Footer.svelte';
+	import { fade } from 'svelte/transition';
+	import { isMobileNavOpen } from '../store';
 </script>
 
 <Nav />
+{#if $isMobileNavOpen}
+	<div in:fade={{ delay: 100 }} out:fade class="glass" />
+{/if}
 <section class="content">
 	<slot />
 </section>
@@ -26,5 +31,16 @@
 
 	.content {
 		margin-top: 4rem;
+	}
+
+	.glass {
+		position: fixed;
+		height: 100vh;
+		width: 100vw;
+		z-index: 2;
+		background-color: rgba(255, 255, 255, 0.1);
+		backdrop-filter: blur(8px);
+		-webkit-backdrop-filter: blur(8px);
+		/* display: none; */
 	}
 </style>

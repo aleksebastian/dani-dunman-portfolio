@@ -1,11 +1,14 @@
 <script>
 	import { onMount } from 'svelte';
 	import smoothscroll from 'smoothscroll-polyfill';
-	import { yOffSet } from '../store';
+	import { yOffSet, isMobileNavOpen } from '../store';
+
+	import FaEnvelopeSquare from 'svelte-icons/fa/FaEnvelopeSquare.svelte';
 
 	const id = 'work';
 	const yOffset = -70;
 	let element;
+	let win;
 
 	onMount(() => {
 		smoothscroll.polyfill();
@@ -13,6 +16,7 @@
 		if (element) {
 			yOffSet.set(element.getBoundingClientRect().top + window.pageYOffset + yOffset);
 		}
+		win = document.body;
 	});
 
 	const handleClick = () => {
@@ -28,12 +32,64 @@
 	} else {
 		boxShadow = 'none';
 	}
+
+	$: isMobileNavOpenLocal = false;
+	$: isMobileNavOpenLocal, toggleMobileNav();
+
+	const toggleMobileNav = () => {
+		isMobileNavOpen.set(isMobileNavOpenLocal);
+		if (win) {
+			if (!isMobileNavOpenLocal) {
+				win.style.overflow = null;
+			} else {
+				win.style.overflow = 'hidden';
+			}
+		}
+	};
 </script>
 
 <svelte:window bind:scrollY={y} />
 
-<nav class="nav" style={`box-shadow: ${boxShadow}`}>
-	<a href="/">Daniela Dunman</a>
+<nav class="nav" style="box-shadow: {boxShadow}">
+	<a style="opacity: {isMobileNavOpenLocal ? '0' : '1'}" href="/">Daniela Dunman</a>
+	<!-- MOBILE NAV -->
+	<div class="ham">
+		<input type="checkbox" bind:checked={isMobileNavOpenLocal} />
+		<span />
+		<span />
+		<span />
+		<ul id="menu" style="transform: {!isMobileNavOpenLocal ? 'translate(100%, 0)' : 'none'}">
+			<div class="actions">
+				<li>
+					<a href="/resume"> Home </a>
+				</li>
+				<li>
+					<a href="/resume"> About </a>
+				</li>
+			</div>
+			<div class="projects">
+				<li>
+					<a href="/">USPS SmartBanking</a>
+				</li>
+				<li>
+					<a href="/resume"> BlueDoor </a>
+				</li>
+				<li>
+					<a href="/contact"> Radio Museum Exhibit </a>
+				</li>
+				<li>
+					<a href="/contact"> Works in Intaglio </a>
+				</li>
+				<li>
+					<a href="/contact"> Language Exchange </a>
+				</li>
+				<li>
+					<a href="/contact"> Logos </a>
+				</li>
+			</div>
+		</ul>
+	</div>
+
 	<div class="nav-links">
 		<a href="/" on:click={handleClick}>Work</a>
 		<a href="/about">About</a>
@@ -41,14 +97,56 @@
 </nav>
 
 <style>
+	.projects {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+		text-align: center;
+	}
+
+	.actions li,
+	.projects li {
+		padding-top: 0.1rem;
+		padding-bottom: 0.1rem;
+	}
+
+	#menu {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100vw;
+		min-height: 100vh;
+		min-height: -webkit-fill-available;
+		margin: 20px 0 0 -84vw;
+
+		padding: 120px 0 50px 0;
+		/* padding-top: 125px; */
+		list-style-type: none;
+		-webkit-font-smoothing: antialiased;
+		transform-origin: 0% 0%;
+		transform: translate(100%, 0);
+		transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+		background-color: rgba(255, 255, 255, 0.95);
+	}
+
+	#menu li {
+		/* padding: 15px 0; */
+		font-size: 1.8rem;
+		font-weight: 600;
+	}
+
+	.ham input:checked ~ ul {
+		transform: none;
+	}
+
 	.nav {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		height: 4rem;
-		padding: 0 3rem;
+		padding: 0 2rem;
 		font-size: 1.2rem;
-		overflow: hidden;
+		/* overflow: hidden; */
 		background-color: rgba(255, 255, 255, 0.95);
 		position: fixed;
 		top: 0;
@@ -60,9 +158,88 @@
 		-webkit-backdrop-filter: blur(8px);
 	}
 
+	.nav a {
+		transition: all;
+		transition-duration: 400ms;
+	}
+
 	.nav-links {
+		display: none;
+		/* display: flex;
+		gap: 2rem; */
+	}
+
+	.flex {
 		display: flex;
-		gap: 2rem;
+		gap: 4rem;
+		margin-top: 4rem;
+	}
+
+	.w-12 {
+		width: 3rem;
+		height: 3rem;
+	}
+
+	.ham {
+		display: block;
+		position: relative;
+		z-index: 1000;
+		-webkit-user-select: none;
+		user-select: none;
+	}
+
+	.ham input {
+		display: block;
+		width: 2.2rem;
+		height: 1.8rem;
+		position: absolute;
+		top: -7px;
+		left: -5px;
+		cursor: pointer;
+		opacity: 0;
+		z-index: 2;
+		-webkit-touch-callout: none;
+	}
+
+	.ham span {
+		display: block;
+		position: relative;
+		z-index: 1;
+		width: 32px;
+		height: 3px;
+		margin-bottom: 5px;
+		background: #d3a615;
+		border-radius: 1px;
+		transform-origin: 4px 0px;
+		transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+			background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+	}
+
+	.ham span:first-child {
+		transform-origin: 0% 0%;
+	}
+
+	.ham span:nth-last-child(2) {
+		transform-origin: 0% 100%;
+	}
+
+	.ham span:nth-last-child(3) {
+		transform-origin: 100% 0%;
+	}
+
+	.ham input:checked ~ span {
+		opacity: 1;
+		transform: rotate(45deg) translate(-2px, 0px);
+		background: #d3a615;
+	}
+
+	.ham input:checked ~ span:nth-last-child(3) {
+		opacity: 0;
+		transform: rotate(0deg) scale(0.2, 0.2);
+	}
+
+	.ham input:checked ~ span:nth-last-child(2) {
+		transform: rotate(-45deg) translate(-2px, 0px);
 	}
 
 	a {
@@ -75,6 +252,10 @@
 
 	/* MOBILE LANDSCAPE */
 	@media (min-width: 640px) {
+		.ham {
+			display: none;
+		}
+
 		.nav {
 			display: flex;
 			justify-content: space-between;

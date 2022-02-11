@@ -1,10 +1,12 @@
 <script>
+	import { fade } from 'svelte/transition';
+
 	import FaInstagram from 'svelte-icons/fa/FaInstagram.svelte';
 	import FaLinkedin from 'svelte-icons/fa/FaLinkedin.svelte';
 	import FaPinterestSquare from 'svelte-icons/fa/FaPinterestSquare.svelte';
 </script>
 
-<div class="container">
+<div transition:fade={{ duration: 150 }} class="container">
 	<div class="img-container">
 		<img
 			alt="portrait"

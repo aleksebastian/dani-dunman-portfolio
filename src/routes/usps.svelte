@@ -2,6 +2,8 @@
 	import { slide, fade } from 'svelte/transition';
 	import { currentPage } from '../store';
 
+	import ProjectHero from '../components/ProjectHero.svelte';
+	import ProjectOverview from '../components/ProjectOverview.svelte';
 	import ImageLoader from '../components/image/ImageLoader.svelte';
 	import Expandable from '../components/Expandable.svelte';
 
@@ -25,7 +27,8 @@
 	};
 
 	import { onMount } from 'svelte';
-	const heroSrc = 'https://picsum.photos/1950/450';
+
+	const heroSrc = 'https://via.placeholder.com/1280x320?text=+';
 	let heroLoaded = false;
 	onMount(() => {
 		currentPage.set('usps');
@@ -40,20 +43,29 @@
 		let randomNum = Math.random() * (max - min) + min;
 		return Math.round(randomNum);
 	}
+
+	const projectOverviewData = [
+		{
+			label: 'Goal',
+			text: 'To provide the underbanked and unbanked community a service for reentering the banking system through USPS. The service should be a stepping stone back into traditional banking, not a replacement for it.'
+		},
+		{
+			label: 'What I Did',
+			text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+		}
+	];
 </script>
 
 <div class="grid">
 	<!-- HERO -->
 	{#if heroLoaded}
-		<div in:fade class="hero full py-md">
-			<p class="project-name">USPS SmartBanking</p>
-			<p class="subheader">UX/Research</p>
-		</div>
+		<ProjectHero {heroSrc} />
 
 		<!-- <div class="hero full py-md" /> -->
 
 		<!-- PROJECT INFO -->
-		<div class="projectInfo py-md">
+		<ProjectOverview {projectOverviewData} />
+		<!-- <div class="projectInfo py-md">
 			<div>
 				<p class="label bold">Goal</p>
 				<p class="body-text">
@@ -70,7 +82,7 @@
 					a galley of type and scrambled it to make a type specimen book.
 				</p>
 			</div>
-		</div>
+		</div> -->
 
 		<!-- GALLERY -->
 		<!-- <div class="galleryBackground"> -->
@@ -184,18 +196,18 @@
 		<!-- HOW IS USPS QUALIFIED TO SERVE -->
 		<div class="main py-md">
 			<p class="label main">How is USPS qualified to serve the un/under banked</p>
-			<div class="flex-row main space-between">
+			<div class="flex-row flex-wrap main space-between">
 				<div class="flex-col pt-sm">
 					<p>serves</p>
 					<p class="header">161.4 MM</p>
 					<p>addresses in the country</p>
 				</div>
-				<div class="flex-col  pt-sm">
+				<div class="flex-col pt-sm">
 					<p>serves</p>
 					<p class="header">161.4 MM</p>
 					<p>addresses in the country</p>
 				</div>
-				<div class="flex-col  pt-sm">
+				<div class="flex-col pt-sm">
 					<p>serves</p>
 					<p class="header">161.4 MM</p>
 					<p>addresses in the country</p>
