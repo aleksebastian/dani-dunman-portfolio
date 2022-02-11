@@ -4,6 +4,7 @@
 
 	import ProjectHero from '../components/ProjectHero.svelte';
 	import ProjectOverview from '../components/ProjectOverview.svelte';
+	import ProjectGallery from '../components/ProjectGallery.svelte';
 	import ImageLoader from '../components/image/ImageLoader.svelte';
 	import Expandable from '../components/Expandable.svelte';
 
@@ -28,7 +29,7 @@
 
 	import { onMount } from 'svelte';
 
-	const heroSrc = 'https://via.placeholder.com/1280x320?text=+';
+	const heroSrc = 'https://via.placeholder.com/1980x495?text=+';
 	let heroLoaded = false;
 	onMount(() => {
 		currentPage.set('usps');
@@ -61,66 +62,10 @@
 	{#if heroLoaded}
 		<ProjectHero {heroSrc} />
 
-		<!-- <div class="hero full py-md" /> -->
-
-		<!-- PROJECT INFO -->
 		<ProjectOverview {projectOverviewData} />
-		<!-- <div class="projectInfo py-md">
-			<div>
-				<p class="label bold">Goal</p>
-				<p class="body-text">
-					To provide the underbanked and unbanked community a service for reentering the banking
-					system through USPS. The service should be a stepping stone back into traditional banking,
-					not a replacement for it.
-				</p>
-			</div>
-			<div>
-				<p class="label bold">What I Did</p>
-				<p class="body-text">
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-					been the industry's standard dummy text ever since the 1500s, when an unknown printer took
-					a galley of type and scrambled it to make a type specimen book.
-				</p>
-			</div>
-		</div> -->
 
 		<!-- GALLERY -->
-		<!-- <div class="galleryBackground"> -->
-		<div id="work" class="gallery full">
-			<div class="photos">
-				<div>
-					<div class="project-image">
-						<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/800/550`} alt="dani" />
-					</div>
-				</div>
-				<div>
-					<div class="project-image">
-						<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/800/550`} alt="dani" />
-					</div>
-				</div>
-				<div>
-					<div class="project-image">
-						<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/800/550`} alt="dani" />
-					</div>
-				</div>
-				<div>
-					<div class="project-image">
-						<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/800/550`} alt="dani" />
-					</div>
-				</div>
-				<div>
-					<div class="project-image">
-						<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/800/550`} alt="dani" />
-					</div>
-				</div>
-				<div>
-					<div class="project-image">
-						<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/800/550`} alt="dani" />
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- </div> -->
+		<ProjectGallery />
 
 		<!-- RESEARCH -->
 		<div class="research full">
@@ -137,7 +82,7 @@
 				<p>Unbanked: A person who does not use banks or banking institutions in any way or form.</p>
 			</div>
 			<div class="researchRight">
-				<p class="callout-lg">~32%</p>
+				<p class="callout-lg">~34%</p>
 
 				<p>of the US population is considered under/un banked</p>
 			</div>
@@ -605,7 +550,7 @@
 
 	.moreStatistics {
 		height: 16rem;
-		grid-column: 3 / 11;
+		grid-column: 2 / 12;
 		background-color: grey;
 	}
 
@@ -673,17 +618,34 @@
 		padding: 3rem 0;
 	}
 
-	.researchLeft {
-		grid-column: 2 / 7;
+	.researchLeft,
+	.researchRight {
+		grid-column: 2 / 12;
 	}
 
 	.researchRight {
-		grid-column: 8 / 11;
-		place-self: center;
+		padding: 0 2rem;
 	}
 
 	.researchRight p {
 		text-align: center;
+	}
+
+	@media (min-width: 768px) {
+		.moreStatistics {
+			height: 16rem;
+			grid-column: 3 / 11;
+			background-color: grey;
+		}
+
+		.researchLeft {
+			grid-column: 2 / 7;
+		}
+
+		.researchRight {
+			grid-column: 8 / 11;
+			place-self: center;
+		}
 	}
 
 	@media (min-width: 1536px) {

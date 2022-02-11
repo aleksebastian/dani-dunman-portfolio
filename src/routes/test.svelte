@@ -1,6 +1,7 @@
 <script>
 	import ProjectHero from '../components/ProjectHero.svelte';
 	import ProjectOverview from '../components/ProjectOverview.svelte';
+	import ProjectGallery from '../components/ProjectGallery.svelte';
 
 	const heroSrc = 'https://via.placeholder.com/1280x320?text=+';
 	const projectOverviewData = [
@@ -15,5 +16,16 @@
 	];
 </script>
 
-<ProjectHero {heroSrc} />
-<ProjectOverview {projectOverviewData} />
+<div class="grid">
+	<ProjectHero {heroSrc} />
+	<ProjectOverview {projectOverviewData} />
+	<ProjectGallery />
+</div>
+
+<style>
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(12, minmax(0, 1fr));
+		grid-column-gap: 1rem;
+	}
+</style>

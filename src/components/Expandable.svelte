@@ -24,10 +24,13 @@
 <style>
 	p {
 		font-size: var(--expand-label);
+		margin-bottom: -1rem;
+		padding: 0;
 	}
 	.expandable {
 		display: grid;
 		grid-template-columns: subgrid;
+		margin-bottom: 1rem;
 	}
 
 	.main {
