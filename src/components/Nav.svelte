@@ -17,7 +17,6 @@
 			yOffSet.set(element.getBoundingClientRect().top + window.pageYOffset + yOffset);
 		}
 		win = document.body;
-		console.log(win);
 	});
 
 	const handleClick = () => {
@@ -51,8 +50,8 @@
 
 <svelte:window bind:scrollY={y} />
 
-<nav class="nav" style={`box-shadow: ${boxShadow}`}>
-	<a href="/">Daniela Dunman</a>
+<nav class="nav" style="box-shadow: {boxShadow}">
+	<a style="opacity: {isMobileNavOpenLocal ? '0' : '1'}" href="/">Daniela Dunman</a>
 	<!-- MOBILE NAV -->
 	<div class="ham">
 		<input type="checkbox" bind:checked={isMobileNavOpenLocal} />
@@ -60,44 +59,34 @@
 		<span />
 		<span />
 		<ul id="menu" style="transform: {!isMobileNavOpenLocal ? 'translate(100%, 0)' : 'none'}">
-			<li>
-				<a href="/">Projects</a>
-			</li>
-			<li>
-				<a href="/resume"> Resume </a>
-			</li>
-			<li>
-				<a href="/contact"> Contact </a>
-			</li>
-			<li class="flex gap-10 mt-10">
-				<a
-					aria-label="Link to linkedin"
-					href="https://linkedin.com/in/alek-ortiz/"
-					rel="noopener"
-					target="_blank"
-					class="w-12 h-12"
-				>
-					<FaEnvelopeSquare />
-				</a>
-				<a
-					aria-label="Link to github"
-					href="https://github.com/aleksebastian"
-					rel="noopener"
-					target="_blank"
-					class="w-12 h-12"
-				>
-					<FaEnvelopeSquare />
-				</a>
-				<a
-					aria-label="Link to email"
-					href="mailto:aleksebastian@outlook.com"
-					rel="noopener"
-					target="_blank"
-					class="w-12 h-12"
-				>
-					<FaEnvelopeSquare />
-				</a>
-			</li>
+			<div class="actions">
+				<li>
+					<a href="/resume"> Home </a>
+				</li>
+				<li>
+					<a href="/resume"> About </a>
+				</li>
+			</div>
+			<div class="projects">
+				<li>
+					<a href="/">USPS SmartBanking</a>
+				</li>
+				<li>
+					<a href="/resume"> BlueDoor </a>
+				</li>
+				<li>
+					<a href="/contact"> Radio Museum Exhibit </a>
+				</li>
+				<li>
+					<a href="/contact"> Works in Intaglio </a>
+				</li>
+				<li>
+					<a href="/contact"> Language Exchange </a>
+				</li>
+				<li>
+					<a href="/contact"> Logos </a>
+				</li>
+			</div>
 		</ul>
 	</div>
 
@@ -108,27 +97,42 @@
 </nav>
 
 <style>
+	.projects {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+		text-align: center;
+	}
+
+	.actions li,
+	.projects li {
+		padding-top: 0.1rem;
+		padding-bottom: 0.1rem;
+	}
+
 	#menu {
 		position: absolute;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		width: 100vw;
-		height: 100vh;
-		margin: 1rem 0 0 -83vw;
-		padding: 50px;
-		padding-top: 125px;
+		min-height: 100vh;
+		min-height: -webkit-fill-available;
+		margin: 20px 0 0 -84vw;
+
+		padding: 120px 0 50px 0;
+		/* padding-top: 125px; */
 		list-style-type: none;
 		-webkit-font-smoothing: antialiased;
 		transform-origin: 0% 0%;
 		transform: translate(100%, 0);
 		transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-		background-color: rgba(255, 255, 255, 0.9);
+		background-color: rgba(255, 255, 255, 0.95);
 	}
 
 	#menu li {
-		padding: 15px 0;
-		font-size: 22px;
+		/* padding: 15px 0; */
+		font-size: 1.8rem;
+		font-weight: 600;
 	}
 
 	.ham input:checked ~ ul {
@@ -152,6 +156,11 @@
 		transition-duration: 250ms;
 		backdrop-filter: blur(8px);
 		-webkit-backdrop-filter: blur(8px);
+	}
+
+	.nav a {
+		transition: all;
+		transition-duration: 400ms;
 	}
 
 	.nav-links {

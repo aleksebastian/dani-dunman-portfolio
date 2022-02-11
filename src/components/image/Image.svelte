@@ -17,7 +17,7 @@
 	img {
 		/* height: 200px; */
 		opacity: 0;
-		transition: opacity 1200ms ease-out;
+		transition: opacity 800ms ease-out;
 	}
 	.loaded {
 		opacity: 1;
