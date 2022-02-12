@@ -169,17 +169,6 @@
 		gap: 2rem; */
 	}
 
-	.flex {
-		display: flex;
-		gap: 4rem;
-		margin-top: 4rem;
-	}
-
-	.w-12 {
-		width: 3rem;
-		height: 3rem;
-	}
-
 	.ham {
 		display: block;
 		position: relative;

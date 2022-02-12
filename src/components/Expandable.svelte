@@ -7,9 +7,9 @@
 	export let text;
 </script>
 
-<div class="expandable-container content">
+<div class="expandable content">
 	<p>{text}</p>
-	<div class="expandable">
+	<div>
 		<div class="line" />
 		<div
 			class="icon"
@@ -22,18 +22,18 @@
 </div>
 
 <style>
-	.expandable-container {
+	.expandable {
 		display: grid;
 		grid-template-columns: subgrid;
 		margin-bottom: 1rem;
 	}
 
-	.expandable-container p {
+	.expandable > p {
 		font-size: var(--expand-label);
 		margin-bottom: -1rem;
 	}
 
-	.expandable {
+	.expandable > div {
 		align-items: center;
 		display: flex;
 	}

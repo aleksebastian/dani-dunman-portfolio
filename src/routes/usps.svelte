@@ -1,5 +1,5 @@
 <script>
-	import { slide, fade } from 'svelte/transition';
+	import { slide } from 'svelte/transition';
 	import { currentPage } from '../store';
 
 	import ProjectHero from '../components/ProjectHero.svelte';
@@ -106,9 +106,9 @@
 		<Painpoints />
 
 		<!-- HOW IS USPS QUALIFIED TO SERVE -->
-		<div class="content py-md">
-			<p class="label content">How is USPS qualified to serve the un/under banked</p>
-			<div class="flex-row flex-wrap content space-between">
+		<div class="qualifications content py-md">
+			<p class="label">How is USPS qualified to serve the un/under banked</p>
+			<div>
 				<div class="flex-col pt-sm">
 					<p>serves</p>
 					<p class="header">161.4 MM</p>
@@ -327,26 +327,6 @@
 </div>
 
 <style>
-	/* .pt-sm {
-		padding-top: 1rem;
-	}
-
-	.pt-md {
-		padding-top: 2rem;
-	}
-
-	.pb-sm {
-		padding-bottom: 1rem;
-	} */
-
-	/* .callout {
-		font-size: var(--callout-size);
-	}
-
-	.callout-lg {
-		font-size: var(--callout-size-lg);
-	} */
-
 	ul {
 		list-style-type: none;
 		margin: 0;
@@ -452,122 +432,14 @@
 		align-items: center;
 	}
 
-	.space-between {
-		justify-content: space-between;
-	}
-
-	/* .label {
-		font-size: var(--label-size);
-	} */
-
 	.header {
 		font-size: var(--header-size);
-	}
-
-	.body-text {
-		font-size: var(--body-size);
-	}
-
-	.hugeNumber {
-		font-size: 4rem;
-	}
-
-	/* .full {
-		grid-column: 1 / -1;
-	} */
-
-	/* .py-sm {
-		padding: 1rem 0;
-	} */
-
-	/* .py-md {
-		padding: 3rem 0;
-	} */
-
-	.painPoint p {
-		text-align: center;
-	}
-
-	.pain-top {
-		display: flex;
-		justify-content: space-around;
-		padding: 1rem 0;
-	}
-
-	.pain-bottom {
-		grid-column: 3 / 11;
-		display: flex;
-		justify-content: space-around;
-		padding: 1rem 0;
-	}
-
-	.point {
-		width: 100px;
-		height: 100px;
-		background-color: grey;
 	}
 
 	.moreStatistics {
 		height: 16rem;
 		grid-column: 2 / 12;
 		background-color: grey;
-	}
-
-	.grid {
-		display: grid;
-		grid-template-columns: repeat(12, minmax(0, 1fr));
-		grid-column-gap: 1rem;
-	}
-
-	.hero {
-		height: 24rem;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		background-image: url('https://picsum.photos/1950/450');
-	}
-
-	.project-name {
-		font-size: var(--header-size);
-		font-weight: 500;
-	}
-
-	.subheader {
-		margin-top: -0.25rem;
-		font-size: var(--label-size);
-	}
-
-	.projectInfo {
-		grid-column: 3 / 11;
-		display: flex;
-		justify-content: space-between;
-	}
-
-	.projectInfo div {
-		flex-basis: 40%;
-	}
-
-	.name {
-		font-size: var(--label-size);
-		font-weight: 600;
-	}
-
-	.gallery {
-		display: grid;
-		grid-column-gap: 1rem;
-		grid-template-columns: repeat(12, minmax(0, 1fr));
-		padding: 3rem 0;
-		min-height: 100vh;
-		background-color: var(--background-color);
-	}
-
-	.photos {
-		grid-column: 3 / 11;
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-		gap: 3rem;
-		justify-items: center;
 	}
 
 	.research {
@@ -590,6 +462,12 @@
 		text-align: center;
 	}
 
+	.qualifications > div {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
 	@media (min-width: 768px) {
 		.moreStatistics {
 			height: 16rem;
@@ -607,9 +485,27 @@
 		}
 	}
 
+	@media (min-width: 1280px) {
+		.qualifications > div {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+
 	@media (min-width: 1536px) {
 		.text {
 			grid-column: 1 / -1;
+		}
+		.qualifications > p {
+			grid-column: 1 / 12;
+		}
+		.qualifications {
+			display: grid;
+			grid-template-columns: subgrid;
+		}
+		.qualifications > div {
+			grid-column: 3 / 10;
 		}
 	}
 </style>

@@ -23,11 +23,3 @@
 	<ProjectGallery />
 	<Painpoints />
 </div>
-
-<style>
-	.grid {
-		display: grid;
-		grid-template-columns: repeat(12, minmax(0, 1fr));
-		grid-column-gap: 1rem;
-	}
-</style>
