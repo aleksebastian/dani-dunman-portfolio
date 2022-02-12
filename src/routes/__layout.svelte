@@ -41,6 +41,5 @@
 		background-color: rgba(255, 255, 255, 0.1);
 		backdrop-filter: blur(8px);
 		-webkit-backdrop-filter: blur(8px);
-		/* display: none; */
 	}
 </style>

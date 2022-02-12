@@ -5,6 +5,7 @@
 	import ProjectHero from '../components/ProjectHero.svelte';
 	import ProjectOverview from '../components/ProjectOverview.svelte';
 	import ProjectGallery from '../components/ProjectGallery.svelte';
+	import Painpoints from '../components/usps/Painpoints.svelte';
 	import ImageLoader from '../components/image/ImageLoader.svelte';
 	import Expandable from '../components/Expandable.svelte';
 
@@ -102,46 +103,12 @@
 		{/if}
 
 		<!-- PAIN POINTS -->
-		<div class="main grid py-md">
-			<p class="label full">Pain Points</p>
-			<div class="pain-top main">
-				<div class="painPoint">
-					<div class="point" />
-					<p>Label</p>
-				</div>
-				<div class="painPoint">
-					<div class="point" />
-					<p>Label</p>
-				</div>
-				<div class="painPoint">
-					<div class="point" />
-					<p>Label</p>
-				</div>
-				<div class="painPoint">
-					<div class="point" />
-					<p>Label</p>
-				</div>
-			</div>
-			<div class="pain-bottom">
-				<div class="painPoint">
-					<div class="point" />
-					<p>Label</p>
-				</div>
-				<div class="painPoint">
-					<div class="point" />
-					<p>Label</p>
-				</div>
-				<div class="painPoint">
-					<div class="point" />
-					<p>Label</p>
-				</div>
-			</div>
-		</div>
+		<Painpoints />
 
 		<!-- HOW IS USPS QUALIFIED TO SERVE -->
-		<div class="main py-md">
-			<p class="label main">How is USPS qualified to serve the un/under banked</p>
-			<div class="flex-row flex-wrap main space-between">
+		<div class="content py-md">
+			<p class="label content">How is USPS qualified to serve the un/under banked</p>
+			<div class="flex-row flex-wrap content space-between">
 				<div class="flex-col pt-sm">
 					<p>serves</p>
 					<p class="header">161.4 MM</p>
@@ -201,7 +168,7 @@
 				</div>
 
 				<!-- UX RESEARCH METHODS -->
-				<div class="flex-row main ux-methods py-md flex-wrap">
+				<div class="flex-row content ux-methods py-md flex-wrap">
 					<div class="image">
 						<ImageLoader alt="rectangle" src={'https://picsum.photos/800/500'} />
 					</div>
@@ -218,7 +185,7 @@
 						</p>
 					</div>
 				</div>
-				<div class="flex-row main ux-methods py-md flex-wrap">
+				<div class="flex-row content ux-methods py-md flex-wrap">
 					<div class="text">
 						<p class="label py-sm">UX RESEARCH METHOD 02: Survey</p>
 						<p>
@@ -247,7 +214,7 @@
 					</div>
 				</div>
 
-				<div class="flex-row main ux-methods last flex-wrap">
+				<div class="flex-row content ux-methods last flex-wrap">
 					<img alt="rectangle" src="https://picsum.photos/750/450" class="image" />
 					<div class="text">
 						<p class="label py-sm">UX RESEARCH METHOD 03/04: User Persona and Journey Map</p>
@@ -258,7 +225,7 @@
 							“unbankedness” for longer and makes it harder for them to get out.
 						</p>
 					</div>
-					<div class="main placeholder">
+					<div class="content placeholder">
 						<ImageLoader alt="placeholder" src="https://picsum.photos/1950/350" />
 					</div>
 				</div>
@@ -266,7 +233,7 @@
 		{/if}
 
 		<!-- SUMMARY OF RESEARCH -->
-		<div class="main py-md">
+		<div class="content py-md">
 			<!-- <div class="this flex-row"> -->
 			<div class="pb-sm">
 				<p class="label">Summary of Research</p>
@@ -295,7 +262,7 @@
 
 		<!-- SOLUTION -->
 		<div class="full grid bg-grey">
-			<div class="main">
+			<div class="content">
 				<p class="label bold py-sm">Solution</p>
 				<p class="py-sm">USPS Second Chance Account</p>
 				<p class="py-sm">
@@ -319,7 +286,7 @@
 				text={'More About SmartBanking'}
 			/>
 			{#if showAbout}
-				<div transition:slide class="main py-md">
+				<div transition:slide class="content py-md">
 					<p class="py-sm">The Who:</p>
 					<p>
 						Those who are denied standard bank accounts due to a rocky (poor) banking history. (Bank
@@ -337,8 +304,8 @@
 			{/if}
 		</div>
 
-		<p class="main label">Final Deliverable</p>
-		<div class="main flex-row py-md">
+		<p class="content label">Final Deliverable</p>
+		<div class="content flex-row py-md">
 			<div class="del">I am Deliverable</div>
 			<div class="del">
 				<p class="label">Suggested Walk-through</p>
@@ -360,11 +327,7 @@
 </div>
 
 <style>
-	* {
-		font-size: var(--body-size);
-	}
-
-	.pt-sm {
+	/* .pt-sm {
 		padding-top: 1rem;
 	}
 
@@ -374,15 +337,15 @@
 
 	.pb-sm {
 		padding-bottom: 1rem;
-	}
+	} */
 
-	.callout {
+	/* .callout {
 		font-size: var(--callout-size);
 	}
 
 	.callout-lg {
 		font-size: var(--callout-size-lg);
-	}
+	} */
 
 	ul {
 		list-style-type: none;
@@ -493,9 +456,9 @@
 		justify-content: space-between;
 	}
 
-	.label {
+	/* .label {
 		font-size: var(--label-size);
-	}
+	} */
 
 	.header {
 		font-size: var(--header-size);
@@ -509,21 +472,17 @@
 		font-size: 4rem;
 	}
 
-	.full {
+	/* .full {
 		grid-column: 1 / -1;
-	}
+	} */
 
-	.main {
-		grid-column: 2 / 12;
-	}
-
-	.py-sm {
+	/* .py-sm {
 		padding: 1rem 0;
-	}
+	} */
 
-	.py-md {
+	/* .py-md {
 		padding: 3rem 0;
-	}
+	} */
 
 	.painPoint p {
 		text-align: center;

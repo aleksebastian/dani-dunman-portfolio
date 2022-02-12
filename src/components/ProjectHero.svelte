@@ -40,9 +40,9 @@
 		/* margin-bottom: 3rem; */
 	}
 
-	.full {
+	/* .full {
 		grid-column: 1 / -1;
-	}
+	} */
 
 	.project-name {
 		font-size: var(--label-size);

@@ -41,9 +41,9 @@
 		/* justify-items: center; */
 	}
 
-	.full {
+	/* .full {
 		grid-column: 1 / -1;
-	}
+	} */
 
 	.photos {
 		display: flex;
@@ -61,9 +61,9 @@
 			background-color: var(--background-color);
 		}
 
-		.full {
+		/* .full {
 			grid-column: 1 / -1;
-		}
+		} */
 
 		.photos {
 			grid-column: 3 / 11;

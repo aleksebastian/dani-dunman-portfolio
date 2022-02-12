@@ -2,8 +2,9 @@
 	import ProjectHero from '../components/ProjectHero.svelte';
 	import ProjectOverview from '../components/ProjectOverview.svelte';
 	import ProjectGallery from '../components/ProjectGallery.svelte';
+	import Painpoints from '../components/usps/Painpoints.svelte';
 
-	const heroSrc = 'https://via.placeholder.com/1280x320?text=+';
+	const heroSrc = 'https://via.placeholder.com/1980x495?text=+';
 	const projectOverviewData = [
 		{
 			label: 'Goal',
@@ -20,6 +21,7 @@
 	<ProjectHero {heroSrc} />
 	<ProjectOverview {projectOverviewData} />
 	<ProjectGallery />
+	<Painpoints />
 </div>
 
 <style>

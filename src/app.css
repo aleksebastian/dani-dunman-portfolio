@@ -1,3 +1,55 @@
+body {
+	font-family: 'Lora', serif;
+	max-width: 1980px;
+	margin: 0 auto;
+	font-size: 1.1rem;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* .header {
+	font-size: 4rem;
+} */
+
+.callout {
+	font-size: 3rem;
+}
+
+.callout-lg {
+	font-size: 5rem;
+}
+
+.label {
+	font-size: 1.9rem;
+}
+
+.full {
+	grid-column: 1 / -1;
+}
+
+.content {
+	grid-column: 2 / 12;
+}
+
+.content-tight {
+	grid-column: 3 / 11;
+}
+
+.py-sm {
+	padding: 1rem 0;
+}
+
+.py-md {
+	padding: 3rem 0;
+}
+
+.pt-sm {
+	padding-top: 1rem;
+}
+
+/* CSS RESET */
 /* Box sizing rules */
 *,
 *::before,
@@ -72,13 +124,4 @@ select {
 		scroll-behavior: auto !important;
 	}
 }
-
-body {
-	font-family: 'Lora', serif;
-	max-width: 1980px;
-	margin: 0 auto;
-}
-
-a {
-	text-decoration: none;
-}
+/* END OF CSS RESET */
