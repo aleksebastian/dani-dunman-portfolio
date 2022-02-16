@@ -51,6 +51,14 @@ a {
 	padding: 3rem 0;
 }
 
+.py-sm {
+	padding-bottom: 1rem;
+}
+
+.pb-md {
+	padding-bottom: 3rem;
+}
+
 .pb-lg {
 	padding: 3rem 0;
 }

@@ -3,8 +3,8 @@
 	import ImageLoader from '../image/ImageLoader.svelte';
 </script>
 
-<div transition:slide={{ duration: 1000 }} class="full grid methods">
-	<div class="moreResearch py-md">
+<div transition:slide={{ duration: 1000 }} class="full grid">
+	<div class="moreResearch pb-md">
 		<p class="label pb-sm">Competitive Audit</p>
 		<p class="py-sm">There have been proposals to solve this issue:</p>
 		<div class="proposals">
@@ -33,7 +33,7 @@
 	</div>
 
 	<!-- UX RESEARCH METHODS -->
-	<div class="flex-row content ux-methods-reverse py-md flex-wrap">
+	<div class="flex-row content ux-methods-reverse pb-md flex-wrap">
 		<div class="image">
 			<ImageLoader alt="rectangle" src={'https://picsum.photos/800/500'} />
 		</div>
@@ -98,10 +98,6 @@
 </div>
 
 <style>
-	.methods > div {
-		padding: 2rem 0;
-	}
-
 	.ux-method-3 {
 		display: flex;
 		flex-direction: column;

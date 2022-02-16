@@ -159,7 +159,7 @@
 				</p>
 			</div>
 			<div class="py-sm">
-				<p class="label">Conclusion/Opportunity Statement</p>
+				<p class="label">Conclusion / Opportunity Statement</p>
 				<p>
 					We will provide convenient banking services for the people who are deny-listed from the
 					banking system so they can easily establish financial security through the USPS Banking
@@ -195,8 +195,8 @@
 				text={'More About SmartBanking'}
 			/>
 			{#if showAbout}
-				<div transition:slide class="content py-md">
-					<p class="py-sm">The Who:</p>
+				<div transition:slide class="content pb-md">
+					<p class="pb-sm">The Who:</p>
 					<p>
 						Those who are denied standard bank accounts due to a rocky (poor) banking history. (Bank
 						history reports track how you have handled savings and checking accounts in the past.
@@ -212,22 +212,35 @@
 				</div>
 			{/if}
 		</div>
-
-		<p class="content label">Final Deliverable</p>
-		<div class="content flex-row py-md">
-			<div class="del">I am Deliverable</div>
-			<div class="del">
-				<p class="label">Suggested Walk-through</p>
-				<ul>
-					<li>Go to the Sign-In page</li>
-					<li>Type in your user and password, and sign in</li>
-					<li>Toggle between your in progress and saved courses</li>
-					<li>Toggle between your achived and current goals</li>
-					<li>Toggle between your inprogress and achived challenges</li>
-					<li>Pick up where you left off on your most recent course</li>
-					<li>Check what part of the lesson you are currently on</li>
-					<li>Go back to the Dashboard</li>
-				</ul>
+		<div class="content py-md">
+			<p class="label">Final Deliverable</p>
+			<div class="flex-row py-md gap-1 flex-wrap">
+				<div class="walkthrough">
+					<iframe
+						title="walkthrough"
+						width="2269"
+						height="1306"
+						src="https://xd.adobe.com/embed/8065d6e2-a5e3-441a-8fb1-4f8d474356e8-d536/?fullscreen&amp;hints=off"
+						frameborder="0"
+						allowfullscreen=""
+						style="width: 350.007px; height: 220.982px; transition-duration: initial;"
+						class=""
+						data-scale="100"
+					/>
+				</div>
+				<div class="del">
+					<p class="label">Suggested Walk-through</p>
+					<ul class="steps">
+						<li>Go to the Sign-In page</li>
+						<li>Type in your user and password, and sign in</li>
+						<li>Toggle between your in progress and saved courses</li>
+						<li>Toggle between your achived and current goals</li>
+						<li>Toggle between your inprogress and achived challenges</li>
+						<li>Pick up where you left off on your most recent course</li>
+						<li>Check what part of the lesson you are currently on</li>
+						<li>Go back to the Dashboard</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	{:else}
@@ -236,6 +249,23 @@
 </div>
 
 <style>
+	.del > p {
+		padding-bottom: 1rem;
+	}
+	ul {
+		padding: 0;
+		list-style-type: none;
+	}
+	.steps li {
+		margin: 0;
+		padding: 0.5rem 0 0.5rem 0;
+		font-size: 0.9rem;
+	}
+	.gap-1 {
+		gap: 1rem;
+		justify-content: space-around;
+	}
+
 	ul {
 		list-style-type: none;
 		margin: 0;
@@ -245,11 +275,26 @@
 	li {
 		padding: 0.9rem 0;
 	}
+	/* 
+	.walkthrough {
+		position: relative;
+		padding-bottom: 56.25%;
+		padding-top: 25px;
+		height: 0;
+	} */
 
-	.del {
-		flex-basis: calc(50% - 0.5rem);
-		max-width: calc(50% - 0.5rem);
-	}
+	/* .walkthrough iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	} */
+
+	/* .del {
+		flex-basis: calc(45% - 0.5rem);
+		max-width: calc(45% - 0.5rem);
+	} */
 
 	.bold {
 		font-weight: 500;
@@ -391,6 +436,10 @@
 		.researchRight {
 			grid-column: 8 / 11;
 			place-self: center;
+		}
+		.del {
+			flex-basis: calc(45% - 0.5rem);
+			max-width: calc(45% - 0.5rem);
 		}
 	}
 
