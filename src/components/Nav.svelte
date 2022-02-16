@@ -117,7 +117,7 @@
 		width: 101vw;
 		min-height: 100vh;
 		/* min-height: -webkit-fill-available; */
-		margin: 20px 0 0 -85vw;
+		margin: 20px 0 0 -84vw;
 
 		padding: 90px 0 50px 0;
 		/* padding-top: 125px; */
