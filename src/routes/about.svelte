@@ -88,20 +88,23 @@
 		max-width: 100%;
 		height: auto;
 		transform: rotate(-2deg);
+		max-height: calc(100vh - 11rem);
+	}
+
+	.img-container {
+		justify-self: center;
 	}
 
 	@media (min-width: 768px) {
+		img {
+			max-height: calc(100vh - 11rem);
+		}
 		.img-container {
-			/* max-width: 300px; */
 			flex-basis: 30%;
 		}
 
 		.right {
-			/* display: flex; */
-			/* flex-direction: column; */
 			flex-basis: 50%;
-			/* gap: 1.5rem; */
-			/* padding: 1rem 0; */
 		}
 	}
 

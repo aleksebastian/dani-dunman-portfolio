@@ -7,9 +7,9 @@
 	export let text;
 </script>
 
-<div class="expandable main py-md">
+<div class="expandable content">
 	<p>{text}</p>
-	<div class="second flex-row">
+	<div>
 		<div class="line" />
 		<div
 			class="icon"
@@ -22,34 +22,25 @@
 </div>
 
 <style>
-	p {
-		font-size: var(--expand-label);
-	}
 	.expandable {
 		display: grid;
 		grid-template-columns: subgrid;
+		margin-bottom: 1rem;
 	}
 
-	.main {
-		grid-column: 2 / 12;
+	.expandable > p {
+		font-size: var(--expand-label);
+		margin-bottom: -1rem;
 	}
 
-	.second {
+	.expandable > div {
 		align-items: center;
-	}
-
-	.flex-row {
 		display: flex;
 	}
 
 	.line {
 		width: 100%;
 		border-bottom: 1px solid black;
-		text-align: center;
-	}
-
-	.py-md {
-		padding: 0;
 	}
 
 	.icon {

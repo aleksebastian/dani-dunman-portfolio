@@ -1,11 +1,14 @@
 <script>
-	import { slide, fade } from 'svelte/transition';
+	import { slide } from 'svelte/transition';
 	import { currentPage } from '../store';
 
 	import ProjectHero from '../components/ProjectHero.svelte';
 	import ProjectOverview from '../components/ProjectOverview.svelte';
+	import ProjectGallery from '../components/ProjectGallery.svelte';
+	import Painpoints from '../components/usps/Painpoints.svelte';
 	import ImageLoader from '../components/image/ImageLoader.svelte';
 	import Expandable from '../components/Expandable.svelte';
+	import MoreResearch from '../components/usps/MoreResearch.svelte';
 
 	let percentage = 0;
 	$: showStatistics = false;
@@ -28,7 +31,7 @@
 
 	import { onMount } from 'svelte';
 
-	const heroSrc = 'https://via.placeholder.com/1280x320?text=+';
+	const heroSrc = 'https://via.placeholder.com/1980x495?text=+';
 	let heroLoaded = false;
 	onMount(() => {
 		currentPage.set('usps');
@@ -61,66 +64,10 @@
 	{#if heroLoaded}
 		<ProjectHero {heroSrc} />
 
-		<!-- <div class="hero full py-md" /> -->
-
-		<!-- PROJECT INFO -->
 		<ProjectOverview {projectOverviewData} />
-		<!-- <div class="projectInfo py-md">
-			<div>
-				<p class="label bold">Goal</p>
-				<p class="body-text">
-					To provide the underbanked and unbanked community a service for reentering the banking
-					system through USPS. The service should be a stepping stone back into traditional banking,
-					not a replacement for it.
-				</p>
-			</div>
-			<div>
-				<p class="label bold">What I Did</p>
-				<p class="body-text">
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-					been the industry's standard dummy text ever since the 1500s, when an unknown printer took
-					a galley of type and scrambled it to make a type specimen book.
-				</p>
-			</div>
-		</div> -->
 
 		<!-- GALLERY -->
-		<!-- <div class="galleryBackground"> -->
-		<div id="work" class="gallery full">
-			<div class="photos">
-				<div>
-					<div class="project-image">
-						<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/800/550`} alt="dani" />
-					</div>
-				</div>
-				<div>
-					<div class="project-image">
-						<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/800/550`} alt="dani" />
-					</div>
-				</div>
-				<div>
-					<div class="project-image">
-						<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/800/550`} alt="dani" />
-					</div>
-				</div>
-				<div>
-					<div class="project-image">
-						<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/800/550`} alt="dani" />
-					</div>
-				</div>
-				<div>
-					<div class="project-image">
-						<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/800/550`} alt="dani" />
-					</div>
-				</div>
-				<div>
-					<div class="project-image">
-						<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/800/550`} alt="dani" />
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- </div> -->
+		<ProjectGallery />
 
 		<!-- RESEARCH -->
 		<div class="research full">
@@ -137,7 +84,7 @@
 				<p>Unbanked: A person who does not use banks or banking institutions in any way or form.</p>
 			</div>
 			<div class="researchRight">
-				<p class="callout-lg">~32%</p>
+				<p class="callout-lg">~34%</p>
 
 				<p>of the US population is considered under/un banked</p>
 			</div>
@@ -157,46 +104,12 @@
 		{/if}
 
 		<!-- PAIN POINTS -->
-		<div class="main grid py-md">
-			<p class="label full">Pain Points</p>
-			<div class="pain-top main">
-				<div class="painPoint">
-					<div class="point" />
-					<p>Label</p>
-				</div>
-				<div class="painPoint">
-					<div class="point" />
-					<p>Label</p>
-				</div>
-				<div class="painPoint">
-					<div class="point" />
-					<p>Label</p>
-				</div>
-				<div class="painPoint">
-					<div class="point" />
-					<p>Label</p>
-				</div>
-			</div>
-			<div class="pain-bottom">
-				<div class="painPoint">
-					<div class="point" />
-					<p>Label</p>
-				</div>
-				<div class="painPoint">
-					<div class="point" />
-					<p>Label</p>
-				</div>
-				<div class="painPoint">
-					<div class="point" />
-					<p>Label</p>
-				</div>
-			</div>
-		</div>
+		<Painpoints />
 
 		<!-- HOW IS USPS QUALIFIED TO SERVE -->
-		<div class="main py-md">
-			<p class="label main">How is USPS qualified to serve the un/under banked</p>
-			<div class="flex-row flex-wrap main space-between">
+		<div class="qualifications content py-md">
+			<p class="label">How is USPS qualified to serve the un/under banked</p>
+			<div>
 				<div class="flex-col pt-sm">
 					<p>serves</p>
 					<p class="header">161.4 MM</p>
@@ -225,103 +138,11 @@
 
 		<!-- MORE RESEARCH -->
 		{#if showResearch}
-			<div transition:slide={{ duration: 1000 }} class="full grid">
-				<div class="moreResearch py-md">
-					<p class="researchText label pb-sm">Competitive Audit</p>
-					<p class="researchText py-sm">There have been proposals to solve this issue.</p>
-					<div class="flex-row proposals py-sm">
-						<div class="proposal">
-							<p>{'Cryptocurrencies'.toUpperCase()}</p>
-							<p>
-								are fully digital and easy to access, and location and income are not a barrier.
-							</p>
-						</div>
-						<div class="proposal">
-							<p>{'“Outlet” bank branch offices'.toUpperCase()}</p>
-							<p>
-								are branches of participating banks that are conveniently located for lower-income
-								households.
-							</p>
-						</div>
-						<div class="proposal">
-							<p>{'Neobanks'.toUpperCase()}</p>
-							<p>
-								a type of direct bank that functions fully online, such as Chime, Current, and
-								Aspiration.
-							</p>
-						</div>
-					</div>
-					<p class="researchText">However,</p>
-					<p class="researchText">there are no active soluctions.</p>
-				</div>
-
-				<!-- UX RESEARCH METHODS -->
-				<div class="flex-row main ux-methods py-md flex-wrap">
-					<div class="image">
-						<ImageLoader alt="rectangle" src={'https://picsum.photos/800/500'} />
-					</div>
-					<div class="text">
-						<p class="label py-sm">UX RESEARCH METHOD 01: How Might We (HMW’s)</p>
-						<p>
-							My team and I created a Miro board where we could share our research findings and
-							organize them in such a way that we could easily compare and contrast between
-							different questions and problem spaces. We looked over our HMWs and reorganized our
-							sticky notes into the categories of information distribution, resources/education,
-							security, utility services, and tasks. From there, we sorted through them once again
-							and created another table with the most relevant and helpful questions. In this table,
-							we listed possible answers to the HMWs.
-						</p>
-					</div>
-				</div>
-				<div class="flex-row main ux-methods py-md flex-wrap">
-					<div class="text">
-						<p class="label py-sm">UX RESEARCH METHOD 02: Survey</p>
-						<p>
-							I created a quick survey that I shared on my Instagram for people to answer questions
-							about their experience with banking, their frustrations, and what they would be
-							willing to do to open a bank account if they found themselves on the bank's deny-list.
-						</p>
-						<p class="py-md">
-							Those who are denied standard bank accounts due to a rocky banking history were
-							identified as part of the unbanked community, and are the target audience.
-						</p>
-					</div>
-
-					<div class="complex">
-						<div class="imgs flex-row">
-							<div class="sq-img">
-								<ImageLoader alt="square" src={`https://picsum.photos/600`} />
-							</div>
-							<div class="sq-img">
-								<ImageLoader alt="square" src={`https://picsum.photos/600`} />
-							</div>
-						</div>
-						<div class="img">
-							<ImageLoader alt="square" src="https://picsum.photos/800/300" />
-						</div>
-					</div>
-				</div>
-
-				<div class="flex-row main ux-methods last flex-wrap">
-					<img alt="rectangle" src="https://picsum.photos/750/450" class="image" />
-					<div class="text">
-						<p class="label py-sm">UX RESEARCH METHOD 03/04: User Persona and Journey Map</p>
-						<p>
-							My target audience is deny-listed, bank users. People who have been kicked out of the
-							banking system are unable to open an account independent of where they go because
-							their history follows them. Not being able to bank pushes them further into
-							“unbankedness” for longer and makes it harder for them to get out.
-						</p>
-					</div>
-					<div class="main placeholder">
-						<ImageLoader alt="placeholder" src="https://picsum.photos/1950/350" />
-					</div>
-				</div>
-			</div>
+			<MoreResearch />
 		{/if}
 
 		<!-- SUMMARY OF RESEARCH -->
-		<div class="main py-md">
+		<div class="content py-md">
 			<!-- <div class="this flex-row"> -->
 			<div class="pb-sm">
 				<p class="label">Summary of Research</p>
@@ -338,7 +159,7 @@
 				</p>
 			</div>
 			<div class="py-sm">
-				<p class="label">Conclusion/Opportunity Statement</p>
+				<p class="label">Conclusion / Opportunity Statement</p>
 				<p>
 					We will provide convenient banking services for the people who are deny-listed from the
 					banking system so they can easily establish financial security through the USPS Banking
@@ -350,7 +171,7 @@
 
 		<!-- SOLUTION -->
 		<div class="full grid bg-grey">
-			<div class="main">
+			<div class="content">
 				<p class="label bold py-sm">Solution</p>
 				<p class="py-sm">USPS Second Chance Account</p>
 				<p class="py-sm">
@@ -374,8 +195,8 @@
 				text={'More About SmartBanking'}
 			/>
 			{#if showAbout}
-				<div transition:slide class="main py-md">
-					<p class="py-sm">The Who:</p>
+				<div transition:slide class="content pb-md">
+					<p class="pb-sm">The Who:</p>
 					<p>
 						Those who are denied standard bank accounts due to a rocky (poor) banking history. (Bank
 						history reports track how you have handled savings and checking accounts in the past.
@@ -391,22 +212,35 @@
 				</div>
 			{/if}
 		</div>
-
-		<p class="main label">Final Deliverable</p>
-		<div class="main flex-row py-md">
-			<div class="del">I am Deliverable</div>
-			<div class="del">
-				<p class="label">Suggested Walk-through</p>
-				<ul>
-					<li>Go to the Sign-In page</li>
-					<li>Type in your user and password, and sign in</li>
-					<li>Toggle between your in progress and saved courses</li>
-					<li>Toggle between your achived and current goals</li>
-					<li>Toggle between your inprogress and achived challenges</li>
-					<li>Pick up where you left off on your most recent course</li>
-					<li>Check what part of the lesson you are currently on</li>
-					<li>Go back to the Dashboard</li>
-				</ul>
+		<div class="content py-md">
+			<p class="label">Final Deliverable</p>
+			<div class="flex-row py-md gap-1 flex-wrap">
+				<div class="walkthrough">
+					<iframe
+						title="walkthrough"
+						width="2269"
+						height="1306"
+						src="https://xd.adobe.com/embed/8065d6e2-a5e3-441a-8fb1-4f8d474356e8-d536/?fullscreen&amp;hints=off"
+						frameborder="0"
+						allowfullscreen=""
+						style="width: 350.007px; height: 220.982px; transition-duration: initial;"
+						class=""
+						data-scale="100"
+					/>
+				</div>
+				<div class="del">
+					<p class="label">Suggested Walk-through</p>
+					<ul class="steps">
+						<li>Go to the Sign-In page</li>
+						<li>Type in your user and password, and sign in</li>
+						<li>Toggle between your in progress and saved courses</li>
+						<li>Toggle between your achived and current goals</li>
+						<li>Toggle between your inprogress and achived challenges</li>
+						<li>Pick up where you left off on your most recent course</li>
+						<li>Check what part of the lesson you are currently on</li>
+						<li>Go back to the Dashboard</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	{:else}
@@ -415,28 +249,21 @@
 </div>
 
 <style>
-	* {
-		font-size: var(--body-size);
-	}
-
-	.pt-sm {
-		padding-top: 1rem;
-	}
-
-	.pt-md {
-		padding-top: 2rem;
-	}
-
-	.pb-sm {
+	.del > p {
 		padding-bottom: 1rem;
 	}
-
-	.callout {
-		font-size: var(--callout-size);
+	ul {
+		padding: 0;
+		list-style-type: none;
 	}
-
-	.callout-lg {
-		font-size: var(--callout-size-lg);
+	.steps li {
+		margin: 0;
+		padding: 0.5rem 0 0.5rem 0;
+		font-size: 0.9rem;
+	}
+	.gap-1 {
+		gap: 1rem;
+		justify-content: space-around;
 	}
 
 	ul {
@@ -448,11 +275,26 @@
 	li {
 		padding: 0.9rem 0;
 	}
+	/* 
+	.walkthrough {
+		position: relative;
+		padding-bottom: 56.25%;
+		padding-top: 25px;
+		height: 0;
+	} */
 
-	.del {
-		flex-basis: calc(50% - 0.5rem);
-		max-width: calc(50% - 0.5rem);
-	}
+	/* .walkthrough iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	} */
+
+	/* .del {
+		flex-basis: calc(45% - 0.5rem);
+		max-width: calc(45% - 0.5rem);
+	} */
 
 	.bold {
 		font-weight: 500;
@@ -544,126 +386,14 @@
 		align-items: center;
 	}
 
-	.space-between {
-		justify-content: space-between;
-	}
-
-	.label {
-		font-size: var(--label-size);
-	}
-
 	.header {
 		font-size: var(--header-size);
 	}
 
-	.body-text {
-		font-size: var(--body-size);
-	}
-
-	.hugeNumber {
-		font-size: 4rem;
-	}
-
-	.full {
-		grid-column: 1 / -1;
-	}
-
-	.main {
-		grid-column: 2 / 12;
-	}
-
-	.py-sm {
-		padding: 1rem 0;
-	}
-
-	.py-md {
-		padding: 3rem 0;
-	}
-
-	.painPoint p {
-		text-align: center;
-	}
-
-	.pain-top {
-		display: flex;
-		justify-content: space-around;
-		padding: 1rem 0;
-	}
-
-	.pain-bottom {
-		grid-column: 3 / 11;
-		display: flex;
-		justify-content: space-around;
-		padding: 1rem 0;
-	}
-
-	.point {
-		width: 100px;
-		height: 100px;
-		background-color: grey;
-	}
-
 	.moreStatistics {
 		height: 16rem;
-		grid-column: 3 / 11;
+		grid-column: 2 / 12;
 		background-color: grey;
-	}
-
-	.grid {
-		display: grid;
-		grid-template-columns: repeat(12, minmax(0, 1fr));
-		grid-column-gap: 1rem;
-	}
-
-	.hero {
-		height: 24rem;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		background-image: url('https://picsum.photos/1950/450');
-	}
-
-	.project-name {
-		font-size: var(--header-size);
-		font-weight: 500;
-	}
-
-	.subheader {
-		margin-top: -0.25rem;
-		font-size: var(--label-size);
-	}
-
-	.projectInfo {
-		grid-column: 3 / 11;
-		display: flex;
-		justify-content: space-between;
-	}
-
-	.projectInfo div {
-		flex-basis: 40%;
-	}
-
-	.name {
-		font-size: var(--label-size);
-		font-weight: 600;
-	}
-
-	.gallery {
-		display: grid;
-		grid-column-gap: 1rem;
-		grid-template-columns: repeat(12, minmax(0, 1fr));
-		padding: 3rem 0;
-		min-height: 100vh;
-		background-color: var(--background-color);
-	}
-
-	.photos {
-		grid-column: 3 / 11;
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-		gap: 3rem;
-		justify-items: center;
 	}
 
 	.research {
@@ -673,22 +403,67 @@
 		padding: 3rem 0;
 	}
 
-	.researchLeft {
-		grid-column: 2 / 7;
+	.researchLeft,
+	.researchRight {
+		grid-column: 2 / 12;
 	}
 
 	.researchRight {
-		grid-column: 8 / 11;
-		place-self: center;
+		padding: 0 2rem;
 	}
 
 	.researchRight p {
 		text-align: center;
 	}
 
+	.qualifications > div {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	@media (min-width: 768px) {
+		.moreStatistics {
+			height: 16rem;
+			grid-column: 3 / 11;
+			background-color: grey;
+		}
+
+		.researchLeft {
+			grid-column: 2 / 7;
+		}
+
+		.researchRight {
+			grid-column: 8 / 11;
+			place-self: center;
+		}
+		.del {
+			flex-basis: calc(45% - 0.5rem);
+			max-width: calc(45% - 0.5rem);
+		}
+	}
+
+	@media (min-width: 1280px) {
+		.qualifications > div {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+
 	@media (min-width: 1536px) {
 		.text {
 			grid-column: 1 / -1;
+		}
+		.qualifications > p {
+			grid-column: 1 / 12;
+		}
+		.qualifications {
+			display: grid;
+			grid-template-columns: subgrid;
+		}
+		.qualifications > div {
+			grid-column: 3 / 10;
 		}
 	}
 </style>

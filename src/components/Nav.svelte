@@ -114,12 +114,12 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		width: 100vw;
+		width: 101vw;
 		min-height: 100vh;
-		min-height: -webkit-fill-available;
+		/* min-height: -webkit-fill-available; */
 		margin: 20px 0 0 -84vw;
 
-		padding: 120px 0 50px 0;
+		padding: 90px 0 50px 0;
 		/* padding-top: 125px; */
 		list-style-type: none;
 		-webkit-font-smoothing: antialiased;
@@ -167,17 +167,6 @@
 		display: none;
 		/* display: flex;
 		gap: 2rem; */
-	}
-
-	.flex {
-		display: flex;
-		gap: 4rem;
-		margin-top: 4rem;
-	}
-
-	.w-12 {
-		width: 3rem;
-		height: 3rem;
 	}
 
 	.ham {

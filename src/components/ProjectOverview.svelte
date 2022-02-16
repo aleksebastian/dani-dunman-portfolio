@@ -43,13 +43,13 @@
 		}
 	}
 
-	.py-md {
+	/* .py-md {
 		padding: 3rem 0;
-	}
+	} */
 
-	.label {
+	/* .label {
 		font-size: var(--label-size);
-	}
+	} */
 
 	.body-text {
 		font-size: var(--body-size);
