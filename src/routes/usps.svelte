@@ -6,7 +6,6 @@
 	import ProjectOverview from '../components/ProjectOverview.svelte';
 	import ProjectGallery from '../components/ProjectGallery.svelte';
 	import Painpoints from '../components/usps/Painpoints.svelte';
-	import ImageLoader from '../components/image/ImageLoader.svelte';
 	import Expandable from '../components/Expandable.svelte';
 	import MoreResearch from '../components/usps/MoreResearch.svelte';
 
@@ -275,26 +274,6 @@
 	li {
 		padding: 0.9rem 0;
 	}
-	/* 
-	.walkthrough {
-		position: relative;
-		padding-bottom: 56.25%;
-		padding-top: 25px;
-		height: 0;
-	} */
-
-	/* .walkthrough iframe {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	} */
-
-	/* .del {
-		flex-basis: calc(45% - 0.5rem);
-		max-width: calc(45% - 0.5rem);
-	} */
 
 	.bold {
 		font-weight: 500;
@@ -304,76 +283,8 @@
 		background-color: var(--background-color);
 	}
 
-	.ux-methods {
-		align-items: center;
-		justify-content: center;
-		gap: 1rem;
-	}
-
-	.complex {
-		flex-basis: calc(50% - 0.5rem);
-		max-width: calc(50% - 0.5rem);
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-	}
-
-	.image {
-		/* max-width: 600px; */
-		flex-basis: calc(50% - 0.5rem);
-		max-width: calc(50% - 0.5rem);
-		height: auto;
-	}
-
-	.text {
-		flex-basis: calc(50% - 0.5rem);
-		max-width: calc(50% - 0.5rem);
-	}
-
 	.flex-wrap {
 		flex-wrap: wrap;
-	}
-
-	.imgs {
-		gap: 1rem;
-	}
-
-	.img {
-		background-color: blue;
-		max-height: 300px;
-	}
-
-	.placeholder {
-		/* height: 300px; */
-		background-color: grey;
-	}
-
-	.last {
-		padding: 3rem 0 3rem 0;
-	}
-
-	.researchText {
-		grid-column: 1 / 11;
-	}
-
-	.proposals {
-		grid-column: 2 / 10;
-		justify-content: space-around;
-	}
-
-	.proposal {
-		flex-basis: 25%;
-	}
-
-	.proposal p {
-		padding: 0.5rem 0;
-	}
-
-	.moreResearch {
-		display: grid;
-		grid-template-columns: repeat(10, minmax(0, 1fr));
-		/* height: 16rem; */
-		grid-column: 2 / 12;
 	}
 
 	.flex-row {
@@ -452,9 +363,6 @@
 	}
 
 	@media (min-width: 1536px) {
-		.text {
-			grid-column: 1 / -1;
-		}
 		.qualifications > p {
 			grid-column: 1 / 12;
 		}
