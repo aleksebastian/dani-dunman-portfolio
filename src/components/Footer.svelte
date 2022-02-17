@@ -66,24 +66,6 @@
 <p class="copyright">Copyright © 2021 Daniela Dunman. All Rights Reserved.</p>
 
 <style>
-	/* screens: {
-			MOBILE LANDSCAPE
-      'sm': '640px',
-      // => @media (min-width: 640px) { ... }
-			TABLET PORTRAIT
-      'md': '768px',
-      // => @media (min-width: 768px) { ... }
-			TABLET LANDSCAPE
-      'lg': '1024px',
-      // => @media (min-width: 1024px) { ... }
-			MACBOOK
-      'xl': '1280px',
-      // => @media (min-width: 1280px) { ... }
-			MONITOR
-      '2xl': '1536px',
-      // => @media (min-width: 1536px) { ... }
-    } */
-
 	.info {
 		display: flex;
 		gap: 1rem;
@@ -103,9 +85,7 @@
 
 	.footer {
 		display: flex;
-		flex-wrap: wrap;
-		/* justify-content: space-between; */
-		/* align-items: flex-start; */
+		flex-direction: column;
 		padding: 3rem 0;
 		border-top: 12px solid #d3a615;
 		color: black;
@@ -124,18 +104,15 @@
 	.gif-container {
 		display: flex;
 		flex-direction: column;
-		/* justify-content: center; */
 		align-items: center;
 		max-width: 6rem;
 		text-align: center;
-		/* gap: 1rem; */
 		font-size: 0.6rem;
 	}
 
 	.footer-gif {
 		max-width: 3rem;
 		height: auto;
-		aspect-ratio: 1 / 1;
 	}
 
 	.copyright {
@@ -163,13 +140,11 @@
 			text-align: center;
 			gap: 0.8rem;
 			font-size: 1rem;
-			/* flex-basis: 100%; */
 		}
 
 		.footer-gif {
 			max-width: 4rem;
 			height: auto;
-			aspect-ratio: 1 / 1;
 		}
 
 		.right-footer {
@@ -190,24 +165,15 @@
 
 		.gifs-container {
 			display: flex;
-			justify-content: space-between;
-			/* gap: 1rem; */
+			justify-content: space-around;
 			align-items: flex-start;
 			flex-grow: 1;
 		}
 
-		/* .gifs-container {
-			display: flex;
-			gap: 0.5rem;
-			padding: 0 1rem 0 1rem;
-		} */
-
 		.footer {
 			display: flex;
-			flex-wrap: wrap;
+			flex-direction: row;
 			gap: 3rem;
-			/* justify-content: space-between; */
-			/* align-items: flex-start; */
 			padding: 3rem;
 			border-top: 12px solid #d3a615;
 			color: black;

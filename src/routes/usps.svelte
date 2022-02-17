@@ -41,11 +41,6 @@
 		};
 	});
 
-	function rand(min, max) {
-		let randomNum = Math.random() * (max - min) + min;
-		return Math.round(randomNum);
-	}
-
 	const projectOverviewData = [
 		{
 			label: 'Goal',
@@ -187,6 +182,7 @@
 					history.
 				</p>
 			</div>
+
 			<Expandable
 				{handleClick}
 				state={showAbout}
@@ -213,20 +209,20 @@
 		</div>
 		<div class="content py-md">
 			<p class="label">Final Deliverable</p>
-			<div class="flex-row py-md gap-1 flex-wrap">
-				<div class="walkthrough">
-					<iframe
-						title="walkthrough"
-						width="2269"
-						height="1306"
-						src="https://xd.adobe.com/embed/8065d6e2-a5e3-441a-8fb1-4f8d474356e8-d536/?fullscreen&amp;hints=off"
-						frameborder="0"
-						allowfullscreen=""
-						style="width: 350.007px; height: 220.982px; transition-duration: initial;"
-						class=""
-						data-scale="100"
-					/>
-				</div>
+			<div class="walkthrough flex-row py-md gap-1 flex-wrap">
+				<!-- <div class="walkthrough"> -->
+				<iframe
+					title="walkthrough"
+					width="944"
+					height="576"
+					src="https://xd.adobe.com/embed/8065d6e2-a5e3-441a-8fb1-4f8d474356e8-d536/?fullscreen&amp;hints=off"
+					frameborder="0"
+					allowfullscreen=""
+					style=""
+					class="proto"
+					data-scale="100"
+				/>
+				<!-- </div> -->
 				<div class="del">
 					<p class="label">Suggested Walk-through</p>
 					<ul class="steps">
@@ -248,6 +244,17 @@
 </div>
 
 <style>
+	.walkthrough {
+		display: flex;
+		align-items: center;
+	}
+
+	.proto {
+		/* max-width: 100vw; */
+		max-height: 200px;
+		transition-duration: initial;
+	}
+
 	.del > p {
 		padding-bottom: 1rem;
 	}
@@ -258,7 +265,6 @@
 	.steps li {
 		margin: 0;
 		padding: 0.5rem 0 0.5rem 0;
-		font-size: 0.9rem;
 	}
 	.gap-1 {
 		gap: 1rem;
@@ -334,6 +340,13 @@
 	}
 
 	@media (min-width: 768px) {
+		.walkthrough iframe {
+			margin: 0;
+		}
+		.proto {
+			max-width: calc(50vw - 1rem);
+			max-height: 80vh;
+		}
 		.moreStatistics {
 			height: 16rem;
 			grid-column: 3 / 11;
@@ -347,10 +360,6 @@
 		.researchRight {
 			grid-column: 8 / 11;
 			place-self: center;
-		}
-		.del {
-			flex-basis: calc(45% - 0.5rem);
-			max-width: calc(45% - 0.5rem);
 		}
 	}
 

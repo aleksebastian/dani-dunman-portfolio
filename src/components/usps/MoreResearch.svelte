@@ -66,10 +66,10 @@
 		<div class="img-grid">
 			<div class="flex-row">
 				<div class="sq-img">
-					<ImageLoader alt="square" src={`https://picsum.photos/600`} />
+					<ImageLoader alt="square" src={`https://picsum.photos/400`} />
 				</div>
 				<div class="sq-img">
-					<ImageLoader alt="square" src={`https://picsum.photos/600`} />
+					<ImageLoader alt="square" src={`https://picsum.photos/400`} />
 				</div>
 			</div>
 			<div class="img">
@@ -92,7 +92,7 @@
 			<img alt="rectangle" src="https://picsum.photos/750/450" class="image" />
 		</div>
 		<div class="content placeholder">
-			<ImageLoader alt="placeholder" src="https://picsum.photos/1950/350" />
+			<ImageLoader alt="placeholder" src="https://picsum.photos/1600/300" />
 		</div>
 	</div>
 </div>
@@ -219,6 +219,7 @@
 
 		.ux-method-3 {
 			flex-direction: row-reverse;
+			align-items: center;
 		}
 	}
 </style>

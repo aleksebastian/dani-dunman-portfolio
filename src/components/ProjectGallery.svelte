@@ -10,22 +10,22 @@
 <div id="work" class="gallery full">
 	<div class="photos">
 		<div>
-			<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/800/550`} alt="dani" />
+			<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/600/400`} alt="dani" />
 		</div>
 		<div>
-			<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/800/550`} alt="dani" />
+			<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/600/400`} alt="dani" />
 		</div>
 		<div>
-			<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/800/550`} alt="dani" />
+			<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/600/400`} alt="dani" />
 		</div>
 		<div>
-			<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/800/550`} alt="dani" />
+			<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/600/400`} alt="dani" />
 		</div>
 		<div>
-			<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/800/550`} alt="dani" />
+			<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/600/400`} alt="dani" />
 		</div>
 		<div>
-			<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/800/550`} alt="dani" />
+			<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/600/400`} alt="dani" />
 		</div>
 	</div>
 </div>
