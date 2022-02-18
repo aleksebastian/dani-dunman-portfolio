@@ -30,7 +30,7 @@
 	}
 
 	.content {
-		margin-top: 4rem;
+		padding-top: 4rem;
 	}
 
 	.glass {

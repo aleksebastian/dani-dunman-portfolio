@@ -4,51 +4,72 @@
 	import FaInstagram from 'svelte-icons/fa/FaInstagram.svelte';
 	import FaLinkedin from 'svelte-icons/fa/FaLinkedin.svelte';
 	import FaPinterestSquare from 'svelte-icons/fa/FaPinterestSquare.svelte';
+
+	import { currentPage } from '../store';
+
+	import { onMount } from 'svelte';
+
+	let imgSrc =
+		'https://freight.cargo.site/w/800/q/75/i/3e3ad5f598fcba7a6e849c8dabb36d3babcabce1c682818d8d34b878c7412986/Screen-Shot-2021-10-07-at-11.31.44-AM.png';
+
+	let imgLoaded = false;
+	onMount(() => {
+		currentPage.set('about');
+		const img = new Image();
+		img.src = imgSrc;
+		img.onload = () => {
+			imgLoaded = true;
+		};
+	});
 </script>
 
-<div transition:fade={{ duration: 150 }} class="container">
-	<div class="img-container">
-		<img
-			alt="portrait"
-			src="https://freight.cargo.site/w/800/q/75/i/3e3ad5f598fcba7a6e849c8dabb36d3babcabce1c682818d8d34b878c7412986/Screen-Shot-2021-10-07-at-11.31.44-AM.png"
-		/>
-	</div>
-	<div class="right">
-		<div class="text">
-			<p class="header">Olá! E aí, tudo bem?</p>
-			<p>
-				My name is Daniela, but everyone calls me Dani. I’m an Austinite and recent Texas State
-				University graduate with a BFA in Communication Design. I’m a Ux Designer, Researcher, and
-				Problem-Solver. What I love most in design is creating things and experiences that make a
-				difference in someone’s day.
-			</p>
-			<p>
-				Growing up, I spent every summer visiting family in Brazil, getting to immerse myself in
-				another culture, practicing and perfecting my Portuguese, and eating great food. When I’m
-				not in the studio, you’ll find me watching a movie, reading, cooking, or watching Spanish
-				telenovelas to “practice my Español”!
-			</p>
-			<div class="contact">
-				<div class="row">
-					<p>Resume</p>
-					<p>E-Resume</p>
-				</div>
-				<a href="mailto:danieladunman@gmail.com" class="email">danieladunman@gmail.com</a>
-				<div class="icons">
-					<div class="icon">
-						<FaInstagram />
+{#if imgLoaded}
+	<div transition:fade={{ duration: 150 }} class="container">
+		<div class="img-container">
+			<img
+				alt="portrait"
+				src="https://freight.cargo.site/w/800/q/75/i/3e3ad5f598fcba7a6e849c8dabb36d3babcabce1c682818d8d34b878c7412986/Screen-Shot-2021-10-07-at-11.31.44-AM.png"
+			/>
+		</div>
+		<div class="right">
+			<div class="text">
+				<p class="header">Olá! E aí, tudo bem?</p>
+				<p>
+					My name is Daniela, but everyone calls me Dani. I’m an Austinite and recent Texas State
+					University graduate with a BFA in Communication Design. I’m a Ux Designer, Researcher, and
+					Problem-Solver. What I love most in design is creating things and experiences that make a
+					difference in someone’s day.
+				</p>
+				<p>
+					Growing up, I spent every summer visiting family in Brazil, getting to immerse myself in
+					another culture, practicing and perfecting my Portuguese, and eating great food. When I’m
+					not in the studio, you’ll find me watching a movie, reading, cooking, or watching Spanish
+					telenovelas to “practice my Español”!
+				</p>
+				<div class="contact">
+					<div class="row">
+						<p>Resume</p>
+						<p>E-Resume</p>
 					</div>
-					<div class="icon">
-						<FaLinkedin />
-					</div>
-					<div class="icon">
-						<FaPinterestSquare />
+					<a href="mailto:danieladunman@gmail.com" class="email">danieladunman@gmail.com</a>
+					<div class="icons">
+						<div class="icon">
+							<FaInstagram />
+						</div>
+						<div class="icon">
+							<FaLinkedin />
+						</div>
+						<div class="icon">
+							<FaPinterestSquare />
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
+{:else}
+	<div style="min-height: 100vh" />
+{/if}
 
 <style>
 	.email {

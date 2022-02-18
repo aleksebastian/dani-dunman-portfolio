@@ -30,12 +30,16 @@
 
 	import { onMount } from 'svelte';
 
-	const heroSrc = 'https://via.placeholder.com/1980x495?text=+';
+	const hero = {
+		imgSrc: 'https://via.placeholder.com/1980x695?text=+',
+		header: 'USPS SmartBanking',
+		subheader: 'UX/Research'
+	};
 	let heroLoaded = false;
 	onMount(() => {
 		currentPage.set('usps');
 		const heroImg = new Image();
-		heroImg.src = heroSrc;
+		heroImg.src = hero.imgSrc;
 		heroImg.onload = () => {
 			heroLoaded = true;
 		};
@@ -56,7 +60,7 @@
 <div class="grid">
 	<!-- HERO -->
 	{#if heroLoaded}
-		<ProjectHero {heroSrc} />
+		<ProjectHero {hero} />
 
 		<ProjectOverview {projectOverviewData} />
 
