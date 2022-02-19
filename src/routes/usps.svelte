@@ -242,12 +242,41 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="full grid py-md" style="background-color: var(--background-color)">
+			<div class="content py-md">
+				<p class="label bold">HELLO</p>
+
+				<div class="pt-sm">
+					<p class="med">hello</p>
+					<p>hello 2</p>
+				</div>
+			</div>
+
+			<div class="content pb-md">
+				<p class="label bold">HELLO</p>
+
+				<div class="py-sm">
+					<p class="med">hello</p>
+					<p>hello 2</p>
+				</div>
+
+				<div class="py-sm">
+					<p class="med">hello</p>
+					<p>hello 2</p>
+				</div>
+			</div>
+		</div>
 	{:else}
 		<div style="min-height: 100vh" />
 	{/if}
 </div>
 
 <style>
+	.med {
+		font-size: 1.3rem;
+	}
+
 	.walkthrough {
 		display: flex;
 		align-items: center;
@@ -255,7 +284,7 @@
 
 	.proto {
 		/* max-width: 100vw; */
-		max-height: 200px;
+		max-height: 250px;
 		transition-duration: initial;
 	}
 
@@ -344,6 +373,10 @@
 	}
 
 	@media (min-width: 768px) {
+		.walkthrough {
+			flex-wrap: nowrap;
+			gap: 1rem !important;
+		}
 		.walkthrough iframe {
 			margin: 0;
 		}

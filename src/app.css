@@ -25,6 +25,10 @@ a {
 	font-size: 1.9rem;
 }
 
+.bold {
+	font-weight: 500;
+}
+
 .grid {
 	display: grid;
 	grid-template-columns: repeat(12, minmax(0, 1fr));
