@@ -10,7 +10,7 @@
 	import { onMount } from 'svelte';
 
 	let imgSrc =
-		'https://freight.cargo.site/w/800/q/75/i/3e3ad5f598fcba7a6e849c8dabb36d3babcabce1c682818d8d34b878c7412986/Screen-Shot-2021-10-07-at-11.31.44-AM.png';
+		'https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645321739/Dani/About/dani_mxgsyl.png';
 
 	let imgLoaded = false;
 	onMount(() => {
@@ -28,7 +28,7 @@
 		<div class="img-container">
 			<img
 				alt="portrait"
-				src="https://freight.cargo.site/w/800/q/75/i/3e3ad5f598fcba7a6e849c8dabb36d3babcabce1c682818d8d34b878c7412986/Screen-Shot-2021-10-07-at-11.31.44-AM.png"
+				src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645321739/Dani/About/dani_mxgsyl.png"
 			/>
 		</div>
 		<div class="right">
