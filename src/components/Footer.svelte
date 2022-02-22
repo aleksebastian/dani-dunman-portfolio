@@ -11,7 +11,7 @@
 		<div class="gif-container">
 			<div class="footer-gif">
 				<ImageLoader
-					src="https://res.cloudinary.com/blitva/image/upload/v1643897805/Dani/hippo_animation_loop_qnan1e.gif"
+					src="https://res.cloudinary.com/blitva/image/upload/c_scale,w_200/v1643897805/Dani/Footer/hippo_animation_loop_qnan1e.gif"
 					alt="hippo"
 				/>
 			</div>
@@ -20,7 +20,7 @@
 		<div class="gif-container">
 			<div class="footer-gif">
 				<ImageLoader
-					src="https://res.cloudinary.com/blitva/image/upload/v1643897805/Dani/pizza-loop_ed5rvh.gif"
+					src="https://res.cloudinary.com/blitva/image/upload/c_scale,w_200/v1643897805/Dani/Footer/pizza-loop_ed5rvh.gif"
 					alt="hippo"
 				/>
 			</div>
@@ -29,7 +29,7 @@
 		<div class="gif-container">
 			<div class="footer-gif">
 				<ImageLoader
-					src="https://res.cloudinary.com/blitva/image/upload/v1643897805/Dani/coffee_animation_ejkykd.gif"
+					src="https://res.cloudinary.com/blitva/image/upload/c_scale,w_200/v1643897805/Dani/Footer/coffee_animation_ejkykd.gif"
 					alt="hippo"
 				/>
 			</div>
@@ -38,7 +38,7 @@
 		<div class="gif-container">
 			<img
 				class="footer-gif"
-				src="https://res.cloudinary.com/blitva/image/upload/v1643897805/Dani/acai-animtion-loop_xguomg.gif"
+				src="https://res.cloudinary.com/blitva/image/upload/c_scale,w_200/v1643897805/Dani/Footer/acai-animtion-loop_xguomg.gif"
 				alt="hippo"
 			/>
 			<p>It’s açaí (ah-sah-ee) Not acai (uh-kai)</p>

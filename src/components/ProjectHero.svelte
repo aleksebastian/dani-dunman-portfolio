@@ -1,15 +1,15 @@
 <script>
 	import { fade } from 'svelte/transition';
 
-	export let heroSrc;
+	export let project;
 </script>
 
 <!-- <div class="grid"> -->
-<div in:fade class="hero full py-md">
-	<img src={heroSrc} alt="project" />
+<div in:fade class="hero full">
+	<img src={project.heroSrc} alt="project" />
 	<div class="text">
-		<p class="project-name">USPS SmartBanking</p>
-		<p class="subheader">UX/Research</p>
+		<p class="project-name">{project.name}</p>
+		<p class="subheader">{project.type}</p>
 	</div>
 </div>
 
@@ -37,12 +37,7 @@
 	.hero {
 		position: relative;
 		display: inline-block;
-		/* margin-bottom: 3rem; */
 	}
-
-	/* .full {
-		grid-column: 1 / -1;
-	} */
 
 	.project-name {
 		font-size: var(--label-size);

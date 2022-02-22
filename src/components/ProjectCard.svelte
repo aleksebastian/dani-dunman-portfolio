@@ -9,11 +9,14 @@
 	import ImageLoader from './image/ImageLoader.svelte';
 </script>
 
-<a href={`/${project.toLowerCase()}`} class="project">
+<a href={project.route} class="project">
 	<div class="project-image">
-		<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/700/450`} alt="dani" />
+		<ImageLoader
+			src={`https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_crop,h_600/v1645400448/Dani/works%20in%20intaglio/Works_In_Intaglio_mockup_jcxwnm.jpg`}
+			alt="dani"
+		/>
 	</div>
-	<p class="project-name">{project}</p>
+	<p class="project-name">{project.name}</p>
 </a>
 
 <style>
@@ -55,6 +58,11 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		z-index: 2;
+		/* background-color: blue; */
+		width: 100%;
+		text-align: center;
+		padding: 0 10%;
+		line-height: 1.25;
 	}
 
 	@media (min-width: 768px) {

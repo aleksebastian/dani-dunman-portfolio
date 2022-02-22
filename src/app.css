@@ -3,6 +3,7 @@ body {
 	max-width: 1980px;
 	margin: 0 auto;
 	font-size: 1.1rem;
+	-webkit-tap-highlight-color: transparent;
 }
 
 a {
@@ -23,6 +24,10 @@ a {
 
 .label {
 	font-size: 1.9rem;
+}
+
+.bold {
+	font-weight: 500;
 }
 
 .grid {
@@ -49,6 +54,10 @@ a {
 
 .py-md {
 	padding: 3rem 0;
+}
+
+.py-lg {
+	padding: 5rem 0;
 }
 
 .py-sm {

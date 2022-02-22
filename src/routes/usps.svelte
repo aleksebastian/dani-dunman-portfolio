@@ -2,6 +2,8 @@
 	import { slide } from 'svelte/transition';
 	import { currentPage } from '../store';
 
+	import { usps } from '../projectData.json';
+
 	import ProjectHero from '../components/ProjectHero.svelte';
 	import ProjectOverview from '../components/ProjectOverview.svelte';
 	import ProjectGallery from '../components/ProjectGallery.svelte';
@@ -30,12 +32,16 @@
 
 	import { onMount } from 'svelte';
 
-	const heroSrc = 'https://via.placeholder.com/1980x495?text=+';
+	// const hero = {
+	// 	imgSrc: 'https://via.placeholder.com/1980x695?text=+',
+	// 	header: 'USPS SmartBanking',
+	// 	subheader: 'UX/Research'
+	// };
 	let heroLoaded = false;
 	onMount(() => {
-		currentPage.set('usps');
+		currentPage.set(usps.route);
 		const heroImg = new Image();
-		heroImg.src = heroSrc;
+		heroImg.src = usps.heroSrc;
 		heroImg.onload = () => {
 			heroLoaded = true;
 		};
@@ -56,9 +62,9 @@
 <div class="grid">
 	<!-- HERO -->
 	{#if heroLoaded}
-		<ProjectHero {heroSrc} />
+		<ProjectHero project={usps} />
 
-		<ProjectOverview {projectOverviewData} />
+		<ProjectOverview overview={usps.overview} />
 
 		<!-- GALLERY -->
 		<ProjectGallery />
@@ -238,12 +244,41 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="full grid py-md" style="background-color: var(--background-color)">
+			<div class="content py-md">
+				<p class="label bold">HELLO</p>
+
+				<div class="pt-sm">
+					<p class="med">hello</p>
+					<p>hello 2</p>
+				</div>
+			</div>
+
+			<div class="content pb-md">
+				<p class="label bold">HELLO</p>
+
+				<div class="py-sm">
+					<p class="med">hello</p>
+					<p>hello 2</p>
+				</div>
+
+				<div class="py-sm">
+					<p class="med">hello</p>
+					<p>hello 2</p>
+				</div>
+			</div>
+		</div>
 	{:else}
 		<div style="min-height: 100vh" />
 	{/if}
 </div>
 
 <style>
+	.med {
+		font-size: 1.3rem;
+	}
+
 	.walkthrough {
 		display: flex;
 		align-items: center;
@@ -251,7 +286,7 @@
 
 	.proto {
 		/* max-width: 100vw; */
-		max-height: 200px;
+		max-height: 250px;
 		transition-duration: initial;
 	}
 
@@ -340,6 +375,10 @@
 	}
 
 	@media (min-width: 768px) {
+		.walkthrough {
+			flex-wrap: nowrap;
+			gap: 1rem !important;
+		}
 		.walkthrough iframe {
 			margin: 0;
 		}

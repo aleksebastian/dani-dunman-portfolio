@@ -1,0 +1,124 @@
+{
+	"usps": {
+		"name": "USPS SmartBanking",
+		"type": "UX, Research",
+		"route": "/usps",
+		"cardSrc": "https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400448/Dani/works%20in%20intaglio/Works_In_Intaglio_mockup_jcxwnm.jpg",
+		"heroSrc": "https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_crop,h_800,w_2500/v1645400448/Dani/works%20in%20intaglio/Works_In_Intaglio_mockup_jcxwnm.jpg",
+		"overview": [
+			{
+				"label": "Goal",
+				"text": "To provide the underbanked and unbanked community a service for reentering the banking system through USPS. The service should be a stepping stone back into traditional banking, not a replacement for it."
+			},
+			{
+				"label": "What I Did",
+				"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+			}
+		]
+	},
+	"bluedoor": {
+		"name": "BlueDoor",
+		"type": "UX, UI",
+		"route": "/bluedoor",
+		"cardSrc": "https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400448/Dani/works%20in%20intaglio/Works_In_Intaglio_mockup_jcxwnm.jpg",
+		"heroSrc": "https://via.placeholder.com/1980x695?text=+",
+		"overview": [
+			{
+				"label": "Goal",
+				"text": "To provide the underbanked and unbanked community a service for reentering the banking system through USPS. The service should be a stepping stone back into traditional banking, not a replacement for it."
+			},
+			{
+				"label": "Problem Statement",
+				"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+			},
+			{
+				"label": "What I Did",
+				"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+			}
+		]
+	},
+	"intaglio": {
+		"name": "Works in Intaglio",
+		"type": "Publication",
+		"route": "intaglio",
+		"cardSrc": "https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400448/Dani/works%20in%20intaglio/Works_In_Intaglio_mockup_jcxwnm.jpg",
+		"heroSrc": "https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_crop,h_800,w_2500,g_north/v1645400448/Dani/works%20in%20intaglio/Works_In_Intaglio_mockup_jcxwnm.jpg",
+		"overview": [
+			{
+				"label": "Goal",
+				"text": "To provide the underbanked and unbanked community a service for reentering the banking system through USPS. The service should be a stepping stone back into traditional banking, not a replacement for it."
+			},
+			{
+				"label": "Problem Statement",
+				"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+			},
+			{
+				"label": "What I Did",
+				"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+			}
+		]
+	},
+	"radio": {
+		"name": "Radio Museum Exhibit",
+		"type": "Research, UI",
+		"route": "radio",
+		"cardSrc": "https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400448/Dani/works%20in%20intaglio/Works_In_Intaglio_mockup_jcxwnm.jpg",
+		"heroSrc": "https://via.placeholder.com/1980x695?text=+",
+		"overview": [
+			{
+				"label": "Goal",
+				"text": "To provide the underbanked and unbanked community a service for reentering the banking system through USPS. The service should be a stepping stone back into traditional banking, not a replacement for it."
+			},
+			{
+				"label": "Problem Statement",
+				"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+			},
+			{
+				"label": "What I Did",
+				"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+			}
+		]
+	},
+	"language": {
+		"name": "Language Exchange Publication",
+		"type": "",
+		"route": "radio",
+		"cardSrc": "https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400448/Dani/works%20in%20intaglio/Works_In_Intaglio_mockup_jcxwnm.jpg",
+		"heroSrc": "https://via.placeholder.com/1980x695?text=+",
+		"overview": [
+			{
+				"label": "Goal",
+				"text": "To provide the underbanked and unbanked community a service for reentering the banking system through USPS. The service should be a stepping stone back into traditional banking, not a replacement for it."
+			},
+			{
+				"label": "Problem Statement",
+				"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+			},
+			{
+				"label": "What I Did",
+				"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+			}
+		]
+	},
+	"logo": {
+		"name": "Logo Design",
+		"type": "",
+		"route": "radio",
+		"cardSrc": "https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400448/Dani/works%20in%20intaglio/Works_In_Intaglio_mockup_jcxwnm.jpg",
+		"heroSrc": "https://via.placeholder.com/1980x695?text=+",
+		"overview": [
+			{
+				"label": "Goal",
+				"text": "To provide the underbanked and unbanked community a service for reentering the banking system through USPS. The service should be a stepping stone back into traditional banking, not a replacement for it."
+			},
+			{
+				"label": "Problem Statement",
+				"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+			},
+			{
+				"label": "What I Did",
+				"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+			}
+		]
+	}
+}

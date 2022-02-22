@@ -1,9 +1,10 @@
 <script>
-	import { onMount } from 'svelte';
 	import smoothscroll from 'smoothscroll-polyfill';
+	import { onMount } from 'svelte';
 	import { yOffSet, isMobileNavOpen } from '../store';
 
-	import FaEnvelopeSquare from 'svelte-icons/fa/FaEnvelopeSquare.svelte';
+	import projectData from '../projectData.json';
+	const projects = Object.values(projectData);
 
 	const id = 'work';
 	const yOffset = -70;
@@ -36,6 +37,10 @@
 	$: isMobileNavOpenLocal = false;
 	$: isMobileNavOpenLocal, toggleMobileNav();
 
+	const toggleLocalNavState = () => {
+		isMobileNavOpenLocal = !isMobileNavOpenLocal;
+	};
+
 	const toggleMobileNav = () => {
 		isMobileNavOpen.set(isMobileNavOpenLocal);
 		if (win) {
@@ -60,32 +65,19 @@
 		<span />
 		<ul id="menu" style="transform: {!isMobileNavOpenLocal ? 'translate(100%, 0)' : 'none'}">
 			<div class="actions">
-				<li>
-					<a href="/resume"> Home </a>
+				<li on:click={toggleLocalNavState}>
+					<a href="/"> Home </a>
 				</li>
-				<li>
-					<a href="/resume"> About </a>
+				<li on:click={toggleLocalNavState}>
+					<a href="/about"> About </a>
 				</li>
 			</div>
 			<div class="projects">
-				<li>
-					<a href="/">USPS SmartBanking</a>
-				</li>
-				<li>
-					<a href="/resume"> BlueDoor </a>
-				</li>
-				<li>
-					<a href="/contact"> Radio Museum Exhibit </a>
-				</li>
-				<li>
-					<a href="/contact"> Works in Intaglio </a>
-				</li>
-				<li>
-					<a href="/contact"> Language Exchange </a>
-				</li>
-				<li>
-					<a href="/contact"> Logos </a>
-				</li>
+				{#each projects as project}
+					<li on:click={toggleLocalNavState}>
+						<a href={project.route}>{project.name}</a>
+					</li>
+				{/each}
 			</div>
 		</ul>
 	</div>

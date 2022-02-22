@@ -1,11 +1,11 @@
 <script>
 	import ProjectCard from './ProjectCard.svelte';
-
-	const projects = ['USPS', 'Bluedoor', 'Works', 'Radio', 'Language', 'Logo'];
+	import projects from '../projectData.json';
+	const parsedProjects = Object.values(projects);
 </script>
 
 <div id="work" class="gallery">
-	{#each projects as project}
+	{#each parsedProjects as project}
 		<ProjectCard {project} />
 	{/each}
 </div>
