@@ -2,6 +2,7 @@
 	import ProjectCard from './ProjectCard.svelte';
 	import projects from '../projectData.json';
 	const parsedProjects = Object.values(projects);
+	console.log(parsedProjects);
 </script>
 
 <div id="work" class="gallery">
