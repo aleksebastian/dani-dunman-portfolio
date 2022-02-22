@@ -2,33 +2,62 @@
 	<p class="label full">Pain Points</p>
 	<div class="pain-top content">
 		<div class="painPoint">
-			<div class="point" />
+			<!-- <div class="point" /> -->
+			<img
+				class="point"
+				alt="painpoint"
+				src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_scale,w_200/v1645400438/Dani/usps/Artboard_15_copy_3_kk7h7d.png"
+			/>
 			<p>Label</p>
 		</div>
 		<div class="painPoint">
-			<div class="point" />
+			<img
+				class="point"
+				alt="painpoint"
+				src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_scale,w_200/v1645400439/Dani/usps/Artboard_15_copy_5_iz3rue.png"
+			/>
 			<p>Label</p>
 		</div>
 		<div class="painPoint">
-			<div class="point" />
+			<img
+				class="point"
+				alt="painpoint"
+				src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_scale,w_200/v1645400434/Dani/usps/USPS_Data_pnnfu4.jpg"
+			/>
 			<p>Label</p>
 		</div>
 		<div class="painPoint">
-			<div class="point" />
+			<img
+				class="point"
+				alt="painpoint"
+				src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_scale,w_200/v1645400441/Dani/usps/Artboard_15_copy_6_rxy4sf.png"
+			/>
 			<p>Label</p>
 		</div>
 	</div>
 	<div class="pain-bottom">
 		<div class="painPoint">
-			<div class="point" />
+			<img
+				class="point"
+				alt="painpoint"
+				src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_scale,w_200/v1645400438/Dani/usps/Artboard_15_copy_4_qme2mw.png"
+			/>
 			<p>Label</p>
 		</div>
 		<div class="painPoint">
-			<div class="point" />
+			<img
+				class="point"
+				alt="painpoint"
+				src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_scale,w_200/v1645400437/Dani/usps/Artboard_15_copy_2_kaezjn.png"
+			/>
 			<p>Label</p>
 		</div>
 		<div class="painPoint">
-			<div class="point" />
+			<img
+				class="point"
+				alt="painpoint"
+				src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_scale,w_200/v1645400435/Dani/usps/Artboard_15_f97tkw.png"
+			/>
 			<p>Label</p>
 		</div>
 	</div>
@@ -46,7 +75,7 @@
 	.point {
 		width: 100px;
 		height: 100px;
-		background-color: grey;
+		/* background-color: grey; */
 	}
 
 	.painPoint p {
@@ -95,7 +124,7 @@
 		.point {
 			width: 100px;
 			height: 100px;
-			background-color: grey;
+			/* background-color: grey; */
 		}
 		.pain-bottom {
 			width: 100%;

@@ -22,7 +22,7 @@
 </script>
 
 <svelte:head>
-	<title>Daniela Dunman | About</title>
+	<title>About | Daniela Dunman</title>
 </svelte:head>
 
 {#if imgLoaded}
