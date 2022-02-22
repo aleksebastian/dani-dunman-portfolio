@@ -29,6 +29,10 @@
 	};
 </script>
 
+<svelte:head>
+	<title>{bluedoor.name}</title>
+</svelte:head>
+
 <div class="grid">
 	{#if heroLoaded}
 		<ProjectHero project={bluedoor} />

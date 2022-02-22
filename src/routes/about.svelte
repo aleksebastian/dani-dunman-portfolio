@@ -21,6 +21,10 @@
 	});
 </script>
 
+<svelte:head>
+	<title>Daniela Dunman | About</title>
+</svelte:head>
+
 {#if imgLoaded}
 	<div transition:fade={{ duration: 150 }} class="container">
 		<div class="img-container">

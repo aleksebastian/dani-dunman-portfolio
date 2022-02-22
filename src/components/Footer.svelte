@@ -50,15 +50,27 @@
 			<a href="/about">More interesting facts</a>
 		</div>
 		<div class="icons">
-			<div class="icon">
+			<a
+				href="https://www.instagram.com/danidunmanart/?hl=en"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
 				<FaInstagram />
-			</div>
-			<div class="icon">
+			</a>
+			<a
+				href="https://www.linkedin.com/in/daniela-dunman/"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
 				<FaLinkedin />
-			</div>
-			<div class="icon">
+			</a>
+			<a
+				href="https://www.pinterest.com/danidunman/_saved/"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
 				<FaPinterestSquare />
-			</div>
+			</a>
 		</div>
 	</div>
 </div>
@@ -96,9 +108,11 @@
 		gap: 2rem;
 	}
 
-	.icon {
+	.icons > a {
 		width: 32px;
 		height: 32px;
+		cursor: pointer;
+		color: black;
 	}
 
 	.gif-container {

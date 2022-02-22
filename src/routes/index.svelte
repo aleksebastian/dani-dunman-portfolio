@@ -10,6 +10,10 @@
 	onMount(() => currentPage.set('index'));
 </script>
 
+<svelte:head>
+	<title>Daniela Dunman</title>
+</svelte:head>
+
 <section class="content">
 	<Hero />
 	<Gallery />

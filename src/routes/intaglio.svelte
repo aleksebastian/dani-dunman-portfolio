@@ -33,6 +33,10 @@
 	const handlePrevClick = () => carousel.goToPrev();
 </script>
 
+<svelte:head>
+	<title>{intaglio.name}</title>
+</svelte:head>
+
 {#if heroLoaded}
 	<div class="grid">
 		<ProjectHero project={intaglio} />
