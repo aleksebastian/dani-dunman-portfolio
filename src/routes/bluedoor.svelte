@@ -1,65 +1,38 @@
 <script>
+	import { onMount } from 'svelte';
+	import { currentPage } from '../store';
+	import { bluedoor } from '../projectData.json';
+
 	import ProjectHero from '../components/ProjectHero.svelte';
 	import ProjectOverview from '../components/ProjectOverview.svelte';
 	import ProjectGallery from '../components/ProjectGallery.svelte';
 	import Expandable from '../components/Expandable.svelte';
 	import MoreResearch from '../components/bluedoor/MoreResearch.svelte';
-	import { currentPage } from '../store';
 
-	import { onMount } from 'svelte';
-
-	const heroSrc = 'https://via.placeholder.com/1980x695?text=+';
-	const hero = {
-		imgSrc: 'https://via.placeholder.com/1980x695?text=+',
-		header: 'BlueDoor',
-		subheader: 'UX/UI'
-	};
 	let heroLoaded = false;
 	onMount(() => {
-		currentPage.set('bluedoor');
+		currentPage.set(bluedoor.route);
 		const heroImg = new Image();
-		heroImg.src = heroSrc;
+		heroImg.src = bluedoor.heroSrc;
 		heroImg.onload = () => {
 			heroLoaded = true;
 		};
 	});
 
 	let showResearch = false;
-
+	``;
 	const handleClick = (section) => {
-		if (section === 'statistics') {
-			showStatistics = !showStatistics;
-			return;
-		}
 		if (section === 'research') {
 			showResearch = !showResearch;
 			return;
 		}
-		if (section === 'about') {
-			showAbout = !showAbout;
-		}
 	};
-
-	const projectOverviewData = [
-		{
-			label: 'Goal',
-			text: 'To provide the underbanked and unbanked community a service for reentering the banking system through USPS. The service should be a stepping stone back into traditional banking, not a replacement for it.'
-		},
-		{
-			label: 'Problem Statement',
-			text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-		},
-		{
-			label: 'What I Did',
-			text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-		}
-	];
 </script>
 
 <div class="grid">
 	{#if heroLoaded}
-		<ProjectHero {hero} />
-		<ProjectOverview {projectOverviewData} />
+		<ProjectHero project={bluedoor} />
+		<ProjectOverview overview={bluedoor.overview} />
 		<ProjectGallery />
 
 		<!-- RESEARCH -->

@@ -1,15 +1,13 @@
 <script>
+	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
+	import { currentPage } from '../store';
 
 	import FaInstagram from 'svelte-icons/fa/FaInstagram.svelte';
 	import FaLinkedin from 'svelte-icons/fa/FaLinkedin.svelte';
 	import FaPinterestSquare from 'svelte-icons/fa/FaPinterestSquare.svelte';
 
-	import { currentPage } from '../store';
-
-	import { onMount } from 'svelte';
-
-	let imgSrc =
+	const imgSrc =
 		'https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645321739/Dani/About/dani_mxgsyl.png';
 
 	let imgLoaded = false;

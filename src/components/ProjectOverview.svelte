@@ -1,9 +1,9 @@
 <script>
-	export let projectOverviewData;
+	export let overview;
 
 	let gridColumn;
 	let flexBasis;
-	let cols = projectOverviewData.length;
+	let cols = overview.length;
 
 	if (cols === 1) {
 		gridColumn = '2 / 12';
@@ -20,7 +20,7 @@
 </script>
 
 <div class="projectInfo py-md" style="grid-column: {gridColumn}">
-	{#each projectOverviewData as projectData}
+	{#each overview as projectData}
 		<div style="flex-basis: {flexBasis}">
 			<p class="label bold">{projectData.label}</p>
 			<p class="body-text">{projectData.text}</p>

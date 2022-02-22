@@ -2,6 +2,8 @@
 	import { slide } from 'svelte/transition';
 	import { currentPage } from '../store';
 
+	import { usps } from '../projectData.json';
+
 	import ProjectHero from '../components/ProjectHero.svelte';
 	import ProjectOverview from '../components/ProjectOverview.svelte';
 	import ProjectGallery from '../components/ProjectGallery.svelte';
@@ -30,16 +32,16 @@
 
 	import { onMount } from 'svelte';
 
-	const hero = {
-		imgSrc: 'https://via.placeholder.com/1980x695?text=+',
-		header: 'USPS SmartBanking',
-		subheader: 'UX/Research'
-	};
+	// const hero = {
+	// 	imgSrc: 'https://via.placeholder.com/1980x695?text=+',
+	// 	header: 'USPS SmartBanking',
+	// 	subheader: 'UX/Research'
+	// };
 	let heroLoaded = false;
 	onMount(() => {
-		currentPage.set('usps');
+		currentPage.set(usps.route);
 		const heroImg = new Image();
-		heroImg.src = hero.imgSrc;
+		heroImg.src = usps.heroSrc;
 		heroImg.onload = () => {
 			heroLoaded = true;
 		};
@@ -60,9 +62,9 @@
 <div class="grid">
 	<!-- HERO -->
 	{#if heroLoaded}
-		<ProjectHero {hero} />
+		<ProjectHero project={usps} />
 
-		<ProjectOverview {projectOverviewData} />
+		<ProjectOverview overview={usps.overview} />
 
 		<!-- GALLERY -->
 		<ProjectGallery />

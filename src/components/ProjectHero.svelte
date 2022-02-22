@@ -1,15 +1,15 @@
 <script>
 	import { fade } from 'svelte/transition';
 
-	export let hero;
+	export let project;
 </script>
 
 <!-- <div class="grid"> -->
 <div in:fade class="hero full">
-	<img src={hero.imgSrc} alt="project" />
+	<img src={project.heroSrc} alt="project" />
 	<div class="text">
-		<p class="project-name">{hero.header}</p>
-		<p class="subheader">{hero.subheader}</p>
+		<p class="project-name">{project.name}</p>
+		<p class="subheader">{project.type}</p>
 	</div>
 </div>
 
