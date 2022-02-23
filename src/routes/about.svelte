@@ -22,7 +22,7 @@
 </script>
 
 <svelte:head>
-	<title>Daniela Dunman | About</title>
+	<title>About | Daniela Dunman</title>
 </svelte:head>
 
 {#if imgLoaded}
@@ -97,13 +97,12 @@
 
 	.header {
 		font-size: var(--label-size);
-		/* padding: 3rem; */
 	}
 
 	.container {
 		display: flex;
 		gap: 3rem;
-		padding: 3.5rem;
+		padding: 2rem;
 		flex-wrap: wrap;
 	}
 
@@ -119,6 +118,9 @@
 	}
 
 	@media (min-width: 768px) {
+		.container {
+			padding: 3.5rem;
+		}
 		img {
 			max-height: calc(100vh - 11rem);
 		}

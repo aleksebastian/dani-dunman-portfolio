@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { currentPage } from '../store';
-	import { intaglio } from '../projectData.json';
+	import { language } from '../projectData.json';
 
 	import FaArrowLeft from 'svelte-icons/fa/FaArrowLeft.svelte';
 	import FaArrowRight from 'svelte-icons/fa/FaArrowRight.svelte';
@@ -15,10 +15,10 @@
 		const module = await import('svelte-carousel');
 		Carousel = module.default;
 
-		currentPage.set(intaglio.route);
+		currentPage.set(language.route);
 
 		const heroImg = new Image();
-		heroImg.src = intaglio.heroSrc;
+		heroImg.src = language.heroSrc;
 		heroImg.onload = () => {
 			heroLoaded = true;
 		};
@@ -34,12 +34,12 @@
 </script>
 
 <svelte:head>
-	<title>{intaglio.name}</title>
+	<title>{language.name}</title>
 </svelte:head>
 
 {#if heroLoaded}
 	<div class="grid">
-		<ProjectHero project={intaglio} />
+		<ProjectHero project={language} />
 		<p class="custom py-lg">
 			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
 			been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
@@ -65,76 +65,21 @@
 				>
 					<img
 						class="carousel-img"
-						src="https://res.cloudinary.com/blitva/image/upload/v1645400457/Dani/works%20in%20intaglio/WII-1_bamp5b.jpg"
+						src={`https://picsum.photos/seed/${rand(0, 200)}/1980/985`}
 						alt="dani"
 					/>
 
 					<img
 						class="carousel-img"
-						src="https://res.cloudinary.com/blitva/image/upload/v1645400458/Dani/works%20in%20intaglio/WII-2_nogig0.jpg"
+						src={`https://picsum.photos/seed/${rand(0, 200)}/1980/985`}
 						alt="dani"
 					/>
 
 					<img
 						class="carousel-img"
-						src="https://res.cloudinary.com/blitva/image/upload/v1645400458/Dani/works%20in%20intaglio/WII-3_xv6wyr.jpg"
+						src={`https://picsum.photos/seed/${rand(0, 200)}/1980/985`}
 						alt="dani"
 					/>
-
-					<img
-						class="carousel-img"
-						src="https://res.cloudinary.com/blitva/image/upload/v1645400456/Dani/works%20in%20intaglio/WII-4_dh5ytw.jpg"
-						alt="dani"
-					/>
-
-					<img
-						class="carousel-img"
-						src="https://res.cloudinary.com/blitva/image/upload/v1645400457/Dani/works%20in%20intaglio/WII-5_x0rrht.jpg"
-						alt="dani"
-					/>
-
-					<img
-						class="carousel-img"
-						src="https://res.cloudinary.com/blitva/image/upload/v1645400455/Dani/works%20in%20intaglio/WII-6_k5srp9.jpg"
-						alt="dani"
-					/>
-
-					<img
-						class="carousel-img"
-						src="https://res.cloudinary.com/blitva/image/upload/v1645400455/Dani/works%20in%20intaglio/WII-7_otwv6h.jpg"
-						alt="dani"
-					/>
-
-					<img
-						class="carousel-img"
-						src="https://res.cloudinary.com/blitva/image/upload/v1645400450/Dani/works%20in%20intaglio/WII-8_ymy7ys.jpg"
-						alt="dani"
-					/>
-
-					<img
-						class="carousel-img"
-						src="https://res.cloudinary.com/blitva/image/upload/v1645400452/Dani/works%20in%20intaglio/WII-9_gpntyd.jpg"
-						alt="dani"
-					/>
-
-					<img
-						class="carousel-img"
-						src="https://res.cloudinary.com/blitva/image/upload/v1645400452/Dani/works%20in%20intaglio/WII-10_anviri.jpg"
-						alt="dani"
-					/>
-
-					<img
-						class="carousel-img"
-						src="https://res.cloudinary.com/blitva/image/upload/v1645400454/Dani/works%20in%20intaglio/WII-11_i1yqbr.jpg"
-						alt="dani"
-					/>
-
-					<img
-						class="carousel-img"
-						src="https://res.cloudinary.com/blitva/image/upload/v1645400451/Dani/works%20in%20intaglio/WII-12_h0zutp.jpg"
-						alt="dani"
-					/>
-
 					<div class="arrows left-arrow" slot="prev" on:click={handlePrevClick}>
 						<FaArrowLeft />
 					</div>
@@ -180,7 +125,7 @@
 	}
 
 	.carousel-img {
-		/* max-height: 85vh; */
+		max-height: 85vh;
 	}
 
 	.gallery > div {

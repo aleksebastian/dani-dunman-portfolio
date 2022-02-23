@@ -12,7 +12,7 @@
 			},
 			{
 				"label": "What I Did",
-				"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+				"text": "I created a hypothetical extension to the USPS website that educates the user about financial managment and good banking habits through workshop-style videos and challenges."
 			}
 		]
 	},
@@ -25,15 +25,15 @@
 		"overview": [
 			{
 				"label": "Goal",
-				"text": "To provide the underbanked and unbanked community a service for reentering the banking system through USPS. The service should be a stepping stone back into traditional banking, not a replacement for it."
+				"text": "Create an Enterprise App that helps you do your job or a job you have had in the past more efficiently."
 			},
 			{
 				"label": "Problem Statement",
-				"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+				"text": "I work as an English teacher for the Brazilian language school Conversation Sem Enrolation (that's a mix between English and Portuguese that translates to conversation without hiccups/confusion). At my job, teacher-to-student, and teacher-to-teacher communication is done through WhatsApp. This doesn’t allow for organization or efficiency of file-sharing or keeping."
 			},
 			{
 				"label": "What I Did",
-				"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+				"text": "I create an app for teachers and tutors that helps them organize their class files and facilitates giving lessons though skype."
 			}
 		]
 	},
@@ -82,7 +82,7 @@
 	"language": {
 		"name": "Language Exchange Publication",
 		"type": "",
-		"route": "radio",
+		"route": "language",
 		"cardSrc": "https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400448/Dani/works%20in%20intaglio/Works_In_Intaglio_mockup_jcxwnm.jpg",
 		"heroSrc": "https://via.placeholder.com/1980x695?text=+",
 		"overview": [
@@ -103,7 +103,7 @@
 	"logo": {
 		"name": "Logo Design",
 		"type": "",
-		"route": "radio",
+		"route": "logo",
 		"cardSrc": "https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400448/Dani/works%20in%20intaglio/Works_In_Intaglio_mockup_jcxwnm.jpg",
 		"heroSrc": "https://via.placeholder.com/1980x695?text=+",
 		"overview": [

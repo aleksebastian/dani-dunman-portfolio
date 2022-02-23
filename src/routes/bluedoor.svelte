@@ -40,41 +40,36 @@
 		<ProjectGallery />
 
 		<!-- RESEARCH -->
-		<div class="research content">
+		<div class="research content py-md">
 			<div class="sub">
 				<p class="label bold">Research</p>
 				<div class="first">
 					<p class="label">Initial Problem Discovery</p>
 					<div>
 						<p>
-							Underbanked: Someone who does not receive all the services available from a bank, be
-							it from location to hours, they are not receiving full benefits. They are people with
-							bank accounts that continue to use non-bank financial services such as moeny orders
-							and bill payments.
+							Because this project was aimed at solving a problem in my own life and work, it was
+							pretty easy to find the problem without having to do too much research. Because the
+							company I work for is small and based in Brazil (2 employees total, including myself),
+							there hasn't been a need for more sophisticated communication and file sharing. But
+							this has made my job more inefficient and file keeping and sharing complicated.
 						</p>
 					</div>
 				</div>
 				<div>
 					<p class="label">Initial Problem Discovery</p>
-					<p class="label">Initial Problem Discovery</p>
+					<p class="label">Competitive Audit</p>
 					<div>
 						<p>
-							Underbanked: Someone who does not receive all the services available from a bank, be
-							it from location to hours, they are not receiving full benefits. They are people with
-							bank accounts that continue to use non-bank financial services such as moeny orders
-							and bill payments.
+							I started looking into Content Management Systems (CMS) and Learning Management
+							Systems (LMS) to see what programs were already out there that were.
 						</p>
 						<p>
-							Underbanked: Someone who does not receive all the services available from a bank, be
-							it from location to hours, they are not receiving full benefits. They are people with
-							bank accounts that continue to use non-bank financial services such as moeny orders
-							and bill payments.
+							Educational LMSs like Canvas, Blackboard, and Tracs were helpful with organizing
+							files, but there was no way of sharing them with other teachers.
 						</p>
 						<p>
-							Underbanked: Someone who does not receive all the services available from a bank, be
-							it from location to hours, they are not receiving full benefits. They are people with
-							bank accounts that continue to use non-bank financial services such as moeny orders
-							and bill payments.
+							My first question was: Does anyone else have issues like this? So, to answer this, I
+							looked around in my community for someone who had a similar job as I did.
 						</p>
 					</div>
 				</div>
@@ -87,23 +82,33 @@
 			text={'More Research and Exploration'}
 		/>
 		{#if showResearch}
-			<MoreResearch />
+			<div class="content pb-md">
+				<MoreResearch />
+			</div>
 		{/if}
 
 		<div class="full grid" style="background-color: var(--background-color)">
 			<div class="content py-md">
-				<p class="label">Header</p>
-				<p>Text</p>
+				<p class="label">Conclusion/Opportunity Statement</p>
+				<p>
+					CSE needs a way to store and organize lesson files, homework, teacher-teacher
+					communication, and student records, and facilitate the sharing of this information.
+				</p>
 			</div>
 
 			<div class="content py-md">
-				<p class="label">Header</p>
-				<p>Text</p>
+				<p class="label">Solution</p>
+				<p>
+					BlueDoor is an interactive app for the iPad that allows teachers/tutors and free-lancers
+					in small businesses to communicate (instructor-to-instructor), organize, and share
+					information more efficiently and in a standardized manner, in a way that makes their job
+					easier, more efficient, and better.
+				</p>
 			</div>
 		</div>
 
 		<div class="content py-md">
-			<p class="label">Final Deliverable</p>
+			<p class="label">Wireframe Prototype</p>
 			<div class="walkthrough flex-row py-md flex-wrap">
 				<!-- <div class="walkthrough"> -->
 				<iframe
@@ -121,14 +126,13 @@
 				<div class="del">
 					<p class="label">Suggested Walk-through</p>
 					<ul class="steps">
-						<li>Go to the Sign-In page</li>
-						<li>Type in your user and password, and sign in</li>
-						<li>Toggle between your in progress and saved courses</li>
-						<li>Toggle between your achived and current goals</li>
-						<li>Toggle between your inprogress and achived challenges</li>
-						<li>Pick up where you left off on your most recent course</li>
-						<li>Check what part of the lesson you are currently on</li>
-						<li>Go back to the Dashboard</li>
+						<li>Sign up as an administrator OR Log in</li>
+						<li>Check out the calander in month view</li>
+						<li>Go to Files, and add “Lesson 27”</li>
+						<li>Go to Messages, and send an Email</li>
+						<li>Look for Dan’s phone number</li>
+						<li>In the skype meeting, open “Book 2, Review 2”</li>
+						<li>End the call, and go back to the Dashboard</li>
 					</ul>
 				</div>
 			</div>
@@ -136,33 +140,72 @@
 
 		<div class="full grid py-md" style="background-color: var(--background-color)">
 			<div class="content py-md">
-				<p class="label bold">HELLO</p>
+				<p class="label bold">Takeaways/What I learned:</p>
 				<div class="py-sm">
-					<p class="med">hello</p>
-					<p>hello 2</p>
+					<p class="med">
+						Researching the solution carrier/vessel can sometimes be just as valuable as researching
+						your problem.
+					</p>
+					<p>
+						I had never used an iPad before doing this project, and I had a really hard time
+						creating an app for it. I spent as much time researching and doing visual audits of how
+						things look on an iPad as I spend researching for my solution. Besides learning how the
+						iPad looks or works, I also learned its assets, features, and limitations which opened
+						more doors (ba-dom-ch🥁) for features.
+					</p>
 				</div>
 				<div class="py-sm">
-					<p class="med">hello</p>
-					<p>hello 2</p>
+					<p class="med">
+						Assumptions hinder user experience and neglect the possibility of better outcomes.
+					</p>
+					<p>
+						Even though I have so much first-hand experience in the job that I'm creating this app
+						for, there is always more I can learn from other people. Talking to other people and
+						getting other users' experiences is gold, even if the app is designed for my job.
+					</p>
 				</div>
 				<div class="py-sm">
-					<p class="med">hello</p>
-					<p>hello 2</p>
+					<p class="med">The more I worked on this project, the more I found needed to be done.</p>
+					<p>
+						Appreciation for this kind of work is a HUGE thing I’ve learned. I never really noticed
+						how many edge cases there are and how many details seem minute but actually keep apps
+						running smoothly.
+					</p>
 				</div>
 			</div>
 			<div class="content py-md">
-				<p class="label bold">HELLO</p>
+				<p class="label bold">Additional Development:</p>
 				<div class="py-sm">
-					<p class="med">hello</p>
-					<p>hello 2</p>
+					<p class="med">
+						I’d create a separate page for the contacts and progress history for each student.
+					</p>
+					<p>
+						Having it all in one place makes for easy organization and keeps everything in one
+						place. However, it might not be intuitive to have student records in the contact
+						section.
+					</p>
 				</div>
 				<div class="py-sm">
-					<p class="med">hello</p>
-					<p>hello 2</p>
+					<p class="med">
+						I’d create more pages in the app such as a page and form for adding new students.
+					</p>
+					<p>
+						It’s great to upgrade your small business with an app that helps you organize and
+						communicate, but if this helps your business, there needs to be a way to do this in the
+						app.
+					</p>
 				</div>
 				<div class="pt-sm">
-					<p class="med">hello</p>
-					<p>hello 2</p>
+					<p class="med">
+						I would create a social media aspect to the app that would help teachers share resources
+						and tips.
+					</p>
+					<p>
+						Teachers need a way to stay inspired, get new lessons, activities, and learn methods to
+						teach students with different learning styles. If taken advantage of, having a community
+						of people in the education field to chat with, and exchange ideas and activities could
+						be a game changer for teachers/tutors and thier lessons.
+					</p>
 				</div>
 			</div>
 		</div>

@@ -35,7 +35,10 @@
 	<!-- UX RESEARCH METHODS -->
 	<div class="flex-row content ux-methods-reverse pb-md flex-wrap">
 		<div class="image">
-			<ImageLoader alt="rectangle" src={'https://picsum.photos/800/500'} />
+			<ImageLoader
+				alt="rectangle"
+				src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_scale,w_800/v1645580734/Dani/usps/PostalBanking_HMW_c8bxbi.jpg"
+			/>
 		</div>
 		<div class="text">
 			<p class="label py-sm">UX RESEARCH METHOD 01: How Might We (HMW’s)</p>
@@ -89,10 +92,17 @@
 					longer and makes it harder for them to get out.
 				</p>
 			</div>
-			<img alt="rectangle" src="https://picsum.photos/750/450" class="image" />
+			<img
+				alt="rectangle"
+				src="https://res.cloudinary.com/blitva/image/upload/q_auto:best/f_auto/c_scale,w_750/v1645400441/Dani/usps/Artboard_7_h2mau0.png"
+				class="image"
+			/>
 		</div>
 		<div class="content placeholder">
-			<ImageLoader alt="placeholder" src="https://picsum.photos/1600/300" />
+			<ImageLoader
+				alt="placeholder"
+				src="https://res.cloudinary.com/blitva/image/upload/q_auto:best/f_auto/v1645581572/Dani/usps/journeymap1_e4ryjy.jpg"
+			/>
 		</div>
 	</div>
 </div>
