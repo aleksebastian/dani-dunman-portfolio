@@ -3,8 +3,8 @@
 	import { currentPage } from '../store';
 	import { intaglio } from '../projectData.json';
 
-	import FaArrowLeft from 'svelte-icons/fa/FaArrowLeft.svelte';
-	import FaArrowRight from 'svelte-icons/fa/FaArrowRight.svelte';
+	import FaArrowLeft from 'svelte-icons/io/IoIosArrowBack.svelte';
+	import FaArrowRight from 'svelte-icons/io/IoIosArrowForward.svelte';
 	import ImageLoader from '../components/image/ImageLoader.svelte';
 	import ProjectHero from '../components/ProjectHero.svelte';
 
@@ -31,6 +31,12 @@
 
 	const handleNextClick = () => carousel.goToNext();
 	const handlePrevClick = () => carousel.goToPrev();
+
+	let isHovering = false;
+
+	const handleHover = () => {
+		isHovering = !isHovering;
+	};
 </script>
 
 <svelte:head>
@@ -48,7 +54,7 @@
 			text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
 			make a type specimen book.
 		</p>
-		<div class="full carousel-container">
+		<div class="full carousel-container" on:mouseenter={handleHover} on:mouseleave={handleHover}>
 			<div class="carousel">
 				<svelte:component
 					this={Carousel}
@@ -57,7 +63,7 @@
 					swiping={true}
 					pauseOnFocus={true}
 					autoplay={true}
-					duration={750}
+					duration={400}
 					autoplayDuration={5000}
 					autoplayProgressVisible={true}
 					let:showPrevPage
@@ -135,10 +141,20 @@
 						alt="dani"
 					/>
 
-					<div class="arrows left-arrow" slot="prev" on:click={handlePrevClick}>
+					<div
+						style="opacity: {isHovering ? '1' : '0'}"
+						class="arrows left-arrow"
+						slot="prev"
+						on:click={handlePrevClick}
+					>
 						<FaArrowLeft />
 					</div>
-					<div class="arrows right-arrow" slot="next" on:click={handleNextClick}>
+					<div
+						style="opacity: {isHovering ? '1' : '0'}"
+						class="arrows right-arrow"
+						slot="next"
+						on:click={handleNextClick}
+					>
 						<FaArrowRight />
 					</div>
 				</svelte:component>
@@ -217,7 +233,9 @@
 			height: 50px;
 			min-height: 100%;
 			cursor: pointer;
-			/* background: linear-gradient(to right, gray, rgba(90, 0, 0, 0)); */
+			transition-property: opacity;
+			transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+			transition-duration: 150ms;
 		}
 
 		.left-arrow {
