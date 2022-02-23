@@ -46,7 +46,7 @@
 {#if heroLoaded}
 	<div class="grid">
 		<ProjectHero project={intaglio} />
-		<p class="custom py-lg">
+		<p class="custom-grid-col py-lg">
 			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
 			been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
 			galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text
@@ -64,11 +64,20 @@
 					pauseOnFocus={true}
 					autoplay={true}
 					duration={400}
-					autoplayDuration={5000}
+					autoplayDuration={4000}
 					autoplayProgressVisible={true}
 					let:showPrevPage
 					let:showNextPage
 				>
+					<div
+						style="opacity: {isHovering ? '1' : '0'}"
+						class="custom-arrow custom-arrow-prev"
+						slot="prev"
+						on:click={handlePrevClick}
+					>
+						<FaArrowLeft />
+					</div>
+
 					<img
 						class="carousel-img"
 						src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400457/Dani/works%20in%20intaglio/WII-1_bamp5b.jpg"
@@ -143,15 +152,7 @@
 
 					<div
 						style="opacity: {isHovering ? '1' : '0'}"
-						class="arrows left-arrow"
-						slot="prev"
-						on:click={handlePrevClick}
-					>
-						<FaArrowLeft />
-					</div>
-					<div
-						style="opacity: {isHovering ? '1' : '0'}"
-						class="arrows right-arrow"
+						class="custom-arrow custom-arrow-next"
 						slot="next"
 						on:click={handleNextClick}
 					>
@@ -160,7 +161,7 @@
 				</svelte:component>
 			</div>
 		</div>
-		<p class="custom py-lg">
+		<p class="custom-grid-col py-lg">
 			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
 			been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
 			galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text
@@ -191,19 +192,6 @@
 {/if}
 
 <style>
-	.carousel > div {
-		position: relative;
-	}
-
-	.carousel-img {
-		/* max-height: 85vh; */
-	}
-
-	.gallery > div {
-		padding-bottom: 3rem;
-		max-height: 100vh;
-	}
-
 	.carousel-container {
 		display: flex;
 		align-items: center;
@@ -213,17 +201,52 @@
 		width: 100%;
 	}
 
-	.custom {
+	.carousel > div {
+		position: relative;
+	}
+
+	.gallery > div {
+		padding-bottom: 3rem;
+		max-height: 100vh;
+	}
+
+	.custom-grid-col {
 		grid-column: 2 / 12;
 	}
 
-	.arrows {
+	.custom-arrow {
 		display: none;
 	}
 
 	@media (min-width: 640px) {
-		.custom {
+		.custom-grid-col {
 			grid-column: 2 / 9;
+		}
+
+		.custom-arrow-prev {
+			left: 0;
+			padding-left: 0.5rem;
+		}
+
+		.custom-arrow-next {
+			right: 0;
+			padding-right: 0.5rem;
+		}
+
+		.custom-arrow {
+			min-width: 3rem;
+			width: 20px;
+			color: white;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			z-index: 1;
+			transition: opacity 150ms ease;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			-webkit-tap-highlight-color: transparent;
 		}
 
 		.arrows {
@@ -245,7 +268,6 @@
 			transform: translate(0%, -50%);
 			z-index: 1;
 			color: white;
-			/* background: linear-gradient(to right, black, rgba(90, 0, 0, 0)); */
 		}
 
 		.right-arrow {
@@ -256,7 +278,6 @@
 			transform: translate(-100%, -50%);
 			z-index: 1;
 			color: white;
-			/* background: linear-gradient(to left, gray, rgba(90, 0, 0, 0)); */
 		}
 	}
 </style>
