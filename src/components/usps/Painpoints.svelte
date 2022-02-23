@@ -8,7 +8,7 @@
 				alt="painpoint"
 				src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_scale,w_200/v1645400438/Dani/usps/Artboard_15_copy_3_kk7h7d.png"
 			/>
-			<p>Label</p>
+			<p>Past financial mistakes</p>
 		</div>
 		<div class="painPoint">
 			<img
@@ -16,7 +16,7 @@
 				alt="painpoint"
 				src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_scale,w_200/v1645400439/Dani/usps/Artboard_15_copy_5_iz3rue.png"
 			/>
-			<p>Label</p>
+			<p>Lack of trust in banks (the system)</p>
 		</div>
 		<div class="painPoint">
 			<img
@@ -24,7 +24,7 @@
 				alt="painpoint"
 				src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_scale,w_200/v1645400434/Dani/usps/USPS_Data_pnnfu4.jpg"
 			/>
-			<p>Label</p>
+			<p>Not enough money to keep in an account</p>
 		</div>
 		<div class="painPoint">
 			<img
@@ -32,7 +32,7 @@
 				alt="painpoint"
 				src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_scale,w_200/v1645400441/Dani/usps/Artboard_15_copy_6_rxy4sf.png"
 			/>
-			<p>Label</p>
+			<p>Inconvenient and/or lack of access</p>
 		</div>
 	</div>
 	<div class="pain-bottom">
@@ -42,7 +42,7 @@
 				alt="painpoint"
 				src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_scale,w_200/v1645400438/Dani/usps/Artboard_15_copy_4_qme2mw.png"
 			/>
-			<p>Label</p>
+			<p>Lack of financial education</p>
 		</div>
 		<div class="painPoint">
 			<img
@@ -50,7 +50,7 @@
 				alt="painpoint"
 				src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_scale,w_200/v1645400437/Dani/usps/Artboard_15_copy_2_kaezjn.png"
 			/>
-			<p>Label</p>
+			<p>Language and/or literacy barrier</p>
 		</div>
 		<div class="painPoint">
 			<img
@@ -58,7 +58,7 @@
 				alt="painpoint"
 				src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_scale,w_200/v1645400435/Dani/usps/Artboard_15_f97tkw.png"
 			/>
-			<p>Label</p>
+			<p>Inability to provide personal information</p>
 		</div>
 	</div>
 </div>
@@ -82,6 +82,7 @@
 		text-align: center;
 		padding: 0;
 		margin-top: -0.5rem;
+		max-width: 12rem;
 	}
 
 	.pain-top {
@@ -94,6 +95,10 @@
 
 	.painPoint {
 		padding: 0.2rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-size: 1rem;
 	}
 
 	.content p {
@@ -106,6 +111,9 @@
 	} */
 
 	@media (min-width: 768px) {
+		.painPoint {
+			font-size: 1.1rem;
+		}
 		.grid {
 			display: grid;
 			grid-template-columns: repeat(12, minmax(0, 1fr));

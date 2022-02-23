@@ -88,7 +88,12 @@
 
 		<!-- MORE STATISTICS -->
 		{#if showStatistics}
-			<div transition:slide class="moreStatistics" />
+			<div transition:slide class="moreStatistics">
+				<img
+					alt="Unbanked demographics graphs"
+					src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400445/Dani/usps/USPS_Data_2_nlg6ac.jpg"
+				/>
+			</div>
 		{/if}
 
 		<!-- PAIN POINTS -->
@@ -96,7 +101,7 @@
 
 		<!-- HOW IS USPS QUALIFIED TO SERVE -->
 		<div class="qualifications content py-md">
-			<p class="label">How is USPS qualified to serve the un/under banked</p>
+			<p class="label">How is USPS qualified to serve the un/under banked?</p>
 			<div>
 				<div class="flex-col pt-sm">
 					<p>serves</p>
@@ -104,14 +109,14 @@
 					<p>addresses in the country</p>
 				</div>
 				<div class="flex-col pt-sm">
-					<p>serves</p>
-					<p class="header">161.4 MM</p>
-					<p>addresses in the country</p>
+					<p>has more than</p>
+					<p class="header">34,000</p>
+					<p>retail locations—covering every state, city, and town</p>
 				</div>
 				<div class="flex-col pt-sm">
-					<p>serves</p>
-					<p class="header">161.4 MM</p>
-					<p>addresses in the country</p>
+					<p>The US had postal banking</p>
+					<p class="header">1911-1966</p>
+					<p>and it worked</p>
 				</div>
 			</div>
 		</div>
@@ -130,7 +135,7 @@
 		{/if}
 
 		<!-- SUMMARY OF RESEARCH -->
-		<div class="content py-md">
+		<div class="research-summary py-md">
 			<!-- <div class="this flex-row"> -->
 			<div class="pb-sm">
 				<p class="label">Summary of Research</p>
@@ -159,7 +164,7 @@
 
 		<!-- SOLUTION -->
 		<div class="full grid bg-grey">
-			<div class="content">
+			<div class="research-summary">
 				<p class="label bold py-sm">Solution</p>
 				<p class="py-sm">USPS Second Chance Account</p>
 				<p class="py-sm">
@@ -184,7 +189,7 @@
 				text={'More About SmartBanking'}
 			/>
 			{#if showAbout}
-				<div transition:slide class="content pb-md">
+				<div transition:slide class="research-summary pb-md">
 					<p class="pb-sm">The Who:</p>
 					<p>
 						Those who are denied standard bank accounts due to a rocky (poor) banking history. (Bank
@@ -202,7 +207,7 @@
 			{/if}
 		</div>
 		<div class="content py-md">
-			<p class="label">Final Deliverable</p>
+			<p class="label">Wireframe Prototype</p>
 			<div class="walkthrough flex-row py-md gap-1 flex-wrap">
 				<!-- <div class="walkthrough"> -->
 				<iframe
@@ -234,26 +239,46 @@
 		</div>
 
 		<div class="full grid py-md" style="background-color: var(--background-color)">
-			<div class="content py-md">
-				<p class="label bold">HELLO</p>
+			<div class="research-summary py-md">
+				<p class="label bold">Takeaways/What I learned:</p>
 
 				<div class="pt-sm">
-					<p class="med">hello</p>
-					<p>hello 2</p>
+					<p class="med">My love for UX that makes changes.</p>
+					<p>
+						This was the first project that I worked on that was completely driven by research.
+						Truth be told, when I first started working on this project, I came up with a different
+						solution than I had imaged and found research to back it up. A few weeks into the
+						project I realized that I was letting my project lead my research instead of letting my
+						research lead my project. I also felt that what I was creating wasn’t going to make a
+						difference in anyone's life. I scrapped everything I had until then and started once
+						again from the ground up. In the last 3 weeks that I had to work on the project, I found
+						and created what I’ve shown in this presentation. I hope you’re impressed! I was
+						certainly very passionate about getting to work on a project that I saw the potential
+						for making waves in financial education and the betterment of people’s lives.
+					</p>
 				</div>
 			</div>
 
-			<div class="content pb-md">
-				<p class="label bold">HELLO</p>
+			<div class="research-summary pb-md">
+				<p class="label bold">Further Development:</p>
 
 				<div class="py-sm">
-					<p class="med">hello</p>
-					<p>hello 2</p>
+					<p class="med">I would like to further develope the fidelity of this project.</p>
+					<p>
+						Because I had a limited amount of time to research this topic and create a realistic
+						solution, especially after starting over halfway through that time, the furthest I was
+						able to push this project was a low fidelity prototype.
+					</p>
 				</div>
 
 				<div class="py-sm">
-					<p class="med">hello</p>
-					<p>hello 2</p>
+					<p class="med">I want to create the data bank (ba-dom-ch🥁) for the lessons.</p>
+					<p>
+						Being able to use the SmartBanking function is great, but where do we find all the
+						lessons? Well, if I had additional time, that would be the next page I would design. I’d
+						make a page where the user can take a quiz about what their needs are in regards to
+						financial education and explore suggested workshops and additional/popular workshops.
+					</p>
 				</div>
 			</div>
 		</div>
@@ -263,6 +288,10 @@
 </div>
 
 <style>
+	.research-summary {
+		grid-column: 2 / 12;
+	}
+
 	.med {
 		font-size: 1.3rem;
 	}
@@ -331,9 +360,9 @@
 	}
 
 	.moreStatistics {
-		height: 16rem;
+		/* height: 16rem; */
 		grid-column: 2 / 12;
-		background-color: grey;
+		/* background-color: grey; */
 	}
 
 	.research {
@@ -363,6 +392,10 @@
 	}
 
 	@media (min-width: 768px) {
+		.research-summary {
+			grid-column: 2 / 8;
+		}
+
 		.walkthrough {
 			flex-wrap: nowrap;
 			gap: 1rem !important;
@@ -375,9 +408,9 @@
 			max-height: 80vh;
 		}
 		.moreStatistics {
-			height: 16rem;
+			/* height: 16rem; */
 			grid-column: 3 / 11;
-			background-color: grey;
+			/* background-color: grey; */
 		}
 
 		.researchLeft {
@@ -399,6 +432,9 @@
 	}
 
 	@media (min-width: 1536px) {
+		.research-summary {
+			grid-column: 2 / 7;
+		}
 		.qualifications > p {
 			grid-column: 1 / 12;
 		}

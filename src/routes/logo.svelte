@@ -24,13 +24,16 @@
 		};
 	});
 
-	function rand(min, max) {
-		let randomNum = Math.random() * (max - min) + min;
-		return Math.round(randomNum);
-	}
-
-	// const handleNextClick = () => carousel.goToNext();
-	// const handlePrevClick = () => carousel.goToPrev();
+	const logoSrcs = [
+		'https://res.cloudinary.com/blitva/image/upload/v1645400434/Dani/logos/Artboard_32_pvd1ag.png',
+		'https://res.cloudinary.com/blitva/image/upload/v1645400432/Dani/logos/Artboard_39_fpoy7b.png',
+		'https://res.cloudinary.com/blitva/image/upload/v1645400433/Dani/logos/Artboard_38_iiywsm.png',
+		'https://res.cloudinary.com/blitva/image/upload/v1645400433/Dani/logos/Artboard_33_bf7b6m.png',
+		'https://res.cloudinary.com/blitva/image/upload/v1645400436/Dani/logos/Artboard_36_lx2oab.png',
+		'https://res.cloudinary.com/blitva/image/upload/v1645400437/Dani/logos/Artboard_37_gss4bi.png',
+		'https://res.cloudinary.com/blitva/image/upload/v1645400438/Dani/logos/Artboard_35_qyvg6e.png',
+		'https://res.cloudinary.com/blitva/image/upload/v1645400439/Dani/logos/Artboard_34_pe1kit.png'
+	];
 </script>
 
 <svelte:head>
@@ -41,66 +44,9 @@
 	<div class="grid">
 		<ProjectHero project={logo} />
 		<div class="subgrid content py-lg">
-			<ImageLoader
-				class="img-container"
-				src={`https://picsum.photos/seed/${rand(0, 200)}/300`}
-				alt="dani"
-			/>
-			<ImageLoader
-				class="img-container"
-				src={`https://picsum.photos/seed/${rand(0, 200)}/300`}
-				alt="dani"
-			/>
-			<ImageLoader
-				class="img-container"
-				src={`https://picsum.photos/seed/${rand(0, 200)}/300`}
-				alt="dani"
-			/>
-			<ImageLoader
-				class="img-container"
-				src={`https://picsum.photos/seed/${rand(0, 200)}/300`}
-				alt="dani"
-			/>
-			<ImageLoader
-				class="img-container"
-				src={`https://picsum.photos/seed/${rand(0, 200)}/300`}
-				alt="dani"
-			/>
-			<ImageLoader
-				class="img-container"
-				src={`https://picsum.photos/seed/${rand(0, 200)}/300`}
-				alt="dani"
-			/>
-			<ImageLoader
-				class="img-container"
-				src={`https://picsum.photos/seed/${rand(0, 200)}/300`}
-				alt="dani"
-			/>
-			<ImageLoader
-				class="img-container"
-				src={`https://picsum.photos/seed/${rand(0, 200)}/300`}
-				alt="dani"
-			/>
-			<ImageLoader
-				class="img-container"
-				src={`https://picsum.photos/seed/${rand(0, 200)}/300`}
-				alt="dani"
-			/>
-			<ImageLoader
-				class="img-container"
-				src={`https://picsum.photos/seed/${rand(0, 200)}/300`}
-				alt="dani"
-			/>
-			<ImageLoader
-				class="img-container"
-				src={`https://picsum.photos/seed/${rand(0, 200)}/300`}
-				alt="dani"
-			/>
-			<ImageLoader
-				class="img-container"
-				src={`https://picsum.photos/seed/${rand(0, 200)}/300`}
-				alt="dani"
-			/>
+			{#each logoSrcs as logoSrc}
+				<ImageLoader class="img-container" src={logoSrc} alt="logo" />
+			{/each}
 		</div>
 	</div>
 {:else}
