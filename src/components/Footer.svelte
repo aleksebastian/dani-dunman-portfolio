@@ -42,19 +42,19 @@
 		let imgToAnimate = document.getElementById(gifId);
 		if (gifId === 'gif-1') {
 			imgToAnimate.src =
-				'https://res.cloudinary.com/blitva/image/upload/c_scale,w_200/v1643897805/Dani/Footer/hippo_animation_loop_qnan1e.gif';
+				'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/v1643897805/Dani/Footer/hippo_animation_loop_qnan1e.gif';
 		}
 		if (gifId === 'gif-2') {
 			imgToAnimate.src =
-				'https://res.cloudinary.com/blitva/image/upload/c_scale,w_200/v1643897805/Dani/Footer/pizza-loop_ed5rvh.gif';
+				'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/v1643897805/Dani/Footer/pizza-loop_ed5rvh.gif';
 		}
 		if (gifId === 'gif-3') {
 			imgToAnimate.src =
-				'https://res.cloudinary.com/blitva/image/upload/c_scale,w_200/v1643897805/Dani/Footer/coffee_animation_ejkykd.gif';
+				'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/v1643897805/Dani/Footer/coffee_animation_ejkykd.gif';
 		}
 		if (gifId === 'gif-4') {
 			imgToAnimate.src =
-				'https://res.cloudinary.com/blitva/image/upload/c_scale,w_200/v1643897805/Dani/Footer/acai-animtion-loop_xguomg.gif';
+				'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/v1643897805/Dani/Footer/acai-animtion-loop_xguomg.gif';
 		}
 	};
 
@@ -63,19 +63,19 @@
 		let imgToAnimate = document.getElementById(gifId);
 		if (gifId === 'gif-1') {
 			imgToAnimate.src =
-				'https://res.cloudinary.com/blitva/image/upload/c_scale,w_200/pg_1/v1643897805/Dani/Footer/hippo_animation_loop_qnan1e.gif';
+				'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/hippo_animation_loop_qnan1e.gif';
 		}
 		if (gifId === 'gif-2') {
 			imgToAnimate.src =
-				'https://res.cloudinary.com/blitva/image/upload/c_scale,w_200/pg_1/v1643897805/Dani/Footer/pizza-loop_ed5rvh.gif';
+				'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/pizza-loop_ed5rvh.gif';
 		}
 		if (gifId === 'gif-3') {
 			imgToAnimate.src =
-				'https://res.cloudinary.com/blitva/image/upload/c_scale,w_200/pg_1/v1643897805/Dani/Footer/coffee_animation_ejkykd.gif';
+				'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/coffee_animation_ejkykd.gif';
 		}
 		if (gifId === 'gif-4') {
 			imgToAnimate.src =
-				'https://res.cloudinary.com/blitva/image/upload/c_scale,w_200/pg_1/v1643897805/Dani/Footer/acai-animtion-loop_xguomg.gif';
+				'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/acai-animtion-loop_xguomg.gif';
 		}
 
 		// setTimeout(setBounceAndCounter, counter);
@@ -92,7 +92,7 @@
 			<div id="footer-gif-1" class={`footer-gif ${currBouncingGif === 1 ? 'bounce' : ''}`}>
 				<img
 					id="gif-1"
-					src="https://res.cloudinary.com/blitva/image/upload/c_scale,w_200/pg_1/v1643897805/Dani/Footer/hippo_animation_loop_qnan1e.gif"
+					src="https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/hippo_animation_loop_qnan1e.gif"
 					alt="hippo"
 				/>
 			</div>
@@ -106,7 +106,7 @@
 			<div id="footer-gif-2" class={`footer-gif ${currBouncingGif === 2 ? 'bounce' : ''}`}>
 				<img
 					id="gif-2"
-					src="https://res.cloudinary.com/blitva/image/upload/c_scale,w_200/pg_1/v1643897805/Dani/Footer/pizza-loop_ed5rvh.gif"
+					src="https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/pizza-loop_ed5rvh.gif"
 					alt="hippo"
 				/>
 			</div>
@@ -120,7 +120,7 @@
 			<div id="footer-gif-3" class={`footer-gif ${currBouncingGif === 3 ? 'bounce' : ''}`}>
 				<img
 					id="gif-3"
-					src="https://res.cloudinary.com/blitva/image/upload/c_scale,w_200/pg_1/v1643897805/Dani/Footer/coffee_animation_ejkykd.gif"
+					src="https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/coffee_animation_ejkykd.gif"
 					alt="hippo"
 				/>
 			</div>
@@ -134,7 +134,7 @@
 			<div id="footer-gif-4" class={`footer-gif ${currBouncingGif === 4 ? 'bounce' : ''}`}>
 				<img
 					id="gif-4"
-					src="https://res.cloudinary.com/blitva/image/upload/c_scale,w_200/pg_1/v1643897805/Dani/Footer/acai-animtion-loop_xguomg.gif"
+					src="https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/acai-animtion-loop_xguomg.gif"
 					alt="hippo"
 				/>
 			</div>

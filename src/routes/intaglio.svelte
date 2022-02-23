@@ -65,73 +65,73 @@
 				>
 					<img
 						class="carousel-img"
-						src="https://res.cloudinary.com/blitva/image/upload/v1645400457/Dani/works%20in%20intaglio/WII-1_bamp5b.jpg"
+						src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400457/Dani/works%20in%20intaglio/WII-1_bamp5b.jpg"
 						alt="dani"
 					/>
 
 					<img
 						class="carousel-img"
-						src="https://res.cloudinary.com/blitva/image/upload/v1645400458/Dani/works%20in%20intaglio/WII-2_nogig0.jpg"
+						src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400458/Dani/works%20in%20intaglio/WII-2_nogig0.jpg"
 						alt="dani"
 					/>
 
 					<img
 						class="carousel-img"
-						src="https://res.cloudinary.com/blitva/image/upload/v1645400458/Dani/works%20in%20intaglio/WII-3_xv6wyr.jpg"
+						src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400458/Dani/works%20in%20intaglio/WII-3_xv6wyr.jpg"
 						alt="dani"
 					/>
 
 					<img
 						class="carousel-img"
-						src="https://res.cloudinary.com/blitva/image/upload/v1645400456/Dani/works%20in%20intaglio/WII-4_dh5ytw.jpg"
+						src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400456/Dani/works%20in%20intaglio/WII-4_dh5ytw.jpg"
 						alt="dani"
 					/>
 
 					<img
 						class="carousel-img"
-						src="https://res.cloudinary.com/blitva/image/upload/v1645400457/Dani/works%20in%20intaglio/WII-5_x0rrht.jpg"
+						src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400457/Dani/works%20in%20intaglio/WII-5_x0rrht.jpg"
 						alt="dani"
 					/>
 
 					<img
 						class="carousel-img"
-						src="https://res.cloudinary.com/blitva/image/upload/v1645400455/Dani/works%20in%20intaglio/WII-6_k5srp9.jpg"
+						src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400455/Dani/works%20in%20intaglio/WII-6_k5srp9.jpg"
 						alt="dani"
 					/>
 
 					<img
 						class="carousel-img"
-						src="https://res.cloudinary.com/blitva/image/upload/v1645400455/Dani/works%20in%20intaglio/WII-7_otwv6h.jpg"
+						src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400455/Dani/works%20in%20intaglio/WII-7_otwv6h.jpg"
 						alt="dani"
 					/>
 
 					<img
 						class="carousel-img"
-						src="https://res.cloudinary.com/blitva/image/upload/v1645400450/Dani/works%20in%20intaglio/WII-8_ymy7ys.jpg"
+						src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400450/Dani/works%20in%20intaglio/WII-8_ymy7ys.jpg"
 						alt="dani"
 					/>
 
 					<img
 						class="carousel-img"
-						src="https://res.cloudinary.com/blitva/image/upload/v1645400452/Dani/works%20in%20intaglio/WII-9_gpntyd.jpg"
+						src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400452/Dani/works%20in%20intaglio/WII-9_gpntyd.jpg"
 						alt="dani"
 					/>
 
 					<img
 						class="carousel-img"
-						src="https://res.cloudinary.com/blitva/image/upload/v1645400452/Dani/works%20in%20intaglio/WII-10_anviri.jpg"
+						src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400452/Dani/works%20in%20intaglio/WII-10_anviri.jpg"
 						alt="dani"
 					/>
 
 					<img
 						class="carousel-img"
-						src="https://res.cloudinary.com/blitva/image/upload/v1645400454/Dani/works%20in%20intaglio/WII-11_i1yqbr.jpg"
+						src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400454/Dani/works%20in%20intaglio/WII-11_i1yqbr.jpg"
 						alt="dani"
 					/>
 
 					<img
 						class="carousel-img"
-						src="https://res.cloudinary.com/blitva/image/upload/v1645400451/Dani/works%20in%20intaglio/WII-12_h0zutp.jpg"
+						src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400451/Dani/works%20in%20intaglio/WII-12_h0zutp.jpg"
 						alt="dani"
 					/>
 
