@@ -135,7 +135,7 @@
 		{/if}
 
 		<!-- SUMMARY OF RESEARCH -->
-		<div class="research-summary py-md">
+		<div class="full-text py-md">
 			<!-- <div class="this flex-row"> -->
 			<div class="pb-sm">
 				<p class="label">Summary of Research</p>
@@ -164,7 +164,7 @@
 
 		<!-- SOLUTION -->
 		<div class="full grid bg-grey">
-			<div class="research-summary">
+			<div class="full-text">
 				<p class="label bold py-sm">Solution</p>
 				<p class="py-sm">USPS Second Chance Account</p>
 				<p class="py-sm">
@@ -189,7 +189,7 @@
 				text={'More About SmartBanking'}
 			/>
 			{#if showAbout}
-				<div transition:slide class="research-summary pb-md">
+				<div transition:slide class="full-text pb-md">
 					<p class="pb-sm">The Who:</p>
 					<p>
 						Those who are denied standard bank accounts due to a rocky (poor) banking history. (Bank
@@ -239,7 +239,7 @@
 		</div>
 
 		<div class="full grid py-md" style="background-color: var(--background-color)">
-			<div class="research-summary py-md">
+			<div class="full-text py-md">
 				<p class="label bold">Takeaways/What I learned:</p>
 
 				<div class="pt-sm">
@@ -259,7 +259,7 @@
 				</div>
 			</div>
 
-			<div class="research-summary pb-md">
+			<div class="full-text pb-md">
 				<p class="label bold">Further Development:</p>
 
 				<div class="py-sm">
@@ -288,10 +288,6 @@
 </div>
 
 <style>
-	.research-summary {
-		grid-column: 2 / 12;
-	}
-
 	.med {
 		font-size: 1.3rem;
 	}
@@ -392,10 +388,6 @@
 	}
 
 	@media (min-width: 768px) {
-		.research-summary {
-			grid-column: 2 / 8;
-		}
-
 		.walkthrough {
 			flex-wrap: nowrap;
 			gap: 1rem !important;
@@ -432,9 +424,6 @@
 	}
 
 	@media (min-width: 1536px) {
-		.research-summary {
-			grid-column: 2 / 7;
-		}
 		.qualifications > p {
 			grid-column: 1 / 12;
 		}

@@ -76,6 +76,42 @@ a {
 	padding-top: 1rem;
 }
 
+.pt-md {
+	padding: 3rem;
+}
+
+.pt-lg {
+	padding-top: 5rem;
+}
+
+.full-text {
+	grid-column: 2 / 12;
+}
+
+.full-text-wide {
+	grid-column: 2 / 12;
+}
+
+@media (min-width: 768px) {
+	.full-text {
+		grid-column: 2 / 8;
+	}
+
+	.full-text-wide {
+		grid-column: 2 / 9;
+	}
+}
+
+@media (min-width: 1536px) {
+	.full-text {
+		grid-column: 2 / 7;
+	}
+
+	.full-text-wide {
+		grid-column: 2 / 8;
+	}
+}
+
 /* CSS RESET */
 /* Box sizing rules */
 *,

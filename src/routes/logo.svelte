@@ -43,7 +43,11 @@
 {#if heroLoaded}
 	<div class="grid">
 		<ProjectHero project={logo} />
-		<div class="subgrid content py-lg">
+		<p class="full-text pt-md">
+			Here are a couple of logos I’ve designed. They came together by concept, and some have even
+			won awards.
+		</p>
+		<div class="subgrid content pb-md">
 			{#each logoSrcs as logoSrc}
 				<ImageLoader class="img-container" src={logoSrc} alt="logo" />
 			{/each}

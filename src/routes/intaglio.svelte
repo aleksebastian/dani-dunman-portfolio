@@ -46,13 +46,12 @@
 {#if heroLoaded}
 	<div class="grid">
 		<ProjectHero project={intaglio} />
-		<p class="custom-grid-col py-lg">
-			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-			been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-			galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text
-			of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-			text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-			make a type specimen book.
+		<p class="full-text-wide py-lg">
+			This book is about the printmaking method of intaglio, specifically final prints, and how
+			different each can be. The images used are of prints done by Elvia Perrin. The secondary
+			images are zoomed-in, smaller sections of the print's patterns, textures, or parts that
+			summarize each piece. I also used images of supplies found around the studio and process work
+			from Perrin as background accents.
 		</p>
 		<div class="full carousel-container" on:mouseenter={handleHover} on:mouseleave={handleHover}>
 			<div class="carousel">
@@ -161,13 +160,12 @@
 				</svelte:component>
 			</div>
 		</div>
-		<p class="custom-grid-col py-lg">
-			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-			been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-			galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text
-			of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-			text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-			make a type specimen book.
+		<p class="full-text-wide py-lg">
+			I chose to overlay the secondary image over itself printed on fibrous paper to mimic a process
+			sometimes done in intaglio called chine-collé. I included the names of the pieces to present
+			them as more than just abstract pieces of art, but as someone's work. I wanted the artist's
+			voice to be present and used her handwriting as the typeface throughout the book. For the
+			cover, I used an intaglio print Perrin gave me.
 		</p>
 		<div class="gallery full">
 			<div>
@@ -210,19 +208,11 @@
 		max-height: 100vh;
 	}
 
-	.custom-grid-col {
-		grid-column: 2 / 12;
-	}
-
 	.custom-arrow {
 		display: none;
 	}
 
 	@media (min-width: 640px) {
-		.custom-grid-col {
-			grid-column: 2 / 9;
-		}
-
 		.custom-arrow-prev {
 			left: 0;
 			padding-left: 0.5rem;
@@ -247,37 +237,6 @@
 			justify-content: center;
 			cursor: pointer;
 			-webkit-tap-highlight-color: transparent;
-		}
-
-		.arrows {
-			display: flex;
-			align-items: center;
-			width: 50px;
-			height: 50px;
-			min-height: 100%;
-			cursor: pointer;
-			transition-property: opacity;
-			transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-			transition-duration: 150ms;
-		}
-
-		.left-arrow {
-			position: absolute;
-			top: 50%;
-			padding-left: 1rem;
-			transform: translate(0%, -50%);
-			z-index: 1;
-			color: white;
-		}
-
-		.right-arrow {
-			position: absolute;
-			top: 50%;
-			left: 100%;
-			padding-right: 1rem;
-			transform: translate(-100%, -50%);
-			z-index: 1;
-			color: white;
 		}
 	}
 </style>

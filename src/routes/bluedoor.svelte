@@ -88,7 +88,7 @@
 		{/if}
 
 		<div class="full grid" style="background-color: var(--background-color)">
-			<div class="content py-md">
+			<div class="full-text py-md">
 				<p class="label">Conclusion/Opportunity Statement</p>
 				<p>
 					CSE needs a way to store and organize lesson files, homework, teacher-teacher
@@ -96,7 +96,7 @@
 				</p>
 			</div>
 
-			<div class="content py-md">
+			<div class="full-text py-md">
 				<p class="label">Solution</p>
 				<p>
 					BlueDoor is an interactive app for the iPad that allows teachers/tutors and free-lancers
@@ -139,7 +139,7 @@
 		</div>
 
 		<div class="full grid py-md" style="background-color: var(--background-color)">
-			<div class="content py-md">
+			<div class="full-text py-md">
 				<p class="label bold">Takeaways/What I learned:</p>
 				<div class="py-sm">
 					<p class="med">
@@ -173,7 +173,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="content py-md">
+			<div class="full-text py-md">
 				<p class="label bold">Additional Development:</p>
 				<div class="py-sm">
 					<p class="med">

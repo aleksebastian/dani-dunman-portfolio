@@ -41,12 +41,12 @@
 	<div class="grid">
 		<ProjectHero project={language} />
 		<p class="custom py-lg">
-			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-			been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-			galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text
-			of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-			text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-			make a type specimen book.
+			For this project, I made an exhibition catalog for an exhibit that I created and curated based
+			on the theme of alternative currencies. My goal was to document what went into the exhibition
+			and expand the viewers' understanding of the topic. The alternative currency I chose was
+			language. I included Alice J Lee's DesignInquiry residency project about language because it
+			focussed on colloquial language and slang as a form of social currency. I also included an
+			interview with Alice and three other essays about language as currency.
 		</p>
 		<div class="full carousel-container">
 			<div class="carousel">
@@ -89,15 +89,8 @@
 				</svelte:component>
 			</div>
 		</div>
-		<p class="custom py-lg">
-			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-			been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-			galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text
-			of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-			text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-			make a type specimen book.
-		</p>
-		<div class="gallery full">
+
+		<div class="gallery full py-md">
 			<div>
 				<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/1980/850`} alt="dani" />
 			</div>
