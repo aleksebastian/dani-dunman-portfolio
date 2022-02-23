@@ -18,7 +18,7 @@
 	<div class="img-1">
 		<ImageLoader
 			alt="rectangle"
-			src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_scale,w_800/v1645400430/Dani/bluedoor/alex_interview_gif_alvael.gif"
+			src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_scale,w_800/r_215/v1645400430/Dani/bluedoor/alex_interview_gif_alvael.gif"
 		/>
 	</div>
 
