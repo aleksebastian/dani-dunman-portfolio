@@ -12,7 +12,7 @@
 <a href={project.route} class="project">
 	<div class="project-image">
 		<ImageLoader
-			src={`https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_crop,h_600/v1645400448/Dani/works%20in%20intaglio/Works_In_Intaglio_mockup_jcxwnm.jpg`}
+			src={`https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400448/Dani/works%20in%20intaglio/Works_In_Intaglio_mockup_jcxwnm.jpg`}
 			alt="dani"
 		/>
 	</div>
@@ -76,7 +76,7 @@
 
 	@media (min-width: 1536px) {
 		.project {
-			max-width: 80%;
+			/* max-width: 80%; */
 		}
 	}
 </style>
