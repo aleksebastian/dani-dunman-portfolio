@@ -185,19 +185,19 @@
 		selectedElement = document.getElementById('category-list').firstChild;
 		console.log(selectedElement);
 		selectedElement.style.opacity = '1';
-		selectedElement.style.fontSize = '1.1rem';
+		selectedElement.style.transform = 'scale(1.2)';
 	});
 
 	const handleClick = (e) => {
 		let targetElement = e.target;
 
 		selectedElement.style.opacity = '0.5';
-		selectedElement.style.fontSize = '.9rem';
+		selectedElement.style.transform = 'scale(1)';
 
 		selectedElement = targetElement;
 
 		selectedElement.style.opacity = '1';
-		selectedElement.style.fontSize = '1.1rem';
+		selectedElement.style.transform = 'scale(1.2)';
 
 		const dataSetName = targetElement.innerHTML.split(' ').slice(-1)[0].toLowerCase();
 		const newData = JSON.parse(JSON.stringify(DATA[`${dataSetName}Data`]));
@@ -247,6 +247,7 @@
 		align-items: center;
 		gap: 1rem;
 		width: 100%;
+		padding: 0 1.5rem;
 	}
 
 	.container > ul {
@@ -258,19 +259,19 @@
 
 	.container > ul > li {
 		cursor: pointer;
-		padding: 0.2rem 0;
-		opacity: 0.5;
+		padding: 0.35rem 0;
+		opacity: 0.6;
 		font-size: 0.9rem;
 		transition: all;
 		transition-duration: 150ms;
 		will-change: auto;
-		min-height: 33px;
+		/* min-height: 33px; */
 	}
 
 	.chart-container {
 		/* position: relative; */
 		/* display: block; */
-		flex: 1 1 auto;
+		/* flex: 1 1 auto; */
 		/* height: 200px; */
 		/* width: 80vw; */
 		/* flex-basis: 60%; */
@@ -284,7 +285,7 @@
 		}
 		.chart-container {
 			/* position: relative; */
-			display: block;
+			/* display: block; */
 			flex: 1 1 auto;
 			/* height: 200px; */
 			/* width: 80vw; */
