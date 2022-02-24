@@ -1,5 +1,5 @@
 <script>
-	import ProjectArrows from '../components/projectArrows.svelte';
+	import ProjectArrows from '../components/ProjectArrows.svelte';
 </script>
 
 <ProjectArrows />

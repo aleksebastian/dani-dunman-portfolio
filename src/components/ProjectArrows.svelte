@@ -11,7 +11,6 @@
 
 	const setPrevAndNextProjects = () => {
 		for (let i = 0; i < projects.length; i++) {
-			console.log($currentPage, projects[i]);
 			if ($currentPage === `/${projects[i]}`) {
 				if (projects[i - 1]) {
 					prevProject = projectData[projects[i - 1]].route;
