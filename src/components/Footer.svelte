@@ -175,6 +175,10 @@
 <p class="copyright">Copyright © 2021 Daniela Dunman. All Rights Reserved.</p>
 
 <style>
+	.right-footer > div > a:hover {
+		color: var(--accent-color);
+	}
+
 	.bounce {
 		animation: bounce 2s;
 		-webkit-animation: bounce 2s;
@@ -295,6 +299,7 @@
 		max-width: 6rem;
 		text-align: center;
 		font-size: 0.6rem;
+		cursor: pointer;
 	}
 
 	.footer-gif {
