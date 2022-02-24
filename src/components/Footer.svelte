@@ -3,173 +3,166 @@
 	import FaLinkedin from 'svelte-icons/fa/FaLinkedin.svelte';
 	import FaPinterestSquare from 'svelte-icons/fa/FaPinterestSquare.svelte';
 
+	import IntersectionObserver from './image/IntersectionObserver.svelte';
+
 	import ImageLoader from './image/ImageLoader.svelte';
 
-	import { onMount } from 'svelte';
+	import { onMount, onDestroy } from 'svelte';
 
-	function getRandomIntInclusive(min, max) {
-		min = Math.ceil(min);
-		max = Math.floor(max);
-		return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
-	}
+	const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 
-	let currBouncingGif;
-
-	// const randomBounce = () => {
-	// 	let nextBouncingGifNum = getRandomIntInclusive(1, 4);
-	// 	let nextBouncingGif = document.getElementById(`footer-gif-${nextBouncingGifNum}`);
-	// 	nextBouncingGif.classList.add('bounce');
-	// };
-
+	let currPlayingGif;
+	let local = false;
 	let counter = 10;
 	let isHovering = false;
+	let interval;
 	const setBounceAndCounter = function () {
-		let next = getRandomIntInclusive(1, 4);
-		while (next === currBouncingGif) {
-			next = getRandomIntInclusive(1, 4);
+		let next = getRandomInt(1, 4);
+		while (next === currPlayingGif) {
+			next = getRandomInt(1, 4);
 		}
-		currBouncingGif = next;
-		counter = getRandomIntInclusive(1500, 2500);
-		if (!isHovering) {
-			setTimeout(setBounceAndCounter, counter);
+		setGif(`gif-${currPlayingGif}`, false);
+		currPlayingGif = next;
+		setGif(`gif-${currPlayingGif}`, true);
+		counter = getRandomInt(3300, 3400);
+		interval = setTimeout(setBounceAndCounter, counter);
+	};
+
+	onMount(() => {
+		setTimeout(setBounceAndCounter, counter);
+	});
+
+	const setGif = (gifId, hoveringState) => {
+		const imgToAnimate = document.getElementById(gifId);
+		if (gifId === 'gif-1') {
+			imgToAnimate.src = hoveringState
+				? 'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/e_loop:1/v1643897805/Dani/Footer/hippo_animation_loop_qnan1e.gif'
+				: 'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/hippo_animation_loop_qnan1e.gif';
+		}
+		if (gifId === 'gif-2') {
+			imgToAnimate.src = hoveringState
+				? 'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/e_loop:1/v1643897805/Dani/Footer/pizza-loop_ed5rvh.gif'
+				: 'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/pizza-loop_ed5rvh.gif';
+		}
+		if (gifId === 'gif-3') {
+			imgToAnimate.src = hoveringState
+				? 'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/e_loop:1/v1643897805/Dani/Footer/coffee_animation_ejkykd.gif'
+				: 'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/coffee_animation_ejkykd.gif';
+		}
+		if (gifId === 'gif-4') {
+			imgToAnimate.src = hoveringState
+				? 'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/e_loop:1/v1643897805/Dani/Footer/acai-animtion-loop_xguomg.gif'
+				: 'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/acai-animtion-loop_xguomg.gif';
 		}
 	};
 
-	// setTimeout(setBounceAndCounter, counter);
-
 	const handleMouseEnter = (gifId) => {
 		isHovering = true;
-		let imgToAnimate = document.getElementById(gifId);
-		if (gifId === 'gif-1') {
-			imgToAnimate.src =
-				'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/e_loop:1/v1643897805/Dani/Footer/hippo_animation_loop_qnan1e.gif';
-		}
-		if (gifId === 'gif-2') {
-			imgToAnimate.src =
-				'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/e_loop:1/v1643897805/Dani/Footer/pizza-loop_ed5rvh.gif';
-		}
-		if (gifId === 'gif-3') {
-			imgToAnimate.src =
-				'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/e_loop:1/v1643897805/Dani/Footer/coffee_animation_ejkykd.gif';
-		}
-		if (gifId === 'gif-4') {
-			imgToAnimate.src =
-				'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/e_loop:1/v1643897805/Dani/Footer/acai-animtion-loop_xguomg.gif';
-		}
+		setGif(gifId, isHovering);
+		clearInterval(interval);
 	};
 
 	const handleMouseLeave = (gifId) => {
 		isHovering = false;
-		let imgToAnimate = document.getElementById(gifId);
-		if (gifId === 'gif-1') {
-			imgToAnimate.src =
-				'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/hippo_animation_loop_qnan1e.gif';
-		}
-		if (gifId === 'gif-2') {
-			imgToAnimate.src =
-				'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/pizza-loop_ed5rvh.gif';
-		}
-		if (gifId === 'gif-3') {
-			imgToAnimate.src =
-				'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/coffee_animation_ejkykd.gif';
-		}
-		if (gifId === 'gif-4') {
-			imgToAnimate.src =
-				'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/acai-animtion-loop_xguomg.gif';
-		}
-
-		// setTimeout(setBounceAndCounter, counter);
+		setGif(gifId, isHovering);
+		counter = 10;
+		interval = setTimeout(setBounceAndCounter, counter);
 	};
+	onDestroy(() => clearInterval(interval));
 </script>
 
 <div class="footer">
-	<div class="gifs-container">
-		<div
-			class="gif-container"
-			on:mouseenter={() => handleMouseEnter('gif-1')}
-			on:mouseleave={() => handleMouseLeave('gif-1')}
-		>
-			<div id="footer-gif-1" class="footer-gif">
-				<img
-					id="gif-1"
-					src="https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/hippo_animation_loop_qnan1e.gif"
-					alt="hippo"
-				/>
+	<IntersectionObserver once={false} let:intersecting bind:intersecting={local} top={400}>
+		{#if intersecting}
+			<div class="gifs-container">
+				<div
+					class="gif-container"
+					on:mouseenter={() => handleMouseEnter('gif-1')}
+					on:mouseleave={() => handleMouseLeave('gif-1')}
+				>
+					<div id="footer-gif-1" class="footer-gif">
+						<img
+							id="gif-1"
+							src="https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/hippo_animation_loop_qnan1e.gif"
+							alt="hippo"
+						/>
+					</div>
+					<p>Hippos are cool</p>
+				</div>
+				<div
+					class="gif-container"
+					on:mouseenter={() => handleMouseEnter('gif-2')}
+					on:mouseleave={() => handleMouseLeave('gif-2')}
+				>
+					<div id="footer-gif-2" class="footer-gif">
+						<img
+							id="gif-2"
+							src="https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/pizza-loop_ed5rvh.gif"
+							alt="hippo"
+						/>
+					</div>
+					<p>Pineapple goes on pizza</p>
+				</div>
+				<div
+					class="gif-container"
+					on:mouseenter={() => handleMouseEnter('gif-3')}
+					on:mouseleave={() => handleMouseLeave('gif-3')}
+				>
+					<div id="footer-gif-3" class="footer-gif">
+						<img
+							id="gif-3"
+							src="https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/coffee_animation_ejkykd.gif"
+							alt="hippo"
+						/>
+					</div>
+					<p>I take my coffee black</p>
+				</div>
+				<div
+					class="gif-container"
+					on:mouseenter={() => handleMouseEnter('gif-4')}
+					on:mouseleave={() => handleMouseLeave('gif-4')}
+				>
+					<div id="footer-gif-4" class="footer-gif">
+						<img
+							id="gif-4"
+							src="https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/acai-animtion-loop_xguomg.gif"
+							alt="hippo"
+						/>
+					</div>
+					<p>It’s açaí (ah-sah-ee) Not acai (uh-kai)</p>
+				</div>
 			</div>
-			<p>Hippos are cool</p>
-		</div>
-		<div
-			class="gif-container"
-			on:mouseenter={() => handleMouseEnter('gif-2')}
-			on:mouseleave={() => handleMouseLeave('gif-2')}
-		>
-			<div id="footer-gif-2" class="footer-gif">
-				<img
-					id="gif-2"
-					src="https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/pizza-loop_ed5rvh.gif"
-					alt="hippo"
-				/>
+			<div class="right-footer">
+				<div class="info">
+					<a href="mailto:danieladunman@gmail.com">danieladunman@gmail.com</a>
+					<a href="/about">More interesting facts</a>
+				</div>
+				<div class="icons">
+					<a
+						href="https://www.instagram.com/danidunmanart/?hl=en"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<FaInstagram />
+					</a>
+					<a
+						href="https://www.linkedin.com/in/daniela-dunman/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<FaLinkedin />
+					</a>
+					<a
+						href="https://www.pinterest.com/danidunman/_saved/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<FaPinterestSquare />
+					</a>
+				</div>
 			</div>
-			<p>Pineapple goes on pizza</p>
-		</div>
-		<div
-			class="gif-container"
-			on:mouseenter={() => handleMouseEnter('gif-3')}
-			on:mouseleave={() => handleMouseLeave('gif-3')}
-		>
-			<div id="footer-gif-3" class="footer-gif">
-				<img
-					id="gif-3"
-					src="https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/coffee_animation_ejkykd.gif"
-					alt="hippo"
-				/>
-			</div>
-			<p>I take my coffee black</p>
-		</div>
-		<div
-			class="gif-container"
-			on:mouseenter={() => handleMouseEnter('gif-4')}
-			on:mouseleave={() => handleMouseLeave('gif-4')}
-		>
-			<div id="footer-gif-4" class="footer-gif">
-				<img
-					id="gif-4"
-					src="https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/acai-animtion-loop_xguomg.gif"
-					alt="hippo"
-				/>
-			</div>
-			<p>It’s açaí (ah-sah-ee) Not acai (uh-kai)</p>
-		</div>
-	</div>
-	<div class="right-footer">
-		<div class="info">
-			<a href="mailto:danieladunman@gmail.com">danieladunman@gmail.com</a>
-			<a href="/about">More interesting facts</a>
-		</div>
-		<div class="icons">
-			<a
-				href="https://www.instagram.com/danidunmanart/?hl=en"
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-				<FaInstagram />
-			</a>
-			<a
-				href="https://www.linkedin.com/in/daniela-dunman/"
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-				<FaLinkedin />
-			</a>
-			<a
-				href="https://www.pinterest.com/danidunman/_saved/"
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-				<FaPinterestSquare />
-			</a>
-		</div>
-	</div>
+		{/if}
+	</IntersectionObserver>
 </div>
 
 <p class="copyright">Copyright © 2021 Daniela Dunman. All Rights Reserved.</p>

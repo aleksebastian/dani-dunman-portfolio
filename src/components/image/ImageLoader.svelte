@@ -14,7 +14,7 @@
 	});
 </script>
 
-<IntersectionObserver once={true} let:intersecting>
+<IntersectionObserver once={true} let:intersecting top={200}>
 	{#if intersecting || nativeLoading}
 		<Image {alt} {src} />
 	{/if}

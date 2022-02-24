@@ -183,7 +183,6 @@
 		ctx = document.getElementById('Chart1');
 		myChart = new Chart(ctx, config);
 		selectedElement = document.getElementById('category-list').firstChild;
-		console.log(selectedElement);
 		selectedElement.style.opacity = '1';
 		selectedElement.style.transform = 'scale(1.2)';
 	});

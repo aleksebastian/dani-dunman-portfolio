@@ -40,7 +40,7 @@
 	"intaglio": {
 		"name": "Works in Intaglio",
 		"type": "Publication",
-		"route": "intaglio",
+		"route": "/intaglio",
 		"cardSrc": "https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400448/Dani/works%20in%20intaglio/Works_In_Intaglio_mockup_jcxwnm.jpg",
 		"heroSrc": "https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_crop,h_800,w_2500,g_north/v1645400448/Dani/works%20in%20intaglio/Works_In_Intaglio_mockup_jcxwnm.jpg",
 		"overview": [
@@ -61,7 +61,7 @@
 	"radio": {
 		"name": "Radio Museum Exhibit",
 		"type": "Research, UI",
-		"route": "radio",
+		"route": "/radio",
 		"cardSrc": "https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400448/Dani/works%20in%20intaglio/Works_In_Intaglio_mockup_jcxwnm.jpg",
 		"heroSrc": "https://via.placeholder.com/1980x695?text=+",
 		"overview": [
@@ -82,7 +82,7 @@
 	"language": {
 		"name": "Language Exchange Publication",
 		"type": "",
-		"route": "language",
+		"route": "/language",
 		"cardSrc": "https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400448/Dani/works%20in%20intaglio/Works_In_Intaglio_mockup_jcxwnm.jpg",
 		"heroSrc": "https://via.placeholder.com/1980x695?text=+",
 		"overview": [
@@ -103,7 +103,7 @@
 	"logo": {
 		"name": "Logo Design",
 		"type": "",
-		"route": "logo",
+		"route": "/logo",
 		"cardSrc": "https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400448/Dani/works%20in%20intaglio/Works_In_Intaglio_mockup_jcxwnm.jpg",
 		"heroSrc": "https://via.placeholder.com/1980x695?text=+",
 		"overview": [
