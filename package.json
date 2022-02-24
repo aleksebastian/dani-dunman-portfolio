@@ -23,6 +23,8 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"chart.js": "^3.7.1",
+		"chartjs-plugin-datalabels": "^2.0.0",
 		"smoothscroll-polyfill": "^0.4.4",
 		"svelte-icons": "^2.1.0"
 	}

@@ -10,6 +10,7 @@
 	import Painpoints from '../components/usps/Painpoints.svelte';
 	import Expandable from '../components/Expandable.svelte';
 	import MoreResearch from '../components/usps/MoreResearch.svelte';
+	import Chart from '../components/usps/Chart.svelte';
 
 	let percentage = 0;
 	$: showStatistics = false;
@@ -88,11 +89,8 @@
 
 		<!-- MORE STATISTICS -->
 		{#if showStatistics}
-			<div transition:slide class="moreStatistics">
-				<img
-					alt="Unbanked demographics graphs"
-					src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400445/Dani/usps/USPS_Data_2_nlg6ac.jpg"
-				/>
+			<div transition:slide class="content">
+				<Chart />
 			</div>
 		{/if}
 
@@ -401,7 +399,7 @@
 		}
 		.moreStatistics {
 			/* height: 16rem; */
-			grid-column: 3 / 11;
+			grid-column: 3 / 9;
 			/* background-color: grey; */
 		}
 
