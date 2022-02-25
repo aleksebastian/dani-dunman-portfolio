@@ -62,7 +62,6 @@
 		display: grid;
 		grid-gap: 3rem;
 		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		/* justify-items: center; */
 	}
 
 	@media (min-width: 640px) {

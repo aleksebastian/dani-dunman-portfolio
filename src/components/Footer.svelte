@@ -8,26 +8,62 @@
 	import { onMount } from 'svelte';
 
 	const setGif = (gifId, hoveringState) => {
+		gifId = `gif-${currPlayingGif}`;
+		let imgId = `footer-text-${currPlayingGif}`;
 		const imgToAnimate = document.getElementById(gifId);
+		const textToAnimate = document.getElementById(imgId);
+
 		if (gifId === 'gif-1') {
-			imgToAnimate.src = hoveringState
-				? 'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/v1643897805/Dani/Footer/hippo_animation_loop_qnan1e.gif'
-				: 'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/hippo_animation_loop_qnan1e.gif';
+			if (hoveringState) {
+				textToAnimate.classList.add('shake-lr');
+				imgToAnimate.src =
+					'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/v1643897805/Dani/Footer/hippo_animation_loop_qnan1e.gif';
+			} else {
+				imgToAnimate.src =
+					'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/hippo_animation_loop_qnan1e.gif';
+				textToAnimate.classList.remove('shake-lr');
+				textToAnimate.style.animation = 'none'; // clear animation
+				textToAnimate.offsetHeight; /* trigger reflow */
+			}
 		}
 		if (gifId === 'gif-2') {
-			imgToAnimate.src = hoveringState
-				? 'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/v1643897805/Dani/Footer/pizza-loop_ed5rvh.gif'
-				: 'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/pizza-loop_ed5rvh.gif';
+			if (hoveringState) {
+				textToAnimate.classList.add('shake-lr');
+				imgToAnimate.src =
+					'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/v1643897805/Dani/Footer/pizza-loop_ed5rvh.gif';
+			} else {
+				imgToAnimate.src =
+					'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/pizza-loop_ed5rvh.gif';
+				textToAnimate.classList.remove('shake-lr');
+				textToAnimate.style.animation = 'none'; // clear animation
+				textToAnimate.offsetHeight; /* trigger reflow */
+			}
 		}
 		if (gifId === 'gif-3') {
-			imgToAnimate.src = hoveringState
-				? 'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/v1643897805/Dani/Footer/coffee_animation_ejkykd.gif'
-				: 'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/coffee_animation_ejkykd.gif';
+			if (hoveringState) {
+				textToAnimate.classList.add('shake-lr');
+				imgToAnimate.src =
+					'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/v1643897805/Dani/Footer/coffee_animation_ejkykd.gif';
+			} else {
+				imgToAnimate.src =
+					'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/coffee_animation_ejkykd.gif';
+				textToAnimate.classList.remove('shake-lr');
+				textToAnimate.style.animation = 'none'; // clear animation
+				textToAnimate.offsetHeight; /* trigger reflow */
+			}
 		}
 		if (gifId === 'gif-4') {
-			imgToAnimate.src = hoveringState
-				? 'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/v1643897805/Dani/Footer/acai-animtion-loop_xguomg.gif'
-				: 'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/acai-animtion-loop_xguomg.gif';
+			if (hoveringState) {
+				textToAnimate.classList.add('shake-lr');
+				imgToAnimate.src =
+					'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/v1643897805/Dani/Footer/acai-animtion-loop_xguomg.gif';
+			} else {
+				imgToAnimate.src =
+					'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/acai-animtion-loop_xguomg.gif';
+				textToAnimate.classList.remove('shake-lr');
+				textToAnimate.style.animation = 'none'; // clear animation
+				textToAnimate.offsetHeight; /* trigger reflow */
+			}
 		}
 	};
 
@@ -42,9 +78,9 @@
 		while (nextGifToPlay === currPlayingGif) {
 			nextGifToPlay = getRandomInt(1, 4);
 		}
-		setGif(`gif-${currPlayingGif}`, false);
+		setGif(currPlayingGif, false);
 		currPlayingGif = nextGifToPlay;
-		setGif(`gif-${currPlayingGif}`, true);
+		setGif(currPlayingGif, true);
 		counter = getRandomInt(3300, 3400);
 		interval = setTimeout(playGif, counter);
 	};
@@ -68,27 +104,23 @@
 		return () => clearInterval(interval);
 	});
 
-	const handleMouseEnter = (gifId) => {
-		clearInterval(interval);
-		isHovering = true;
-		setGif(gifId, isHovering);
-	};
+	// const handleMouseEnter = (gifId) => {
+	// 	clearInterval(interval);
+	// 	isHovering = true;
+	// 	setGif(gifId, isHovering);
+	// };
 
-	const handleMouseLeave = (gifId) => {
-		isHovering = false;
-		setGif(gifId, isHovering);
-		counter = 150;
-		interval = setTimeout(playGif, counter);
-	};
+	// const handleMouseLeave = (gifId) => {
+	// 	isHovering = false;
+	// 	setGif(gifId, isHovering);
+	// 	counter = 150;
+	// 	interval = setTimeout(playGif, counter);
+	// };
 </script>
 
 <div class="footer">
 	<div class="gifs-container">
-		<div
-			class="gif-container"
-			on:mouseenter={() => handleMouseEnter('gif-1')}
-			on:mouseleave={() => handleMouseLeave('gif-1')}
-		>
+		<div class="gif-container">
 			<div id="footer-gif-1" class="footer-gif">
 				<img
 					id="gif-1"
@@ -96,13 +128,9 @@
 					alt="hippo"
 				/>
 			</div>
-			<p>Hippos are cool</p>
+			<p id="footer-text-1">Hippos are cool</p>
 		</div>
-		<div
-			class="gif-container"
-			on:mouseenter={() => handleMouseEnter('gif-2')}
-			on:mouseleave={() => handleMouseLeave('gif-2')}
-		>
+		<div class="gif-container">
 			<div id="footer-gif-2" class="footer-gif">
 				<img
 					id="gif-2"
@@ -110,13 +138,9 @@
 					alt="hippo"
 				/>
 			</div>
-			<p>Pineapple goes on pizza</p>
+			<p id="footer-text-2">Pineapple goes on pizza</p>
 		</div>
-		<div
-			class="gif-container"
-			on:mouseenter={() => handleMouseEnter('gif-3')}
-			on:mouseleave={() => handleMouseLeave('gif-3')}
-		>
+		<div class="gif-container">
 			<div id="footer-gif-3" class="footer-gif">
 				<img
 					id="gif-3"
@@ -124,13 +148,9 @@
 					alt="hippo"
 				/>
 			</div>
-			<p>I take my coffee black</p>
+			<p id="footer-text-3">I take my coffee black</p>
 		</div>
-		<div
-			class="gif-container"
-			on:mouseenter={() => handleMouseEnter('gif-4')}
-			on:mouseleave={() => handleMouseLeave('gif-4')}
-		>
+		<div class="gif-container">
 			<div id="footer-gif-4" class="footer-gif">
 				<img
 					id="gif-4"
@@ -138,7 +158,7 @@
 					alt="hippo"
 				/>
 			</div>
-			<p>It’s açaí (ah-sah-ee) Not acai (uh-kai)</p>
+			<p id="footer-text-4" class="shake-lr">It’s açaí (ah-sah-ee) Not acai (uh-kai)</p>
 		</div>
 	</div>
 	<div class="right-footer">
@@ -260,7 +280,7 @@
 			align-items: center;
 			max-width: 10rem;
 			text-align: center;
-			gap: 0.8rem;
+			gap: 1rem;
 			font-size: 1rem;
 		}
 
@@ -299,6 +319,103 @@
 			padding: 3rem;
 			border-top: 12px solid #d3a615;
 			color: black;
+		}
+	}
+
+	/* ----------------------------------------------
+ * Generated by Animista on 2022-2-25 11:20:57
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+	/**
+ * ----------------------------------------
+ * animation shake-lr
+ * ----------------------------------------
+ */
+
+	.shake-lr {
+		-webkit-animation: shake-lr 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) both !important;
+		animation: shake-lr 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) both !important;
+	}
+
+	/* ----------------------------------------------
+ * Generated by Animista on 2022-2-25 11:23:8
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+	/**
+ * ----------------------------------------
+ * animation shake-lr
+ * ----------------------------------------
+ */
+	@-webkit-keyframes shake-lr {
+		0%,
+		100% {
+			-webkit-transform: rotate(0deg);
+			transform: rotate(0deg);
+			-webkit-transform-origin: 50% 50%;
+			transform-origin: 50% 50%;
+		}
+		10% {
+			-webkit-transform: rotate(8deg);
+			transform: rotate(8deg);
+		}
+		20%,
+		40%,
+		60% {
+			-webkit-transform: rotate(-10deg);
+			transform: rotate(-10deg);
+		}
+		30%,
+		50%,
+		70% {
+			-webkit-transform: rotate(10deg);
+			transform: rotate(10deg);
+		}
+		80% {
+			-webkit-transform: rotate(-8deg);
+			transform: rotate(-8deg);
+		}
+		90% {
+			-webkit-transform: rotate(8deg);
+			transform: rotate(8deg);
+		}
+	}
+	@keyframes shake-lr {
+		0%,
+		100% {
+			-webkit-transform: rotate(0deg);
+			transform: rotate(0deg);
+			-webkit-transform-origin: 50% 50%;
+			transform-origin: 50% 50%;
+		}
+		10% {
+			-webkit-transform: rotate(8deg);
+			transform: rotate(8deg);
+		}
+		20%,
+		40%,
+		60% {
+			-webkit-transform: rotate(-10deg);
+			transform: rotate(-10deg);
+		}
+		30%,
+		50%,
+		70% {
+			-webkit-transform: rotate(10deg);
+			transform: rotate(10deg);
+		}
+		80% {
+			-webkit-transform: rotate(-8deg);
+			transform: rotate(-8deg);
+		}
+		90% {
+			-webkit-transform: rotate(8deg);
+			transform: rotate(8deg);
 		}
 	}
 </style>
