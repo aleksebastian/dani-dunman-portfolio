@@ -1,6 +1,15 @@
 <script>
 	import ImageLoader from './image/ImageLoader.svelte';
 
+	const imgSrcs = [
+		'https://res.cloudinary.com/blitva/image/upload/c_scale,w_1100/f_auto/q_auto/r_60/v1645728893/Dani/bluedoor/gallery%20/BlueDoor1_regnzf.jpg',
+		'https://res.cloudinary.com/blitva/image/upload/c_scale,w_1100/f_auto/q_auto/r_60/v1645728894/Dani/bluedoor/gallery%20/BlueDoor2_kuhjme.jpg',
+		'https://res.cloudinary.com/blitva/image/upload/c_scale,w_1100/f_auto/q_auto/r_60/v1645728894/Dani/bluedoor/gallery%20/BlueDoor3_goe1rq.jpg',
+		'https://res.cloudinary.com/blitva/image/upload/c_scale,w_1100/f_auto/q_auto/r_60/v1645728895/Dani/bluedoor/gallery%20/BlueDoor4_hrhy98.jpg',
+		'https://res.cloudinary.com/blitva/image/upload/c_scale,w_1100/f_auto/q_auto/r_60/v1645728895/Dani/bluedoor/gallery%20/BlueDoor6_u43xdf.jpg',
+		'https://res.cloudinary.com/blitva/image/upload/c_scale,w_1100/f_auto/q_auto/r_60/v1645728895/Dani/bluedoor/gallery%20/BlueDoor5_xnak1c.jpg'
+	];
+
 	function rand(min, max) {
 		let randomNum = Math.random() * (max - min) + min;
 		return Math.round(randomNum);
@@ -9,24 +18,11 @@
 
 <div id="work" class="gallery full">
 	<div class="photos">
-		<div>
-			<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/800/500`} alt="dani" />
-		</div>
-		<div>
-			<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/800/500`} alt="dani" />
-		</div>
-		<div>
-			<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/800/500`} alt="dani" />
-		</div>
-		<div>
-			<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/800/500`} alt="dani" />
-		</div>
-		<div>
-			<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/800/500`} alt="dani" />
-		</div>
-		<div>
-			<ImageLoader src={`https://picsum.photos/seed/${rand(0, 200)}/800/500`} alt="dani" />
-		</div>
+		{#each imgSrcs as imgSrc}
+			<div>
+				<ImageLoader src={imgSrc} alt="dani" />
+			</div>
+		{/each}
 	</div>
 </div>
 
@@ -38,7 +34,6 @@
 		padding: 3rem 0;
 		min-height: 100vh;
 		background-color: var(--background-color);
-		/* justify-items: center; */
 	}
 
 	/* .full {
