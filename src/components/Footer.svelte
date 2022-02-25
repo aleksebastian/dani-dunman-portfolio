@@ -38,7 +38,6 @@
 	let interval;
 	let isHovering = false;
 	const playGif = function () {
-		console.log('playing gif');
 		let nextGifToPlay = getRandomInt(1, 4);
 		while (nextGifToPlay === currPlayingGif) {
 			nextGifToPlay = getRandomInt(1, 4);
