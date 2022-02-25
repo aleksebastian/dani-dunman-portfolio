@@ -361,28 +361,28 @@
 			transform-origin: 50% 50%;
 		}
 		10% {
-			-webkit-transform: rotate(8deg);
-			transform: rotate(8deg);
+			-webkit-transform: rotate(4deg);
+			transform: rotate(4deg);
 		}
 		20%,
 		40%,
 		60% {
-			-webkit-transform: rotate(-10deg);
-			transform: rotate(-10deg);
+			-webkit-transform: rotate(-6deg);
+			transform: rotate(-6deg);
 		}
 		30%,
 		50%,
 		70% {
-			-webkit-transform: rotate(10deg);
-			transform: rotate(10deg);
+			-webkit-transform: rotate(6deg);
+			transform: rotate(6deg);
 		}
 		80% {
-			-webkit-transform: rotate(-8deg);
-			transform: rotate(-8deg);
+			-webkit-transform: rotate(-4deg);
+			transform: rotate(-4deg);
 		}
 		90% {
-			-webkit-transform: rotate(8deg);
-			transform: rotate(8deg);
+			-webkit-transform: rotate(4deg);
+			transform: rotate(4deg);
 		}
 	}
 	@keyframes shake-lr {
@@ -394,28 +394,28 @@
 			transform-origin: 50% 50%;
 		}
 		10% {
-			-webkit-transform: rotate(8deg);
-			transform: rotate(8deg);
+			-webkit-transform: rotate(4deg);
+			transform: rotate(4deg);
 		}
 		20%,
 		40%,
 		60% {
-			-webkit-transform: rotate(-10deg);
-			transform: rotate(-10deg);
+			-webkit-transform: rotate(-6deg);
+			transform: rotate(-6deg);
 		}
 		30%,
 		50%,
 		70% {
-			-webkit-transform: rotate(10deg);
-			transform: rotate(10deg);
+			-webkit-transform: rotate(6deg);
+			transform: rotate(6deg);
 		}
 		80% {
-			-webkit-transform: rotate(-8deg);
-			transform: rotate(-8deg);
+			-webkit-transform: rotate(-4deg);
+			transform: rotate(-4deg);
 		}
 		90% {
-			-webkit-transform: rotate(8deg);
-			transform: rotate(8deg);
+			-webkit-transform: rotate(4deg);
+			transform: rotate(4deg);
 		}
 	}
 </style>
