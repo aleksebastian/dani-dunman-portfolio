@@ -158,7 +158,7 @@
 					alt="hippo"
 				/>
 			</div>
-			<p id="footer-text-4" class="shake-lr">It’s açaí (ah-sah-ee) Not acai (uh-kai)</p>
+			<p id="footer-text-4">It’s açaí (ah-sah-ee) Not acai (uh-kai)</p>
 		</div>
 	</div>
 	<div class="right-footer">
