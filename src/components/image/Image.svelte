@@ -15,7 +15,6 @@
 
 <style>
 	img {
-		/* height: 200px; */
 		opacity: 0;
 		transition: opacity 800ms ease-out;
 	}

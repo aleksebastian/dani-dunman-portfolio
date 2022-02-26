@@ -5,7 +5,6 @@
 
 <div transition:slide={{ duration: 1000 }} class="content container">
 	<!-- UX RESEARCH METHODS -->
-
 	<div class="txt-1">
 		<p class="label py-sm">RESEARCH METHOD 01: Interview</p>
 		<p>
@@ -67,17 +66,11 @@
 		flex-direction: column;
 		gap: 1rem;
 	}
-
 	.section {
 		padding-top: 2rem;
 	}
-
 	.txt-2 {
 		text-align: center;
-	}
-
-	div.img-4 > * {
-		/* padding: 0.25rem; */
 	}
 
 	@media (min-width: 768px) {
@@ -93,11 +86,9 @@
 				'img-3 img-3 img-3 img-3 img-3 txt-3 txt-3 txt-3'
 				'txt-4 txt-4 txt-4 txt-4 img-4 img-4 img-4 img-4';
 		}
-
 		.section {
 			padding-top: 0;
 		}
-
 		.img-1 {
 			grid-area: img-1;
 		}
@@ -114,14 +105,13 @@
 		.txt-3 {
 			grid-area: txt-3;
 		}
+		.txt-4 {
+			grid-area: txt-4;
+		}
 		.img-4 {
 			padding: 0.5rem;
 			grid-area: img-4;
 			box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-		}
-
-		.txt-4 {
-			grid-area: txt-4;
 		}
 	}
 </style>

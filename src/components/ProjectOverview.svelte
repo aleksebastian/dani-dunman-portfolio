@@ -43,14 +43,6 @@
 		}
 	}
 
-	/* .py-md {
-		padding: 3rem 0;
-	} */
-
-	/* .label {
-		font-size: var(--label-size);
-	} */
-
 	.body-text {
 		font-size: var(--body-size);
 	}

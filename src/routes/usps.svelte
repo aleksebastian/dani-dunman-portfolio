@@ -12,6 +12,9 @@
 	import MoreResearch from '../components/usps/MoreResearch.svelte';
 	import Chart from '../components/usps/Chart.svelte';
 
+	const project = usps;
+	const { route, name, heroSrc, overview, gallerySrcs } = usps;
+
 	let percentage = 0;
 	$: showStatistics = false;
 	$: showResearch = false;
@@ -35,9 +38,9 @@
 
 	let heroLoaded = false;
 	onMount(() => {
-		currentPage.set(usps.route);
+		currentPage.set(route);
 		const heroImg = new Image();
-		heroImg.src = usps.heroSrc;
+		heroImg.src = heroSrc;
 		heroImg.onload = () => {
 			heroLoaded = true;
 		};
@@ -45,18 +48,18 @@
 </script>
 
 <svelte:head>
-	<title>{usps.name}</title>
+	<title>{name}</title>
 </svelte:head>
 
 <div class="grid">
 	<!-- HERO -->
 	{#if heroLoaded}
-		<ProjectHero project={usps} />
+		<ProjectHero {project} />
 
-		<ProjectOverview overview={usps.overview} />
+		<ProjectOverview {overview} />
 
 		<!-- GALLERY -->
-		<ProjectGallery />
+		<ProjectGallery {gallerySrcs} />
 
 		<!-- RESEARCH -->
 		<div class="research full">
@@ -134,7 +137,6 @@
 
 		<!-- SUMMARY OF RESEARCH -->
 		<div class="full-text py-md">
-			<!-- <div class="this flex-row"> -->
 			<div class="pb-sm">
 				<p class="label">Summary of Research</p>
 				<p>
@@ -157,7 +159,6 @@
 					services by building trust and knowledge about personal finances.
 				</p>
 			</div>
-			<!-- </div> -->
 		</div>
 
 		<!-- SOLUTION -->
@@ -207,7 +208,6 @@
 		<div class="content py-md">
 			<p class="label">Wireframe Prototype</p>
 			<div class="walkthrough flex-row py-md gap-1 flex-wrap">
-				<!-- <div class="walkthrough"> -->
 				<iframe
 					title="walkthrough"
 					width="944"
@@ -296,7 +296,6 @@
 	}
 
 	.proto {
-		/* max-width: 100vw; */
 		max-height: 250px;
 		transition-duration: initial;
 	}
@@ -353,12 +352,6 @@
 		font-size: var(--header-size);
 	}
 
-	.moreStatistics {
-		/* height: 16rem; */
-		grid-column: 2 / 12;
-		/* background-color: grey; */
-	}
-
 	.research {
 		display: grid;
 		grid-column-gap: 1rem;
@@ -396,11 +389,6 @@
 		.proto {
 			max-width: calc(50vw - 1rem);
 			max-height: 80vh;
-		}
-		.moreStatistics {
-			/* height: 16rem; */
-			grid-column: 3 / 9;
-			/* background-color: grey; */
 		}
 
 		.researchLeft {

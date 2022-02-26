@@ -6,6 +6,7 @@
 	import { onMount } from 'svelte';
 
 	const labels = ['Fully Banked', 'Underbanked', 'Unbanked'];
+
 	const DATA = {
 		genderData: {
 			labels: labels,
@@ -215,7 +216,6 @@
 			if (currDatasetInGraph) {
 				currDatasetInGraph.label = currDataset.label;
 				currDatasetInGraph.data = currDataset.data;
-				// currDatasetInGraph.maxBarThickness = currDataset.maxBarThickness;
 			} else {
 				myChart.data.datasets.push(currDataset);
 			}
@@ -264,18 +264,6 @@
 		transition: all;
 		transition-duration: 150ms;
 		will-change: auto;
-		/* min-height: 33px; */
-	}
-
-	.chart-container {
-		/* position: relative; */
-		/* display: block; */
-		/* flex: 1 1 auto; */
-		/* height: 200px; */
-		/* width: 80vw; */
-		/* flex-basis: 60%; */
-		/* display: block; */
-		/* min-width: 800px; */
 	}
 
 	@media (min-width: 768px) {
@@ -283,14 +271,7 @@
 			flex-direction: row;
 		}
 		.chart-container {
-			/* position: relative; */
-			/* display: block; */
 			flex: 1 1 auto;
-			/* height: 200px; */
-			/* width: 80vw; */
-			/* flex-basis: 60%; */
-			/* display: block; */
-			/* min-width: 800px; */
 		}
 	}
 </style>

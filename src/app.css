@@ -10,10 +10,6 @@ a {
 	text-decoration: none;
 }
 
-/* .header {
-	font-size: 4rem;
-} */
-
 .callout {
 	font-size: 3rem;
 }
@@ -118,12 +114,6 @@ a {
 * See http://animista.net/license for more info. 
 * w: http://animista.net, t: @cssanimista
 * ---------------------------------------------- */
-
-/**
-* ----------------------------------------
-* animation shake-lr
-* ----------------------------------------
-*/
 
 .shake-lr {
 	-webkit-animation: shake-lr 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) both !important;

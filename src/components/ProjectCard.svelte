@@ -1,12 +1,6 @@
 <script>
-	export let project;
-
-	function rand(min, max) {
-		let randomNum = Math.random() * (max - min) + min;
-		return Math.round(randomNum);
-	}
-
 	import ImageLoader from './image/ImageLoader.svelte';
+	export let project;
 </script>
 
 <a href={project.route} class="project">
@@ -71,12 +65,6 @@
 		}
 		.project {
 			max-width: 100%;
-		}
-	}
-
-	@media (min-width: 1536px) {
-		.project {
-			/* max-width: 80%; */
 		}
 	}
 </style>

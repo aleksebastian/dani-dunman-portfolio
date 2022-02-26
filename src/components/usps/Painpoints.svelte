@@ -2,7 +2,6 @@
 	<p class="label full">Pain Points</p>
 	<div class="pain-top content">
 		<div class="painPoint">
-			<!-- <div class="point" /> -->
 			<img
 				class="point"
 				alt="painpoint"
@@ -69,13 +68,11 @@
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 		grid-column-gap: 1rem;
 		justify-items: center;
-		/* gap: 1rem; */
 	}
 
 	.point {
 		width: 100px;
 		height: 100px;
-		/* background-color: grey; */
 	}
 
 	.painPoint p {
@@ -106,10 +103,6 @@
 		padding: 1rem 0;
 	}
 
-	/* .label {
-		font-size: var(--label-size);
-	} */
-
 	@media (min-width: 768px) {
 		.painPoint {
 			font-size: 1.1rem;
@@ -132,8 +125,8 @@
 		.point {
 			width: 100px;
 			height: 100px;
-			/* background-color: grey; */
 		}
+
 		.pain-bottom {
 			width: 100%;
 			grid-column: 3 / 11;

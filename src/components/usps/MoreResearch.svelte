@@ -182,10 +182,6 @@
 	}
 
 	@media (min-width: 768px) {
-		.methods > div {
-			padding: 3rem 0;
-		}
-
 		.proposals {
 			grid-column: 2 / 10;
 			flex-direction: row;

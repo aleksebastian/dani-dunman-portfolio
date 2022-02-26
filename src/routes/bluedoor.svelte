@@ -9,18 +9,20 @@
 	import Expandable from '../components/Expandable.svelte';
 	import MoreResearch from '../components/bluedoor/MoreResearch.svelte';
 
+	const project = bluedoor;
+	const { route, name, heroSrc, overview, gallerySrcs } = bluedoor;
+
 	let heroLoaded = false;
 	onMount(() => {
-		currentPage.set(bluedoor.route);
+		currentPage.set(route);
 		const heroImg = new Image();
-		heroImg.src = bluedoor.heroSrc;
+		heroImg.src = heroSrc;
 		heroImg.onload = () => {
 			heroLoaded = true;
 		};
 	});
 
 	let showResearch = false;
-	``;
 	const handleClick = (section) => {
 		if (section === 'research') {
 			showResearch = !showResearch;
@@ -30,14 +32,14 @@
 </script>
 
 <svelte:head>
-	<title>{bluedoor.name}</title>
+	<title>{name}</title>
 </svelte:head>
 
 <div class="grid">
 	{#if heroLoaded}
-		<ProjectHero project={bluedoor} />
-		<ProjectOverview overview={bluedoor.overview} />
-		<ProjectGallery />
+		<ProjectHero {project} />
+		<ProjectOverview {overview} />
+		<ProjectGallery {gallerySrcs} />
 
 		<!-- RESEARCH -->
 		<div class="research content py-md">
@@ -110,7 +112,6 @@
 		<div class="content py-md">
 			<p class="label">Wireframe Prototype</p>
 			<div class="walkthrough flex-row py-md flex-wrap">
-				<!-- <div class="walkthrough"> -->
 				<iframe
 					title="walkthrough"
 					width="944"
@@ -122,7 +123,6 @@
 					class="proto"
 					data-scale="100"
 				/>
-				<!-- </div> -->
 				<div class="del">
 					<p class="label">Suggested Walk-through</p>
 					<ul class="steps">
@@ -224,13 +224,8 @@
 	.med {
 		font-size: 1.3rem;
 	}
-	/* 
-	.takeaway > div {
-		padding
-	} */
 
 	.proto {
-		/* max-width: 100vw; */
 		max-height: 250px;
 		transition-duration: initial;
 	}

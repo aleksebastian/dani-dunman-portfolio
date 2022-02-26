@@ -3,18 +3,12 @@
 	import { currentPage } from '../store';
 	import { logo } from '../projectData.json';
 
-	// import FaArrowLeft from 'svelte-icons/fa/FaArrowLeft.svelte';
-	// import FaArrowRight from 'svelte-icons/fa/FaArrowRight.svelte';
 	import ImageLoader from '../components/image/ImageLoader.svelte';
 	import ProjectHero from '../components/ProjectHero.svelte';
 
 	let heroLoaded = false;
-	// let Carousel;
-	// let carousel;
-	onMount(async () => {
-		// const module = await import('svelte-carousel');
-		// Carousel = module.default;
 
+	onMount(async () => {
 		currentPage.set(logo.route);
 
 		const heroImg = new Image();

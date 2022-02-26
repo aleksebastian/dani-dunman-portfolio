@@ -1,10 +1,8 @@
 <script>
 	import { fade } from 'svelte/transition';
-
 	export let project;
 </script>
 
-<!-- <div class="grid"> -->
 <div in:fade class="hero full">
 	<img src={project.heroSrc} alt="project" />
 	<div class="text">
@@ -13,15 +11,7 @@
 	</div>
 </div>
 
-<!-- </div> -->
 <style>
-	/* GRID RULE AND GRID ELEMENT SHOULD BE REMOVED */
-	/* .grid {
-		display: grid;
-		grid-template-columns: repeat(12, minmax(0, 1fr));
-		grid-column-gap: 1rem;
-	} */
-
 	img {
 		display: block;
 	}

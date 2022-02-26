@@ -3,8 +3,6 @@
 	import FaLinkedin from 'svelte-icons/fa/FaLinkedin.svelte';
 	import FaPinterestSquare from 'svelte-icons/fa/FaPinterestSquare.svelte';
 
-	// import IntersectionObserver from './image/IntersectionObserver.svelte';
-
 	import { onMount } from 'svelte';
 
 	const setGif = (gifId, hoveringState) => {
@@ -22,8 +20,8 @@
 				imgToAnimate.src =
 					'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/hippo_animation_loop_qnan1e.gif';
 				textToAnimate.classList.remove('shake-lr');
-				textToAnimate.style.animation = 'none'; // clear animation
-				textToAnimate.offsetHeight; /* trigger reflow */
+				textToAnimate.style.animation = 'none';
+				textToAnimate.offsetHeight;
 			}
 		}
 		if (gifId === 'gif-2') {
@@ -35,8 +33,8 @@
 				imgToAnimate.src =
 					'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/pizza-loop_ed5rvh.gif';
 				textToAnimate.classList.remove('shake-lr');
-				textToAnimate.style.animation = 'none'; // clear animation
-				textToAnimate.offsetHeight; /* trigger reflow */
+				textToAnimate.style.animation = 'none';
+				textToAnimate.offsetHeight;
 			}
 		}
 		if (gifId === 'gif-3') {
@@ -48,8 +46,8 @@
 				imgToAnimate.src =
 					'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/coffee_animation_ejkykd.gif';
 				textToAnimate.classList.remove('shake-lr');
-				textToAnimate.style.animation = 'none'; // clear animation
-				textToAnimate.offsetHeight; /* trigger reflow */
+				textToAnimate.style.animation = 'none';
+				textToAnimate.offsetHeight;
 			}
 		}
 		if (gifId === 'gif-4') {
@@ -61,8 +59,8 @@
 				imgToAnimate.src =
 					'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/acai-animtion-loop_xguomg.gif';
 				textToAnimate.classList.remove('shake-lr');
-				textToAnimate.style.animation = 'none'; // clear animation
-				textToAnimate.offsetHeight; /* trigger reflow */
+				textToAnimate.style.animation = 'none';
+				textToAnimate.offsetHeight;
 			}
 		}
 	};
@@ -72,7 +70,6 @@
 	let currPlayingGif;
 	let counter = 10;
 	let interval;
-	let isHovering = false;
 	const playGif = function () {
 		let nextGifToPlay = getRandomInt(1, 4);
 		while (nextGifToPlay === currPlayingGif) {
@@ -103,19 +100,6 @@
 
 		return () => clearInterval(interval);
 	});
-
-	// const handleMouseEnter = (gifId) => {
-	// 	clearInterval(interval);
-	// 	isHovering = true;
-	// 	setGif(gifId, isHovering);
-	// };
-
-	// const handleMouseLeave = (gifId) => {
-	// 	isHovering = false;
-	// 	setGif(gifId, isHovering);
-	// 	counter = 150;
-	// 	interval = setTimeout(playGif, counter);
-	// };
 </script>
 
 <div class="footer">

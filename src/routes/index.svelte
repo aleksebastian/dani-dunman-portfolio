@@ -1,8 +1,6 @@
 <script>
-	import Nav from '../components/Nav.svelte';
 	import Hero from '../components/Hero.svelte';
 	import Gallery from '../components/Gallery.svelte';
-	import Footer from '../components/Footer.svelte';
 
 	import { onMount } from 'svelte';
 	import { currentPage } from '../store';
@@ -15,8 +13,12 @@
 </svelte:head>
 
 <section class="content">
-	<Hero />
-	<Gallery />
+	<div>
+		<Hero />
+	</div>
+	<div>
+		<Gallery />
+	</div>
 </section>
 
 <style>

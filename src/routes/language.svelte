@@ -155,7 +155,6 @@
 			height: 50px;
 			min-height: 100%;
 			cursor: pointer;
-			/* background: linear-gradient(to right, gray, rgba(90, 0, 0, 0)); */
 		}
 
 		.left-arrow {
@@ -165,7 +164,6 @@
 			transform: translate(0%, -50%);
 			z-index: 1;
 			color: white;
-			/* background: linear-gradient(to right, black, rgba(90, 0, 0, 0)); */
 		}
 
 		.right-arrow {
@@ -176,7 +174,6 @@
 			transform: translate(-100%, -50%);
 			z-index: 1;
 			color: white;
-			/* background: linear-gradient(to left, gray, rgba(90, 0, 0, 0)); */
 		}
 	}
 </style>
