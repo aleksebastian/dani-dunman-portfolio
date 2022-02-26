@@ -71,6 +71,9 @@
 	let counter = 10;
 	let interval;
 	const playGif = function () {
+		if (interval) {
+			clearTimeout(interval);
+		}
 		let nextGifToPlay = getRandomInt(1, 4);
 		while (nextGifToPlay === currPlayingGif) {
 			nextGifToPlay = getRandomInt(1, 4);
@@ -92,13 +95,13 @@
 			if (footerElement.isIntersecting) {
 				setTimeout(playGif, counter);
 			} else {
-				clearInterval(interval);
+				clearTimeout(interval);
 			}
 		});
 
 		observer.observe(target);
 
-		return () => clearInterval(interval);
+		return () => clearTimeout(interval);
 	});
 </script>
 
@@ -179,6 +182,22 @@
 <p class="copyright">Copyright © 2021 Daniela Dunman. All Rights Reserved.</p>
 
 <style>
+	#footer-text-1 {
+		width: 8ch;
+	}
+
+	#footer-text-2 {
+		width: 13ch;
+	}
+
+	#footer-text-3 {
+		width: 10ch;
+	}
+
+	#footer-gif-3 {
+		margin-left: 0.5rem;
+	}
+
 	.right-footer > div > a:hover {
 		color: var(--accent-color);
 	}
@@ -233,7 +252,6 @@
 		max-width: 6rem;
 		text-align: center;
 		font-size: 0.6rem;
-		cursor: pointer;
 	}
 
 	.footer-gif {

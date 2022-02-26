@@ -13,7 +13,7 @@
 <section class="content">
 	<slot />
 </section>
-{#if $currentPage !== 'about' && $currentPage !== 'index'}
+{#if $currentPage !== '/about' && $currentPage !== '/'}
 	<ProjectArrows />
 {/if}
 <Footer />

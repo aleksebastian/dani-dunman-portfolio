@@ -12,7 +12,7 @@
 
 	let imgLoaded = false;
 	onMount(() => {
-		currentPage.set('about');
+		currentPage.set('/about');
 		const img = new Image();
 		img.src = imgSrc;
 		img.onload = () => {
@@ -55,13 +55,13 @@
 					</div>
 					<a href="mailto:danieladunman@gmail.com" class="email">danieladunman@gmail.com</a>
 					<div class="icons">
-						<div class="icon">
+						<div>
 							<FaInstagram />
 						</div>
-						<div class="icon">
+						<div>
 							<FaLinkedin />
 						</div>
-						<div class="icon">
+						<div>
 							<FaPinterestSquare />
 						</div>
 					</div>
@@ -79,8 +79,7 @@
 	}
 
 	.row p,
-	.email,
-	.icon {
+	.email {
 		cursor: pointer;
 	}
 
@@ -145,8 +144,9 @@
 		color: var(--accent-color);
 	}
 
-	.icon {
+	.icons > div {
 		width: 32px;
 		height: 32px;
+		cursor: pointer;
 	}
 </style>

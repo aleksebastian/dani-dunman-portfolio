@@ -1,7 +1,7 @@
 <script>
+	import { onMount } from 'svelte';
 	import { slide } from 'svelte/transition';
 	import { currentPage } from '../store';
-
 	import { usps } from '../projectData.json';
 
 	import ProjectHero from '../components/ProjectHero.svelte';
@@ -15,7 +15,7 @@
 	const project = usps;
 	const { route, name, heroSrc, overview, gallerySrcs } = usps;
 
-	let percentage = 0;
+	$: percentage = 0;
 	$: showStatistics = false;
 	$: showResearch = false;
 	$: showAbout = false;
@@ -34,16 +34,44 @@
 		}
 	};
 
-	import { onMount } from 'svelte';
+	const increasePercentage = (max) => {
+		if (percentage < max) {
+			percentage += 1;
+			setTimeout(() => {
+				increasePercentage(max);
+			}, 45);
+		}
+	};
 
 	let heroLoaded = false;
+	let target;
+	let observer;
+	let maxPercentage = 34;
+
+	const observePercentage = () => {
+		target = document.getElementById('percentage');
+		observer = new IntersectionObserver((entry) => {
+			let percentageElement = entry[0];
+			if (percentageElement.isIntersecting) {
+				increasePercentage(maxPercentage);
+			}
+		});
+
+		observer.observe(target);
+	};
+
 	onMount(() => {
 		currentPage.set(route);
 		const heroImg = new Image();
 		heroImg.src = heroSrc;
 		heroImg.onload = () => {
 			heroLoaded = true;
+			setTimeout(() => {
+				observePercentage();
+			}, 150);
 		};
+
+		return () => observer.unobserve();
 	});
 </script>
 
@@ -55,10 +83,7 @@
 	<!-- HERO -->
 	{#if heroLoaded}
 		<ProjectHero {project} />
-
 		<ProjectOverview {overview} />
-
-		<!-- GALLERY -->
 		<ProjectGallery {gallerySrcs} />
 
 		<!-- RESEARCH -->
@@ -76,20 +101,18 @@
 				<p>Unbanked: A person who does not use banks or banking institutions in any way or form.</p>
 			</div>
 			<div class="researchRight">
-				<p class="callout-lg">~34%</p>
+				<p id="percentage" class="callout-lg">~{percentage}%</p>
 
 				<p>of the US population is considered under/un banked</p>
 			</div>
 		</div>
 
-		<!-- EXPANDABLE SECTION -->
 		<Expandable
 			{handleClick}
 			state={showStatistics}
 			section={'statistics'}
 			text={'More statistics'}
 		/>
-
 		<!-- MORE STATISTICS -->
 		{#if showStatistics}
 			<div transition:slide class="content">
@@ -97,7 +120,6 @@
 			</div>
 		{/if}
 
-		<!-- PAIN POINTS -->
 		<Painpoints />
 
 		<!-- HOW IS USPS QUALIFIED TO SERVE -->
@@ -122,15 +144,12 @@
 			</div>
 		</div>
 
-		<!-- EXPANDABLE SECTION -->
 		<Expandable
 			{handleClick}
 			state={showResearch}
 			section={'research'}
 			text={'More research and exploration'}
 		/>
-
-		<!-- MORE RESEARCH -->
 		{#if showResearch}
 			<MoreResearch />
 		{/if}
@@ -189,21 +208,22 @@
 			/>
 			{#if showAbout}
 				<div transition:slide class="full-text pb-md">
-					<p class="pb-sm">The Who:</p>
+					<p class="pb-sm bold">The Who:</p>
 					<p>
-						Those who are denied standard bank accounts due to a rocky (poor) banking history. (Bank
-						history reports track how you have handled savings and checking accounts in the past.
-						These show if you have overdrawn accounts, fees that you did not pay, or have been
-						suspected of fraud.)
+						Those who are denied standard bank accounts due to a rocky banking history. Bank history
+						reports track how a person has handled their saving and checking accounts in the past.
+						For example, these reports show if the person has overdrawn accounts, failed to pay
+						fees, and even if they have been suspected of fraud.
 					</p>
-					<p class="py-sm">The problem we are solving:</p>
+					<p class="pt-sm bold">The problem we are solving:</p>
 					<p>
-						People who are on the ChexSystems cant open bank accounts except for second chance
-						accounts. These can be found in various places, but they only provide a second
-						opportunity to either fail again or try to grow a little bit. There are no
+						People who are on the ChexSystems can only open second chance accounts. These accounts
+						can be found in various places, but they only provide a second opportunity to either
+						fail again or try to grow a little bit. There are no
 					</p>
 				</div>
 			{/if}
+			<!-- WIREFRAME -->
 		</div>
 		<div class="content py-md">
 			<p class="label">Wireframe Prototype</p>
@@ -219,7 +239,6 @@
 					class="proto"
 					data-scale="100"
 				/>
-				<!-- </div> -->
 				<div class="del">
 					<p class="label">Suggested Walk-through</p>
 					<ul class="steps">
@@ -236,10 +255,10 @@
 			</div>
 		</div>
 
+		<!-- TAKEAWAYS -->
 		<div class="full grid py-md" style="background-color: var(--background-color)">
 			<div class="full-text py-md">
 				<p class="label bold">Takeaways/What I learned:</p>
-
 				<div class="pt-sm">
 					<p class="med">My love for UX that makes changes.</p>
 					<p>
@@ -303,14 +322,12 @@
 	.del > p {
 		padding-bottom: 1rem;
 	}
-	ul {
-		padding: 0;
-		list-style-type: none;
-	}
+
 	.steps li {
 		margin: 0;
 		padding: 0.5rem 0 0.5rem 0;
 	}
+
 	.gap-1 {
 		gap: 1rem;
 		justify-content: space-around;

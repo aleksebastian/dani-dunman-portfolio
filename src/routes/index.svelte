@@ -5,7 +5,7 @@
 	import { onMount } from 'svelte';
 	import { currentPage } from '../store';
 
-	onMount(() => currentPage.set('index'));
+	onMount(() => currentPage.set('/'));
 </script>
 
 <svelte:head>
