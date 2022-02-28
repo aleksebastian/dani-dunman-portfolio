@@ -3,7 +3,6 @@ body {
 	max-width: 1980px;
 	margin: 0 auto;
 	font-size: 1.1rem;
-	-webkit-tap-highlight-color: transparent;
 }
 
 a {
