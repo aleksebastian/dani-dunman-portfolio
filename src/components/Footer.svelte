@@ -9,58 +9,58 @@
 		gifId = `gif-${currPlayingGif}`;
 		let imgId = `footer-text-${currPlayingGif}`;
 		const imgToAnimate = document.getElementById(gifId);
-		const textToAnimate = document.getElementById(imgId);
+		// const textToAnimate = document.getElementById(imgId);
 
 		if (gifId === 'gif-1') {
 			if (hoveringState) {
-				textToAnimate.classList.add('shake-lr');
+				// textToAnimate.classList.add('shake-lr');
 				imgToAnimate.src =
 					'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/v1643897805/Dani/Footer/hippo_animation_loop_qnan1e.gif';
 			} else {
 				imgToAnimate.src =
 					'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/hippo_animation_loop_qnan1e.gif';
-				textToAnimate.classList.remove('shake-lr');
-				textToAnimate.style.animation = 'none';
-				textToAnimate.offsetHeight;
+				// textToAnimate.classList.remove('shake-lr');
+				// textToAnimate.style.animation = 'none';
+				// textToAnimate.offsetHeight;
 			}
 		}
 		if (gifId === 'gif-2') {
 			if (hoveringState) {
-				textToAnimate.classList.add('shake-lr');
+				// textToAnimate.classList.add('shake-lr');
 				imgToAnimate.src =
 					'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/v1643897805/Dani/Footer/pizza-loop_ed5rvh.gif';
 			} else {
 				imgToAnimate.src =
 					'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/pizza-loop_ed5rvh.gif';
-				textToAnimate.classList.remove('shake-lr');
-				textToAnimate.style.animation = 'none';
-				textToAnimate.offsetHeight;
+				// textToAnimate.classList.remove('shake-lr');
+				// textToAnimate.style.animation = 'none';
+				// textToAnimate.offsetHeight;
 			}
 		}
 		if (gifId === 'gif-3') {
 			if (hoveringState) {
-				textToAnimate.classList.add('shake-lr');
+				// textToAnimate.classList.add('shake-lr');
 				imgToAnimate.src =
 					'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/v1643897805/Dani/Footer/coffee_animation_ejkykd.gif';
 			} else {
 				imgToAnimate.src =
 					'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/coffee_animation_ejkykd.gif';
-				textToAnimate.classList.remove('shake-lr');
-				textToAnimate.style.animation = 'none';
-				textToAnimate.offsetHeight;
+				// textToAnimate.classList.remove('shake-lr');
+				// textToAnimate.style.animation = 'none';
+				// textToAnimate.offsetHeight;
 			}
 		}
 		if (gifId === 'gif-4') {
 			if (hoveringState) {
-				textToAnimate.classList.add('shake-lr');
+				// textToAnimate.classList.add('shake-lr');
 				imgToAnimate.src =
 					'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/v1643897805/Dani/Footer/acai-animtion-loop_xguomg.gif';
 			} else {
 				imgToAnimate.src =
 					'https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/acai-animtion-loop_xguomg.gif';
-				textToAnimate.classList.remove('shake-lr');
-				textToAnimate.style.animation = 'none';
-				textToAnimate.offsetHeight;
+				// textToAnimate.classList.remove('shake-lr');
+				// textToAnimate.style.animation = 'none';
+				// textToAnimate.offsetHeight;
 			}
 		}
 	};

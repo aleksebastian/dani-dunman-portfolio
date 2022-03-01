@@ -72,6 +72,34 @@
 				"label": "What I Did",
 				"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 			}
+		],
+		"carouselImgs": [
+			"https://res.cloudinary.com/blitva/image/upload/ar_2.1,c_crop/q_auto/f_auto/v1645400457/Dani/works%20in%20intaglio/WII-1_bamp5b.jpg",
+			"https://res.cloudinary.com/blitva/image/upload/ar_2.1,c_crop/q_auto/f_auto/v1645400458/Dani/works%20in%20intaglio/WII-2_nogig0.jpg",
+			"https://res.cloudinary.com/blitva/image/upload/ar_2.1,c_crop/q_auto/f_auto/v1645400458/Dani/works%20in%20intaglio/WII-3_xv6wyr.jpg",
+			"https://res.cloudinary.com/blitva/image/upload/ar_2.1,c_crop/q_auto/f_auto/v1645400456/Dani/works%20in%20intaglio/WII-4_dh5ytw.jpg",
+			"https://res.cloudinary.com/blitva/image/upload/ar_2.1,c_crop/q_auto/f_auto/v1645400457/Dani/works%20in%20intaglio/WII-5_x0rrht.jpg",
+			"https://res.cloudinary.com/blitva/image/upload/ar_2.1,c_crop/q_auto/f_auto/v1645400455/Dani/works%20in%20intaglio/WII-6_k5srp9.jpg",
+			"https://res.cloudinary.com/blitva/image/upload/ar_2.1,c_crop/q_auto/f_auto/v1645400455/Dani/works%20in%20intaglio/WII-7_otwv6h.jpg",
+			"https://res.cloudinary.com/blitva/image/upload/ar_2.1,c_crop/q_auto/f_auto/v1645400450/Dani/works%20in%20intaglio/WII-8_ymy7ys.jpg",
+			"https://res.cloudinary.com/blitva/image/upload/ar_2.1,c_crop/q_auto/f_auto/v1645400452/Dani/works%20in%20intaglio/WII-9_gpntyd.jpg",
+			"https://res.cloudinary.com/blitva/image/upload/ar_2.1,c_crop/q_auto/f_auto/v1645400452/Dani/works%20in%20intaglio/WII-10_anviri.jpg",
+			"https://res.cloudinary.com/blitva/image/upload/ar_2.1,c_crop/q_auto/f_auto/v1645400454/Dani/works%20in%20intaglio/WII-11_i1yqbr.jpg",
+			"https://res.cloudinary.com/blitva/image/upload/ar_2.1,c_crop/q_auto/f_auto/v1645400451/Dani/works%20in%20intaglio/WII-12_h0zutp.jpg"
+		],
+		"carouselImgsMobile": [
+			"https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400457/Dani/works%20in%20intaglio/WII-1_bamp5b.jpg",
+			"https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400458/Dani/works%20in%20intaglio/WII-2_nogig0.jpg",
+			"https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400458/Dani/works%20in%20intaglio/WII-3_xv6wyr.jpg",
+			"https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400456/Dani/works%20in%20intaglio/WII-4_dh5ytw.jpg",
+			"https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400457/Dani/works%20in%20intaglio/WII-5_x0rrht.jpg",
+			"https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400455/Dani/works%20in%20intaglio/WII-6_k5srp9.jpg",
+			"https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400455/Dani/works%20in%20intaglio/WII-7_otwv6h.jpg",
+			"https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400450/Dani/works%20in%20intaglio/WII-8_ymy7ys.jpg",
+			"https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400452/Dani/works%20in%20intaglio/WII-9_gpntyd.jpg",
+			"https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400452/Dani/works%20in%20intaglio/WII-10_anviri.jpg",
+			"https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400454/Dani/works%20in%20intaglio/WII-11_i1yqbr.jpg",
+			"https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400451/Dani/works%20in%20intaglio/WII-12_h0zutp.jpg"
 		]
 	},
 	"radio": {
