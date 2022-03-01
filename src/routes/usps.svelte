@@ -15,10 +15,10 @@
 	const project = usps;
 	const { route, name, heroSrc, overview, gallerySrcs } = usps;
 
-	$: percentage = 0;
-	$: showStatistics = false;
-	$: showResearch = false;
-	$: showAbout = false;
+	let percentage = 0;
+	let showStatistics = false;
+	let showResearch = false;
+	let showAbout = false;
 
 	const handleClick = (section) => {
 		if (section === 'statistics') {
@@ -40,6 +40,8 @@
 			setTimeout(() => {
 				increasePercentage(max);
 			}, 45);
+		} else {
+			observer.unobserve(target);
 		}
 	};
 
@@ -70,9 +72,9 @@
 				observePercentage();
 			}, 150);
 		};
-
-		return () => observer.unobserve();
 	});
+
+	// onDestroy(() => observer.unobserve());
 </script>
 
 <svelte:head>

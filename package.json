@@ -18,14 +18,14 @@
 		"eslint-plugin-svelte3": "^3.2.1",
 		"prettier": "^2.4.1",
 		"prettier-plugin-svelte": "^2.4.0",
-		"svelte": "^3.44.0",
-		"svelte-carousel": "^1.0.17-rc4"
+		"svelte": "^3.44.0"
 	},
 	"type": "module",
 	"dependencies": {
 		"chart.js": "^3.7.1",
 		"chartjs-plugin-datalabels": "^2.0.0",
 		"smoothscroll-polyfill": "^0.4.4",
-		"svelte-icons": "^2.1.0"
+		"svelte-icons": "^2.1.0",
+		"swiper": "^8.0.6"
 	}
 }

@@ -4,34 +4,38 @@
 	import projectData from '../projectData.json';
 	import { currentPage } from '../store';
 
-	const projects = Object.keys(projectData);
+	const projectRoutes = Object.values(projectData).map((project) => project.route);
 
-	let prevProject;
-	let nextProject;
+	let prevProjectRoute;
+	let nextProjectRoute;
 
-	const setPrevAndNextProjects = () => {
-		for (let i = 0; i < projects.length; i++) {
-			if ($currentPage === `/${projects[i]}`) {
-				if (projects[i - 1]) {
-					prevProject = projectData[projects[i - 1]].route;
+	console.log(projectRoutes);
+
+	const setPrevAndNextProjectRoutes = () => {
+		for (let i = 0; i < projectRoutes.length; i++) {
+			console.log($currentPage, projectRoutes[i]);
+			if ($currentPage === projectRoutes[i]) {
+				if (projectRoutes[i - 1]) {
+					prevProjectRoute = projectRoutes[i - 1];
 				} else {
-					prevProject = null;
+					prevProjectRoute = null;
 				}
-				if (projects[i + 1]) {
-					nextProject = projectData[projects[i + 1]].route;
+				if (projectRoutes[i + 1]) {
+					nextProjectRoute = projectRoutes[i + 1];
 				} else {
-					nextProject = null;
+					nextProjectRoute = null;
 				}
+				console.log(prevProjectRoute, nextProjectRoute);
 				break;
 			}
 		}
 	};
 
-	$: $currentPage, setPrevAndNextProjects();
+	$: $currentPage, setPrevAndNextProjectRoutes();
 </script>
 
 <div class="container">
-	<a href={prevProject} style="visibility: {prevProject ? 'visible' : 'hidden'}">
+	<a href={prevProjectRoute} style="visibility: {prevProjectRoute ? 'visible' : 'hidden'}">
 		<div class="icon">
 			<FaArrowLeft />
 		</div>
@@ -41,7 +45,7 @@
 		<span>Previous Project</span>
 	</a>
 
-	<a href={nextProject} style="visibility: {nextProject ? 'visible' : 'hidden'}">
+	<a href={nextProjectRoute} style="visibility: {nextProjectRoute ? 'visible' : 'hidden'}">
 		<span>Next Project</span>
 		<div class="icon">
 			<FaArrowRight />
