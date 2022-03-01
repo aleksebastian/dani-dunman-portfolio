@@ -5,15 +5,11 @@
 	import { currentPage } from '../store';
 
 	const projectRoutes = Object.values(projectData).map((project) => project.route);
-
 	let prevProjectRoute;
 	let nextProjectRoute;
 
-	console.log(projectRoutes);
-
 	const setPrevAndNextProjectRoutes = () => {
 		for (let i = 0; i < projectRoutes.length; i++) {
-			console.log($currentPage, projectRoutes[i]);
 			if ($currentPage === projectRoutes[i]) {
 				if (projectRoutes[i - 1]) {
 					prevProjectRoute = projectRoutes[i - 1];
@@ -25,7 +21,6 @@
 				} else {
 					nextProjectRoute = null;
 				}
-				console.log(prevProjectRoute, nextProjectRoute);
 				break;
 			}
 		}

@@ -1,4 +1,5 @@
 <script>
+	import { fade } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import { currentPage } from '../store';
 	import { language } from '../projectData.json';
@@ -35,7 +36,7 @@
 			focussed on colloquial language and slang as a form of social currency. I also included an
 			interview with Alice and three other essays about language as currency.
 		</p>
-		<div class="full">
+		<div in:fade class="full">
 			<Carousel {carouselImgSrcs} />
 		</div>
 

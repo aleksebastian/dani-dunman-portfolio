@@ -1,4 +1,5 @@
 <script>
+	import { fade } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import { currentPage } from '../store';
 	import { intaglio } from '../projectData.json';
@@ -43,7 +44,7 @@
 			summarize each piece. I also used images of supplies found around the studio and process work
 			from Perrin as background accents.
 		</p>
-		<div class="full">
+		<div in:fade class="full">
 			<Carousel {carouselImgSrcs} />
 		</div>
 		<p class="full-text-wide py-lg">
