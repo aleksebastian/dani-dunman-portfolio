@@ -195,17 +195,11 @@
 	}
 
 	#footer-gif-3 {
-		margin-left: 0.5rem;
+		margin-left: 0.3rem;
 	}
 
 	.right-footer > div > a:hover {
 		color: var(--accent-color);
-	}
-
-	#footer-gif-2 {
-		max-width: 3.5rem;
-		padding: 0.25rem 0rem;
-		height: auto;
 	}
 
 	.info {
@@ -222,7 +216,8 @@
 	.gifs-container {
 		display: flex;
 		gap: 0.5rem;
-		padding: 0 1rem 0 1rem;
+		padding: 0 1rem;
+		justify-content: space-around;
 	}
 
 	.footer {
@@ -308,8 +303,6 @@
 		}
 
 		.gifs-container {
-			display: flex;
-			justify-content: space-around;
 			align-items: flex-start;
 			flex-grow: 1;
 		}

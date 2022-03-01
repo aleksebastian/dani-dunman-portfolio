@@ -1,7 +1,7 @@
 <script>
 	import smoothscroll from 'smoothscroll-polyfill';
 	import { onMount } from 'svelte';
-	import { yOffSet, isMobileNavOpen } from '../store';
+	import { yOffSet, isMobileNavOpen, currentPage } from '../store';
 
 	import projectData from '../projectData.json';
 	const projects = Object.values(projectData);
@@ -21,9 +21,13 @@
 	});
 
 	const handleClick = () => {
-		setTimeout(() => {
-			window.scrollTo({ top: $yOffSet, behavior: 'smooth' });
-		}, 100);
+		
+		y = 400;
+
+		// setTimeout(() => {
+		// 	window.scrollTo({ top: $yOffSet, behavior: 'smooth' });
+		// 	console.log('scroll');
+		// }, 400);
 	};
 
 	let boxShadow = 'none';
