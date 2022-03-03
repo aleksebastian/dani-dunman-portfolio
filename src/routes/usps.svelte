@@ -15,7 +15,48 @@
 	const project = usps;
 	const { route, name, heroSrc, overview, gallerySrcs } = usps;
 
+	let heroLoaded = false;
+
+	onMount(() => {
+		currentPage.set(route);
+		const heroImg = new Image();
+		heroImg.src = heroSrc;
+		heroImg.onload = () => {
+			heroLoaded = true;
+			setTimeout(() => {
+				observePercentage();
+			}, 150);
+		};
+	});
+
+	let observer;
+
+	const observePercentage = () => {
+		target = document.getElementById('percentage');
+		observer = new IntersectionObserver((entry) => {
+			let percentageElement = entry[0];
+			if (percentageElement.isIntersecting) {
+				increasePercentage(maxPercentage);
+			}
+		});
+
+		observer.observe(target);
+	};
+
 	let percentage = 0;
+	let maxPercentage = 34;
+
+	const increasePercentage = (max) => {
+		if (percentage < max) {
+			percentage += 1;
+			setTimeout(() => {
+				increasePercentage(max);
+			}, 45);
+		} else {
+			observer.unobserve(target);
+		}
+	};
+
 	let showStatistics = false;
 	let showResearch = false;
 	let showAbout = false;
@@ -33,48 +74,6 @@
 			showAbout = !showAbout;
 		}
 	};
-
-	const increasePercentage = (max) => {
-		if (percentage < max) {
-			percentage += 1;
-			setTimeout(() => {
-				increasePercentage(max);
-			}, 45);
-		} else {
-			observer.unobserve(target);
-		}
-	};
-
-	let heroLoaded = false;
-	let target;
-	let observer;
-	let maxPercentage = 34;
-
-	const observePercentage = () => {
-		target = document.getElementById('percentage');
-		observer = new IntersectionObserver((entry) => {
-			let percentageElement = entry[0];
-			if (percentageElement.isIntersecting) {
-				increasePercentage(maxPercentage);
-			}
-		});
-
-		observer.observe(target);
-	};
-
-	onMount(() => {
-		currentPage.set(route);
-		const heroImg = new Image();
-		heroImg.src = heroSrc;
-		heroImg.onload = () => {
-			heroLoaded = true;
-			setTimeout(() => {
-				observePercentage();
-			}, 150);
-		};
-	});
-
-	// onDestroy(() => observer.unobserve());
 </script>
 
 <svelte:head>
