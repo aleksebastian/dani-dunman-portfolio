@@ -29,6 +29,7 @@
 		};
 	});
 
+	let target;
 	let observer;
 
 	const observePercentage = () => {
