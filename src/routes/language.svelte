@@ -42,19 +42,41 @@
 
 		<div class="gallery full py-md">
 			<div>
-				<ImageLoader src={`https://picsum.photos/seed/1/1980/850`} alt="dani" />
+				<ImageLoader
+					src={`https://res.cloudinary.com/blitva/image/upload/v1645400433/Dani/language%20/DSC_0160_ztllvm.jpg`}
+					alt="dani"
+				/>
 			</div>
 			<div>
-				<ImageLoader src={`https://picsum.photos/seed/2/1980/850`} alt="dani" />
+				<ImageLoader
+					src={`https://res.cloudinary.com/blitva/image/upload/v1645400430/Dani/language%20/DSC_0084_wefwub.jpg`}
+					alt="dani"
+				/>
+			</div>
+
+			<div>
+				<ImageLoader
+					src={`https://res.cloudinary.com/blitva/image/upload/v1645400428/Dani/language%20/DSC_0070_nmfmg7.jpg`}
+					alt="dani"
+				/>
 			</div>
 			<div>
-				<ImageLoader src={`https://picsum.photos/seed/3/1980/850`} alt="dani" />
+				<ImageLoader
+					src={`https://res.cloudinary.com/blitva/image/upload/v1645400426/Dani/language%20/DSC_0085_qcbaqe.jpg`}
+					alt="dani"
+				/>
 			</div>
 			<div>
-				<ImageLoader src={`https://picsum.photos/seed/4/1980/850`} alt="dani" />
+				<ImageLoader
+					src={`https://res.cloudinary.com/blitva/image/upload/v1645400424/Dani/language%20/DSC_0079_dgrzwg.jpg`}
+					alt="dani"
+				/>
 			</div>
 			<div>
-				<ImageLoader src={`https://picsum.photos/seed/5/1980/850`} alt="dani" />
+				<ImageLoader
+					src={`https://res.cloudinary.com/blitva/image/upload/v1645400424/Dani/language%20/DSC_0069_stvuen.jpg`}
+					alt="dani"
+				/>
 			</div>
 		</div>
 	</div>
@@ -65,6 +87,6 @@
 <style>
 	.gallery > div {
 		padding-bottom: 3rem;
-		max-height: 100vh;
+		/* max-height: 100vh; */
 	}
 </style>
