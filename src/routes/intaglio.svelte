@@ -56,19 +56,41 @@
 		</p>
 		<div class="gallery full">
 			<div>
-				<ImageLoader src={`https://picsum.photos/seed/1/1980/850`} alt="dani" />
+				<ImageLoader
+					src={`https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1646433255/Dani/works%20in%20intaglio/DSC_0007_afq1oa.jpg`}
+					alt="dani"
+				/>
 			</div>
 			<div>
-				<ImageLoader src={`https://picsum.photos/seed/2/1980/850`} alt="dani" />
+				<ImageLoader
+					src={`https://res.cloudinary.com/blitva/image/upload/v1646433254/Dani/works%20in%20intaglio/DSC_0009_nlosze.jpg`}
+					alt="dani"
+				/>
 			</div>
 			<div>
-				<ImageLoader src={`https://picsum.photos/seed/3/1980/850`} alt="dani" />
+				<ImageLoader
+					src={`https://res.cloudinary.com/blitva/image/upload/v1646433254/Dani/works%20in%20intaglio/DSC_0037_lx366j.jpg`}
+					alt="dani"
+				/>
+			</div>
+
+			<div>
+				<ImageLoader
+					src={`https://res.cloudinary.com/blitva/image/upload/v1646433253/Dani/works%20in%20intaglio/DSC_0048_qmgvht.jpg`}
+					alt="dani"
+				/>
 			</div>
 			<div>
-				<ImageLoader src={`https://picsum.photos/seed/4/1980/850`} alt="dani" />
+				<ImageLoader
+					src={`https://res.cloudinary.com/blitva/image/upload/v1646433252/Dani/works%20in%20intaglio/DSC_0002_ic64kz.jpg`}
+					alt="dani"
+				/>
 			</div>
 			<div>
-				<ImageLoader src={`https://picsum.photos/seed/5/1980/850`} alt="dani" />
+				<ImageLoader
+					src={`https://res.cloudinary.com/blitva/image/upload/v1646433252/Dani/works%20in%20intaglio/DSC_0057-2_ouyrbs.jpg`}
+					alt="dani"
+				/>
 			</div>
 		</div>
 	</div>
@@ -79,6 +101,6 @@
 <style>
 	.gallery > div {
 		padding-bottom: 3rem;
-		max-height: 100vh;
+		/* max-height: 100vh; */
 	}
 </style>
