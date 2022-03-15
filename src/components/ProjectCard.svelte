@@ -10,7 +10,10 @@
 			alt="dani"
 		/>
 	</div>
-	<p class="project-name">{project.name}</p>
+	<div class="project-text">
+		<p class="project-name">{project.name}</p>
+		<p>{project.type}</p>
+	</div>
 </a>
 
 <style>
@@ -45,7 +48,7 @@
 		transition: all 150ms;
 	}
 
-	.project-name {
+	.project-text {
 		font-size: var(--label-size);
 		position: absolute;
 		top: 50%;
