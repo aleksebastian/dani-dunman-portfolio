@@ -1,9 +1,11 @@
 <script>
-	import MobileChart from '../components/usps/mobileChart.svelte';
+	import MobileChart from '../components/usps/MobileChart.svelte';
+	import SurveyQs from '../components/usps/SurveyQs.svelte';
 </script>
 
 <div class="container">
-	<MobileChart />
+	<!-- <MobileChart /> -->
+	<SurveyQs />
 </div>
 
 <style>

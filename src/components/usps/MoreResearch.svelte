@@ -1,6 +1,7 @@
 <script>
 	import { slide } from 'svelte/transition';
 	import ImageLoader from '../image/ImageLoader.svelte';
+	import SurveyQs from './SurveyQs.svelte';
 </script>
 
 <div transition:slide={{ duration: 1000 }} class="full grid">
@@ -79,17 +80,17 @@
 		</div>
 
 		<div class="img-grid">
-			<div class="flex-row">
-				<div class="sq-img">
-					<ImageLoader alt="square" src={`https://picsum.photos/400`} />
-				</div>
-				<div class="sq-img">
-					<ImageLoader alt="square" src={`https://picsum.photos/400`} />
-				</div>
+			<!-- <div class="flex-row"> -->
+			<div>
+				<SurveyQs />
 			</div>
-			<div class="img">
-				<ImageLoader alt="square" src="https://picsum.photos/800/300" />
+			<div>
+				<SurveyQs />
 			</div>
+			<div>
+				<SurveyQs />
+			</div>
+			<!-- </div> -->
 		</div>
 	</div>
 
@@ -185,6 +186,7 @@
 	}
 
 	.img-grid {
+		/* padding: 0 1rem; */
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
