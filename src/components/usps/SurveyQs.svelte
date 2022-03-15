@@ -52,8 +52,8 @@
 	}
 
 	.slide {
-		height: 10rem;
 		text-align: center;
-		line-height: 10rem;
+		padding: 0 2rem;
+		margin: 3rem 0;
 	}
 </style>
