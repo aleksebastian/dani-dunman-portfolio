@@ -9,18 +9,30 @@
 		<p class="py-sm">There have been proposals to solve this issue:</p>
 		<div class="proposals">
 			<div>
-				<p>{'Cryptocurrencies'.toUpperCase()}</p>
+				<a
+					href="https://unbanked.com/cryptocurrencies-as-a-solution-for-the-financially-unbanked/"
+					target="_blank"
+					rel="noopener noreferrer">{'Cryptocurrencies'.toUpperCase()}</a
+				>
 				<p>are fully digital and easy to access, and location and income are not a barrier.</p>
 			</div>
 			<div>
-				<p>{'“Outlet” bank branch offices'.toUpperCase()}</p>
+				<a
+					href="https://www.brookings.edu/articles/bringing-unbanked-households-into-the-banking-system/"
+					target="_blank"
+					rel="noopener noreferrer">{'“Outlet” bank branch offices'.toUpperCase()}</a
+				>
 				<p>
 					are branches of participating banks that are conveniently located for lower-income
 					households.
 				</p>
 			</div>
 			<div>
-				<p>{'Neobanks'.toUpperCase()}</p>
+				<a
+					href="https://www.forbes.com/sites/columbiabusinessschool/2021/03/16/neobanks-a-fintech-solution-for-underbanked-communities/?sh=7e04722d7690"
+					target="_blank"
+					rel="noopener noreferrer">{'Neobanks'.toUpperCase()}</a
+				>
 				<p>
 					a type of direct bank that functions fully online, such as Chime, Current, and Aspiration.
 				</p>
@@ -108,6 +120,12 @@
 </div>
 
 <style>
+	a {
+		color: black;
+	}
+	a:hover {
+		color: var(--accent-color);
+	}
 	.ux-method-3 {
 		display: flex;
 		flex-direction: column;
