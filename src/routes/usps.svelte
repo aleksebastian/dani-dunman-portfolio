@@ -116,7 +116,7 @@
 			text={'More statistics'}
 		/>
 		<!-- MORE STATISTICS -->
-		{#if showStatistics}
+		{#if !showStatistics}
 			<div transition:slide class="content">
 				<Chart />
 			</div>
