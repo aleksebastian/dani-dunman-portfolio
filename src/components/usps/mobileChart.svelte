@@ -148,7 +148,7 @@
 		// },
 		plugins: {
 			tooltip: {
-				// enabled: false
+				enabled: false
 			},
 			legend: {
 				labels: {
