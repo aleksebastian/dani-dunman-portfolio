@@ -123,6 +123,7 @@
 <style>
 	a {
 		color: black;
+		text-decoration: underline;
 	}
 	a:hover {
 		color: var(--accent-color);
