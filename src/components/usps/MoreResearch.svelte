@@ -114,13 +114,67 @@
 		<div class="content placeholder">
 			<ImageLoader
 				alt="placeholder"
-				src="https://res.cloudinary.com/blitva/image/upload/q_auto:best/f_auto/v1645581572/Dani/usps/journeymap1_e4ryjy.jpg"
+				src="https://res.cloudinary.com/blitva/image/upload/q_auto:best/f_auto/v1647368347/Dani/usps/journeymap1_mmgvyv.jpg"
 			/>
 		</div>
 	</div>
+
+	<p class="full-text label py-md">UX RESEARCH METHOD 04(.2): Revisiting the Journey Map</p>
+	<p class="full-text">
+		Once I had found the best solution for my intended audience, I revisited the user journey map I
+		created for my persona. I created a second one reflecting Janine’s typical day after having a
+		Second Chance Account for 8 months, 1 year into COVID, showing some of her improved skills.
+	</p>
+	<div class="content py-sm">
+		<ImageLoader
+			alt="placeholder"
+			src="https://res.cloudinary.com/blitva/image/upload/q_auto:best/f_auto/v1647368346/Dani/usps/journeymap2_wqhh5h.jpg"
+		/>
+	</div>
+	<div class="content fullWidth">
+		<p>The top three things that changed for Janine were:</p>
+		<div class="proposals py-sm">
+			<div class="ux-method-4">
+				<p>1.</p>
+				<p class="center">
+					Janine started saving money on small things that add up to a larger sum
+				</p>
+			</div>
+			<div class="ux-method-4">
+				<p>2.</p>
+				<p class="center">
+					Janine started regularly checking her finances and budgeting for the things she wanted to
+					buy
+				</p>
+			</div>
+			<div class="ux-method-4">
+				<p>3.</p>
+				<p class="center">
+					Janine started an emergency fund and can get through unexpected events that come up
+				</p>
+			</div>
+		</div>
+	</div>
+	<p class="content py-sm">
+		Main Takeaway: Janine doesn’t have to worry about not having money in her account due to
+		unnecessary expenses because she has spent 8 months learning and preparing for emergencies and
+		practicing good banking habits.
+	</p>
 </div>
 
 <style>
+	.center {
+		text-align: center;
+	}
+	.ux-method-4 {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		/* gap: 1rem; */
+	}
+	.fullWidth {
+		min-width: 100%;
+	}
 	a {
 		color: black;
 		text-decoration: underline;
