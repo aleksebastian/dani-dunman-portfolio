@@ -162,7 +162,7 @@
 				formatter: (value) => `${value}%`,
 				font: {
 					family: "'Lora', serif",
-					size: 16,
+					size: 14,
 					weight: 'normal'
 				},
 				color: '#fff'
