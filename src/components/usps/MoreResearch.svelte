@@ -119,7 +119,7 @@
 		</div>
 	</div>
 
-	<p class="full-text label py-md">UX RESEARCH METHOD 04(.2): Revisiting the Journey Map</p>
+	<p class="full-text label py-sm">UX RESEARCH METHOD 04(.2): Revisiting the Journey Map</p>
 	<p class="full-text">
 		Once I had found the best solution for my intended audience, I revisited the user journey map I
 		created for my persona. I created a second one reflecting Janine’s typical day after having a
