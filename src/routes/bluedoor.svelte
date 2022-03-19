@@ -58,7 +58,7 @@
 					</div>
 				</div>
 				<div>
-					<p class="label">Initial Problem Discovery</p>
+					<p class="label">Initial Research</p>
 					<p class="label">Competitive Audit</p>
 					<div>
 						<p>
@@ -75,6 +75,18 @@
 						</p>
 					</div>
 				</div>
+			</div>
+			<div class="screenshots">
+				<img
+					src="https://res.cloudinary.com/blitva/image/upload/v1647368118/Dani/bluedoor/IMG_1174_kc1hs8.jpg"
+					alt="whatsapp screenshot"
+					class="screenshot"
+				/>
+				<img
+					src="https://res.cloudinary.com/blitva/image/upload/r_60/v1647368119/Dani/bluedoor/IMG_1177_cq5ke1.jpg"
+					alt="whatsapp screenshot"
+					class="screenshot"
+				/>
 			</div>
 		</div>
 		<Expandable
@@ -286,6 +298,16 @@
 		}
 		.sub {
 			grid-column: 1 / 6;
+		}
+		.screenshots {
+			display: flex;
+			align-items: flex-start;
+			gap: 1rem;
+			grid-column: 7 / 9;
+		}
+		.screenshots > img {
+			max-width: 100%;
+			height: auto;
 		}
 		.proto {
 			max-width: calc(50vw - 1rem);
