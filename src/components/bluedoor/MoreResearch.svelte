@@ -21,7 +21,7 @@
 		/>
 	</div>
 
-	<p class="txt-2 section">
+	<p class="txt-2 section pb-md">
 		“Every time after the class, I had to write in a folder. I had the outline of the day, what did
 		you cover, how did the student do, all that. That was for people, not only for the managers to
 		understand that you were working, but also because the next teacher would know on what page to
@@ -36,14 +36,14 @@
 			needed to be addressed without jumping to hypothetical cool features.
 		</p>
 	</div>
-	<div class="img-3">
+	<div class="img-3 pb-md">
 		<ImageLoader
 			alt="rectangle"
 			src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_scale,w_800/v1645400426/Dani/bluedoor/HMW_bluedoor_drlki9.jpg"
 		/>
 	</div>
 
-	<div class="txt-4 section">
+	<div class="txt-4" style={'margin-top: -0.5rem'}>
 		<p class="label py-sm">RESEARCH METHOD 03: Need Statements</p>
 		<p>
 			Need Statements helped me stay focused on the problem. When you have too many ideas, and too
@@ -52,7 +52,7 @@
 			basics—does this feature directly point back to the needs of my user?
 		</p>
 	</div>
-	<div class="img-4">
+	<div class="img-4" style={'margin-top: -0.5rem'}>
 		<ImageLoader
 			alt="rectangle"
 			src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_scale,w_800/v1645400423/Dani/bluedoor/needStatements_bluedoor_i4j2jd.jpg"
