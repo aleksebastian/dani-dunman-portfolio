@@ -91,6 +91,10 @@ a {
 	padding-top: 5rem;
 }
 
+.mt-md {
+	margin-top: 3rem;
+}
+
 .full-text {
 	grid-column: 2 / 12;
 }

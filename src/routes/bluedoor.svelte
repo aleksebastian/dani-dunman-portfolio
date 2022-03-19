@@ -101,7 +101,7 @@
 			</div>
 		{/if}
 
-		<div class="full grid" style="background-color: var(--background-color)">
+		<div class="full grid mt-md" style="background-color: var(--background-color)">
 			<div class="full-text py-md">
 				<p class="label">Conclusion/Opportunity Statement</p>
 				<p>

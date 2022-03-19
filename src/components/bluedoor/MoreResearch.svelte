@@ -151,6 +151,7 @@
 			align-items: center;
 			gap: 20px;
 			padding: 20px;
+			/* margin-bottom: 2.5rem; */
 		}
 	}
 </style>
