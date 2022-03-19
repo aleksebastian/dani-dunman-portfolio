@@ -37,7 +37,18 @@
 			interview with Alice and three other essays about language as currency.
 		</p>
 		<div in:fade class="full">
-			<Carousel {carouselImgSrcs} />
+			<iframe
+				title="slideshow"
+				width="1728"
+				height="800"
+				src="https://online.fliphtml5.com/hduvs/puol/"
+				seamless="seamless"
+				frameborder="0"
+				allowtransparency="true"
+				allowfullscreen="true"
+				style="width: 100%; max-height: 80vh;"
+				class=""
+			/>
 		</div>
 
 		<div class="gallery full py-md">
