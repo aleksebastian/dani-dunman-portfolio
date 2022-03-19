@@ -16,10 +16,10 @@
 			}
 		],
 		"gallerySrcs": [
-			"https://res.cloudinary.com/blitva/image/upload/c_scale,w_1100/f_auto/q_auto/r_60/v1647371299/Dani/usps/Web_1920_15_bepo5y.png",
-			"https://res.cloudinary.com/blitva/image/upload/c_scale,w_1100/f_auto/q_auto/r_60/v1647371298/Dani/usps/Web_1920_14_iedwqf.png",
-			"https://res.cloudinary.com/blitva/image/upload/c_scale,w_1100/f_auto/q_auto/r_60/v1647371297/Dani/usps/Web_1920_13_iafryf.png",
-			"https://res.cloudinary.com/blitva/image/upload/c_scale,w_1100/f_auto/q_auto/r_60/v1647371297/Dani/usps/Web_1280_11_kfl9qp.png"
+			"https://res.cloudinary.com/blitva/image/upload/c_scale,w_900/f_auto/q_auto/v1647371299/Dani/usps/Web_1920_15_bepo5y.png",
+			"https://res.cloudinary.com/blitva/image/upload/c_scale,w_900/f_auto/q_auto/v1647371298/Dani/usps/Web_1920_14_iedwqf.png",
+			"https://res.cloudinary.com/blitva/image/upload/c_scale,w_900/f_auto/q_auto/v1647371297/Dani/usps/Web_1920_13_iafryf.png",
+			"https://res.cloudinary.com/blitva/image/upload/c_scale,w_900/f_auto/q_auto/v1647371297/Dani/usps/Web_1280_11_kfl9qp.png"
 		]
 	},
 	"bluedoor": {
