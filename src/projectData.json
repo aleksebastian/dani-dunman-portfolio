@@ -183,6 +183,99 @@
 				"label": "What I Did",
 				"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 			}
+		],
+		"logoSrcs": [
+			{
+				"name": "EZ Grill",
+				"awards": ["Graphis New Talent 2021 | Gold"],
+				"imgSrcs": [
+					"https://res.cloudinary.com/blitva/image/upload/v1646675149/Dani/all%20logos/EZ%20Grill/Artboard_35_pepetr.png",
+					"https://res.cloudinary.com/blitva/image/upload/v1646675150/Dani/all%20logos/EZ%20Grill/ezgrill2_cltfc5.png",
+					"https://res.cloudinary.com/blitva/image/upload/v1646675150/Dani/all%20logos/EZ%20Grill/ezgrill3_riwvlp.png",
+					"https://res.cloudinary.com/blitva/image/upload/v1646675149/Dani/all%20logos/EZ%20Grill/ezgrill4_x4nlmv.png",
+					"https://res.cloudinary.com/blitva/image/upload/v1646675148/Dani/all%20logos/EZ%20Grill/ezgrill5_gtilqp.png"
+				]
+			},
+			{
+				"name": "Zippo",
+				"awards": ["Graphis New Talent 2021 | Silver"],
+				"imgSrcs": [
+					"https://res.cloudinary.com/blitva/image/upload/v1646675146/Dani/all%20logos/zippo/Artboard_39_txcrey.png",
+					"https://res.cloudinary.com/blitva/image/upload/v1646675154/Dani/all%20logos/zippo/zippo2_rdjjee.jpg",
+					"https://res.cloudinary.com/blitva/image/upload/v1646675152/Dani/all%20logos/zippo/zippo3_oilokp.png",
+					"https://res.cloudinary.com/blitva/image/upload/v1646675149/Dani/all%20logos/zippo/zippo4_h4nqlt.jpg"
+				]
+			},
+			{
+				"name": "Nephelae",
+				"awards": ["Graphis New Talent 2021 |Honorable Mention"],
+				"imgSrcs": [
+					"https://res.cloudinary.com/blitva/image/upload/v1646675147/Dani/all%20logos/Nephelae/Artboard_34_nx4vny.png",
+					"https://res.cloudinary.com/blitva/image/upload/v1646675147/Dani/all%20logos/Nephelae/nephelae2_wfwrsj.png",
+					"https://res.cloudinary.com/blitva/image/upload/v1646675147/Dani/all%20logos/Nephelae/nephelae3_qgksle.png",
+					"https://res.cloudinary.com/blitva/image/upload/v1646675148/Dani/all%20logos/Nephelae/nephelae4_h0n4xg.png",
+					"https://res.cloudinary.com/blitva/image/upload/v1646675147/Dani/all%20logos/Nephelae/nephelae5_iktm3r.png",
+					"https://res.cloudinary.com/blitva/image/upload/v1646675148/Dani/all%20logos/Nephelae/nephelae6_haf5xo.png"
+				]
+			},
+			{
+				"name": "Cattlemen",
+				"awards": ["Graphis New Talent 2021 | Honorable Mention"],
+				"imgSrcs": [
+					"https://res.cloudinary.com/blitva/image/upload/v1646675148/Dani/all%20logos/Cattlemen/Artboard_36_rnkg7q.png",
+					"https://res.cloudinary.com/blitva/image/upload/v1646675149/Dani/all%20logos/Cattlemen/cattlemen3_p5haog.png",
+					"https://res.cloudinary.com/blitva/image/upload/v1646675148/Dani/all%20logos/Cattlemen/cattlemen4_obetyz.png",
+					"https://res.cloudinary.com/blitva/image/upload/v1646675148/Dani/all%20logos/Cattlemen/cattlemen5_xb9x7c.png",
+					"https://res.cloudinary.com/blitva/image/upload/v1646675148/Dani/all%20logos/Cattlemen/cattlemen2_qjkpai.png"
+				]
+			},
+			{
+				"name": "Espolon",
+				"awards": [],
+				"imgSrcs": [
+					"https://res.cloudinary.com/blitva/image/upload/v1646675161/Dani/all%20logos/espolon/Artboard_32_ufbncx.png",
+					"https://res.cloudinary.com/blitva/image/upload/v1646675160/Dani/all%20logos/espolon/espolon2_fekwr4.png",
+					"https://res.cloudinary.com/blitva/image/upload/v1646675161/Dani/all%20logos/espolon/espolon3_bbspfr.png",
+					"https://res.cloudinary.com/blitva/image/upload/v1646675162/Dani/all%20logos/espolon/espolon4_ur8evz.png",
+					"https://res.cloudinary.com/blitva/image/upload/v1646675159/Dani/all%20logos/espolon/espolon5_pxjb5k.png",
+					"https://res.cloudinary.com/blitva/image/upload/v1646675160/Dani/all%20logos/espolon/espolon6_sy0y79.jpg"
+				]
+			},
+			{
+				"name": "Shelter Diving",
+				"awards": [],
+				"imgSrcs": [
+					"https://res.cloudinary.com/blitva/image/upload/v1646675156/Dani/all%20logos/scuba%20shelter/Artboard_37_voyirz.png",
+					"https://res.cloudinary.com/blitva/image/upload/v1646675157/Dani/all%20logos/scuba%20shelter/shelterdiving2_lkptcj.png",
+					"https://res.cloudinary.com/blitva/image/upload/v1646675154/Dani/all%20logos/scuba%20shelter/shelterdiving3_cdeqxf.png",
+					"https://res.cloudinary.com/blitva/image/upload/v1646675151/Dani/all%20logos/scuba%20shelter/shelterdiving4_j7nxuk.png",
+					"https://res.cloudinary.com/blitva/image/upload/v1646675156/Dani/all%20logos/scuba%20shelter/shelterdiving5_n4hit0.png"
+				]
+			},
+			{
+				"name": "Hungry Knight",
+				"awards": [],
+				"imgSrcs": [
+					"https://res.cloudinary.com/blitva/image/upload/v1646675161/Dani/all%20logos/hungry%20knights/Artboard_38_luyt17.png",
+					"https://res.cloudinary.com/blitva/image/upload/v1646675165/Dani/all%20logos/hungry%20knights/hungryknight2_kkfokp.png",
+					"https://res.cloudinary.com/blitva/image/upload/v1646675164/Dani/all%20logos/hungry%20knights/hungryknight3_v9myxw.png",
+					"https://res.cloudinary.com/blitva/image/upload/v1646675165/Dani/all%20logos/hungry%20knights/hungryknight4_tz3ed9.png",
+					"https://res.cloudinary.com/blitva/image/upload/v1646675163/Dani/all%20logos/hungry%20knights/hungryknight5_w6w4fm.png",
+					"https://res.cloudinary.com/blitva/image/upload/v1646675147/Dani/all%20logos/hungry%20knights/hungryknight6_gjkw8w.png",
+					"https://res.cloudinary.com/blitva/image/upload/v1646675147/Dani/all%20logos/hungry%20knights/hungryknight7_c0kugk.jpg"
+				]
+			},
+			{
+				"name": "Dan Pam Don",
+				"awards": [],
+				"imgSrcs": [
+					"https://res.cloudinary.com/blitva/image/upload/v1646675158/Dani/all%20logos/Dan%20Pam%20Don/Artboard_33_unqlgm.png",
+					"https://res.cloudinary.com/blitva/image/upload/v1646675159/Dani/all%20logos/Dan%20Pam%20Don/danpamdon3_covej3.png",
+					"https://res.cloudinary.com/blitva/image/upload/v1646675156/Dani/all%20logos/Dan%20Pam%20Don/danpamdon4_ic3olh.png",
+					"https://res.cloudinary.com/blitva/image/upload/v1646675157/Dani/all%20logos/Dan%20Pam%20Don/danpamdon5_mbekvp.png",
+					"https://res.cloudinary.com/blitva/image/upload/v1646675157/Dani/all%20logos/Dan%20Pam%20Don/danpamdon2_klb2fz.png"
+				]
+			}
 		]
 	}
 }

@@ -5,6 +5,7 @@
 
 	import ImageLoader from '../components/image/ImageLoader.svelte';
 	import ProjectHero from '../components/ProjectHero.svelte';
+	import Carousel from '../components/logo/Carousel.svelte';
 
 	let heroLoaded = false;
 
@@ -18,16 +19,7 @@
 		};
 	});
 
-	const logoSrcs = [
-		'https://res.cloudinary.com/blitva/image/upload/q_auto:best/f_auto/v1645400434/Dani/logos/Artboard_32_pvd1ag.png',
-		'https://res.cloudinary.com/blitva/image/upload/q_auto:best/f_auto/v1645400432/Dani/logos/Artboard_39_fpoy7b.png',
-		'https://res.cloudinary.com/blitva/image/upload/q_auto:best/f_auto/v1645400433/Dani/logos/Artboard_38_iiywsm.png',
-		'https://res.cloudinary.com/blitva/image/upload/q_auto:best/f_auto/v1645400433/Dani/logos/Artboard_33_bf7b6m.png',
-		'https://res.cloudinary.com/blitva/image/upload/q_auto:best/f_auto/v1645400436/Dani/logos/Artboard_36_lx2oab.png',
-		'https://res.cloudinary.com/blitva/image/upload/q_auto:best/f_auto/v1645400437/Dani/logos/Artboard_37_gss4bi.png',
-		'https://res.cloudinary.com/blitva/image/upload/q_auto:best/f_auto/v1645400438/Dani/logos/Artboard_35_qyvg6e.png',
-		'https://res.cloudinary.com/blitva/image/upload/q_auto:best/f_auto/v1645400439/Dani/logos/Artboard_34_pe1kit.png'
-	];
+	const { logoSrcs } = logo;
 </script>
 
 <svelte:head>
@@ -43,7 +35,7 @@
 		</p>
 		<div class="subgrid content pb-md">
 			{#each logoSrcs as logoSrc}
-				<ImageLoader class="img-container" src={logoSrc} alt="logo" />
+				<Carousel carouselImgSrcs={logoSrc.imgSrcs} />
 			{/each}
 		</div>
 	</div>
