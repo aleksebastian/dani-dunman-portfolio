@@ -52,11 +52,35 @@
 			basics—does this feature directly point back to the needs of my user?
 		</p>
 	</div>
+
 	<div class="img-4" style={'margin-top: -0.5rem'}>
-		<ImageLoader
-			alt="rectangle"
-			src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_scale,w_800/v1645400423/Dani/bluedoor/needStatements_bluedoor_i4j2jd.jpg"
-		/>
+		<p class="thought">
+			Eduardo needs a way to share files with the other teacher with notes so that he can train her
+			more effectively, easily (which in turn would create a better teaching experience for her, and
+			her students).
+		</p>
+		<p class="thought">
+			Eduardo needs a way to keep track of how many classes Daniela has given so that he can pay her
+			accordingly.
+		</p>
+		<p class="thought">
+			Daniela needs a way to keep Eduardo in the know of how many classes she has given during each
+			pay-period so that she can get paid on time, without hassle.
+		</p>
+		<p class="thought">
+			Daniela needs a way to come up with better ideas for lessons and activities so that she can
+			deliver a lesson that is entertaining and educational for the student (which keeps them
+			interested and wanting to learn.
+		</p>
+		<p class="thought">
+			Alex needs a way to send personalized homework to students, and notify the teacher that will
+			deliver the next lesson to the student so that they can all be on the same page as far as
+			where the student is in his studies and what (s)he needs to do next.
+		</p>
+		<p class="thought">
+			Alex needs a way to keep track of the assignments he was assigned to his students so that he
+			can seem more professional.
+		</p>
 	</div>
 </div>
 
@@ -73,6 +97,15 @@
 		text-align: center;
 	}
 
+	.thought {
+		background-color: #fff;
+		padding: 0 20px;
+		border-radius: 30px;
+		max-width: 190px;
+		font-size: 0.85rem;
+		padding: 20px;
+	}
+
 	@media (min-width: 768px) {
 		.container {
 			display: grid;
@@ -84,7 +117,7 @@
 				'txt-1 txt-1 txt-1 txt-1 img-1 img-1 img-1 img-1'
 				'  .   txt-2 txt-2 txt-2 txt-2 txt-2 txt-2   . '
 				'img-3 img-3 img-3 img-3 img-3 txt-3 txt-3 txt-3'
-				'txt-4 txt-4 txt-4 txt-4 img-4 img-4 img-4 img-4';
+				'txt-4 txt-4 txt-4 img-4 img-4 img-4 img-4 img-4';
 		}
 		.section {
 			padding-top: 0;
@@ -109,9 +142,15 @@
 			grid-area: txt-4;
 		}
 		.img-4 {
-			padding: 0.5rem;
 			grid-area: img-4;
-			box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+			background: rgb(8, 58, 75);
+			background: linear-gradient(180deg, rgba(8, 58, 75, 1) 0%, rgba(15, 116, 150, 1) 100%);
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: center;
+			align-items: center;
+			gap: 20px;
+			padding: 20px;
 		}
 	}
 </style>
