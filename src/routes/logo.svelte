@@ -35,7 +35,16 @@
 		</p>
 		<div class="subgrid content pb-md">
 			{#each logoSrcs as logoSrc}
-				<Carousel carouselImgSrcs={logoSrc.imgSrcs} />
+				<div class="carousel">
+					<Carousel carouselImgSrcs={logoSrc.imgSrcs} />
+					{#if logoSrc.awards.length}
+						{#each logoSrc.awards as award}
+							<p>{award}</p>
+						{/each}
+					{:else}
+						<p>&nbsp;</p>
+					{/if}
+				</div>
 			{/each}
 		</div>
 	</div>
@@ -48,6 +57,11 @@
 		display: grid;
 		grid-gap: 3rem;
 		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		align-items: end;
+	}
+
+	.carousel > p {
+		font-size: 0.9rem;
 	}
 
 	@media (min-width: 640px) {
