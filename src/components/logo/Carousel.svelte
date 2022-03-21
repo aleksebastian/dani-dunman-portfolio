@@ -22,10 +22,16 @@
 			firstImgLoaded = true;
 		};
 	});
+
+	let isHovering = false;
+	const toggleNav = () => {
+		console.log('hello');
+		isHovering = !isHovering;
+	};
 </script>
 
 {#if firstImgLoaded}
-	<div in:fade={{ duration: 1200 }}>
+	<div class="carousel" in:fade={{ duration: 1200 }}>
 		<Swiper
 			modules={[Keyboard, Navigation, Pagination]}
 			slidesPerView={1}
@@ -47,12 +53,12 @@
 <style>
 	:root {
 		--swiper-navigation-color: transparent;
-		/* --swiper-theme-color: white; */
+		--swiper-theme-color: black;
 		--swiper-navigation-size: 1.5rem;
 	}
 
 	@media (min-width: 768px) {
-		:root {
+		.carousel:hover {
 			--swiper-navigation-color: black;
 		}
 	}
