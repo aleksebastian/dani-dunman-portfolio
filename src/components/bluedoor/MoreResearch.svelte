@@ -99,11 +99,21 @@
 
 	.thought {
 		background-color: #fff;
-		padding: 0 20px;
-		border-radius: 30px;
-		max-width: 190px;
-		font-size: 0.85rem;
+		border-radius: 15px;
+		font-size: 0.9rem;
+		padding: 15px;
+	}
+
+	.img-4 {
+		background: rgb(8, 58, 75);
+		background: linear-gradient(180deg, rgba(8, 58, 75, 1) 0%, rgba(15, 116, 150, 1) 100%);
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
 		padding: 20px;
+		/* margin-bottom: 2.5rem; */
 	}
 
 	@media (min-width: 768px) {
@@ -141,6 +151,7 @@
 		.txt-4 {
 			grid-area: txt-4;
 		}
+
 		.img-4 {
 			grid-area: img-4;
 			background: rgb(8, 58, 75);
@@ -152,6 +163,15 @@
 			gap: 20px;
 			padding: 20px;
 			/* margin-bottom: 2.5rem; */
+		}
+
+		.thought {
+			background-color: #fff;
+			padding: 0 20px;
+			border-radius: 30px;
+			max-width: 190px;
+			font-size: 0.85rem;
+			padding: 20px;
 		}
 	}
 </style>

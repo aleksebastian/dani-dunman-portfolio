@@ -103,7 +103,7 @@
 
 		<div class="full grid mt-md" style="background-color: var(--background-color)">
 			<div class="full-text py-md">
-				<p class="label">Conclusion/Opportunity Statement</p>
+				<p class="label">Conclusion / Opportunity Statement</p>
 				<p>
 					CSE needs a way to store and organize lesson files, homework, teacher-teacher
 					communication, and student records, and facilitate the sharing of this information.
@@ -152,7 +152,7 @@
 
 		<div class="full grid py-md" style="background-color: var(--background-color)">
 			<div class="full-text py-md">
-				<p class="label bold">Takeaways/What I learned:</p>
+				<p class="label bold">Takeaways / What I learned:</p>
 				<div class="py-sm">
 					<p class="med">
 						Researching the solution carrier/vessel can sometimes be just as valuable as researching
@@ -286,6 +286,13 @@
 		padding: 0.5rem 0;
 	}
 
+	.screenshots {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		grid-column: 1 / -1;
+	}
+
 	@media (min-width: 768px) {
 		.walkthrough {
 			gap: 1rem;
@@ -301,8 +308,8 @@
 		}
 		.screenshots {
 			display: flex;
+			flex-direction: row;
 			align-items: flex-start;
-			gap: 1rem;
 			grid-column: 7 / 9;
 		}
 		.screenshots > img {
