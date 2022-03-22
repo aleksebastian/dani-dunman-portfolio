@@ -51,6 +51,9 @@
 {/if}
 
 <style>
+	img {
+		padding: 1.5rem;
+	}
 	:root {
 		--swiper-navigation-color: transparent;
 		--swiper-theme-color: black !important;
