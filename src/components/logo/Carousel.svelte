@@ -53,8 +53,8 @@
 <style>
 	:root {
 		--swiper-navigation-color: transparent;
-		--swiper-theme-color: black;
-		--swiper-navigation-size: 1.5rem;
+		--swiper-theme-color: black !important;
+		--swiper-navigation-size: 1.5rem !important;
 	}
 
 	@media (min-width: 768px) {
