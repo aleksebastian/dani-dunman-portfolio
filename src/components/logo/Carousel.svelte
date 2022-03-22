@@ -53,6 +53,7 @@
 <style>
 	img {
 		padding: 1.5rem;
+		z-index: -1;
 	}
 	:root {
 		--swiper-navigation-color: transparent;
