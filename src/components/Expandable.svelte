@@ -8,7 +8,7 @@
 </script>
 
 <div class="expandable content">
-	<p>{text}</p>
+	<p on:click={() => handleClick(section)}>{text}</p>
 	<div>
 		<div class="line" />
 		<div
@@ -22,9 +22,13 @@
 </div>
 
 <style>
+	p {
+		cursor: pointer;
+		z-index: 1;
+	}
+
 	.expandable {
 		display: grid;
-		grid-template-columns: subgrid;
 		margin-bottom: 1rem;
 	}
 
