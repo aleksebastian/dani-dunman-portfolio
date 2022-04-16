@@ -185,7 +185,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="full-text py-md">
+			<div class="full-text py-sm pb-md">
 				<p class="label bold">Additional Development:</p>
 				<div class="py-sm">
 					<p class="med">
