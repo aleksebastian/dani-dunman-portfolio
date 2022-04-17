@@ -232,7 +232,8 @@
 		</div>
 		<!-- WIREFRAME -->
 		{#if innerWidth <= 640}
-			<video controls width={innerWidth} preload="metadata">
+			<p class="label content pt-sm">Wireframe Prototype</p>
+			<video class="full" controls width={innerWidth} preload="metadata">
 				<source
 					src="https://res.cloudinary.com/blitva/video/upload/v1645400463/Dani/usps/Untitled_design-2_odwror.mp4#t=0.5"
 				/>
@@ -241,6 +242,9 @@
 
 				Sorry, your browser doesn't support embedded videos.
 			</video>
+			<p style="font-size: 0.95rem" class="pt-sm pb-md content">
+				Interactive wireframe prototype available on desktop
+			</p>
 		{:else}
 			<div class="content py-md">
 				<p class="label">Wireframe Prototype</p>
