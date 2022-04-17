@@ -75,7 +75,11 @@
 			showAbout = !showAbout;
 		}
 	};
+
+	let innerWidth;
 </script>
+
+<svelte:window bind:innerWidth />
 
 <svelte:head>
 	<title>{name}</title>
@@ -225,37 +229,49 @@
 					</p>
 				</div>
 			{/if}
-			<!-- WIREFRAME -->
 		</div>
-		<div class="content py-md">
-			<p class="label">Wireframe Prototype</p>
-			<div class="walkthrough flex-row py-md gap-1 flex-wrap">
-				<iframe
-					title="walkthrough"
-					width="944"
-					height="576"
-					src="https://xd.adobe.com/embed/8065d6e2-a5e3-441a-8fb1-4f8d474356e8-d536/?fullscreen&amp;hints=off"
-					frameborder="0"
-					allowfullscreen=""
-					style=""
-					class="proto"
-					data-scale="100"
+		<!-- WIREFRAME -->
+		{#if innerWidth <= 640}
+			<video controls width={innerWidth}>
+				<source
+					src="https://res.cloudinary.com/blitva/video/upload/v1645400463/Dani/usps/Untitled_design-2_odwror.mp4"
 				/>
-				<div class="del">
-					<p class="label">Suggested Walk-through</p>
-					<ul class="steps">
-						<li>Go to the Sign-In page</li>
-						<li>Type in your user and password, and sign in</li>
-						<li>Toggle between your in progress and saved courses</li>
-						<li>Toggle between your achived and current goals</li>
-						<li>Toggle between your inprogress and achived challenges</li>
-						<li>Pick up where you left off on your most recent course</li>
-						<li>Check what part of the lesson you are currently on</li>
-						<li>Go back to the Dashboard</li>
-					</ul>
+
+				<track kind="captions" />
+
+				Sorry, your browser doesn't support embedded videos.
+			</video>
+		{:else}
+			<div class="content py-md">
+				<p class="label">Wireframe Prototype</p>
+				<div class="walkthrough flex-row py-md gap-1 flex-wrap">
+					<iframe
+						title="walkthrough"
+						width="944"
+						height="576"
+						src="https://xd.adobe.com/embed/8065d6e2-a5e3-441a-8fb1-4f8d474356e8-d536/?fullscreen&amp;hints=off"
+						frameborder="0"
+						allowfullscreen=""
+						style=""
+						class="proto"
+						data-scale="100"
+					/>
+					<div class="del">
+						<p class="label">Suggested Walk-through</p>
+						<ul class="steps">
+							<li>Go to the Sign-In page</li>
+							<li>Type in your user and password, and sign in</li>
+							<li>Toggle between your in progress and saved courses</li>
+							<li>Toggle between your achived and current goals</li>
+							<li>Toggle between your inprogress and achived challenges</li>
+							<li>Pick up where you left off on your most recent course</li>
+							<li>Check what part of the lesson you are currently on</li>
+							<li>Go back to the Dashboard</li>
+						</ul>
+					</div>
 				</div>
 			</div>
-		</div>
+		{/if}
 
 		<!-- TAKEAWAYS -->
 		<div class="full grid py-md" style="background-color: var(--background-color)">
