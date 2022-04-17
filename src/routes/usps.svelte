@@ -232,9 +232,9 @@
 		</div>
 		<!-- WIREFRAME -->
 		{#if innerWidth <= 640}
-			<video controls width={innerWidth}>
+			<video controls width={innerWidth} preload="metadata">
 				<source
-					src="https://res.cloudinary.com/blitva/video/upload/v1645400463/Dani/usps/Untitled_design-2_odwror.mp4"
+					src="https://res.cloudinary.com/blitva/video/upload/v1645400463/Dani/usps/Untitled_design-2_odwror.mp4#t=0.5"
 				/>
 
 				<track kind="captions" />
