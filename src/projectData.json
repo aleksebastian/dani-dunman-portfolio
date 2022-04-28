@@ -3,7 +3,7 @@
 		"name": "USPS SmartBanking",
 		"type": "UX, Research",
 		"route": "/usps",
-		"cardSrc": "https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400448/Dani/works%20in%20intaglio/Works_In_Intaglio_mockup_jcxwnm.jpg",
+		"cardSrc": "https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1651151621/Dani/usps/Untitled-design-3_oat6id.png",
 		"heroSrc": "https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_crop,h_800,w_2500/v1645400448/Dani/works%20in%20intaglio/Works_In_Intaglio_mockup_jcxwnm.jpg",
 		"overview": [
 			{
@@ -26,7 +26,7 @@
 		"name": "BlueDoor",
 		"type": "UX, UI",
 		"route": "/bluedoor",
-		"cardSrc": "https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400448/Dani/works%20in%20intaglio/Works_In_Intaglio_mockup_jcxwnm.jpg",
+		"cardSrc": "https://res.cloudinary.com/blitva/image/upload/f_auto/q_auto/v1650490691/Dani/bluedoor/bluedoor_cover_ypzlio.png",
 		"heroSrc": "https://via.placeholder.com/1980x695?text=+",
 		"overview": [
 			{
@@ -104,7 +104,7 @@
 		"name": "Radio Museum Exhibit",
 		"type": "UI, Research",
 		"route": "/radio",
-		"cardSrc": "https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400448/Dani/works%20in%20intaglio/Works_In_Intaglio_mockup_jcxwnm.jpg",
+		"cardSrc": "https://res.cloudinary.com/blitva/image/upload/f_auto/q_auto/v1650152832/Dani/radio/radio_cover_ockl8u.png",
 		"heroSrc": "https://via.placeholder.com/1980x695?text=+",
 		"overview": [
 			{
@@ -133,7 +133,7 @@
 		"name": "Language Exchange",
 		"type": "Publication",
 		"route": "/language",
-		"cardSrc": "https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400448/Dani/works%20in%20intaglio/Works_In_Intaglio_mockup_jcxwnm.jpg",
+		"cardSrc": "https://res.cloudinary.com/blitva/image/upload/f_auto/q_auto/v1645400433/Dani/language%20/DSC_0160_ztllvm.jpg",
 		"heroSrc": "https://via.placeholder.com/1980x695?text=+",
 		"overview": [
 			{
@@ -168,7 +168,7 @@
 		"name": "Logo Design",
 		"type": "",
 		"route": "/logo",
-		"cardSrc": "https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400448/Dani/works%20in%20intaglio/Works_In_Intaglio_mockup_jcxwnm.jpg",
+		"cardSrc": "https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1651151755/Dani/all%20logos/IMG_2754_sfwrtv.jpg",
 		"heroSrc": "https://via.placeholder.com/1980x695?text=+",
 		"overview": [
 			{

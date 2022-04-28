@@ -5,10 +5,7 @@
 
 <a href={project.route} class="project">
 	<div class="project-image">
-		<ImageLoader
-			src={`https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1645400448/Dani/works%20in%20intaglio/Works_In_Intaglio_mockup_jcxwnm.jpg`}
-			alt="dani"
-		/>
+		<img src={project.cardSrc} alt="dani" />
 	</div>
 	<div class="project-text">
 		<p class="project-name">{project.name}</p>
@@ -17,10 +14,16 @@
 </a>
 
 <style>
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
 	.project {
 		position: relative;
 		width: 100%;
-		height: auto;
+		height: 100%;
 		color: white;
 		cursor: pointer;
 		z-index: 1;
