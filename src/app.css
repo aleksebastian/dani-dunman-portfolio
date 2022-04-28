@@ -10,6 +10,18 @@
 	--background-color: rgb(235, 235, 235);
 }
 
+@media (min-width: 48em) {
+	:root {
+		font-size: calc(0.6rem + ((1vw - 0.48rem) * 1.3889));
+	}
+}
+
+@media (min-width: 120em) {
+	:root {
+		font-size: 2em;
+	}
+}
+
 body {
 	font-family: 'Lora', serif;
 	max-width: 1980px;
