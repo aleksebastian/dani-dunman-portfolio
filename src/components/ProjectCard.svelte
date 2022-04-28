@@ -20,6 +20,10 @@
 		object-fit: cover;
 	}
 
+	.project-image {
+		aspect-ratio: 3 / 2;
+	}
+
 	.project {
 		position: relative;
 		width: 100%;
