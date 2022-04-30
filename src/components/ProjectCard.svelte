@@ -1,15 +1,19 @@
 <script>
-	import ImageLoader from './image/ImageLoader.svelte';
 	export let project;
+
+	let isTextShowing = false;
+	const showText = () => (isTextShowing = !isTextShowing);
 </script>
 
-<a href={project.route} class="project">
+<a href={project.route} class="project" on:mouseenter={showText} on:mouseleave={showText}>
 	<div class="project-image">
 		<img src={project.cardSrc} alt="dani" />
 	</div>
 	<div class="project-text">
-		<p class="project-name">{project.name}</p>
-		<p>{project.type}</p>
+		{#if isTextShowing}
+			<p class="project-name">{project.name}</p>
+			<p>{project.type}</p>
+		{/if}
 	</div>
 </a>
 
@@ -50,7 +54,7 @@
 	}
 
 	.project:hover::after {
-		opacity: 0.3;
+		opacity: 0.4;
 		-webkit-transition: all 150ms;
 		transition: all 150ms;
 	}
@@ -62,7 +66,6 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		z-index: 2;
-		/* background-color: blue; */
 		width: 100%;
 		text-align: center;
 		padding: 0 10%;
