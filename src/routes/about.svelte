@@ -50,20 +50,46 @@
 				</p>
 				<div class="contact">
 					<div class="row">
-						<p>Resume</p>
-						<p>E-Resume</p>
+						<a
+							href="Dani resume.pdf"
+							download="Daniela Dunman resume"
+							rel="noopener"
+							target="_blank"
+						>
+							<p>Resume</p>
+						</a>
+						<a
+							href="Dani e-resume.pdf"
+							download="Daniela Dunmans e-resume"
+							rel="noopener"
+							target="_blank"
+						>
+							<p>E-resume</p>
+						</a>
 					</div>
 					<a href="mailto:danieladunman@gmail.com" class="email">danieladunman@gmail.com</a>
 					<div class="icons">
-						<div>
+						<a
+							href="https://www.instagram.com/danidunmanart/?hl=en"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							<FaInstagram />
-						</div>
-						<div>
+						</a>
+						<a
+							href="https://www.linkedin.com/in/daniela-dunman/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							<FaLinkedin />
-						</div>
-						<div>
+						</a>
+						<a
+							href="https://www.pinterest.com/danidunman/_saved/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							<FaPinterestSquare />
-						</div>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -81,6 +107,12 @@
 	.row p,
 	.email {
 		cursor: pointer;
+		color: black;
+	}
+
+	.row p:hover,
+	.email:hover {
+		color: var(--accent-color);
 	}
 
 	.contact {
@@ -141,12 +173,12 @@
 	.icons {
 		display: flex;
 		gap: 2rem;
-		color: var(--accent-color);
 	}
 
-	.icons > div {
+	.icons > a {
 		width: 32px;
 		height: 32px;
 		cursor: pointer;
+		color: var(--accent-color);
 	}
 </style>
