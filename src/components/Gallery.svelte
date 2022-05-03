@@ -6,7 +6,11 @@
 
 <div id="work" class="gallery">
 	{#each parsedProjects as project}
-		<ProjectCard {project} />
+		<div>
+			<ProjectCard {project} />
+			<p class="type">{project.name}</p>
+			<p class="type">{project.type}</p>
+		</div>
 	{/each}
 </div>
 
@@ -20,6 +24,9 @@
 	}
 
 	@media (min-width: 1024px) {
+		.type {
+			display: none;
+		}
 		.gallery {
 			display: grid;
 			grid-gap: 3rem;
