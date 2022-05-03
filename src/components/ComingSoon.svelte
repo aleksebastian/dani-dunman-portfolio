@@ -12,6 +12,7 @@
 		position: absolute;
 		background: rgb(255, 255, 255, 0.3);
 		backdrop-filter: saturate(180%) blur(6px);
+		-webkit-backdrop-filter: saturate(180%) blur(6px);
 	}
 	p {
 		font-size: 4.5rem;
