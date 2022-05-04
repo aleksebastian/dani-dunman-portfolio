@@ -1,7 +1,9 @@
 <script>
 	import { slide } from 'svelte/transition';
 	import ImageLoader from '../image/ImageLoader.svelte';
-	import SurveyQs from './SurveyQs.svelte';
+	import SurveyQs1 from './SurveyQs1.svelte';
+	import SurveyQs2 from './SurveyQs2.svelte';
+	import SurveyQs3 from './SurveyQs3.svelte';
 </script>
 
 <div transition:slide={{ duration: 1000 }} class="full grid">
@@ -82,15 +84,12 @@
 		<div class="img-grid">
 			<!-- <div class="flex-row"> -->
 			<div>
-				<SurveyQs />
+				<SurveyQs1 />
 			</div>
 			<div>
-				<SurveyQs />
+				<SurveyQs2 />
 			</div>
-			<div>
-				<SurveyQs />
-			</div>
-			<!-- </div> -->
+			<div><SurveyQs3 /></div>
 		</div>
 	</div>
 
