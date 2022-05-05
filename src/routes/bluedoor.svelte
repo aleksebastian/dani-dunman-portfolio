@@ -53,7 +53,7 @@
 							pretty easy to find the problem without having to do too much research. Because the
 							company I work for is small and based in Brazil (2 employees total, including myself),
 							there hasn't been a need for more sophisticated communication and file sharing. But
-							this has made my job more inefficient and file keeping and sharing complicated.
+							this has made my job less efficient and file keeping and sharing complicated.
 						</p>
 					</div>
 				</div>
@@ -102,7 +102,7 @@
 		{/if}
 
 		<div class="full grid mt-md" style="background-color: var(--background-color)">
-			<div class="full-text py-md">
+			<div class="full-text pt-md pb-sm">
 				<p class="label">Conclusion / Opportunity Statement</p>
 				<p>
 					CSE needs a way to store and organize lesson files, homework, teacher-teacher
@@ -110,7 +110,7 @@
 				</p>
 			</div>
 
-			<div class="full-text py-md">
+			<div class="full-text pb-md">
 				<p class="label">Solution</p>
 				<p>
 					BlueDoor is an interactive app for the iPad that allows teachers/tutors and free-lancers
@@ -179,7 +179,7 @@
 				<div class="py-sm">
 					<p class="med">The more I worked on this project, the more I found needed to be done.</p>
 					<p>
-						Appreciation for this kind of work is a HUGE thing I’ve learned. I never really noticed
+						Appreciation for this app design is a HUGE thing I’ve learned. I never really noticed
 						how many edge cases there are and how many details seem minute but actually keep apps
 						running smoothly.
 					</p>

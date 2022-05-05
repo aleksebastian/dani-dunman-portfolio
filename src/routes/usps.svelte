@@ -99,9 +99,8 @@
 				<p class="label">Initial Research</p>
 				<p>
 					Underbanked: Someone who does not receive all the services available from a bank, be it
-					from location to hours, they are not receiving full benefits. They are people with bank
-					accounts that continue to use non-bank financial services such as moeny orders and bill
-					payments.
+					from location to hours. They are people with bank accounts that continue to use non-bank
+					financial services such as moeny orders and bill payments.
 				</p>
 				<p>&nbsp;</p>
 				<p>Unbanked: A person who does not use banks or banking institutions in any way or form.</p>
@@ -328,7 +327,7 @@
 
 <style>
 	.med {
-		font-size: 1.3rem;
+		font-size: 1.35rem;
 	}
 
 	.walkthrough {

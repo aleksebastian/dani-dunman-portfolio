@@ -100,4 +100,8 @@
 		padding-bottom: 3rem;
 		/* max-height: 100vh; */
 	}
+
+	.gallery > div:last-child {
+		margin-bottom: -6rem;
+	}
 </style>

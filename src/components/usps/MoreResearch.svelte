@@ -61,7 +61,7 @@
 				My team and I created a Miro board where we could share our research findings and organize
 				them in such a way that we could easily compare and contrast between different questions and
 				problem spaces. We looked over our HMWs and reorganized our sticky notes into the categories
-				of information distribution, resources/education, security, utility services, and tasks.
+				of Information Distribution, Resources/Education, Security, Utility Services, and Tasks.
 				From there, we sorted through them once again and created another table with the most
 				relevant and helpful questions. In this table, we listed possible answers to the HMWs.
 			</p>
