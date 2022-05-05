@@ -6,7 +6,7 @@
 
 	import ProjectHero from '../components/ProjectHero.svelte';
 	import ProjectOverview from '../components/ProjectOverview.svelte';
-	import ProjectGallery from '../components/ProjectGallery.svelte';
+	import UspsProjectGallery from '../components/usps/UspsProjectGallery.svelte';
 	import Painpoints from '../components/usps/Painpoints.svelte';
 	import Expandable from '../components/Expandable.svelte';
 	import MoreResearch from '../components/usps/MoreResearch.svelte';
@@ -90,7 +90,7 @@
 	{#if heroLoaded}
 		<ProjectHero {project} />
 		<ProjectOverview {overview} />
-		<ProjectGallery {gallerySrcs} />
+		<UspsProjectGallery {gallerySrcs} />
 
 		<!-- RESEARCH -->
 		<div class="research full">

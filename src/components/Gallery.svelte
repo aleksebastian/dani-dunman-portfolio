@@ -34,4 +34,22 @@
 			padding: 3rem 0;
 		}
 	}
+
+	@media (min-width: 1024px) {
+		.type {
+			display: none;
+		}
+		.gallery {
+			display: grid;
+			grid-gap: 3rem;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			padding: 3rem 0;
+		}
+	}
+
+	@media (min-width: 1536px) {
+		.gallery {
+			place-items: unset;
+		}
+	}
 </style>
