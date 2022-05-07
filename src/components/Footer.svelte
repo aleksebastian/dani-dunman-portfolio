@@ -110,8 +110,6 @@
 		<div class="gif-container">
 			<div id="footer-gif-1" class="footer-gif">
 				<img
-					width="200"
-					height="200"
 					id="gif-1"
 					src="https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/hippo_animation_loop_qnan1e.gif"
 					alt="hippo"
@@ -122,8 +120,6 @@
 		<div class="gif-container">
 			<div id="footer-gif-2" class="footer-gif">
 				<img
-					width="200"
-					height="200"
 					id="gif-2"
 					src="https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/pizza-loop_ed5rvh.gif"
 					alt="pizza"
@@ -134,8 +130,6 @@
 		<div class="gif-container">
 			<div id="footer-gif-3" class="footer-gif">
 				<img
-					width="200"
-					height="200"
 					id="gif-3"
 					src="https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/coffee_animation_ejkykd.gif"
 					alt="coffee cup"
@@ -146,8 +140,6 @@
 		<div class="gif-container">
 			<div id="footer-gif-4" class="footer-gif">
 				<img
-					width="200"
-					height="200"
 					id="gif-4"
 					src="https://res.cloudinary.com/blitva/image/upload/q_auto/c_scale,w_200/pg_1/v1643897805/Dani/Footer/acai-animtion-loop_xguomg.gif"
 					alt="açaí bowl"
