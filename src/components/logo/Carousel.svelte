@@ -44,7 +44,7 @@
 			spaceBetween={30}
 		>
 			{#each carouselImgSrcs as carouselImgSrc}
-				<SwiperSlide><img src={carouselImgSrc} alt="dani" /></SwiperSlide>
+				<SwiperSlide><img src={carouselImgSrc} alt="project" /></SwiperSlide>
 			{/each}
 		</Swiper>
 	</div>

@@ -55,38 +55,38 @@
 			<div>
 				<ImageLoader
 					src={`https://res.cloudinary.com/blitva/image/upload/v1645400433/Dani/language%20/DSC_0160_ztllvm.jpg`}
-					alt="dani"
+					alt="language exchange page"
 				/>
 			</div>
 			<div>
 				<ImageLoader
 					src={`https://res.cloudinary.com/blitva/image/upload/v1645400430/Dani/language%20/DSC_0084_wefwub.jpg`}
-					alt="dani"
+					alt="language exchange page"
 				/>
 			</div>
 
 			<div>
 				<ImageLoader
 					src={`https://res.cloudinary.com/blitva/image/upload/v1645400428/Dani/language%20/DSC_0070_nmfmg7.jpg`}
-					alt="dani"
+					alt="language exchange page"
 				/>
 			</div>
 			<div>
 				<ImageLoader
 					src={`https://res.cloudinary.com/blitva/image/upload/v1645400426/Dani/language%20/DSC_0085_qcbaqe.jpg`}
-					alt="dani"
+					alt="language exchange page"
 				/>
 			</div>
 			<div>
 				<ImageLoader
 					src={`https://res.cloudinary.com/blitva/image/upload/v1645400424/Dani/language%20/DSC_0079_dgrzwg.jpg`}
-					alt="dani"
+					alt="language exchange page"
 				/>
 			</div>
 			<div>
 				<ImageLoader
 					src={`https://res.cloudinary.com/blitva/image/upload/v1645400424/Dani/language%20/DSC_0069_stvuen.jpg`}
-					alt="dani"
+					alt="language exchange page"
 				/>
 			</div>
 		</div>

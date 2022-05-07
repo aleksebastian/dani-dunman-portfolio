@@ -4,7 +4,7 @@
 		<div class="painPoint">
 			<img
 				class="point"
-				alt="painpoint"
+				alt="oops dialog box"
 				src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_scale,w_200/v1645400438/Dani/usps/Artboard_15_copy_3_kk7h7d.png"
 			/>
 			<p>Past financial mistakes</p>
@@ -12,7 +12,7 @@
 		<div class="painPoint">
 			<img
 				class="point"
-				alt="painpoint"
+				alt="crossed out handshake"
 				src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_scale,w_200/v1645400439/Dani/usps/Artboard_15_copy_5_iz3rue.png"
 			/>
 			<p>Lack of trust in banks (the system)</p>
@@ -20,7 +20,7 @@
 		<div class="painPoint">
 			<img
 				class="point"
-				alt="painpoint"
+				alt="empty pocket"
 				src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_scale,w_200/v1645400434/Dani/usps/USPS_Data_pnnfu4.jpg"
 			/>
 			<p>Not enough money to keep in an account</p>
@@ -28,7 +28,7 @@
 		<div class="painPoint">
 			<img
 				class="point"
-				alt="painpoint"
+				alt="crossed out upward arrow"
 				src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_scale,w_200/v1645400441/Dani/usps/Artboard_15_copy_6_rxy4sf.png"
 			/>
 			<p>Inconvenient and/or lack of access</p>
@@ -38,7 +38,7 @@
 		<div class="painPoint">
 			<img
 				class="point"
-				alt="painpoint"
+				alt="crossed out graduation cap"
 				src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_scale,w_200/v1645400438/Dani/usps/Artboard_15_copy_4_qme2mw.png"
 			/>
 			<p>Lack of financial education</p>
@@ -46,7 +46,7 @@
 		<div class="painPoint">
 			<img
 				class="point"
-				alt="painpoint"
+				alt="Dialog boxes with question mark and exclamation marks, respectively"
 				src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_scale,w_200/v1645400437/Dani/usps/Artboard_15_copy_2_kaezjn.png"
 			/>
 			<p>Language and/or literacy barrier</p>
@@ -54,7 +54,7 @@
 		<div class="painPoint">
 			<img
 				class="point"
-				alt="painpoint"
+				alt="Crossed out ID"
 				src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_scale,w_200/v1645400435/Dani/usps/Artboard_15_f97tkw.png"
 			/>
 			<p>Inability to provide personal information</p>

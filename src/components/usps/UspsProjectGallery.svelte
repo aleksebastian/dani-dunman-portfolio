@@ -7,7 +7,7 @@
 	<div class="photos">
 		{#each gallerySrcs as imgSrc}
 			<div>
-				<ImageLoader src={imgSrc} alt="dani" />
+				<ImageLoader src={imgSrc} alt="Project" />
 			</div>
 		{/each}
 	</div>

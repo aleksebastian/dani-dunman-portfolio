@@ -7,7 +7,7 @@
 
 <a href={project.route} class="project" on:mouseenter={showText} on:mouseleave={showText}>
 	<div class="project-image">
-		<img src={project.cardSrc} alt="dani" />
+		<img src={project.cardSrc} alt="project cover" />
 	</div>
 	<div class="project-text">
 		{#if isTextShowing}

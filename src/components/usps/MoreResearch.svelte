@@ -51,7 +51,7 @@
 	<div class="flex-row content ux-methods-reverse pb-md flex-wrap">
 		<div class="image">
 			<ImageLoader
-				alt="rectangle"
+				alt="How might we's"
 				src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_scale,w_800/v1645580734/Dani/usps/PostalBanking_HMW_c8bxbi.jpg"
 			/>
 		</div>
@@ -105,14 +105,14 @@
 				</p>
 			</div>
 			<img
-				alt="rectangle"
+				alt="Art board"
 				src="https://res.cloudinary.com/blitva/image/upload/q_auto:best/f_auto/c_scale,w_750/v1645400441/Dani/usps/Artboard_7_h2mau0.png"
 				class="image"
 			/>
 		</div>
 		<div class="content placeholder">
 			<ImageLoader
-				alt="placeholder"
+				alt="Journey map"
 				src="https://res.cloudinary.com/blitva/image/upload/q_auto:best/f_auto/v1647368347/Dani/usps/journeymap1_mmgvyv.jpg"
 			/>
 		</div>
@@ -126,7 +126,7 @@
 	</p>
 	<div class="content py-sm">
 		<ImageLoader
-			alt="placeholder"
+			alt="Journey map 2"
 			src="https://res.cloudinary.com/blitva/image/upload/q_auto:best/f_auto/v1647368346/Dani/usps/journeymap2_wqhh5h.jpg"
 		/>
 	</div>

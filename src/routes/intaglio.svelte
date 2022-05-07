@@ -58,38 +58,38 @@
 			<div>
 				<ImageLoader
 					src={`https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/v1646433255/Dani/works%20in%20intaglio/DSC_0007_afq1oa.jpg`}
-					alt="dani"
+					alt="works in intaglio book pages"
 				/>
 			</div>
 			<div>
 				<ImageLoader
 					src={`https://res.cloudinary.com/blitva/image/upload/v1646433254/Dani/works%20in%20intaglio/DSC_0009_nlosze.jpg`}
-					alt="dani"
+					alt="works in intaglio book pages"
 				/>
 			</div>
 			<div>
 				<ImageLoader
 					src={`https://res.cloudinary.com/blitva/image/upload/v1646433254/Dani/works%20in%20intaglio/DSC_0037_lx366j.jpg`}
-					alt="dani"
+					alt="works in intaglio book pages"
 				/>
 			</div>
 
 			<div>
 				<ImageLoader
 					src={`https://res.cloudinary.com/blitva/image/upload/v1646433253/Dani/works%20in%20intaglio/DSC_0048_qmgvht.jpg`}
-					alt="dani"
+					alt="works in intaglio book pages"
 				/>
 			</div>
 			<div>
 				<ImageLoader
 					src={`https://res.cloudinary.com/blitva/image/upload/v1646433252/Dani/works%20in%20intaglio/DSC_0002_ic64kz.jpg`}
-					alt="dani"
+					alt="works in intaglio book pages"
 				/>
 			</div>
 			<div>
 				<ImageLoader
 					src={`https://res.cloudinary.com/blitva/image/upload/v1646433252/Dani/works%20in%20intaglio/DSC_0057-2_ouyrbs.jpg`}
-					alt="dani"
+					alt="works in intaglio book pages"
 				/>
 			</div>
 		</div>

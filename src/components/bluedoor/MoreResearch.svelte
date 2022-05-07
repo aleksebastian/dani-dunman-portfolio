@@ -16,7 +16,7 @@
 	</div>
 	<div class="img-1">
 		<ImageLoader
-			alt="rectangle"
+			alt="Interview with Alex GIF"
 			src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_scale,w_800/r_215/v1645400430/Dani/bluedoor/alex_interview_gif_alvael.gif"
 		/>
 	</div>
@@ -38,7 +38,7 @@
 	</div>
 	<div class="img-3 pb-md">
 		<ImageLoader
-			alt="rectangle"
+			alt="How Might We's"
 			src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_scale,w_800/v1645400426/Dani/bluedoor/HMW_bluedoor_drlki9.jpg"
 		/>
 	</div>
