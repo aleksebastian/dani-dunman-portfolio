@@ -150,7 +150,7 @@
 	</div>
 	<div class="right-footer">
 		<div class="info">
-			<a href="mailto:danieladunman@gmail.com">danieladunman@gmail.com</a>
+			<a href="mailto:danieladunman.design@gmail.com">danieladunman.design@gmail.com</a>
 			<a href="/about">More interesting facts</a>
 		</div>
 		<div class="icons">

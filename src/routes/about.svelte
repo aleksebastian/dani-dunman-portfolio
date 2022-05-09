@@ -67,7 +67,9 @@
 							<p>E-resume</p>
 						</a>
 					</div>
-					<a href="mailto:danieladunman@gmail.com" class="email">danieladunman@gmail.com</a>
+					<a href="mailto:danieladunman.design@gmail.com" class="email"
+						>danieladunman.design@gmail.com</a
+					>
 					<div class="icons">
 						<a
 							href="https://www.instagram.com/danidunmanart/?hl=en"
