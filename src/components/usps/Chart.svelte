@@ -5,6 +5,8 @@
 
 	import { onMount } from 'svelte';
 
+	let width;
+
 	const labels = ['Fully Banked', 'Underbanked', 'Unbanked'];
 
 	const DATA = {
@@ -121,7 +123,56 @@
 		}
 	};
 
-	const options = {
+	const mobileOptions = {
+		indexAxis: 'x',
+		responsive: true,
+		maintainAspectRatio: false,
+		scales: {
+			y: {
+				stacked: true,
+				display: false
+			},
+			x: {
+				stacked: true,
+				ticks: {
+					font: {
+						family: "'Lora', serif",
+						size: 14
+					},
+					color: 'black'
+				},
+				grid: {
+					display: false,
+					drawBorder: false
+				}
+			}
+		},
+		plugins: {
+			tooltip: {
+				enabled: false
+			},
+			legend: {
+				labels: {
+					font: {
+						family: "'Lora', serif",
+						size: 14
+					},
+					color: 'black'
+				}
+			},
+			datalabels: {
+				formatter: (value) => `${value}%`,
+				font: {
+					family: "'Lora', serif",
+					size: 14,
+					weight: 'normal'
+				},
+				color: '#fff'
+			}
+		}
+	};
+
+	const nonMobileOptions = {
 		indexAxis: 'y',
 		responsive: true,
 		maintainAspectRatio: false,
@@ -173,8 +224,7 @@
 	const data = JSON.parse(JSON.stringify(DATA.genderData));
 	const config = {
 		type: 'bar',
-		data,
-		options
+		data
 	};
 
 	let ctx;
@@ -182,6 +232,7 @@
 	let selectedElement;
 	onMount(() => {
 		ctx = document.getElementById('Chart1');
+		config.options = width < 480 ? mobileOptions : nonMobileOptions;
 		myChart = new Chart(ctx, config);
 		selectedElement = document.getElementById('category-list').firstChild;
 		selectedElement.style.opacity = '1';
@@ -225,6 +276,8 @@
 	};
 </script>
 
+<svelte:window bind:innerWidth={width} />
+
 <div class="container">
 	<ul id="category-list">
 		<li on:click={(e) => handleClick(e)}>GENDER</li>
@@ -264,6 +317,17 @@
 		transition: all;
 		transition-duration: 150ms;
 		will-change: auto;
+	}
+
+	@media (max-width: 480px) {
+		.chart-container {
+			position: relative;
+			height: 62vh;
+		}
+		#category-list {
+			display: flex;
+			flex-direction: column;
+		}
 	}
 
 	@media (min-width: 768px) {

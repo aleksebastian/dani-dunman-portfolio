@@ -204,6 +204,8 @@
 
 	.info {
 		display: flex;
+		flex-wrap: wrap-reverse;
+		justify-content: center;
 		gap: 1rem;
 		padding: 1rem;
 		font-size: 0.9rem;
