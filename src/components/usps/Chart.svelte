@@ -328,6 +328,9 @@
 			display: flex;
 			flex-direction: column;
 		}
+		.container {
+			flex-direction: column-reverse;
+		}
 	}
 
 	@media (min-width: 768px) {
