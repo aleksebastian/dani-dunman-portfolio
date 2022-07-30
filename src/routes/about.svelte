@@ -50,20 +50,10 @@
 				</p>
 				<div class="contact">
 					<div class="row">
-						<a
-							href="Dani resume.pdf"
-							download="Daniela Dunman resume"
-							rel="noopener"
-							target="_blank"
-						>
+						<a href="Daniela Dunman resume.pdf" rel="noopener" target="_blank">
 							<p>Resume</p>
 						</a>
-						<a
-							href="Dani e-resume.pdf"
-							download="Daniela Dunmans e-resume"
-							rel="noopener"
-							target="_blank"
-						>
+						<a href="Daniela Dunman e-resume.pdf" rel="noopener" target="_blank">
 							<p>E-resume</p>
 						</a>
 					</div>
