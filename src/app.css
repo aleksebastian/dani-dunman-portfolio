@@ -114,6 +114,10 @@ a {
 	grid-column: 2 / 12;
 }
 
+.full-text-sub {
+	grid-column: 1 / 9;
+}
+
 @media (min-width: 768px) {
 	.full-text {
 		grid-column: 2 / 8;
@@ -121,6 +125,10 @@ a {
 
 	.full-text-wide {
 		grid-column: 2 / 9;
+	}
+
+	.full-text-sub {
+		grid-column: 1 / 8;
 	}
 }
 
@@ -131,6 +139,10 @@ a {
 
 	.full-text-wide {
 		grid-column: 2 / 8;
+	}
+
+	.full-text-sub {
+		grid-column: 1 / 7;
 	}
 }
 
