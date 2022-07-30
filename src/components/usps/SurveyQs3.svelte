@@ -27,9 +27,9 @@
 			<div>
 				<p class="percentage">87.5%</p>
 				<p>
-					of participants answered that they would be willing to open an “account that has special
-					terms and conditions” that they could eventually be ungraded from to a normal accunt in a
-					year or less if they hed been denied multiple times at different banks.
+					of participants answered that they would be willing to open an account that has "special
+					terms and conditions" that they could eventually be ungraded from to a normal account in a
+					year or less if they had been denied multiple times at different banks.
 				</p>
 			</div>
 		</div></SwiperSlide
