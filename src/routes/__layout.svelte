@@ -1,6 +1,6 @@
 <script>
 	import Nav from '../components/Nav.svelte';
-	import ProjectArrows from '../components/ProjectArrows.svelte';
+	import ProjectsNavigation from '../components/ProjectsNavigation.svelte';
 	import Footer from '../components/Footer.svelte';
 	import { fade } from 'svelte/transition';
 	import { isMobileNavOpen, currentPage } from '../store';
@@ -14,7 +14,7 @@
 	<slot />
 </section>
 {#if $currentPage !== '/about' && $currentPage !== '/'}
-	<ProjectArrows />
+	<ProjectsNavigation />
 {/if}
 <Footer />
 
