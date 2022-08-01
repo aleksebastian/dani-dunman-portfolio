@@ -34,7 +34,7 @@
 		<ProjectHero project={radio} />
 		<ProjectOverview overview={radio.overview} />
 		<div class="video-wrapper full bg-grey">
-			<video class="video" controls>
+			<video controls>
 				<source
 					src="https://res.cloudinary.com/blitva/video/upload/v1650507985/Dani/radio/MarconiIntroduction_xqi2ve.mp4"
 					type="video/mp4"
@@ -59,6 +59,7 @@
 		</div>
 		<div class="research content">
 			<img
+				class="stickyNotesImg"
 				src="https://res.cloudinary.com/blitva/image/upload/v1645400440/Dani/radio/Radio_pr6g2w.jpg"
 				alt="Sticky notes - needs to be true list"
 			/>
@@ -155,6 +156,7 @@
 		<div class="content py-md">
 			<p class="label">User journey map and mock-ups</p>
 			<img
+				class="journeyImg"
 				src="https://res.cloudinary.com/blitva/image/upload/v1645400431/Dani/radio/journey-map-and-mockups-_qss8fj.jpg"
 				alt="User journey map and mock-ups"
 			/>
@@ -216,8 +218,13 @@
 
 	.museumImgs {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
 		gap: 1rem;
+		/* border: 1px solid red; */
+	}
+
+	.stickyNotesImg {
+		/* border: 1px solid red; */
 	}
 
 	ul {
@@ -239,37 +246,32 @@
 
 	li {
 		display: flex;
-		align-items: center;
+		/* align-items: center; */
 		gap: 0.5rem;
 		margin: 0.5rem 0;
 	}
 
 	.icon {
-		width: 32px;
-		height: 32px;
+		min-width: 32px;
+		max-width: 32px;
+		margin-bottom: -0.5rem;
+		/* height: 32px; */
+		/* margin: 1rem; */
 	}
 
 	.video-wrapper {
 		display: flex;
 		justify-content: center;
+		padding: 2rem 0;
 	}
 
-	.video {
-		padding: 2rem;
-	}
-
-	.imageGrid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
-		gap: 1rem;
-	}
-
-	.placeholderSqr {
-		min-width: 135px;
-		min-height: 135px;
-		background-color: black;
+	.video-wrapper > video {
+		max-width: 100%;
 	}
 
 	@media (min-width: 640px) {
+		li {
+			align-items: center;
+		}
 	}
 </style>

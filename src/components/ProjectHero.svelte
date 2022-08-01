@@ -12,8 +12,8 @@
 	</div> -->
 </div>
 {#if project.name === 'Radio Museum Exhibit'}
-	<div class="full" style="height: 3rem; background-color: var(--accent-color);">
-		<p style="text-align: center; line-height: 3rem;">
+	<div class="full temp-banner">
+		<p style="text-align: center">
 			Parts of project research are still being added to this page. Meanwhile, feel free to checkout
 			the deliverables.
 		</p>
@@ -26,6 +26,11 @@
 </div>
 
 <style>
+	.temp-banner {
+		padding: 1rem;
+		background-color: var(--accent-color);
+	}
+
 	.hero {
 		object-fit: cover;
 	}
