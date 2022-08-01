@@ -78,7 +78,7 @@
 			</div>
 			<div class="screenshots">
 				<img
-					src="https://res.cloudinary.com/blitva/image/upload/v1647368118/Dani/bluedoor/IMG_1174_kc1hs8.jpg"
+					src="https://res.cloudinary.com/blitva/image/upload/r_60/v1647368118/Dani/bluedoor/IMG_1174_kc1hs8.jpg"
 					alt="whatsapp conversation screenshot"
 					class="screenshot"
 				/>

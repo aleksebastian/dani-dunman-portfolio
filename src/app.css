@@ -32,6 +32,10 @@ a {
 	text-decoration: none;
 }
 
+.bg-grey {
+	background-color: var(--background-color);
+}
+
 .callout {
 	font-size: 3rem;
 }
@@ -40,8 +44,12 @@ a {
 	font-size: 5rem;
 }
 
+.text-md {
+	font-size: 1.3rem;
+}
+
 .label {
-	font-size: 1.9rem;
+	font-size: var(--label-size);
 }
 
 .bold {

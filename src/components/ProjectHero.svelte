@@ -1,6 +1,7 @@
 <script>
 	import { fade } from 'svelte/transition';
 	export let project;
+	console.log(project.name);
 </script>
 
 <div in:fade class="hero full">
@@ -10,6 +11,15 @@
 		<p class="subheader">{project.type}</p>
 	</div> -->
 </div>
+{#if project.name === 'Radio Museum Exhibit'}
+	<div class="full" style="height: 3rem; background-color: var(--accent-color);">
+		<p style="text-align: center; line-height: 3rem;">
+			Parts of project research are still being added to this page. Meanwhile, feel free to checkout
+			the deliverables.
+		</p>
+	</div>
+{/if}
+
 <div class="text content">
 	<p class="project-name">{project.name}</p>
 	<p class="subheader">{project.type}</p>
