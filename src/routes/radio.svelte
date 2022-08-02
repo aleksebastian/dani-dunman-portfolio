@@ -183,29 +183,31 @@
 
 		<div class="full-text py-md">
 			<p class="label pb-sm">Further Development</p>
-			<div class="bestPractices">
-				<p class="text-md">I would like to develop the other rooms in the exhibit.</p>
-				<p>
-					This seems pretty straightforward as further development. But what I would also try to do
-					is make the transition from room to room smoother.
-				</p>
-			</div>
-			<div class="bestPractices">
-				<p class="text-md">I’d create specific personas for visitors.</p>
-				<p>
-					If visitors had specified roles to fulfill, everyone would actively participate. When
-					everyone is part of a team and has specific jobs, they start to build trust with each
-					other, and this would make the experience that much more gratifying. I’d look into making
-					levels for the challenges.
-				</p>
-			</div>
-			<div class="bestPractices">
-				<p class="text-md">I’d look into adding levels of difficulty.</p>
-				<p>
-					To make the experience more engaging to all audiences, This way, younger children would
-					have an easier time in the exhibit, and older visitors who are up for a challenge can have
-					a more realistic experience.
-				</p>
+			<div class="furtherDev">
+				<div class="bestPractices">
+					<p class="text-md">I would like to develop the other rooms in the exhibit.</p>
+					<p>
+						This seems pretty straightforward as further development. But what I would also try to
+						do is make the transition from room to room smoother.
+					</p>
+				</div>
+				<div class="bestPractices">
+					<p class="text-md">I’d create specific personas for visitors.</p>
+					<p>
+						If visitors had specified roles to fulfill, everyone would actively participate. When
+						everyone is part of a team and has specific jobs, they start to build trust with each
+						other, and this would make the experience that much more gratifying. I’d look into
+						making levels for the challenges.
+					</p>
+				</div>
+				<div class="bestPractices">
+					<p class="text-md">I’d look into adding levels of difficulty.</p>
+					<p>
+						To make the experience more engaging to all audiences, This way, younger children would
+						have an easier time in the exhibit, and older visitors who are up for a challenge can
+						have a more realistic experience.
+					</p>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -214,6 +216,16 @@
 {/if}
 
 <style>
+	.furtherDev {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.furtherDev > div > p:last-child {
+		margin-top: -1rem;
+	}
+
 	.bestPractices {
 		display: flex;
 		flex-direction: column;
