@@ -1,12 +1,8 @@
 <script>
 	import { slide } from 'svelte/transition';
 	import MdArrowDownward from 'svelte-icons/md/MdArrowDownward.svelte';
-
-	// export let handleClick;
-	// export let state;
-	// export let section;
 	export let title;
-	let isOpen = true;
+	let isOpen = false;
 	const handleClick = () => (isOpen = !isOpen);
 </script>
 

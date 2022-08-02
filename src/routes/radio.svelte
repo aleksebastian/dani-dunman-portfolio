@@ -5,12 +5,13 @@
 	import { currentPage } from '../store';
 	import { radio } from '../projectData.json';
 
-	// import ImageLoader from '../components/image/ImageLoader.svelte';
+	import ImageLoader from '../components/image/ImageLoader.svelte';
 	import ProjectHero from '../components/ProjectHero.svelte';
 	import ProjectOverview from '../components/ProjectOverview.svelte';
-	// import NewExpandable from '../components/NewExpandable.svelte';
-	// import MoreResearch from '../components/radio/MoreResearch.svelte';
+	import NewExpandable from '../components/NewExpandable.svelte';
+	import MoreResearch from '../components/radio/MoreResearch.svelte';
 	import MdArrowForward from 'svelte-icons/md/MdArrowForward.svelte';
+	import MoreResearch2 from '../components/radio/MoreResearch2.svelte';
 
 	let heroLoaded = false;
 
@@ -64,10 +65,10 @@
 				alt="Sticky notes - needs to be true list"
 			/>
 		</div>
-		<!-- <NewExpandable title="More Research and Exploration">
+		<NewExpandable title="More Research and Exploration">
 			<MoreResearch />
-		</NewExpandable> -->
-		<div class="bestPractices content py-md">
+		</NewExpandable>
+		<div class="bestPractices content pt-md">
 			<p>Next, I began my research on types of interactive exhibits and technologies.</p>
 			<p class="label">Best Practices</p>
 			<p>
@@ -108,6 +109,9 @@
 			</ul>
 			<p>So I added these things to my “needs to be true” list.</p>
 		</div>
+		<NewExpandable title="More Research and Exploration">
+			<MoreResearch2 />
+		</NewExpandable>
 	</div>
 	<div class="full grid bg-grey">
 		<div class="full-text py-md">
@@ -153,7 +157,7 @@
 				alt="Room 1: The First Radio Message: Marconi's First Successful Test"
 			/>
 		</div>
-		<div class="content py-md">
+		<div class="content pb-md">
 			<p class="label">User journey map and mock-ups</p>
 			<img
 				class="journeyImg"

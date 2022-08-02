@@ -1,24 +1,11 @@
 <script>
 	import { fade } from 'svelte/transition';
 	export let project;
-	console.log(project.name);
 </script>
 
 <div in:fade class="hero full">
 	<img src={project.heroSrc} alt="project" style="object-position: {project.heroPosition};" />
-	<!-- <div class="text">
-		<p class="project-name">{project.name}</p>
-		<p class="subheader">{project.type}</p>
-	</div> -->
 </div>
-{#if project.name === 'Radio Museum Exhibit'}
-	<div class="full temp-banner">
-		<p style="text-align: center">
-			Parts of project research are still being added to this page. Meanwhile, feel free to checkout
-			the deliverables.
-		</p>
-	</div>
-{/if}
 
 <div class="text content">
 	<p class="project-name">{project.name}</p>
@@ -26,11 +13,6 @@
 </div>
 
 <style>
-	.temp-banner {
-		padding: 1rem;
-		background-color: var(--accent-color);
-	}
-
 	.hero {
 		object-fit: cover;
 	}
