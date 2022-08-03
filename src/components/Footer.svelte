@@ -309,6 +309,10 @@
 			flex-grow: 1;
 		}
 
+		.icons {
+			align-self: flex-start;
+		}
+
 		.footer {
 			display: flex;
 			flex-direction: row;
