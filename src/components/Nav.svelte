@@ -21,7 +21,9 @@
 	});
 
 	const handleClick = () => {
-		window.scrollTo({ top: $yOffSet, behavior: 'smooth' });
+		setTimeout(() => {
+			window.scrollTo({ top: $yOffSet, behavior: 'smooth' });
+		}, 300);
 	};
 
 	let boxShadow = 'none';
