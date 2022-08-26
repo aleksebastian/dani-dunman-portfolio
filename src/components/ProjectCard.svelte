@@ -2,10 +2,15 @@
 	export let project;
 
 	let isTextShowing = false;
-	const showText = () => (isTextShowing = !isTextShowing);
+	const toggleShowText = () => (isTextShowing = !isTextShowing);
 </script>
 
-<a href={project.route} class="project" on:mouseenter={showText} on:mouseleave={showText}>
+<a
+	href={project.route}
+	class="project"
+	on:mouseenter={toggleShowText}
+	on:mouseleave={toggleShowText}
+>
 	<div class="project-image">
 		<img src={project.cardSrc} alt="project cover" />
 	</div>
