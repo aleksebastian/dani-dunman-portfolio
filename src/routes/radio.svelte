@@ -48,10 +48,6 @@
 			<p class="label bold">Research</p>
 			<p class="label">Field Research</p>
 			<p class="py-sm">
-				This is going to be something i come up with and ill type it out later... about visiting
-				other museums and how this project started.
-			</p>
-			<p class="pb-sm">
 				Before I researched anything about radio, I focused on what kind of experience I wanted to
 				create for the audience. There were a couple of things that I wanted to make sure were true
 				for my exhibit, so I made a list that I came back to to make sure I was still focused on the
