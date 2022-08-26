@@ -1,12 +1,12 @@
 <script>
 	import { fade } from 'svelte/transition';
 	import { onMount } from 'svelte';
-	import { currentPage } from '../store';
-	import { intaglio } from '../projectData.json';
+	import { currentPage } from '../../store';
+	import { intaglio } from '../../projectData.json';
 
-	import ImageLoader from '../components/image/ImageLoader.svelte';
-	import ProjectHero from '../components/ProjectHero.svelte';
-	import Carousel from '../components/Carousel.svelte';
+	import ImageLoader from '../../components/image/ImageLoader.svelte';
+	import ProjectHero from '../../components/ProjectHero.svelte';
+	import Carousel from '../../components/Carousel.svelte';
 
 	let heroLoaded = false;
 	let innerWidth;

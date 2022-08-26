@@ -1,5 +1,5 @@
 <script>
-	import SurveyQs from '../components/usps/SurveyQs1.svelte';
+	import SurveyQs from '../../components/usps/SurveyQs1.svelte';
 </script>
 
 <div class="container">

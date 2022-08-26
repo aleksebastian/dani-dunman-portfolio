@@ -1,13 +1,13 @@
 <script>
 	import { onMount } from 'svelte';
-	import { currentPage } from '../store';
-	import { bluedoor } from '../projectData.json';
+	import { currentPage } from '../../store';
+	import { bluedoor } from '../../projectData.json';
 
-	import ProjectHero from '../components/ProjectHero.svelte';
-	import ProjectOverview from '../components/ProjectOverview.svelte';
-	import ProjectGallery from '../components/ProjectGallery.svelte';
-	import Expandable from '../components/Expandable.svelte';
-	import MoreResearch from '../components/bluedoor/MoreResearch.svelte';
+	import ProjectHero from '../../components/ProjectHero.svelte';
+	import ProjectOverview from '../../components/ProjectOverview.svelte';
+	import ProjectGallery from '../../components/ProjectGallery.svelte';
+	import Expandable from '../../components/Expandable.svelte';
+	import MoreResearch from '../../components/bluedoor/MoreResearch.svelte';
 
 	const project = bluedoor;
 	const { route, name, heroSrc, overview, gallerySrcs } = bluedoor;

@@ -1,6 +1,6 @@
 <script>
-	import ProjectHero from '../components/ProjectHero.svelte';
-	import { currentPage } from '../store';
+	import ProjectHero from '../../components/ProjectHero.svelte';
+	import { currentPage } from '../../store';
 
 	import { onMount } from 'svelte';
 

@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
-	import { currentPage } from '../store';
+	import { currentPage } from '../../store';
 
 	import FaInstagram from 'svelte-icons/fa/FaInstagram.svelte';
 	import FaLinkedin from 'svelte-icons/fa/FaLinkedin.svelte';

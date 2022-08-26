@@ -1,16 +1,16 @@
 <script>
 	import { onMount } from 'svelte';
 	import { slide } from 'svelte/transition';
-	import { currentPage } from '../store';
-	import { usps } from '../projectData.json';
+	import { currentPage } from '../../store';
+	import { usps } from '../../projectData.json';
 
-	import ProjectHero from '../components/ProjectHero.svelte';
-	import ProjectOverview from '../components/ProjectOverview.svelte';
-	import UspsProjectGallery from '../components/usps/UspsProjectGallery.svelte';
-	import Painpoints from '../components/usps/Painpoints.svelte';
-	import Expandable from '../components/Expandable.svelte';
-	import MoreResearch from '../components/usps/MoreResearch.svelte';
-	import Chart from '../components/usps/Chart.svelte';
+	import ProjectHero from '../../components/ProjectHero.svelte';
+	import ProjectOverview from '../../components/ProjectOverview.svelte';
+	import UspsProjectGallery from '../../components/usps/UspsProjectGallery.svelte';
+	import Painpoints from '../../components/usps/Painpoints.svelte';
+	import Expandable from '../../components/Expandable.svelte';
+	import MoreResearch from '../../components/usps/MoreResearch.svelte';
+	import Chart from '../../components/usps/Chart.svelte';
 
 	const project = usps;
 	const { route, name, heroSrc, overview, gallerySrcs } = usps;

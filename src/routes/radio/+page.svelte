@@ -1,17 +1,17 @@
 <script>
-	import ComingSoon from '../components/ComingSoon.svelte';
+	import ComingSoon from '../../components/ComingSoon.svelte';
 
 	import { onMount } from 'svelte';
-	import { currentPage } from '../store';
-	import { radio } from '../projectData.json';
+	import { currentPage } from '../../store';
+	import { radio } from '../../projectData.json';
 
-	import ImageLoader from '../components/image/ImageLoader.svelte';
-	import ProjectHero from '../components/ProjectHero.svelte';
-	import ProjectOverview from '../components/ProjectOverview.svelte';
-	import NewExpandable from '../components/NewExpandable.svelte';
-	import MoreResearch from '../components/radio/MoreResearch.svelte';
+	import ImageLoader from '../../components/image/ImageLoader.svelte';
+	import ProjectHero from '../../components/ProjectHero.svelte';
+	import ProjectOverview from '../../components/ProjectOverview.svelte';
+	import NewExpandable from '../../components/NewExpandable.svelte';
+	import MoreResearch from '../../components/radio/MoreResearch.svelte';
 	import MdArrowForward from 'svelte-icons/md/MdArrowForward.svelte';
-	import MoreResearch2 from '../components/radio/MoreResearch2.svelte';
+	import MoreResearch2 from '../../components/radio/MoreResearch2.svelte';
 
 	let heroLoaded = false;
 
