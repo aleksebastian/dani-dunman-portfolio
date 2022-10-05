@@ -4,12 +4,7 @@ import adapter from '@sveltejs/adapter-auto';
 const config = {
 	extensions: ['.svelte', '.md'],
 	kit: {
-		adapter: adapter(),
-
-		prerender: {
-			default: true,
-			entries: ['*']
-		}
+		adapter: adapter()
 	}
 };
 

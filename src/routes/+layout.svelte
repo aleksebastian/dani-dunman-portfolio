@@ -1,4 +1,7 @@
 <script>
+	export const csr = false;
+	export const prerender = true;
+
 	import Nav from '../components/Nav.svelte';
 	import ProjectsNavigation from '../components/ProjectsNavigation.svelte';
 	import Footer from '../components/Footer.svelte';
