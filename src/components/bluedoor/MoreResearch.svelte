@@ -6,7 +6,7 @@
 <div transition:slide={{ duration: 1000 }} class="content container">
 	<!-- UX RESEARCH METHODS -->
 	<div class="txt-1">
-		<p class="label py-sm">RESEARCH METHOD 01: Interview</p>
+		<p class="label py-sm">RESEARCH METHOD 01: Interviews</p>
 		<p>
 			I interviewed my friend Alex, who has also taught languages in the US as well as overseas. He
 			had a lot of the same frustrations what I had, although he did meantion a few things that
@@ -21,12 +21,15 @@
 		/>
 	</div>
 
-	<p class="txt-2 section pb-md">
-		“Every time after the class, I had to write in a folder. I had the outline of the day, what did
-		you cover, how did the student do, all that. That was for people, not only for the managers to
-		understand that you were working, but also because the next teacher would know on what page to
-		start, or they'd know what to do the next class." —Alex Spadaro
-	</p>
+	<div class="txt-2 section pb-md">
+		<p>
+			“Every time after the class, I had to write in a folder. I had the outline of the day, what
+			did you cover, how did the student do, all that. That was for people, not only for the
+			managers to understand that you were working, but also because the next teacher would know on
+			what page to start, or they'd know what to do the next class."
+		</p>
+		<p>—Alexander Spadaro</p>
+	</div>
 
 	<div class="txt-3 section">
 		<p class="label py-sm">RESEARCH METHOD 02: How Might We</p>
@@ -82,6 +85,15 @@
 			can seem more professional.
 		</p>
 	</div>
+
+	<div class="txt-5 section">
+		<p class="label py-sm">RESEARCH METHOD 04: Journey Map</p>
+		<p>I’m going to add text here.</p>
+	</div>
+	<div class="img-5 pb-md">
+		<ImageLoader alt="How Might We's" src="https://picsum.photos/600/250" />
+		<ImageLoader alt="How Might We's" src="https://picsum.photos/600/250" />
+	</div>
 </div>
 
 <style>
@@ -127,7 +139,8 @@
 				'txt-1 txt-1 txt-1 txt-1 img-1 img-1 img-1 img-1'
 				'  .   txt-2 txt-2 txt-2 txt-2 txt-2 txt-2   . '
 				'img-3 img-3 img-3 img-3 img-3 txt-3 txt-3 txt-3'
-				'txt-4 txt-4 txt-4 img-4 img-4 img-4 img-4 img-4';
+				'txt-4 txt-4 txt-4 img-4 img-4 img-4 img-4 img-4'
+				'img-5 img-5 img-5 img-5 img-5 txt-5 txt-5 txt-5';
 		}
 		.section {
 			padding-top: 0;
@@ -163,6 +176,17 @@
 			gap: 20px;
 			padding: 20px;
 			/* margin-bottom: 2.5rem; */
+		}
+
+		.txt-5 {
+			grid-area: txt-5;
+		}
+
+		.img-5 {
+			grid-area: img-5;
+			display: flex;
+			flex-direction: column;
+			gap: 30px;
 		}
 
 		.thought {
