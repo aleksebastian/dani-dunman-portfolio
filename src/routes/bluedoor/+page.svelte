@@ -128,7 +128,7 @@
 					title="walkthrough"
 					width="944"
 					height="576"
-					src="https://xd.adobe.com/embed/a1ebb32a-07e7-4efc-b750-4a4a4ce43691-f4b8/"
+					src="https://xd.adobe.com/embed/4778fe84-e01f-4530-bf6a-9a161c7effa4-122b/"
 					frameborder="0"
 					allowfullscreen=""
 					style=""
@@ -189,28 +189,31 @@
 				<p class="label bold">Additional Development:</p>
 				<div class="py-sm">
 					<p class="med">
-						I’d create a separate page for the contacts and progress history for each student.
+						Create an extension to connect to video chats for sharing right from the app while in a
+						call
 					</p>
 					<p>
-						Having it all in one place makes for easy organization and keeps everything in one
-						place. However, it might not be intuitive to have student records in the contact
-						section.
+						Being able to share files with your students right away keeps the flow of the class
+						running seamlessly. Without this ability, it breaks consentration, focus, and can
+						ultimatly make the class unsuccessful.
 					</p>
 				</div>
 				<div class="py-sm">
 					<p class="med">
-						I’d create more pages in the app such as a page and form for adding new students.
+						Add registration and payment records to the app for a one-stop shop for all the needs of
+						small learning businesses
 					</p>
 					<p>
-						It’s great to upgrade your small business with an app that helps you organize and
-						communicate, but if this helps your business, there needs to be a way to do this in the
-						app.
+						When a small buisness has to employ too many different softwares the share similar
+						information, it can get confusing and frustrating. Creating a one-stop-shop for small
+						businesses presents the opportunity to save time and resources that allow the business
+						to grow and focus on things they consider to be more important.
 					</p>
 				</div>
 				<div class="pt-sm">
 					<p class="med">
-						I would create a social media aspect to the app that would help teachers share resources
-						and tips.
+						Create a social media aspect to the app that would help teachers share resources and
+						tips.
 					</p>
 					<p>
 						Teachers need a way to stay inspired, get new lessons, activities, and learn methods to
