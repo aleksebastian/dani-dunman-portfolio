@@ -122,35 +122,123 @@
 		</div>
 
 		<div class="content py-md">
-			<p class="label">Wireframe Prototype</p>
-			<div class="walkthrough flex-row py-md flex-wrap">
-				<iframe
-					title="walkthrough"
-					width="944"
-					height="576"
-					src="https://xd.adobe.com/embed/4778fe84-e01f-4530-bf6a-9a161c7effa4-122b/"
-					frameborder="0"
-					allowfullscreen=""
-					style=""
-					class="proto"
-					data-scale="100"
+			<p class="label pb-sm">Development</p>
+			<p class="label py-sm">App Roadmap and Information Architecture</p>
+			<p>I need to come up with this but use placeholder text and ill get this to you asap</p>
+
+			<img
+				class="py-md"
+				src="https://res.cloudinary.com/blitva/image/upload/v1666910896/Dani/bluedoor/BD_ProductMap_fmmcwi.png"
+				alt="product map"
+			/>
+
+			<p class="label py-sm">Major Improvements</p>
+			<p>I need to come up with this but use placeholder text and ill get this to you asap</p>
+			<p class="label py-sm pt-md">Personalization and File Organization</p>
+			<p>I need to come up with this but use placeholder text and ill get this to you asap</p>
+
+			<div class="improvement-photos py-md">
+				<img
+					src="https://res.cloudinary.com/blitva/image/upload/v1666910870/Dani/bluedoor/BD_Impr1_bef_uxlkcs.png"
+					alt="product map"
 				/>
-				<div class="del">
-					<p class="label">Suggested Walk-through</p>
-					<ul class="steps">
-						<li>Sign up as an administrator OR Log in</li>
-						<li>Check out the calander in month view</li>
-						<li>Go to Files, and add “Lesson 27”</li>
-						<li>Go to Messages, and send an Email</li>
-						<li>Look for Dan’s phone number</li>
-						<li>In the skype meeting, open “Book 2, Review 2”</li>
-						<li>End the call, and go back to the Dashboard</li>
-					</ul>
+				<img
+					src="https://res.cloudinary.com/blitva/image/upload/v1666910866/Dani/bluedoor/BD_Impr1_aft_xdxgi2.png"
+					alt="product map"
+				/>
+			</div>
+
+			<p class="label py-sm pt-md">Messaging and Sharing Files</p>
+			<p>I need to come up with this but use placeholder text and ill get this to you asap</p>
+
+			<div class="improvement-photos py-md">
+				<div>
+					<video
+						controls
+						src="https://res.cloudinary.com/blitva/video/upload/v1666910892/Dani/bluedoor/BD_Impr2.1_lik1ql.mov"
+					>
+						<track kind="captions" />
+					</video>
+				</div>
+				<div>
+					<video
+						controls
+						src="https://res.cloudinary.com/blitva/video/upload/v1666910929/Dani/bluedoor/BD_Impr2.2_i9zade.mov"
+					>
+						<track kind="captions" />
+					</video>
+				</div>
+			</div>
+
+			<p class="label py-sm pt-md">Creating an Account</p>
+			<p>I need to come up with this but use placeholder text and ill get this to you asap</p>
+
+			<div class="improvement-photos py-md">
+				<img
+					src="https://res.cloudinary.com/blitva/image/upload/v1666910865/Dani/bluedoor/BD_Impr3_bef_trs9hh.png"
+					alt="product map"
+				/>
+				<img
+					src="https://res.cloudinary.com/blitva/image/upload/v1666910865/Dani/bluedoor/BD_Impr3_aft_hbqucn.png"
+					alt="product map"
+				/>
+			</div>
+
+			<p class="label py-sm pt-md">Sharing Class Information Between Teachers</p>
+			<p>I need to come up with this but use placeholder text and ill get this to you asap</p>
+
+			<div class="improvement-photos py-md">
+				<div>
+					<video
+						controls
+						src="https://res.cloudinary.com/blitva/video/upload/v1666910910/Dani/bluedoor/BD_Impr4_bef_b4vge8.mov"
+					>
+						<track kind="captions" />
+					</video>
+				</div>
+				<div>
+					<video
+						controls
+						src="https://res.cloudinary.com/blitva/video/upload/v1666910899/Dani/bluedoor/BD_Impr4_aft_rff7hb.mp4"
+					>
+						<track kind="captions" />
+					</video>
 				</div>
 			</div>
 		</div>
 
 		<div class="full grid py-md" style="background-color: var(--background-color)">
+			<div class="content py-md">
+				<p class="label">Final Deliverable</p>
+				<div class="walkthrough flex-row py-md flex-wrap">
+					<iframe
+						title="walkthrough"
+						width="944"
+						height="576"
+						src="https://xd.adobe.com/embed/4778fe84-e01f-4530-bf6a-9a161c7effa4-122b/"
+						frameborder="0"
+						allowfullscreen=""
+						style=""
+						class="proto"
+						data-scale="100"
+					/>
+					<div class="del">
+						<p class="label">Suggested Walk-through</p>
+						<ul class="steps">
+							<li>Sign up as an administrator or Log in</li>
+							<li>Check out the calander in month view</li>
+							<li>Go to Files, and add “Lesson 27”</li>
+							<li>Go to Messages, and send an Email</li>
+							<li>Look for Dan’s phone number</li>
+							<li>In the skype meeting, open “Book 2, Review 2”</li>
+							<li>End the call, and go back to the Dashboard</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="full grid py-md">
 			<div class="full-text py-md">
 				<p class="label bold">Takeaways / What I learned:</p>
 				<div class="py-sm">
@@ -230,6 +318,17 @@
 </div>
 
 <style>
+	video {
+		width: 100% !important;
+		height: auto !important;
+	}
+
+	.improvement-photos {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+		grid-gap: 1rem;
+	}
+
 	.walkthrough {
 		display: flex;
 		flex-wrap: wrap;
