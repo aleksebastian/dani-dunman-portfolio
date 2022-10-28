@@ -29,7 +29,10 @@
 			return;
 		}
 	};
+	let innerWidth;
 </script>
+
+<svelte:window bind:innerWidth />
 
 <svelte:head>
 	<title>{name}</title>
@@ -208,34 +211,51 @@
 		</div>
 
 		<div class="full grid py-md" style="background-color: var(--background-color)">
-			<div class="content py-md">
-				<p class="label">Final Deliverable</p>
-				<div class="walkthrough flex-row py-md flex-wrap">
-					<iframe
-						title="walkthrough"
-						width="944"
-						height="576"
-						src="https://xd.adobe.com/embed/4778fe84-e01f-4530-bf6a-9a161c7effa4-122b/"
-						frameborder="0"
-						allowfullscreen=""
-						style=""
-						class="proto"
-						data-scale="100"
+			<!-- WIREFRAME -->
+			{#if innerWidth <= 640}
+				<p class="label content pt-sm">Wireframe Prototype</p>
+				<video class="full" controls width={innerWidth} preload="metadata">
+					<source
+						src="https://res.cloudinary.com/blitva/video/upload/v1666910908/Dani/bluedoor/BD_flow3_di096g.mp4"
 					/>
-					<div class="del">
-						<p class="label">Suggested Walk-through</p>
-						<ul class="steps">
-							<li>Sign up as an administrator or Log in</li>
-							<li>Check out the calander in month view</li>
-							<li>Go to Files, and add “Lesson 27”</li>
-							<li>Go to Messages, and send an Email</li>
-							<li>Look for Dan’s phone number</li>
-							<li>In the skype meeting, open “Book 2, Review 2”</li>
-							<li>End the call, and go back to the Dashboard</li>
-						</ul>
+
+					<track kind="captions" />
+
+					Sorry, your browser doesn't support embedded videos.
+				</video>
+				<p style="font-size: 0.95rem" class="pt-sm pb-md content">
+					Interactive wireframe prototype available on desktop
+				</p>
+			{:else}
+				<div class="content py-md">
+					<p class="label">Final Deliverable</p>
+					<div class="walkthrough flex-row py-md flex-wrap">
+						<iframe
+							title="walkthrough"
+							width="944"
+							height="576"
+							src="https://xd.adobe.com/embed/4778fe84-e01f-4530-bf6a-9a161c7effa4-122b/"
+							frameborder="0"
+							allowfullscreen=""
+							style=""
+							class="proto"
+							data-scale="100"
+						/>
+						<div class="del">
+							<p class="label">Suggested Walk-through</p>
+							<ul class="steps">
+								<li>Sign up as an administrator or Log in</li>
+								<li>Check out the calander in month view</li>
+								<li>Go to Files, and add “Lesson 27”</li>
+								<li>Go to Messages, and send an Email</li>
+								<li>Look for Dan’s phone number</li>
+								<li>In the skype meeting, open “Book 2, Review 2”</li>
+								<li>End the call, and go back to the Dashboard</li>
+							</ul>
+						</div>
 					</div>
 				</div>
-			</div>
+			{/if}
 		</div>
 
 		<div class="full grid py-md">
