@@ -91,8 +91,14 @@
 		<p>I’m going to add text here.</p>
 	</div>
 	<div class="img-5 pb-md">
-		<ImageLoader alt="How Might We's" src="https://picsum.photos/600/250" />
-		<ImageLoader alt="How Might We's" src="https://picsum.photos/600/250" />
+		<ImageLoader
+			alt="How Might We's"
+			src="https://res.cloudinary.com/blitva/image/upload/v1666910903/Dani/bluedoor/BD_UJ1_jsi4hj.jpg"
+		/>
+		<ImageLoader
+			alt="How Might We's"
+			src="https://res.cloudinary.com/blitva/image/upload/v1666910901/Dani/bluedoor/BD_UJ2_n2irf6.jpg"
+		/>
 	</div>
 </div>
 

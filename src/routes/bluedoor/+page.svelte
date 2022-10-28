@@ -230,17 +230,21 @@
 				<div class="content py-md">
 					<p class="label">Final Deliverable</p>
 					<div class="walkthrough flex-row py-md flex-wrap">
-						<iframe
-							title="walkthrough"
-							width="944"
-							height="576"
-							src="https://xd.adobe.com/embed/4778fe84-e01f-4530-bf6a-9a161c7effa4-122b/"
-							frameborder="0"
-							allowfullscreen=""
-							style=""
-							class="proto"
-							data-scale="100"
-						/>
+						<div
+							style="background-color: white; height: 626px; display: flex; align-items: center;"
+						>
+							<iframe
+								title="walkthrough"
+								width="944"
+								height="576"
+								src="https://xd.adobe.com/embed/4778fe84-e01f-4530-bf6a-9a161c7effa4-122b/"
+								frameborder="0"
+								allowfullscreen=""
+								style=""
+								class="proto"
+								data-scale="100"
+							/>
+						</div>
 						<div class="del">
 							<p class="label">Suggested Walk-through</p>
 							<ul class="steps">
