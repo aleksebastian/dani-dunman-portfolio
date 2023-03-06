@@ -11,7 +11,7 @@
 		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "^1.0.2",
+		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.2.6",
 		"chart.js": "^4.2.0",
 		"eslint": "^8.26.0",
@@ -27,6 +27,6 @@
 		"chartjs-plugin-datalabels": "^2.0.0",
 		"smoothscroll-polyfill": "^0.4.4",
 		"svelte-icons": "^2.1.0",
-		"swiper": "^8.0.6"
+		"swiper": "^8.4.7"
 	}
 }
