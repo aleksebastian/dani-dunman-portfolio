@@ -38,14 +38,7 @@
 <div class="full-text-sub">
 	<p class="text-md">Picking an Audience</p>
 	<p class="py-sm">
-		I visited some museums and researched what some problem areas are in museum exhibits. From this,
-		I concluded that the main issues that most museums have are:
-	</p>
-	<p class="pb-sm">
-		Before I researched anything about radio, I focused on what kind of experience I wanted to
-		create for the audience. There were a couple of things that I wanted to make sure were true for
-		my exhibit, so I made a list that I came back to to make sure I was still focused on the
-		challenge at hand. I call it the “needs to be true” list.
+		I figured the best way to widen the visitor demographics would be to bring in kids, not just because they are the opposite age group of the current visitor demographic, but because with children come older siblings, guardians, relatives, etc. In other words, a wider age range. With that in mind, I needed to create an exhibit that would appeal to multiple age ranges.
 	</p>
 </div>
 
