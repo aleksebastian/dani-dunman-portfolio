@@ -38,11 +38,7 @@
 	<div class="grid">
 		<ProjectHero project={intaglio} />
 		<p class="full-text-wide py-lg">
-			This book is about the printmaking method of intaglio, specifically final prints, and how
-			different each can be. The images used are of prints done by Elvia Perrin. The secondary
-			images are zoomed-in, smaller sections of the print's patterns, textures, or parts that
-			summarize each piece. I also used images of supplies found around the studio and process work
-			from Perrin as background accents.
+			This book is about the printmaking method of intaglio, specifically final prints, and how different each can be. The images used are prints done by Elvia Perrin. The secondary images are zoomed-in, smaller sections of the print's patterns, textures, or parts that summarize each piece. I also used images of supplies found around the studio and process work from Perrin as background accents.
 		</p>
 		<div in:fade class="full">
 			<Carousel {carouselImgSrcs} />
