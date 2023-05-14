@@ -51,12 +51,12 @@
 	<div class="flex-row content ux-methods-reverse pb-md flex-wrap">
 		<div class="image">
 			<ImageLoader
-				alt="How might we's"
+				alt="How might wes"
 				src="https://res.cloudinary.com/blitva/image/upload/q_auto/f_auto/c_scale,w_800/v1645580734/Dani/usps/PostalBanking_HMW_c8bxbi.jpg"
 			/>
 		</div>
 		<div class="text">
-			<p class="label py-sm">UX RESEARCH METHOD 01: How Might We (HMW’s)</p>
+			<p class="label py-sm">UX RESEARCH METHOD 01: How Might We (HMWs)</p>
 			<p>
 				My team and I created a Miro board where we could share our research findings and organize
 				them in such a way that we could easily compare and contrast between different questions and
@@ -71,13 +71,10 @@
 		<div class="text">
 			<p class="label py-sm">UX RESEARCH METHOD 02: Survey</p>
 			<p>
-				I created a quick survey that I shared on my Instagram for people to answer questions about
-				their experience with banking, their frustrations, and what they would be willing to do to
-				open a bank account if they found themselves on the bank's deny-list.
+				I created a quick survey that I shared on my Instagram for people to answer questions about their experience with banking, their frustrations, and what they would be willing to do to open a bank account if they found themselves on the bank's deny list.
 			</p>
 			<p class="py-sm">
-				Those who are denied standard bank accounts due to a rocky banking history were identified
-				as part of the unbanked community, and are the target audience.
+				Those who are denied standard bank accounts due to a rocky banking history were identified as part of the unbanked community, and are the target audience.
 			</p>
 		</div>
 
@@ -98,10 +95,7 @@
 			<div class="text">
 				<p class="label py-sm">UX RESEARCH METHOD 03/04: User Persona and Journey Map</p>
 				<p>
-					My target audience is deny-listed, bank users. People who have been kicked out of the
-					banking system are unable to open an account independent of where they go because their
-					history follows them. Not being able to bank pushes them further into “unbankedness” for
-					longer and makes it harder for them to get out.
+					My target audience is deny-listed, bank users. People who have been kicked out of the banking system are unable to open an account independent of where they go because their history follows them. Not being able to bank pushes them further into “unbankedness” for longer and makes it harder for them to get out.
 				</p>
 			</div>
 			<img

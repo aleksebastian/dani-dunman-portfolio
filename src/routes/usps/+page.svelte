@@ -220,9 +220,7 @@
 					</p>
 					<p class="pt-sm bold">The problem we are solving:</p>
 					<p>
-						People who are on the ChexSystems can only open second chance accounts. These accounts
-						can be found in various places, but they only provide a second opportunity to either
-						fail again or try to grow a little bit. There are no
+						People who are on the ChexSystems can only open second-chance accounts. These accounts can be found in various places, but they only provide a second opportunity to either fail again or try to grow a little bit.
 					</p>
 				</div>
 			{/if}
@@ -263,8 +261,8 @@
 							<li>Go to the Sign-In page</li>
 							<li>Type in your user and password, and sign in</li>
 							<li>Toggle between your in progress and saved courses</li>
-							<li>Toggle between your achived and current goals</li>
-							<li>Toggle between your inprogress and achived challenges</li>
+							<li>Toggle between your achieved and current goals</li>
+							<li>Toggle between your in-progress and achieved challenges</li>
 							<li>Pick up where you left off on your most recent course</li>
 							<li>Check what part of the lesson you are currently on</li>
 							<li>Go back to the Dashboard</li>
@@ -299,21 +297,18 @@
 				<p class="label bold">Further Development:</p>
 
 				<div class="py-sm">
-					<p class="med">I would like to further develope the fidelity of this project.</p>
+					<p class="med">
+						I would like to further develop the fidelity of this project.
+					</p>
 					<p>
-						Because I had a limited amount of time to research this topic and create a realistic
-						solution, especially after starting over halfway through that time, the furthest I was
-						able to push this project was a low fidelity prototype.
+						Because I had a limited amount of time to research this topic and create a realistic solution, especially after starting over halfway through that time, the furthest I was able to push this project was a low-fidelity prototype.
 					</p>
 				</div>
 
 				<div class="py-sm">
 					<p class="med">I want to create the data bank (ba-dom-ch🥁) for the lessons.</p>
 					<p>
-						Being able to use the SmartBanking function is great, but where do we find all the
-						lessons? Well, if I had additional time, that would be the next page I would design. I’d
-						make a page where the user can take a quiz about what their needs are in regards to
-						financial education and explore suggested workshops and additional/popular workshops.
+						Being able to use the SmartBanking function is great, but where do we find all the lessons? Well, if I had additional time, that would be the next page I would design. I’d make a page where the user can take a quiz about what their needs are regarding financial education and explore suggested workshops and additional/popular workshops.
 					</p>
 				</div>
 			</div>
