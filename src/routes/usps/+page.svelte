@@ -259,10 +259,10 @@
 						<p class="label">Suggested Walk-through</p>
 						<ul class="steps">
 							<li>Go to the Sign-In page</li>
-							<li>Type in your user and password, and sign in</li>
-							<li>Toggle between your in progress and saved courses</li>
-							<li>Toggle between your achieved and current goals</li>
-							<li>Toggle between your in-progress and achieved challenges</li>
+							<li>Sign in with your user and password</li>
+							<li>Toggle between in-progress and saved courses</li>
+							<li>Toggle between achieved and current goals</li>
+							<li>Toggle between in-progress and achieved challenges</li>
 							<li>Pick up where you left off on your most recent course</li>
 							<li>Check what part of the lesson you are currently on</li>
 							<li>Go back to the Dashboard</li>
