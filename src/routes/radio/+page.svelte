@@ -48,10 +48,8 @@
 			<p class="label bold">Research</p>
 			<p class="label">Field Research</p>
 			<p class="py-sm">
-				Before I researched anything about radio, I focused on what kind of experience I wanted to
-				create for the audience. There were a couple of things that I wanted to make sure were true
-				for my exhibit, so I made a list that I came back to to make sure I was still focused on the
-				challenge at hand. I call it the “needs to be true” list.
+				Before researching anything related to radio, I focused on what kind of experience I wanted to create for the audience. There were a couple of things I wanted to make sure were true for my exhibit, so I made a list that I could reference to ensure that I stayed focused on the challenge. I call it the “needs to be true” list.
+
 			</p>
 		</div>
 		<div class="research content">
@@ -113,11 +111,7 @@
 		<div class="full-text py-md">
 			<p class="label pb-sm">Conclusion/Opportunity Statement</p>
 			<p>
-				With an interactive exhibit that puts the visitor in the context of the subject, minimizes
-				reading as the form of contextualizing and education, and guides the visitor through a
-				definite timeline and path, I can enhance the visitor experience at the Museum of
-				Communication while also appealing to a wider audience. This will ultimately bringing in
-				more people and giving them a more interesting and memorable experience.
+				With an interactive exhibit that puts the visitor in the context of the subject, minimizes reading as the main form of contextualizing and education, and guides the visitor through a definite timeline and path, I can enhance the visitor experience at the Museum of Communication while also appealing to a wider audience. This will ultimately bring in more people and give them a more interesting and memorable experience.
 			</p>
 		</div>
 	</div>
@@ -125,21 +119,16 @@
 		<div class="full-text bestPractices">
 			<p class="label">Solution</p>
 			<p>
-				Through this exhibit, the visitor will get to experience firsthand what it was like to be in
-				5 different times in history where radio changed the world. Each room presents, in story
-				form, one of these different times. And in each, the visitor plays an important assisting
-				role in the actualization of the event. One extra room at the end of the walk-through will
-				recap everything that the viewer learned and present them with a takeaway. The visitor will
-				go home having learned about how radio was discovered and invented, how it works, and how it
-				has changed and influenced history.
+				Through this exhibit, the visitor will experience firsthand what it was like to be in 5 different times in history when radio changed the world. Each room presents, in story form, one of these eras. And in each, the visitor plays an assisting role in the achievement of the event. The last room of the walk-through will recap everything the viewer learned and present them with a takeaway. The visitor will go home having learned about how the radio was discovered and invented, how it works, and how it has changed and influenced history.
 			</p>
-			<p>The 5 stories that the visitor will travel through, in order, are:</p>
+			<p>The five stories that the visitor will travel through, in order, are:
+</p>
 			<ol>
 				<li>The First Radio Message</li>
 				<li>Radio in WW1</li>
 				<li>The First Radio Station</li>
-				<li>Edwin Armstrong</li>
-				<li>The Creation of FM Radio, and What about now?</li>
+				<li>Edwin Armstrong and The Creation of FM Radio</li>
+				<li>What about now?</li>
 			</ol>
 			<p>For the sake of this project, I focused on the first room, The First Radio Message.</p>
 		</div>
@@ -167,13 +156,7 @@
 				Look for inspiration in places unrelated to the project you’re working on.
 			</p>
 			<p>
-				When I was researching museum exhibits, I wanted to see what other museums had done for
-				exhibits about radio. In a nutshell, I couldn’t find any that were something other than a
-				traditional “look but don’t touch”. No one had done anything interesting with radio. This
-				was a good thing because whatever I decided to do would be new, but I also had no
-				jumping-off point or ideas of how to present radio. This led me to search for inspiration
-				outside of museums. One of the most interesting inspirations I found was escape rooms, and I
-				think this helped jumpstart a more interesting direction for this exhibit.
+				When I researched museum exhibits, I wanted to see what other museums had done about radio. In a nutshell, I couldn’t find any exhibit styles besides the traditional “look but don’t touch.” No one had done anything interesting with the radio. This was a good thing because whatever I decided to do would be new. But I also had no jumping-off point or inspiration on how to present radio. This led me to search for inspiration outside of museums. One of the most interesting things I found was escape rooms, and I believe this helped jumpstart a more exciting direction for this exhibit.
 			</p>
 		</div>
 
