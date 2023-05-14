@@ -29,12 +29,7 @@
 	<div class="grid">
 		<ProjectHero project={language} />
 		<p class="full-text py-lg">
-			For this project, I made an exhibition catalog for an exhibit that I created and curated based
-			on the theme of alternative currencies. My goal was to document what went into the exhibition
-			and expand the viewers' understanding of the topic. The alternative currency I chose was
-			language. I included Alice J Lee's DesignInquiry residency project about language because it
-			focussed on colloquial language and slang as a form of social currency. I also included an
-			interview with Alice and three other essays about language as currency.
+			For this project, I made an exhibition catalog for an exhibit I created and curated based on the theme of alternative currencies. My goal was to document what went into the exhibition and expand the viewers' understanding of the topic. The alternative currency I chose was language. I included Alice J Lee's DesignInquiry residency project about language because it focussed on colloquial language and slang as a form of social currency. I also included an interview with Alice and three other essays about language as currency.
 		</p>
 		<div in:fade class="full">
 			<iframe
