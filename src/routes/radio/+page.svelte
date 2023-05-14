@@ -49,7 +49,6 @@
 			<p class="label">Field Research</p>
 			<p class="py-sm">
 				Before researching anything related to radio, I focused on what kind of experience I wanted to create for the audience. There were a couple of things I wanted to make sure were true for my exhibit, so I made a list that I could reference to ensure that I stayed focused on the challenge. I call it the “needs to be true” list.
-
 			</p>
 		</div>
 		<div class="research content">
@@ -130,7 +129,9 @@
 				<li>Edwin Armstrong and The Creation of FM Radio</li>
 				<li>What about now?</li>
 			</ol>
-			<p>For the sake of this project, I focused on the first room, The First Radio Message.</p>
+			<p>
+				For the sake of this project, I focused on the first room, The First Radio Message.
+			</p>
 		</div>
 		<div class="content py-md museumImgs">
 			<img
@@ -166,17 +167,13 @@
 				<div class="bestPractices">
 					<p class="text-md">I would like to develop the other rooms in the exhibit.</p>
 					<p>
-						This seems pretty straightforward as further development. But what I would also try to
-						do is make the transition from room to room smoother.
+						This seems pretty straightforward as further development. But what I would also try to do is make the transition from room to room smoother. I’d create specific personas for visitors.
 					</p>
 				</div>
 				<div class="bestPractices">
 					<p class="text-md">I’d create specific personas for visitors.</p>
 					<p>
-						If visitors had specified roles to fulfill, everyone would actively participate. When
-						everyone is part of a team and has specific jobs, they start to build trust with each
-						other, and this would make the experience that much more gratifying. I’d look into
-						making levels for the challenges.
+						If visitors had specified roles to fulfill, everyone would actively participate. When everyone is part of a team and has specific jobs, they start to build trust with each other, and this would make the experience that much more gratifying. I’d look into making levels for the challenges.
 					</p>
 				</div>
 				<div class="bestPractices">

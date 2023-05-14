@@ -1,9 +1,7 @@
 <div class="full-text-sub">
 	<p class="label">Technologies</p>
 	<p class="py-sm">
-		Then I spent some time looking at other exhibits to see how they embraced technology to enhance
-		the visitor’s experience. What I found was the most common used technologies integrated into
-		museums were:
+		Then I looked at other exhibits to see how they embraced technology to enhance the visitor’s experience. What I found was that the most commonly used technologies integrated into museums were:
 	</p>
 </div>
 <div class="content techImgs pb-sm">
@@ -30,9 +28,7 @@
 	</div>
 </div>
 <div class="full-text-sub py-sm">
-	With the exception of autonomous things, everything else I had already identified as a techonology
-	that I would not like to use my exhibit. So I went on to search for techonology outside of
-	museums. From the things I found, I decided that best fits for this project were:
+	Except for autonomous things, everything else I had already identified as a technology that I would not like to use in my exhibit. So I went on to search for technology outside of museums. From the things I found, I decided that the best fits for this project were:
 </div>
 <div class="full techImgs2 py-sm">
 	<div>
@@ -42,8 +38,7 @@
 		/>
 		<p class="text-md">Digital Wall Displays</p>
 		<p>
-			these show digital narrators that will guide the visitors through the story in each room, and
-			present any extra information that will help the visitor complete the challenge.
+			these show digital narrators that will guide the visitors through the story in each room, and present any extra information that will help the visitor complete the challenge.
 		</p>
 	</div>
 	<div>
@@ -53,9 +48,7 @@
 		/>
 		<p class="text-md">NFC Chips</p>
 		<p>
-			these are placed in each “useful object” (defined as a tool or material that the vistor will
-			be actively using). They will comunicate with the interactive tables so that the visitor will
-			always know what an object is.
+			these are placed in each “useful object” (defined as a tool or material that the visitor will be actively using). They will communicate with the interactive tables so that the visitor will always know what an object is.
 		</p>
 	</div>
 	<div>
@@ -65,8 +58,7 @@
 		/>
 		<p class="text-md">Interactive Tables</p>
 		<p>
-			or “magic tables”, are used to show the visitor what objects to use and what each object is by
-			placing a ring around the object with it’s name circling around it.
+			or “magic tables”, are used to show the visitor what objects to use and what each object is by placing a ring around the object with its name circling it.
 		</p>
 	</div>
 </div>
