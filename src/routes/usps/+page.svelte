@@ -98,9 +98,7 @@
 				<p class="label bold">Research</p>
 				<p class="label">Initial Research</p>
 				<p>
-					Underbanked: Someone who does not receive all the services available from a bank, be it
-					from location to hours. They are people with bank accounts that continue to use non-bank
-					financial services such as moeny orders and bill payments.
+					underbanked: Someone who does not receive all the available services from a bank, albeit the location, hours, or a specific service. They are people with bank accounts that continue to use non-bank financial services such as money orders and bill payments.
 				</p>
 				<p>&nbsp;</p>
 				<p>Unbanked: A person who does not use banks or banking institutions in any way or form.</p>
@@ -108,7 +106,7 @@
 			<div class="researchRight">
 				<p id="percentage" class="callout-lg">~{percentage}%</p>
 
-				<p>of the US population is considered under/un banked</p>
+				<p>Of the US population is considered Under/Unbanked</p>
 			</div>
 		</div>
 
@@ -129,7 +127,7 @@
 
 		<!-- HOW IS USPS QUALIFIED TO SERVE -->
 		<div class="qualifications content py-md">
-			<p class="label">How is USPS qualified to serve the un/under banked?</p>
+			<p class="label">How is USPS qualified to serve the un/underbanked?</p>
 			<div>
 				<div class="flex-col pt-sm">
 					<p>serves</p>
