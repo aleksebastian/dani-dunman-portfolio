@@ -30,8 +30,7 @@
 	<div class="grid">
 		<ProjectHero project={logo} />
 		<p class="full-text pt-md">
-			Here are a couple of logos I’ve designed. They came together by concept, and some have even
-			won awards.
+			Check out these logos I've designed. They were thoughtfully conceptualized and a few of them have even earned awards. Swipe through each to see the full process.
 		</p>
 		<div class="subgrid content pb-md">
 			{#each logoSrcs as logoSrc}
