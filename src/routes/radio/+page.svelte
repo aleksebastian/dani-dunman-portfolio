@@ -199,9 +199,7 @@
 				<div class="bestPractices">
 					<p class="text-md">I’d look into adding levels of difficulty.</p>
 					<p>
-						To make the experience more engaging to all audiences, This way, younger children would
-						have an easier time in the exhibit, and older visitors who are up for a challenge can
-						have a more realistic experience.
+						To make the experience more engaging to all audiences. This way, younger children would have an easier time in the exhibit, and older visitors who are up for a challenge can have a more realistic experience.
 					</p>
 				</div>
 			</div>
