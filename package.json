@@ -14,15 +14,15 @@
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.1.0",
 		"@sveltejs/adapter-vercel": "^3.0.1",
-		"@sveltejs/kit": "^1.20.1",
+		"@sveltejs/kit": "^1.22.1",
 		"chart.js": "^4.3.0",
-		"eslint": "^8.41.0",
+		"eslint": "^8.44.0",
 		"eslint-config-prettier": "^8.8.0",
 		"eslint-plugin-svelte3": "^4.0.0",
-		"prettier": "^2.8.8",
+		"prettier": "^3.0.0",
 		"prettier-plugin-svelte": "^2.10.1",
-		"svelte": "^3.59.1",
-		"vite": "^4.3.9"
+		"svelte": "^4.0.4",
+		"vite": "^4.4.1"
 	},
 	"type": "module",
 	"dependencies": {
