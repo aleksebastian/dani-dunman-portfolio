@@ -9,15 +9,18 @@
 	const id = 'work';
 	const yOffset = -70;
 	let element;
-	let win;
+	let pageBody;
+	let mounted = false;
+
+	$: y && mounted && element
+		? yOffSet.set(element.getBoundingClientRect().top + window.scrollY + yOffset)
+		: null;
 
 	onMount(() => {
 		smoothscroll.polyfill();
 		element = document.getElementById(id);
-		if (element) {
-			yOffSet.set(element.getBoundingClientRect().top + window.pageYOffset + yOffset);
-		}
-		win = document.body;
+		pageBody = document.body;
+		mounted = true;
 	});
 
 	const handleClick = () => {
@@ -43,11 +46,11 @@
 
 	const toggleMobileNav = () => {
 		isMobileNavOpen.set(isMobileNavOpenLocal);
-		if (win) {
+		if (pageBody) {
 			if (!isMobileNavOpenLocal) {
-				win.style.overflow = null;
+				pageBody.style.overflow = null;
 			} else {
-				win.style.overflow = 'hidden';
+				pageBody.style.overflow = 'hidden';
 			}
 		}
 	};
