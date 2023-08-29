@@ -6,14 +6,14 @@
 
 	const routes = Object.values(projectData).map((project) => project.route);
 	const getPageIndex = (route) => routes.indexOf(route);
-	const getPrevProjectRoute = () => routes[getPageIndex($page.url.pathname) - 1];
-	const getNextProjectRoute = () => routes[getPageIndex($page.url.pathname) + 1];
+	const getPrevProjectRoute = (currentRoute) => routes[getPageIndex(currentRoute) - 1];
+	const getNextProjectRoute = (currentRoute) => routes[getPageIndex(currentRoute) + 1];
 </script>
 
 <div class="container">
 	<a
 		class="project-nav"
-		href={getPrevProjectRoute()}
+		href={getPrevProjectRoute($page.url.pathname)}
 		style="visibility: {getPageIndex($page.url.pathname) <= 0 ? 'hidden' : 'visible'}"
 	>
 		<div class="icon">
