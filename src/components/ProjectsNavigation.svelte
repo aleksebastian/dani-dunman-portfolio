@@ -30,7 +30,11 @@
 </script>
 
 <div class="container">
-	<a class='project-nav' href={prevProjectRoute} style="visibility: {prevProjectRoute ? 'visible' : 'hidden'}">
+	<a
+		class="project-nav"
+		href={prevProjectRoute}
+		style="visibility: {prevProjectRoute ? 'visible' : 'hidden'}"
+	>
 		<div class="icon">
 			<FaArrowLeft />
 		</div>
@@ -40,7 +44,11 @@
 		<span>Previous Project</span>
 	</a>
 
-	<a class='project-nav' href={nextProjectRoute} style="visibility: {nextProjectRoute ? 'visible' : 'hidden'}">
+	<a
+		class="project-nav"
+		href={nextProjectRoute}
+		style="visibility: {nextProjectRoute ? 'visible' : 'hidden'}"
+	>
 		<span>Next Project</span>
 		<div class="icon">
 			<FaArrowRight />
@@ -73,19 +81,10 @@
 	.project-nav {
 		display: flex;
 		align-items: center;
-		
 	}
 
 	.icon {
 		width: 12px;
-		height: 12px;
 		margin: 0 -3px;
 	}
-	
-	.project-nav > span {
-		margin-top: 4px;
-	}
-
-
-
 </style>
