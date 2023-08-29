@@ -4,7 +4,6 @@
 	import ProjectHero from '../../components/ProjectHero.svelte';
 	import ProjectOverview from '../../components/ProjectOverview.svelte';
 	import ProjectGallery from '../../components/ProjectGallery.svelte';
-	import Expandable from '../../components/Expandable.svelte';
 	import MoreResearch from '../../components/bluedoor/MoreResearch.svelte';
 
 	const project = bluedoor;
@@ -86,17 +85,10 @@
 				/>
 			</div>
 		</div>
-		<Expandable
-			{handleClick}
-			state={showResearch}
-			section={'research'}
-			text={'More Research and Exploration'}
-		/>
-		{#if showResearch}
-			<div class="content pb-md">
-				<MoreResearch />
-			</div>
-		{/if}
+
+		<div class="content pb-md">
+			<MoreResearch />
+		</div>
 
 		<div class="full grid mt-md" style="background-color: var(--background-color)">
 			<div class="full-text pt-md pb-sm">

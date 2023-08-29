@@ -6,7 +6,6 @@
 	import ProjectOverview from '../../components/ProjectOverview.svelte';
 	import UspsProjectGallery from '../../components/usps/UspsProjectGallery.svelte';
 	import Painpoints from '../../components/usps/Painpoints.svelte';
-	import Expandable from '../../components/Expandable.svelte';
 	import MoreResearch from '../../components/usps/MoreResearch.svelte';
 	import Chart from '../../components/usps/Chart.svelte';
 
@@ -109,18 +108,9 @@
 			</div>
 		</div>
 
-		<Expandable
-			{handleClick}
-			state={showStatistics}
-			section={'statistics'}
-			text={'More statistics'}
-		/>
-		<!-- MORE STATISTICS -->
-		{#if showStatistics}
-			<div transition:slide class="content">
-				<Chart />
-			</div>
-		{/if}
+		<div transition:slide class="content">
+			<Chart />
+		</div>
 
 		<Painpoints />
 
@@ -146,15 +136,7 @@
 			</div>
 		</div>
 
-		<Expandable
-			{handleClick}
-			state={showResearch}
-			section={'research'}
-			text={'More research and exploration'}
-		/>
-		{#if showResearch}
-			<MoreResearch />
-		{/if}
+		<MoreResearch />
 
 		<!-- SUMMARY OF RESEARCH -->
 		<div class="full-text py-md">
@@ -202,29 +184,21 @@
 				</p>
 			</div>
 
-			<Expandable
-				{handleClick}
-				state={showAbout}
-				section={'about'}
-				text={'More About SmartBanking'}
-			/>
-			{#if showAbout}
-				<div transition:slide class="full-text pb-md">
-					<p class="pb-sm bold">The Who:</p>
-					<p>
-						Those who are denied standard bank accounts due to a rocky banking history. Bank history
-						reports track how a person has handled their saving and checking accounts in the past.
-						For example, these reports show if the person has overdrawn accounts, failed to pay
-						fees, and even if they have been suspected of fraud.
-					</p>
-					<p class="pt-sm bold">The problem we are solving:</p>
-					<p>
-						People who are on the ChexSystems can only open second-chance accounts. These accounts
-						can be found in various places, but they only provide a second opportunity to either
-						fail again or try to grow a little bit.
-					</p>
-				</div>
-			{/if}
+			<div transition:slide class="full-text pb-md">
+				<p class="pb-sm bold">The Who:</p>
+				<p>
+					Those who are denied standard bank accounts due to a rocky banking history. Bank history
+					reports track how a person has handled their saving and checking accounts in the past. For
+					example, these reports show if the person has overdrawn accounts, failed to pay fees, and
+					even if they have been suspected of fraud.
+				</p>
+				<p class="pt-sm bold">The problem we are solving:</p>
+				<p>
+					People who are on the ChexSystems can only open second-chance accounts. These accounts can
+					be found in various places, but they only provide a second opportunity to either fail
+					again or try to grow a little bit.
+				</p>
+			</div>
 		</div>
 		<!-- WIREFRAME -->
 		{#if innerWidth <= 640}

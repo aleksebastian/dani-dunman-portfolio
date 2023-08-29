@@ -54,9 +54,10 @@
 				alt="Sticky notes - needs to be true list"
 			/>
 		</div>
-		<NewExpandable title="More Research and Exploration">
+		<div class="content py-md">
 			<MoreResearch />
-		</NewExpandable>
+		</div>
+
 		<div class="bestPractices content pt-md">
 			<p>Next, I began my research on types of interactive exhibits and technologies.</p>
 			<p class="label">Best Practices</p>
@@ -98,9 +99,9 @@
 			</ul>
 			<p>So I added these things to my “needs to be true” list.</p>
 		</div>
-		<NewExpandable title="More Research and Exploration">
+		<div class="content py-md">
 			<MoreResearch2 />
-		</NewExpandable>
+		</div>
 	</div>
 	<div class="full grid bg-grey">
 		<div class="full-text py-md">

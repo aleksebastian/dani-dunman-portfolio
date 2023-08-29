@@ -8,12 +8,8 @@
 </svelte:head>
 
 <section class="content">
-	<div>
-		<Hero />
-	</div>
-	<div>
-		<Gallery />
-	</div>
+	<Hero />
+	<Gallery />
 </section>
 
 <style>

@@ -6,7 +6,7 @@
 	import { isMobileNavOpen } from '../store';
 	import { page } from '$app/stores';
 
-	const noProjectPages = ['/', '/about'];
+	const notProjectPages = ['/', '/about'];
 </script>
 
 <Nav />
@@ -16,7 +16,7 @@
 <section class="content">
 	<slot />
 </section>
-{#if !noProjectPages.includes($page.url.pathname)}
+{#if !notProjectPages.includes($page.url.pathname)}
 	<ProjectsNavigation />
 {/if}
 <Footer />
