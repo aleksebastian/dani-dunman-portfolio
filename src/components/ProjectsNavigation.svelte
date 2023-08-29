@@ -63,10 +63,10 @@
 
 	.project-nav {
 		display: flex;
-		align-items: center;
 	}
 
 	.icon {
+		display: flex;
 		width: 12px;
 		margin: 0 -3px;
 	}
