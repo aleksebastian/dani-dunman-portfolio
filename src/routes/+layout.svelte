@@ -3,7 +3,10 @@
 	import ProjectsNavigation from '../components/ProjectsNavigation.svelte';
 	import Footer from '../components/Footer.svelte';
 	import { fade } from 'svelte/transition';
-	import { isMobileNavOpen, currentPage } from '../store';
+	import { isMobileNavOpen } from '../store';
+	import { page } from '$app/stores';
+
+	const noProjectPages = ['/', '/about'];
 </script>
 
 <Nav />
@@ -13,7 +16,7 @@
 <section class="content">
 	<slot />
 </section>
-{#if $currentPage !== '/about' && $currentPage !== '/'}
+{#if !noProjectPages.includes($page.url.pathname)}
 	<ProjectsNavigation />
 {/if}
 <Footer />

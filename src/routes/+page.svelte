@@ -1,11 +1,6 @@
 <script>
 	import Hero from '../components/Hero.svelte';
 	import Gallery from '../components/Gallery.svelte';
-
-	import { onMount } from 'svelte';
-	import { currentPage } from '../store';
-
-	onMount(() => currentPage.set('/'));
 </script>
 
 <svelte:head>

@@ -1,7 +1,7 @@
 <script>
 	import smoothscroll from 'smoothscroll-polyfill';
 	import { onMount } from 'svelte';
-	import { yOffSet, isMobileNavOpen, currentPage } from '../store';
+	import { yOffSet, isMobileNavOpen } from '../store';
 
 	import projectData from '../projectData.json';
 	const projects = Object.values(projectData);

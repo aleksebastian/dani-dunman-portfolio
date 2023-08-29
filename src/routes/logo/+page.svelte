@@ -1,17 +1,12 @@
 <script>
 	import { onMount } from 'svelte';
-	import { currentPage } from '../../store';
 	import { logo } from '../../projectData.json';
-
-	import ImageLoader from '../../components/image/ImageLoader.svelte';
 	import ProjectHero from '../../components/ProjectHero.svelte';
 	import Carousel from '../../components/logo/Carousel.svelte';
 
 	let heroLoaded = false;
 
 	onMount(async () => {
-		currentPage.set(logo.route);
-
 		const heroImg = new Image();
 		heroImg.src = logo.heroSrc;
 		heroImg.onload = () => {
@@ -30,7 +25,8 @@
 	<div class="grid">
 		<ProjectHero project={logo} />
 		<p class="full-text pt-md">
-			Check out these logos I've designed. They were thoughtfully conceptualized and a few of them have even earned awards. Swipe through each to see the full process.
+			Check out these logos I've designed. They were thoughtfully conceptualized and a few of them
+			have even earned awards. Swipe through each to see the full process.
 		</p>
 		<div class="subgrid content pb-md">
 			{#each logoSrcs as logoSrc}

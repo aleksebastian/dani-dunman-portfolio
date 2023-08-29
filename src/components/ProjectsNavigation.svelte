@@ -2,38 +2,19 @@
 	import FaArrowLeft from 'svelte-icons/io/IoIosArrowBack.svelte';
 	import FaArrowRight from 'svelte-icons/io/IoIosArrowForward.svelte';
 	import projectData from '../projectData.json';
-	import { currentPage } from '../store';
+	import { page } from '$app/stores';
 
-	const projectRoutes = Object.values(projectData).map((project) => project.route);
-	let prevProjectRoute;
-	let nextProjectRoute;
-
-	const setPrevAndNextProjectRoutes = () => {
-		for (let i = 0; i < projectRoutes.length; i++) {
-			if ($currentPage === projectRoutes[i]) {
-				if (projectRoutes[i - 1]) {
-					prevProjectRoute = projectRoutes[i - 1];
-				} else {
-					prevProjectRoute = null;
-				}
-				if (projectRoutes[i + 1]) {
-					nextProjectRoute = projectRoutes[i + 1];
-				} else {
-					nextProjectRoute = null;
-				}
-				break;
-			}
-		}
-	};
-
-	$: $currentPage, setPrevAndNextProjectRoutes();
+	const routes = Object.values(projectData).map((project) => project.route);
+	const getPageIndex = (route) => routes.indexOf(route);
+	const getPrevProjectRoute = () => routes[getPageIndex($page.url.pathname) - 1];
+	const getNextProjectRoute = () => routes[getPageIndex($page.url.pathname) + 1];
 </script>
 
 <div class="container">
 	<a
 		class="project-nav"
-		href={prevProjectRoute}
-		style="visibility: {prevProjectRoute ? 'visible' : 'hidden'}"
+		href={getPrevProjectRoute()}
+		style="visibility: {getPageIndex($page.url.pathname) <= 0 ? 'hidden' : 'visible'}"
 	>
 		<div class="icon">
 			<FaArrowLeft />
@@ -46,8 +27,10 @@
 
 	<a
 		class="project-nav"
-		href={nextProjectRoute}
-		style="visibility: {nextProjectRoute ? 'visible' : 'hidden'}"
+		href={getNextProjectRoute($page.url.pathname)}
+		style="visibility: {getPageIndex($page.url.pathname) >= routes.length - 1
+			? 'hidden'
+			: 'visible'}"
 	>
 		<span>Next Project</span>
 		<div class="icon">

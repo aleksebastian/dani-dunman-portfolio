@@ -1,18 +1,14 @@
 <script>
 	import { fade } from 'svelte/transition';
 	import { onMount } from 'svelte';
-	import { currentPage } from '../../store';
 	import { language } from '../../projectData.json';
-
 	import ImageLoader from '../../components/image/ImageLoader.svelte';
 	import ProjectHero from '../../components/ProjectHero.svelte';
-	import Carousel from '../../components/Carousel.svelte';
 
 	const carouselImgSrcs = language.carouselImgs;
 	let heroLoaded = false;
 
 	onMount(async () => {
-		currentPage.set(language.route);
 		const heroImg = new Image();
 		heroImg.src = language.heroSrc;
 		heroImg.onload = () => {
@@ -29,7 +25,12 @@
 	<div class="grid">
 		<ProjectHero project={language} />
 		<p class="full-text py-lg">
-			For this project, I made an exhibition catalog for an exhibit I created and curated based on the theme of alternative currencies. My goal was to document what went into the exhibition and expand the viewers' understanding of the topic. The alternative currency I chose was language. I included Alice J Lee's DesignInquiry residency project about language because it focussed on colloquial language and slang as a form of social currency. I also included an interview with Alice and three other essays about language as currency.
+			For this project, I made an exhibition catalog for an exhibit I created and curated based on
+			the theme of alternative currencies. My goal was to document what went into the exhibition and
+			expand the viewers' understanding of the topic. The alternative currency I chose was language.
+			I included Alice J Lee's DesignInquiry residency project about language because it focussed on
+			colloquial language and slang as a form of social currency. I also included an interview with
+			Alice and three other essays about language as currency.
 		</p>
 		<div in:fade class="full">
 			<iframe

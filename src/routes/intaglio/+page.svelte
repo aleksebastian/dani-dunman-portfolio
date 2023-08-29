@@ -1,9 +1,7 @@
 <script>
 	import { fade } from 'svelte/transition';
 	import { onMount } from 'svelte';
-	import { currentPage } from '../../store';
 	import { intaglio } from '../../projectData.json';
-
 	import ImageLoader from '../../components/image/ImageLoader.svelte';
 	import ProjectHero from '../../components/ProjectHero.svelte';
 	import Carousel from '../../components/Carousel.svelte';
@@ -13,7 +11,6 @@
 	let carouselImgSrcs;
 
 	onMount(async () => {
-		currentPage.set(intaglio.route);
 		if (innerWidth <= 640) {
 			carouselImgSrcs = intaglio.carouselImgsMobile;
 		} else {

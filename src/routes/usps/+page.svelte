@@ -1,9 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { slide } from 'svelte/transition';
-	import { currentPage } from '../../store';
 	import { usps } from '../../projectData.json';
-
 	import ProjectHero from '../../components/ProjectHero.svelte';
 	import ProjectOverview from '../../components/ProjectOverview.svelte';
 	import UspsProjectGallery from '../../components/usps/UspsProjectGallery.svelte';
@@ -18,7 +16,6 @@
 	let heroLoaded = false;
 
 	onMount(() => {
-		currentPage.set(route);
 		const heroImg = new Image();
 		heroImg.src = heroSrc;
 		heroImg.onload = () => {
@@ -98,7 +95,9 @@
 				<p class="label bold">Research</p>
 				<p class="label">Initial Research</p>
 				<p>
-					underbanked: Someone who does not receive all the available services from a bank, albeit the location, hours, or a specific service. They are people with bank accounts that continue to use non-bank financial services such as money orders and bill payments.
+					underbanked: Someone who does not receive all the available services from a bank, albeit
+					the location, hours, or a specific service. They are people with bank accounts that
+					continue to use non-bank financial services such as money orders and bill payments.
 				</p>
 				<p>&nbsp;</p>
 				<p>Unbanked: A person who does not use banks or banking institutions in any way or form.</p>
@@ -220,7 +219,9 @@
 					</p>
 					<p class="pt-sm bold">The problem we are solving:</p>
 					<p>
-						People who are on the ChexSystems can only open second-chance accounts. These accounts can be found in various places, but they only provide a second opportunity to either fail again or try to grow a little bit.
+						People who are on the ChexSystems can only open second-chance accounts. These accounts
+						can be found in various places, but they only provide a second opportunity to either
+						fail again or try to grow a little bit.
 					</p>
 				</div>
 			{/if}
@@ -297,18 +298,21 @@
 				<p class="label bold">Further Development:</p>
 
 				<div class="py-sm">
-					<p class="med">
-						I would like to further develop the fidelity of this project.
-					</p>
+					<p class="med">I would like to further develop the fidelity of this project.</p>
 					<p>
-						Because I had a limited amount of time to research this topic and create a realistic solution, especially after starting over halfway through that time, the furthest I was able to push this project was a low-fidelity prototype.
+						Because I had a limited amount of time to research this topic and create a realistic
+						solution, especially after starting over halfway through that time, the furthest I was
+						able to push this project was a low-fidelity prototype.
 					</p>
 				</div>
 
 				<div class="py-sm">
 					<p class="med">I want to create the data bank (ba-dom-ch🥁) for the lessons.</p>
 					<p>
-						Being able to use the SmartBanking function is great, but where do we find all the lessons? Well, if I had additional time, that would be the next page I would design. I’d make a page where the user can take a quiz about what their needs are regarding financial education and explore suggested workshops and additional/popular workshops.
+						Being able to use the SmartBanking function is great, but where do we find all the
+						lessons? Well, if I had additional time, that would be the next page I would design. I’d
+						make a page where the user can take a quiz about what their needs are regarding
+						financial education and explore suggested workshops and additional/popular workshops.
 					</p>
 				</div>
 			</div>

@@ -1,8 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-	import { currentPage } from '../../store';
 	import { bluedoor } from '../../projectData.json';
-
 	import ProjectHero from '../../components/ProjectHero.svelte';
 	import ProjectOverview from '../../components/ProjectOverview.svelte';
 	import ProjectGallery from '../../components/ProjectGallery.svelte';
@@ -14,7 +12,6 @@
 
 	let heroLoaded = false;
 	onMount(() => {
-		currentPage.set(route);
 		const heroImg = new Image();
 		heroImg.src = heroSrc;
 		heroImg.onload = () => {

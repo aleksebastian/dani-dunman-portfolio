@@ -1,8 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
-	import { currentPage } from '../../store';
-
 	import FaInstagram from 'svelte-icons/fa/FaInstagram.svelte';
 	import FaLinkedin from 'svelte-icons/fa/FaLinkedin.svelte';
 	import FaPinterestSquare from 'svelte-icons/fa/FaPinterestSquare.svelte';
@@ -12,7 +10,6 @@
 
 	let imgLoaded = false;
 	onMount(() => {
-		currentPage.set('/about');
 		const img = new Image();
 		img.src = imgSrc;
 		img.onload = () => {

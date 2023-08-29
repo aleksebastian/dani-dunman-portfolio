@@ -1,7 +1,5 @@
 <script>
 	import ProjectHero from '../../components/ProjectHero.svelte';
-	import { currentPage } from '../../store';
-
 	import { onMount } from 'svelte';
 
 	const heroSrc = 'https://via.placeholder.com/1980x695?text=+';
@@ -12,7 +10,6 @@
 	};
 	let heroLoaded = false;
 	onMount(() => {
-		currentPage.set('bluedoor');
 		const heroImg = new Image();
 		heroImg.src = heroSrc;
 		heroImg.onload = () => {
