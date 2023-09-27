@@ -1,118 +1,54 @@
 <script>
-	import { Swiper, SwiperSlide } from 'swiper/svelte';
-
-	// Import Swiper styles
-	import 'swiper/css';
-	import 'swiper/css/pagination';
-	import 'swiper/css/navigation';
-
-	// import required modules
-	import { Pagination, Navigation } from 'swiper';
+	import SurveyQsCarousel from './SurveyQsCarousel.svelte';
 </script>
 
-<Swiper
-	pagination={{
-		type: 'bullets'
-	}}
-	navigation={true}
-	modules={[Pagination, Navigation]}
-	loop={true}
-	keyboard={{
-		enabled: true
-	}}
-	class="mySwiper"
->
-	<SwiperSlide
-		><div class="slide">
-			<div>
-				<p class="percentage">87.5%</p>
-				<p>
-					of participants answered that they would be willing to open an account that has "special
-					terms and conditions" that they could eventually be upgraded from to a normal account in a
-					year or less if they had been denied multiple times at different banks.
-				</p>
-			</div>
-		</div></SwiperSlide
-	>
+<SurveyQsCarousel>
+	<swiper-slide class="swiper-slide">
+		<p class="percentage">87.5%</p>
+		<p>
+			of participants answered that they would be willing to open an account that has "special terms
+			and conditions" that they could eventually be upgraded from to a normal account in a year or
+			less if they had been denied multiple times at different banks.
+		</p>
+	</swiper-slide>
 
-	<SwiperSlide
-		><div class="slide third">
-			<div>
-				<p class="med">However</p>
-			</div>
-		</div></SwiperSlide
-	>
+	<swiper-slide class="swiper-slide">
+		<p class="med">However</p>
+	</swiper-slide>
 
-	<SwiperSlide
-		><div class="slide">
-			<div>
-				<p class="percentage">28.5%</p>
-				<p>
-					of participants answered that they would not be willing to open that same account if they
-					had to complete a series of educational tasks that were designed for financial education,
-					even if they would eventually be upraded to a normal account.
-				</p>
-			</div>
-		</div></SwiperSlide
-	>
-</Swiper>
+	<swiper-slide class="swiper-slide">
+		<p class="percentage">28.5%</p>
+		<p>
+			of participants answered that they would not be willing to open that same account if they had
+			to complete a series of educational tasks that were designed for financial education, even if
+			they would eventually be upraded to a normal account.
+		</p>
+	</swiper-slide>
+</SurveyQsCarousel>
 
-<style>
-	:root {
-		/* --swiper-navigation-color: transparent; */
-		--swiper-theme-color: black;
-		--swiper-navigation-size: 1rem;
-	}
+<style lang="scss">
+	:global(.surveyQs-swiper-container) {
+		.swiper-slide {
+			padding: 1rem 2rem;
+			font-size: 0.75rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
 
-	.slide {
-		text-align: center;
-		padding: 0 2rem;
-		margin: 3rem 0;
-		font-size: 0.75rem;
-		display: flex;
-		align-items: center;
-		height: 7rem;
-	}
+		> :nth-child(1) {
+			display: flex;
+			flex-direction: column;
+		}
 
-	.first {
-		display: flex;
-		align-items: center;
-	}
+		> :nth-child(2) {
+			line-height: 150px;
+		}
 
-	.second {
-		display: flex;
-		/* flex-direction: column; */
-		gap: 1rem;
-		flex-basis: 50%;
-	}
-
-	.third {
-		display: flex;
-		justify-content: space-around;
-		/* flex-direction: column; */
-		gap: 1rem;
-		align-items: center;
-	}
-
-	.third > div {
-		display: flex;
-		flex-direction: column;
-		/* align-items: flex-start; */
-		gap: 1rem;
-		font-size: 0.75rem;
-		flex-basis: 50%;
-	}
-
-	.third > div > p {
-		/* height: 1.8rem; */
-	}
-
-	.fourth {
-		/* align-items: center; */
-	}
-
-	.fourth > div {
-		flex-basis: 50%;
+		> :nth-child(3) {
+			display: flex;
+			flex-direction: column;
+		}
 	}
 
 	.percentage {

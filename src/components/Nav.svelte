@@ -1,32 +1,26 @@
 <script>
-	import smoothscroll from 'smoothscroll-polyfill';
 	import { onMount } from 'svelte';
-	import { yOffSet, isMobileNavOpen } from '../store';
-
+	import { isMobileNavOpen$ } from '../store';
 	import projectData from '../projectData.json';
-	const projects = Object.values(projectData);
+	import { createEventDispatcher } from 'svelte';
 
+	const dispatch = createEventDispatcher();
+
+	const projects = Object.values(projectData);
 	const id = 'work';
-	const yOffset = -70;
+	const defaultYOffset = -70;
 	let element;
 	let pageBody;
+
 	let mounted = false;
-
-	$: y && mounted && element
-		? yOffSet.set(element.getBoundingClientRect().top + window.scrollY + yOffset)
-		: null;
-
 	onMount(() => {
-		smoothscroll.polyfill();
 		element = document.getElementById(id);
 		pageBody = document.body;
 		mounted = true;
 	});
 
 	const handleClick = () => {
-		setTimeout(() => {
-			window.scrollTo({ top: $yOffSet, behavior: 'smooth' });
-		}, 300);
+		dispatch('click');
 	};
 
 	let boxShadow = 'none';
@@ -45,7 +39,7 @@
 	};
 
 	const toggleMobileNav = () => {
-		isMobileNavOpen.set(isMobileNavOpenLocal);
+		isMobileNavOpen$.set(isMobileNavOpenLocal);
 		if (pageBody) {
 			if (!isMobileNavOpenLocal) {
 				pageBody.style.overflow = null;
@@ -55,8 +49,6 @@
 		}
 	};
 </script>
-
-<svelte:window bind:scrollY={y} />
 
 <nav class="nav" style="box-shadow: {boxShadow}">
 	<a style="opacity: {isMobileNavOpenLocal ? '0' : '1'}" href="/">Daniela Dunman</a>
@@ -86,7 +78,7 @@
 	</div>
 
 	<div class="nav-links">
-		<a href="/" on:click={handleClick}>Work</a>
+		<a href="/?scroll=true">Work</a>
 		<a href="/about">About</a>
 	</div>
 </nav>

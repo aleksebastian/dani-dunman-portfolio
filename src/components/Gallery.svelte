@@ -2,9 +2,11 @@
 	import ProjectCard from './ProjectCard.svelte';
 	import projects from '../projectData.json';
 	const parsedProjects = Object.values(projects);
+
+	export let galleryEle;
 </script>
 
-<div id="work" class="gallery">
+<div id="work" class="gallery" bind:this={galleryEle}>
 	{#each parsedProjects as project}
 		<div>
 			<ProjectCard {project} />

@@ -1,16 +1,34 @@
 <script>
+	import smoothscroll from 'smoothscroll-polyfill';
 	import Nav from '../components/Nav.svelte';
 	import ProjectsNavigation from '../components/ProjectsNavigation.svelte';
 	import Footer from '../components/Footer.svelte';
 	import { fade } from 'svelte/transition';
-	import { isMobileNavOpen } from '../store';
+	import { isMobileNavOpen$ } from '../store';
 	import { page } from '$app/stores';
+	import { onMount } from 'svelte';
+	import { register } from 'swiper/element/bundle';
+	register();
 
 	const notProjectPages = ['/', '/about'];
+	const id = 'work';
+	const defaultYOffset = -70;
+	let y;
+	let mounted = false;
+
+	const getScrollToPosition = (element) =>
+		element.getBoundingClientRect().top + window.scrollY + defaultYOffset;
+
+	onMount(() => {
+		smoothscroll.polyfill();
+		mounted = true;
+	});
 </script>
 
+<svelte:window bind:scrollY={y} />
+
 <Nav />
-{#if $isMobileNavOpen}
+{#if $isMobileNavOpen$}
 	<div in:fade={{ delay: 100 }} out:fade class="glass" />
 {/if}
 <section class="content">

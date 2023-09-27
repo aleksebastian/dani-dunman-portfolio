@@ -2,17 +2,6 @@
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 
-	import { Navigation, Pagination, Keyboard } from 'swiper';
-
-	import { Swiper, SwiperSlide } from 'swiper/svelte';
-
-	// Import Swiper styles
-	import 'swiper/css';
-	import 'swiper/css/effect-fade';
-	import 'swiper/css/navigation';
-	import 'swiper/css/pagination';
-	import 'swiper/css/scrollbar';
-
 	export let carouselImgSrcs;
 	let firstImgLoaded = false;
 	onMount(() => {
@@ -22,48 +11,49 @@
 			firstImgLoaded = true;
 		};
 	});
-
-	let isHovering = false;
-	const toggleNav = () => {
-		console.log('hello');
-		isHovering = !isHovering;
-	};
 </script>
 
 {#if firstImgLoaded}
 	<div class="carousel" in:fade={{ duration: 1200 }}>
-		<Swiper
-			modules={[Keyboard, Navigation, Pagination]}
-			slidesPerView={1}
-			pagination={{ clickable: true }}
+		<swiper-container
 			navigation={true}
-			loop={true}
-			keyboard={{
-				enabled: true
-			}}
-			spaceBetween={30}
+			pagination={true}
+			pagination-clickable={true}
+			space-between={30}
+			effect="fade"
+			fadeEffect={{ crossFade: true }}
+			rewind={true}
+			class="logos-swiper-container"
 		>
 			{#each carouselImgSrcs as carouselImgSrc}
-				<SwiperSlide><img src={carouselImgSrc} alt="project" /></SwiperSlide>
+				<swiper-slide class="swiper-slide"><img src={carouselImgSrc} alt="project" /></swiper-slide>
 			{/each}
-		</Swiper>
+		</swiper-container>
 	</div>
 {/if}
 
-<style>
-	img {
-		padding: 1.5rem;
-		z-index: -1;
-	}
-	:root {
-		--swiper-navigation-color: transparent;
-		--swiper-theme-color: black !important;
-		--swiper-navigation-size: 1.5rem !important;
+<style lang="scss">
+	.carousel {
+		:global(.logos-swiper-container) {
+			&::part(button-next),
+			&::part(button-prev) {
+				width: 15px;
+			}
+		}
+
+		img {
+			padding: 2.5rem;
+			z-index: -1;
+		}
 	}
 
 	@media (min-width: 768px) {
 		.carousel:hover {
 			--swiper-navigation-color: black;
+		}
+
+		.carousel {
+			--swiper-navigation-color: transparent;
 		}
 	}
 </style>

@@ -8,6 +8,14 @@
 	--expand-label: 0.95rem;
 	--accent-color: #d3a615;
 	--background-color: rgb(235, 235, 235);
+
+	--swiper-navigation-color: black;
+	--swiper-navigation-size: 10px;
+	--swiper-theme-color: black;
+}
+
+swiper-container::part(bullet-active) {
+	background-color: black;
 }
 
 @media (min-width: 48em) {

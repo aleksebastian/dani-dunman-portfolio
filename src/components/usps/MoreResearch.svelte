@@ -71,10 +71,13 @@
 		<div class="text">
 			<p class="label py-sm">UX RESEARCH METHOD 02: Survey</p>
 			<p>
-				I created a quick survey that I shared on my Instagram for people to answer questions about their experience with banking, their frustrations, and what they would be willing to do to open a bank account if they found themselves on the bank's deny list.
+				I created a quick survey that I shared on my Instagram for people to answer questions about
+				their experience with banking, their frustrations, and what they would be willing to do to
+				open a bank account if they found themselves on the bank's deny list.
 			</p>
 			<p class="py-sm">
-				Those who are denied standard bank accounts due to a rocky banking history were identified as part of the unbanked community, and are the target audience.
+				Those who are denied standard bank accounts due to a rocky banking history were identified
+				as part of the unbanked community, and are the target audience.
 			</p>
 		</div>
 
@@ -95,7 +98,10 @@
 			<div class="text">
 				<p class="label py-sm">UX RESEARCH METHOD 03/04: User Persona and Journey Map</p>
 				<p>
-					My target audience is deny-listed, bank users. People who have been kicked out of the banking system are unable to open an account independent of where they go because their history follows them. Not being able to bank pushes them further into “unbankedness” for longer and makes it harder for them to get out.
+					My target audience is deny-listed, bank users. People who have been kicked out of the
+					banking system are unable to open an account independent of where they go because their
+					history follows them. Not being able to bank pushes them further into “unbankedness” for
+					longer and makes it harder for them to get out.
 				</p>
 			</div>
 			<img
@@ -234,10 +240,8 @@
 	}
 
 	.img-grid {
-		/* padding: 0 1rem; */
 		display: flex;
 		flex-direction: column;
-		gap: 1rem;
 	}
 
 	.image {

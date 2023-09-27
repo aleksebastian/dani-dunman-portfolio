@@ -2,18 +2,6 @@
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 
-	import { Navigation, Pagination, Autoplay, Keyboard } from 'swiper';
-
-	import { Swiper, SwiperSlide } from 'swiper/svelte';
-	import { EffectFade } from 'swiper';
-
-	// Import Swiper styles
-	import 'swiper/css';
-	import 'swiper/css/effect-fade';
-	import 'swiper/css/navigation';
-	import 'swiper/css/pagination';
-	import 'swiper/css/scrollbar';
-
 	export let carouselImgSrcs;
 	let firstImgLoaded = false;
 	onMount(() => {
@@ -27,13 +15,12 @@
 
 {#if firstImgLoaded}
 	<div in:fade={{ duration: 1200 }}>
-		<Swiper
-			modules={[EffectFade, Autoplay, Keyboard, Navigation, Pagination]}
+		<swiper-container
 			effect="fade"
 			slidesPerView={1}
 			pagination={{ clickable: true }}
 			navigation={true}
-			loop={true}
+			rewind={true}
 			autoplay={{
 				delay: 2500,
 				disableOnInteraction: true
@@ -43,9 +30,9 @@
 			}}
 		>
 			{#each carouselImgSrcs as carouselImgSrc}
-				<SwiperSlide><img src={carouselImgSrc} alt="dani" /></SwiperSlide>
+				<swiper-slide><img src={carouselImgSrc} alt="dani" /></swiper-slide>
 			{/each}
-		</Swiper>
+		</swiper-container>
 	</div>
 {/if}
 
@@ -53,6 +40,10 @@
 	:root {
 		--swiper-navigation-color: transparent;
 		--swiper-theme-color: white;
+	}
+
+	swiper-container::part(bullet-active) {
+		background-color: white;
 	}
 
 	@media (min-width: 768px) {
