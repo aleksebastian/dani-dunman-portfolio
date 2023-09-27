@@ -56,4 +56,8 @@
 			--swiper-navigation-color: transparent;
 		}
 	}
+
+	.carousel {
+		--swiper-navigation-color: transparent;
+	}
 </style>
