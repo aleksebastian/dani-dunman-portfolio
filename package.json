@@ -13,24 +13,24 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.1.1",
-		"@sveltejs/adapter-vercel": "^3.0.3",
-		"@sveltejs/kit": "^1.27.3",
+		"@sveltejs/adapter-vercel": "^3.1.0",
+		"@sveltejs/kit": "^1.27.6",
 		"chart.js": "^4.4.0",
-		"eslint": "^8.52.0",
+		"eslint": "^8.54.0",
 		"eslint-config-prettier": "^9.0.0",
 		"eslint-plugin-svelte3": "^4.0.0",
-		"prettier": "^3.0.3",
-		"prettier-plugin-svelte": "^3.0.3",
+		"prettier": "^3.1.0",
+		"prettier-plugin-svelte": "^3.1.2",
 		"sass": "^1.69.5",
-		"svelte": "^4.2.2",
-		"svelte-preprocess": "^5.0.4",
-		"vite": "^4.5.0"
+		"svelte": "^4.2.7",
+		"svelte-preprocess": "^5.1.1",
+		"vite": "^5.0.4"
 	},
 	"type": "module",
 	"dependencies": {
 		"chartjs-plugin-datalabels": "^2.2.0",
 		"smoothscroll-polyfill": "^0.4.4",
 		"svelte-icons": "^2.1.0",
-		"swiper": "11.0.3"
+		"swiper": "11.0.5"
 	}
 }
