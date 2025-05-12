@@ -29,7 +29,7 @@
 
 <Nav />
 {#if $isMobileNavOpen$}
-	<div in:fade={{ delay: 100 }} out:fade class="glass" />
+	<div in:fade={{ delay: 100 }} out:fade class="glass"></div>
 {/if}
 <section class="content">
 	<slot />

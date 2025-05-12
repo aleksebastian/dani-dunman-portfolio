@@ -38,6 +38,12 @@
 		isMobileNavOpenLocal = !isMobileNavOpenLocal;
 	};
 
+	const handleKeyDown = (event) => {
+		if (event.key === 'Enter' || event.key === ' ') {
+			toggleLocalNavState();
+		}
+	};
+
 	const toggleMobileNav = () => {
 		isMobileNavOpen$.set(isMobileNavOpenLocal);
 		if (pageBody) {
@@ -55,23 +61,23 @@
 	<!-- MOBILE NAV -->
 	<div class="ham">
 		<input type="checkbox" bind:checked={isMobileNavOpenLocal} />
-		<span />
-		<span />
-		<span />
+		<span></span>
+		<span></span>
+		<span></span>
 		<ul id="menu" style="transform: {!isMobileNavOpenLocal ? 'translate(100%, 0)' : 'none'}">
 			<div class="actions">
-				<li on:click={toggleLocalNavState}>
+				<button type="button" on:click={toggleLocalNavState} on:keydown={handleKeyDown}>
 					<a href="/"> Home </a>
-				</li>
-				<li on:click={toggleLocalNavState}>
+				</button>
+				<button type="button" on:click={toggleLocalNavState} on:keydown={handleKeyDown}>
 					<a href="/about"> About </a>
-				</li>
+				</button>
 			</div>
 			<div class="projects">
 				{#each projects as project}
-					<li on:click={toggleLocalNavState}>
+					<button type="button" on:click={toggleLocalNavState} on:keydown={handleKeyDown}>
 						<a href={project.route}>{project.name}</a>
-					</li>
+					</button>
 				{/each}
 			</div>
 		</ul>
@@ -90,11 +96,7 @@
 		text-align: center;
 	}
 
-	.actions li,
-	.projects li {
-		padding-top: 0.1rem;
-		padding-bottom: 0.1rem;
-	}
+	/* REMOVED .actions li, .projects li */
 
 	#menu {
 		position: absolute;
@@ -113,10 +115,7 @@
 		background-color: rgba(255, 255, 255, 0.95);
 	}
 
-	#menu li {
-		font-size: 1.8rem;
-		font-weight: 600;
-	}
+	/* REMOVED #menu li */
 
 	.ham input:checked ~ ul {
 		transform: none;
@@ -180,8 +179,10 @@
 		background: #d3a615;
 		border-radius: 1px;
 		transform-origin: 4px 0px;
-		transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
-			background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+		transition:
+			transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+			background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+			opacity 0.55s ease;
 	}
 
 	.ham span:first-child {
@@ -296,6 +297,27 @@
 		.nav-links a {
 			color: #d3a615;
 		}
+	}
+
+	/* Add styles for the new button elements to mimic the old li elements */
+	.actions button,
+	.projects button {
+		background: none;
+		border: none;
+		padding: 0.1rem;
+		margin: 0;
+		font-size: 1.8rem; /* Copied from #menu li */
+		font-weight: 600; /* Copied from #menu li */
+		color: #d3a615; /* Copied from a */
+		cursor: pointer;
+		width: 100%;
+		text-align: center;
+	}
+
+	.actions button a,
+	.projects button a {
+		color: inherit; /* Ensure link color is inherited from button */
+		text-decoration: none;
 	}
 
 	/* MACBOOK */

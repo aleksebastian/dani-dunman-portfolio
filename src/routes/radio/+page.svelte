@@ -3,7 +3,6 @@
 	import { radio } from '../../projectData.json';
 	import ProjectHero from '../../components/ProjectHero.svelte';
 	import ProjectOverview from '../../components/ProjectOverview.svelte';
-	import NewExpandable from '../../components/NewExpandable.svelte';
 	import MoreResearch from '../../components/radio/MoreResearch.svelte';
 	import MdArrowForward from 'svelte-icons/md/MdArrowForward.svelte';
 	import MoreResearch2 from '../../components/radio/MoreResearch2.svelte';
@@ -202,7 +201,7 @@
 		</div>
 	</div>
 {:else}
-	<div style="min-height: 100vh" />
+	<div style="min-height: 100vh"></div>
 {/if}
 
 <style>

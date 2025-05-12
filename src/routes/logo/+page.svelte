@@ -44,7 +44,7 @@
 		</div>
 	</div>
 {:else}
-	<div style="min-height: 100vh" />
+	<div style="min-height: 100vh"></div>
 {/if}
 
 <style>

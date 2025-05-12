@@ -43,7 +43,7 @@
 		</div>
 		<div class="full">
 			<p>However,</p>
-			<p>there are no active soluctions.</p>
+			<p>there are no active solutions.</p>
 		</div>
 	</div>
 

@@ -224,55 +224,88 @@
 	const data = JSON.parse(JSON.stringify(DATA.genderData));
 	const config = {
 		type: 'bar',
-		data
+		data,
+		options: {} // Initialize options, will be set in onMount
 	};
 
 	let ctx;
 	let myChart;
 	let selectedElement;
+
 	onMount(() => {
 		ctx = document.getElementById('Chart1');
 		config.options = width < 480 ? mobileOptions : nonMobileOptions;
 		myChart = new Chart(ctx, config);
 		selectedElement = document.getElementById('category-list').firstChild;
-		selectedElement.style.opacity = '1';
-		selectedElement.style.transform = 'scale(1.2)';
+		if (selectedElement && selectedElement.style) {
+			selectedElement.style.opacity = '1';
+			selectedElement.style.transform = 'scale(1.2)';
+		}
 	});
 
-	const handleClick = (e) => {
-		let targetElement = e.target;
+	const updateChart = (targetElement) => {
+		if (!targetElement || typeof targetElement.innerHTML !== 'string' || !myChart) {
+			return;
+		}
 
-		selectedElement.style.opacity = '0.5';
-		selectedElement.style.transform = 'scale(1)';
+		if (selectedElement && selectedElement.style) {
+			selectedElement.style.opacity = '0.6';
+			selectedElement.style.transform = 'scale(1)';
+		}
 
 		selectedElement = targetElement;
 
-		selectedElement.style.opacity = '1';
-		selectedElement.style.transform = 'scale(1.2)';
+		if (selectedElement && selectedElement.style) {
+			selectedElement.style.opacity = '1';
+			selectedElement.style.transform = 'scale(1.2)';
+		}
 
-		const dataSetName = targetElement.innerHTML.split(' ').slice(-1)[0].toLowerCase();
-		const newData = JSON.parse(JSON.stringify(DATA[`${dataSetName}Data`]));
+		const textContent = targetElement.textContent || targetElement.innerText || '';
+		const words = textContent.trim().split(' ');
+		const lastWord = words.length > 0 ? words[words.length - 1] : '';
+		const dataSetName = lastWord.toLowerCase();
 
-		if (newData.datasets.length < myChart.data.datasets.length) {
-			let difference = myChart.data.datasets.length - newData.datasets.length;
-			for (let i = 0; i < difference; i++) {
-				myChart.data.datasets.pop();
-			}
+		const newDataDefinition = DATA[`${dataSetName}Data`];
+
+		if (!newDataDefinition) {
+			console.error(`Data definition not found for: ${dataSetName}Data`);
+			return;
+		}
+		const newData = JSON.parse(JSON.stringify(newDataDefinition));
+
+		if (!myChart.data || !myChart.data.datasets) {
+			console.error('Chart data or datasets not initialized');
+			return;
+		}
+
+		while (myChart.data.datasets.length > newData.datasets.length) {
+			myChart.data.datasets.pop();
 		}
 
 		for (let i = 0; i < newData.datasets.length; i++) {
 			let currDataset = newData.datasets[i];
-			let currDatasetInGraph = myChart.data.datasets[i];
-
-			if (currDatasetInGraph) {
-				currDatasetInGraph.label = currDataset.label;
-				currDatasetInGraph.data = currDataset.data;
+			if (myChart.data.datasets[i]) {
+				myChart.data.datasets[i].label = currDataset.label;
+				myChart.data.datasets[i].data = currDataset.data;
+				myChart.data.datasets[i].backgroundColor = currDataset.backgroundColor;
+				myChart.data.datasets[i].borderColor = currDataset.borderColor;
 			} else {
-				myChart.data.datasets.push(currDataset);
+				myChart.data.datasets.push(JSON.parse(JSON.stringify(currDataset)));
 			}
 		}
 
 		myChart.update();
+	};
+
+	const handleChartClick = (e) => {
+		updateChart(e.target);
+	};
+
+	const handleChartKeyDown = (e) => {
+		if (e.key === 'Enter' || e.key === ' ') {
+			e.preventDefault();
+			updateChart(e.target);
+		}
 	};
 </script>
 
@@ -280,14 +313,14 @@
 
 <div class="container">
 	<ul id="category-list">
-		<li on:click={(e) => handleClick(e)}>GENDER</li>
-		<li on:click={(e) => handleClick(e)}>INCOME</li>
-		<li on:click={(e) => handleClick(e)}>GENERATION</li>
-		<li on:click={(e) => handleClick(e)}>RACE AND ETHNICITY</li>
+		<li on:click={handleChartClick}>GENDER</li>
+		<li on:click={handleChartClick}>INCOME</li>
+		<li on:click={handleChartClick}>GENERATION</li>
+		<li on:click={handleChartClick}>RACE AND ETHNICITY</li>
 	</ul>
 
 	<div class="chart-container">
-		<canvas id="Chart1" />
+		<canvas id="Chart1"></canvas>
 	</div>
 </div>
 
